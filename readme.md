@@ -19,8 +19,8 @@ Reach me at :
 <br>
 
 <p width="50%" align="left"> <!--style="max-width:500px;"-->
-  <img src = "https://github-readme-stats.vercel.app/api?username=Aakriti28&show_icons=true&theme=github_dark&line_height=27">
-<!--   <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=Aakriti28&hide=jupyter notebook,html&theme=tokyonight"> -->
+  <!-- <img src = "https://github-readme-stats.vercel.app/api?username=kingston-aditya&show_icons=true&theme=github_dark&line_height=27"> -->
+  <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=kingston-aditya&hide=jupyter notebook,html&theme=tokyonight">
 </p>
 
 <br>

@@ -1,7 +1,7 @@
 Hey fellas!
 I am a senior undergraduate in the Department of Electrical and Communication Engineering at the Indian Institute of Technology Mandi. I am interested in combinatorial structure in Machine Learning.
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=Aakriti28&label=Profile%20views&color=129e00&style=plastic" alt="Aakriti28" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=kingston-aditya&label=Profile%20views&color=129e00&style=plastic" alt="kingston-aditya" /> </p>
 
 Reach me at :  
 
@@ -19,8 +19,8 @@ Reach me at :
 <br>
 
 <p width="50%" align="left"> <!--style="max-width:500px;"-->
-  <!-- <img src = "https://github-readme-stats.vercel.app/api?username=kingston-aditya&show_icons=true&theme=github_dark&line_height=27"> -->
-  <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=kingston-aditya&hide=jupyter notebook,html&theme=tokyonight">
+  <img src = "https://github-readme-stats.vercel.app/api?username=kingston-aditya&show_icons=true&theme=github_dark&line_height=27">
+  <!-- <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=kingston-aditya&hide=jupyter notebook,html&theme=tokyonight"> -->
 </p>
 
 <br>

@@ -12,7 +12,7 @@ hide:
 
 :fontawesome-solid-inbox: Personal Email: [asnov2k [at] gmail [dot] com](mailto:asnov2k@gmail.com)
 
-<span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073)</span>
+<span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-github:](https://github.com/kingston-aditya) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073)</span>
 
 <br>
 
@@ -28,32 +28,29 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
 === "2024"
 
-    [07/2024] Our paper was accepted by CVPR 2024, check it out [here](https://image-sculpting.github.io/). See you in Seattle!
-    
-    [02/2024] I will join :fontawesome-brands-meta: Meta GenAI as a Research Scientist Intern in 2024 Summer. See you in Menlo Park!
-    
-    [01/2024] Our paper was accepted by ICLR 2024, check it out [here](https://xichenpan.com/kosmosg/).
-
-=== "2023"
-
-    [10/2023] :beach_with_umbrella: Our paper was accepted by WACV 2024 as Oral, check it out [here](https://openaccess.thecvf.com/content/WACV2024/html/Pan_Synthesizing_Coherent_Story_With_Auto-Regressive_Latent_Diffusion_Models_WACV_2024_paper.html).
-    
-    [09/2023] :party_popper: Excited to start my CS Ph.D. at [NYU Courant](https://cs.nyu.edu/home/index.html) advised by Prof. [Saining Xie](https://www.sainingxie.com/).
+    [09/2023] :party_popper: Excited to start my Ph.D. at [University of Maryland](https://umd.edu/) advised by Prof. [Ang Li](https://www.ang-li.com/).
 
 ## Publications & Preprints
 <sup>\*</sup> denotes equal contribution
 
 === "Publications"
 
-    **Exploring MLLM-Diffusion Information Transfer with MetaCanvas**
+    **Keeping Them HONEST: A Framework for Detailed Understanding of How Video Complexity Affects Video-LLM Performance**
 
-    [Han Lin](https://hl-hanlin.github.io/), <u>Xichen Pan</u>, [Ziqi Huang](https://ziqihuangg.github.io/), [Ji Hou](https://sekunde.github.io/), [Jialiang Wang](https://sites.google.com/view/jialiangwang/home), [Weifeng Chen](https://wfchen-umich.github.io/wfchen.github.io/), [Zecheng He](https://zechenghe.github.io/), [Felix Juefei-Xu](https://xujuefei.com/), [Junzhe Sun](https://scholar.google.com/citations?user=wyi0bX0AAAAJ&hl=en), [Zhipeng Fan](https://scholar.google.com/citations?user=Nb6ggPwAAAAJ&hl=en), [Ali Thabet](https://www.alithabet.com/), [Mohit Bansal](https://www.cs.unc.edu/~mbansal/), [Chu Wang](https://scholar.google.com/citations?user=5aaOtscAAAAJ&hl=en)
+    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
     
-    Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/abs/2512.11464)&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](https://metacanvas.github.io/)
+    Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
+
+
+    **Memory Augmented Plug-and-Play Selective Prediction.**
+
+    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
+    
+    Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 
 ## Education
 
-### University of Maryland College Park, UMIACS![Image title](images/umd.png){ align=right style="height:6em; border-radius: 0.5em;"}
+### University of Maryland College Park, UMIACS![Image title](images/umiacs.png){ align=right style="height:6em; border-radius: 0.5em;"}
 
 Aug. 2024 -- Present
 

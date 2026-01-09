@@ -1,0 +1,54 @@
+site_name: "Aditya Sarkar's Homepage"
+site_author: 'Aditya Sarkar'
+copyright: '&copy; Aditya Sarkar'
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    primary: white
+    accent: orange
+  favicon: images/umd.png
+  icon:
+    logo: material/account-school
+  font:
+    text: Gabarito
+    
+plugins:
+  []
+  
+markdown_extensions:
+  - meta
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+          
+extra:
+  social:
+    - icon: fontawesome/solid/envelope 
+      link: mailto:asnov2k@gmail.com
+    - icon: academicons/google-scholar
+      link: https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en
+    - icon: fontawesome/brands/github 
+      link: https://github.com/kingston-aditya
+    - icon: fontawesome/brands/linkedin 
+      link: https://www.linkedin.com/in/aditya-sarkar-970620315/
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/sarkar8073
+  analytics:
+    provider: google
+    property: G-KBQPT9Q9MJ
+extra_css:
+  - stylesheets/extra.css 

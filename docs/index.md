@@ -16,11 +16,7 @@ hide:
 
 <br>
 
-I am a second-year Ph.D. student working in Computer Vision at [UMD UMIACS](https://www.umiacs.umd.edu/), advised by Prof. [Ang Li](https://www.ang-li.com/). My research interests are currently in exploring video world models. 
-
-I like to wonder about the following two questions -
-1. To what extent does a lack of what factor of temporal complexity inhibit the ability of VideoLLMs to form coherent global spatial representations? 
-2. Can diffusion-based paradigms outperform autoregressive models in temporal reasoning by leveraging more effective conditional propagation during the latent denoising process?
+I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), advised by Prof. [Ang Li](https://www.ang-li.com/). I research computer vision models, specifically vision-centric multimodal LLMs and diffusion models.
 
 Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering from [Indian Institute of Technology (IIT) Mandi](https://www.iitmandi.ac.in/), where I was advised by Prof. [Sreelakshmi Manjunath](https://faculty.iitmandi.ac.in/~sreelakshmi/) and received the [President of India Gold Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation) and [Institute Silver Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation).
 
@@ -28,7 +24,9 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
 === "2024"
 
-    [09/2023] :party_popper: Excited to start my Ph.D. at [University of Maryland](https://umd.edu/) advised by Prof. [Ang Li](https://www.ang-li.com/).
+    [09/2024] :party_popper: Excited to start my Ph.D. at [University of Maryland](https://umd.edu/) advised by Prof. [Ang Li](https://www.ang-li.com/).
+
+    [09/2023] :party_popper: Graduated from IIT Mandi with a B.Tech. in Electrical Engineering.
 
 ## Publications & Preprints
 <sup>\*</sup> denotes equal contribution
@@ -50,7 +48,7 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
 ## Education
 
-### University of Maryland College Park, UMIACS![Image title](images/umiacs.png){ align=right style="height:6em; border-radius: 0.5em;"}
+### University of Maryland College Park![Image title](images/umd.png){ align=right style="height:6em; border-radius: 0.5em;"}
 
 Aug. 2024 -- Present
 

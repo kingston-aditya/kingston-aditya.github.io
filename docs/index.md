@@ -16,11 +16,15 @@ hide:
 
 <br>
 
-I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), advised by Prof. [Ang Li](https://www.ang-li.com/). I research computer vision models, specifically vision-centric multimodal LLMs and diffusion models.
+I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), advised by Prof. [Ang Li](https://www.ang-li.com/). Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), Profs. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/) and [David Jacobs](https://www.cs.umd.edu/~djacobs/). I research computer vision models, specifically video-centric multimodal LLMs and diffusion models.
 
 Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering from [Indian Institute of Technology (IIT) Mandi](https://www.iitmandi.ac.in/), where I was advised by Prof. [Sreelakshmi Manjunath](https://faculty.iitmandi.ac.in/~sreelakshmi/) and received the [President of India Gold Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation) and [Institute Silver Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation).
 
 ## News
+
+=== "2026"
+    
+    [15/2026] MA-PaPSP got accepted at ICLR '26. See you in Rio de Janeiro, Brazil.
 
 === "2024"
 
@@ -44,7 +48,7 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
     <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
     
-    Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
+    ICLR 2026 &nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 
 ## Education
 
@@ -52,7 +56,7 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
 Aug. 2024 -- Present
 
-**Ph.D. Student in Computer Vision**, advised by Prof. [Ang Li](https://www.ang-li.com/).
+**Ph.D. in Computer Vision**, advised by Prof. [Ang Li](https://www.ang-li.com/).
 
 ### Indian Institute of Technology Mandi![Image title](images/iitmandi.jpg){ align=right style="height:6em; border-radius: 0.5em;"}
 
@@ -76,4 +80,4 @@ Visiting Researcher
 
 ## Academic Service
 
-ICCV'25
+ICLR'26

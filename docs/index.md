@@ -24,7 +24,7 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
 === "2026"
     
-    [15/2026] MA-PaPSP got accepted at ICLR '26. See you in Rio de Janeiro, Brazil.
+    [01/2026] MA-PaPSP got accepted at ICLR '26. See you in Rio de Janeiro, Brazil.
 
 === "2024"
 
@@ -39,7 +39,7 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
     **Keeping Them HONEST: A Framework for Detailed Understanding of How Video Complexity Affects Video-LLM Performance**
 
-    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
+    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/),  [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
     
     Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 

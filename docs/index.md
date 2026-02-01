@@ -44,7 +44,7 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
     Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 
 
-    **Memory Augmented Plug-and-Play Selective Prediction.**
+    **Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction**
 
     <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
     

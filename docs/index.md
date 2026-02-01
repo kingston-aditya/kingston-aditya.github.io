@@ -16,7 +16,7 @@ hide:
 
 <br>
 
-I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), advised by Prof. [Ang Li](https://www.ang-li.com/). Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), Profs. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/) and [David Jacobs](https://www.cs.umd.edu/~djacobs/). I research computer vision models, specifically video-centric multimodal LLMs and diffusion models.
+I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), advised by Prof. [Ang Li](https://www.ang-li.com/). Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), Profs. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/) and [David Jacobs](https://www.cs.umd.edu/~djacobs/). I research computer vision models, specifically video-centric multimodal LLMs and diffusion models. Check out my [Blog](blog.md).
 
 Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering from [Indian Institute of Technology (IIT) Mandi](https://www.iitmandi.ac.in/), where I was advised by Prof. [Sreelakshmi Manjunath](https://faculty.iitmandi.ac.in/~sreelakshmi/) and received the [President of India Gold Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation) and [Institute Silver Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation).
 

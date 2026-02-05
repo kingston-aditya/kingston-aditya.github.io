@@ -22,3 +22,15 @@ Jack’s blog or as I like to call it, __Jacklog__ is my personal corner of the 
 
 </a>
 
+<a href="../posts/2026-02-10-predicting" style="text-decoration: none; color: inherit;">
+
+<div class="blog-card">
+  <h2>Predicting a video-LLM's prediction.</h2>
+  <p>Special thanks to Yi Li and Shlok Mishra for a lot of super valuable feedback and discussion on this post...</p>
+  <div class="meta">
+    Date: Feb 10, 2026 · Estimated Reading Time: 10 min · Author: Aditya Sarkar
+  </div>
+</div>
+
+</a>
+

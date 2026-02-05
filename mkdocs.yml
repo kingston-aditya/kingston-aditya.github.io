@@ -57,3 +57,5 @@ nav:
   - Home: index.md
   - Blog: blog.md
   - Retrieval: posts/2026-02-05-retrieval.md
+  - Predicting: posts/2026-02-10-retrieval.md
+  - MA-PaPSP: mapapsp.html

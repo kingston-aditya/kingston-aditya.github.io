@@ -6,3 +6,28 @@
   --md-typeset-color:                  hsla(272, 91%, 29%, 1);
   --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
 }
+
+.md-typeset[data-md-page="blog"] {
+  background-color: #f2f2f2;
+}
+
+.blog-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 24px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Card title */
+.blog-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Card meta info */
+.blog-card .meta {
+  color: #777;
+  font-size: 0.9em;
+  margin-top: 12px;
+}

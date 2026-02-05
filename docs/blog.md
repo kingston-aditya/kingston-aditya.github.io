@@ -10,13 +10,13 @@ Jack’s blog or as I like to call it, __Jacklog__ is my personal corner of the 
 
 <span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-github:](https://github.com/kingston-aditya) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073)</span>
 
-<a href="" style="text-decoration: none; color: inherit;">
+<a href="posts/2026-02-05-retrieval.md" style="text-decoration: none; color: inherit;">
 
 <div class="blog-card">
-  <h2>Why We Think</h2>
-  <p>Special thanks to John Schulman for a lot of super valuable feedback and direct edits on this post...</p>
+  <h2>Similar instances enhances rejection.</h2>
+  <p>Special thanks to Yi Li, Jiacheng Cheng and Nuno Vasconcelos for a lot of super valuable feedback and discussion on this post...</p>
   <div class="meta">
-    Date: May 1, 2025 · Estimated Reading Time: 40 min · Author: Lilian Weng
+    Date: Feb 5, 2026 · Estimated Reading Time: 10 min · Author: Aditya Sarkar
   </div>
 </div>
 

@@ -7,6 +7,10 @@ hide:
 
 <p style="color: blue;">Special thanks to Yi Li, Jiacheng Cheng and Nuno Vasconcelos for a lot of super valuable feedback and discussion on this post.</p>
 
+### Motivation. 
+
+### Initial experiments.
+
 
 
 

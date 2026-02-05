@@ -7,7 +7,7 @@
   --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
 }
 
-.md-typeset[data-md-page="blog"] {
+[data-md-page="blog"] .md-main {
   background-color: #cccccc;
 }
 

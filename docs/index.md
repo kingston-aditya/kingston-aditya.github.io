@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Aditya (Jack) Sarkar ![](images/por.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
+# Aditya (Jack) Sarkar - ジャック ![](images/por.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 
 :fontawesome-solid-building: Office: [8125 Paint Branch Dr, College Park, MD 20742](https://maps.app.goo.gl/xWjQWVVnpTVoWaQw8)
 
@@ -39,20 +39,20 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
 === "Publications"
 
-    **Quantifying symbol binding capability of Audio-Visual LLMs**
+    ####Quantifying symbol binding capability of Audio-Visual LLMs
 
     <u>Aditya Sarkar</u>, [Shwai He](https://shwai-he.github.io/),  [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Ang Li](https://www.ang-li.com/).
 
     Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 
-    **Keeping Them HONEST: A Framework for Detailed Understanding of How Video Complexity Affects Video-LLM Performance**
+    ####Keeping Them HONEST: A Framework for Detailed Understanding of How Video Complexity Affects Video-LLM Performance
 
     <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/),  [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
     
     Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 
 
-    ####Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction![Image title](images/mapapsp.png){align=right style="height:8em; border-radius: 1em;"}
+    ####Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction![Image title](images/papsp_pipe.png){align=right style="height:8em; border-radius: 1em;"}
 
     <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
     

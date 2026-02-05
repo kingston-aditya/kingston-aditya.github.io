@@ -52,12 +52,7 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
     Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 
 
-    <div style="display: flex; align-items: center;">
-      <p style="margin-right: 10px;">
-        <strong>Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction</strong>
-      </p>
-      <img src="images/mapapsp.png" alt="Small Image" style="width: 50px; height: auto;">
-    </div>
+    ####Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction![Image title](images/mapapsp.png){ align=right style="height:6em; border-radius: 0.5em;"}
 
     <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
     

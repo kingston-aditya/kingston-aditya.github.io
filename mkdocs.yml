@@ -56,4 +56,4 @@ extra_css:
 nav:
   - Home: index.md
   - Blog: blog.md
-  - Post1: posts/2026-02-05-retrieval.md
+  - Retrieval: posts/2026-02-05-retrieval.md

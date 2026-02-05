@@ -13,15 +13,11 @@ Jack’s blog or as I like to call it, __Jacklog__ is my personal corner of the 
 <a href="" style="text-decoration: none; color: inherit;">
 
 <div class="blog-card">
-
-## Why We Think
-
-Special thanks to John Schulman for a lot of super valuable feedback and direct edits on this post. Test time compute (Graves et al. 2016, Ling et al. 2017, Cobbe et al. 2021) and Chain-of-thought (CoT)...
-
-<div class="meta">
-Date: May 1, 2025 · Estimated Reading Time: 40 min · Author: Lilian Weng
-</div>
-
+  <h2>Why We Think</h2>
+  <p>Special thanks to John Schulman for a lot of super valuable feedback and direct edits on this post...</p>
+  <div class="meta">
+    Date: May 1, 2025 · Estimated Reading Time: 40 min · Author: Lilian Weng
+  </div>
 </div>
 
 </a>

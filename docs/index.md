@@ -20,7 +20,7 @@ I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.
 
 In my free time, I document my readings on my blog __Jacklog__. Feel free to check it out [here](blog.md). 
 
-Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering from [Indian Institute of Technology (IIT) Mandi](https://www.iitmandi.ac.in/), where I was advised by Prof. [Sreelakshmi Manjunath](https://faculty.iitmandi.ac.in/~sreelakshmi/) and received the [President of India Gold Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation) and [Institute Silver Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation). My undergraduate studies were supported by the __National Talent Search__ Scholarship.
+Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering from [Indian Institute of Technology (IIT) Mandi](https://www.iitmandi.ac.in/), where I was advised by Prof. [Sreelakshmi Manjunath](https://faculty.iitmandi.ac.in/~sreelakshmi/) and received the [President of India Gold Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation) and [Institute Silver Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation). My undergraduate studies were supported by the __National Talent Search__ and __Walmart Predoc__ fellowships.
 
 ## News
 
@@ -37,7 +37,7 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 ## Publications & Preprints
 <sup>\*</sup> denotes equal contribution
 
-=== "Publications"
+=== "Selected Publications"
 
     ####Quantifying symbol binding capability of Audio-Visual LLMs
 

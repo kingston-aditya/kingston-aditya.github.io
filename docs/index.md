@@ -16,7 +16,7 @@ hide:
 
 <br>
 
-I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), advised by Prof. [Ang Li](https://www.ang-li.com/). Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), Profs. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/) and [David Jacobs](https://www.cs.umd.edu/~djacobs/). I research computer vision models, specifically video-centric multimodal LLMs and diffusion models. 
+I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), primarily advised by Prof. [Ang Li](https://www.ang-li.com/) and informally advised by Prof. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/). I research computer vision models, specifically video-centric multimodal LLMs and diffusion models. Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/) and Prof. [David Jacobs](https://www.cs.umd.edu/~djacobs/). 
 
 In my free time, I document my readings on my blog __Jacklog__. Feel free to check it out [here](blog.md). 
 
@@ -32,7 +32,7 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
     [09/2024] :party_popper: Excited to start my Ph.D. at [University of Maryland](https://umd.edu/) advised by Prof. [Ang Li](https://www.ang-li.com/).
 
-    [09/2023] :party_popper: Graduated from IIT Mandi with a B.Tech. in Electrical Engineering.
+    [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering.
 
 ## Publications & Preprints
 <sup>\*</sup> denotes equal contribution
@@ -74,4 +74,4 @@ Sept. 2019 -- June 2023
 
 ## Academic Service
 
-ICLR'26
+Reviewer in CVPR'26.

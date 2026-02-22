@@ -1,0 +1,33 @@
+.md-grid {
+  max-width: 1280px; 
+}
+
+.md-content {
+  --md-typeset-color:                  hsla(272, 91%, 29%, 1);
+  --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
+}
+
+[data-md-page="blog"] .md-main {
+  background-color: #cccccc;
+}
+
+.blog-card {
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 24px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Card title */
+.blog-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Card meta info */
+.blog-card .meta {
+  color: #777;
+  font-size: 0.9em;
+  margin-top: 12px;
+}

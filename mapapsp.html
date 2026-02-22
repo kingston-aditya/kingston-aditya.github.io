@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="Memory Augmented Plug-and-Play Selective Prediction"
+          name="description">
+    <meta content="vision-language-model, zero-shot selective prediction, ma-papsp, multimodal large language model"
+          name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>MA-PaPSP</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link href="./mapapsp/css/bulma.min.css" rel="stylesheet">
+    <link href="./mapapsp/css/bulma-carousel.min.css" rel="stylesheet">
+    <link href="./mapapsp/css/bulma-slider.min.css" rel="stylesheet">
+    <link href="./mapapsp/css/fontawesome.all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+          rel="stylesheet">
+    <link href="./mapapsp/css/index.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./mapapsp/js/fontawesome.all.min.js"></script>
+    <script src="./mapapsp/js/bulma-carousel.min.js"></script>
+    <script src="./mapapsp/js/bulma-slider.min.js"></script>
+    <script src="./mapapsp/js/index.js"></script>
+    <style>
+        .textsc {
+            font-variant: small-caps;
+        }
+    </style>
+</head>
+<body>
+
+<nav aria-label="main navigation" class="navbar" role="navigation">
+    <div class="navbar-brand">
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger" role="button">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <a class="navbar-item" href="https://kingston-aditya.github.io/mapapsp">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More Research Works
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="">
+                        Honest
+                    </a>
+                    <a class="navbar-item" href="">
+                        Symbol-Binding
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h2 class="title is-1 publication-title"><span class="textsc">Leveraging Data to Say No: Memory Augmented </span> Plug-and-Play Selective Prediction</h2>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                          <a href="https://kingston-aditya.github.io/">Aditya Sarkar</a><sup>1,2</sup>,</span>
+                        <span class="author-block">
+                          <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a><sup>3</sup>,</span>
+                        <span class="author-block">
+                          <a href="http://www.svcl.ucsd.edu/people/jiacheng/">Jiacheng Cheng</a><sup>2,4</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a><sup>1,5</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a><sup>2</sup>,
+                        </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>1</sup>University of Maryland College Park,</span>
+                        <span class="author-block"><sup>2</sup>University of California San Diego,</span>
+                        <br>
+                        <span class="author-block"><sup>3</sup>Qualcomm AI</span>
+                        <span class="author-block"><sup>4</sup>Yale University</span>
+                        <span class="author-block"><sup>5</sup>Meta AI</span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- PDF Link. -->
+                            <span class="link-block">
+                                <a class="external-link button is-normal is-rounded is-dark"
+                                   href="https://www.arxiv.org/pdf/2601.22570">
+                                  <span class="icon">
+                                      <i class="ai ai-arxiv"></i>
+                                  </span>
+                                  <span>Paper</span>
+                                </a>
+                              </span>
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                                <a class="external-link button is-normal is-rounded is-dark"
+                                   href="https://github.com/kingston-aditya/MA-PaPSP">
+                                  <span class="icon">
+                                      <i class="fab fa-github"></i>
+                                  </span>
+                                  <span>Code</span>
+                                  </a>
+                          </span>
+                        </div>
+                    </div>
+                    <div class="is-size-5 publication-authors">
+                        ICLR 2026
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <img src="./mapapsp/images/teaser.png"/>
+            <h2 class="subtitle has-text-centered">
+                <div class="content has-text-justified">
+                    PaPSP uses an external representation model and the CLIP score to enable selective prediction for VLM tasks like captioning without training. <span class="textsc">MA-PaPSP</span> augments this model with an external dataset, which is leveraged to estimate proxy embeddings of greater stability and better calibrated contrastive scores. The figure shows an example where PaPSP fails but MA-PaPSP succeeds at rejecting an incorrect caption for the image shown. Also shown is the Cider-4 score between predicted and ground truth captions.
+                </div>
+            </h2>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    Selective prediction aims to endow predictors with a reject option, to avoid low confidence predictions. However, existing literature has primarily focused on closed-set tasks, such as visual question answering with predefined options or fixed-category classification. This paper considers selective  prediction for visual language foundation models, addressing a taxonomy of tasks ranging from closed to open set and from finite to unbounded vocabularies, as in image captioning. We seek training-free approaches of low-complexity, applicable to any foundation model and consider methods based on external vision-language model embeddings, like CLIP. This is denoted as Plug-and-Play Selective Prediction (<span class="textsc">PaPSP</span>). We identify two key challenges: (1)<strong> instability of the visual-language representations, </strong>leading to high variance in image-text embeddings, and (2) <strong> poor calibration of similarity scores.</strong> To address these issues, we propose a memory augmented PaPSP (<span class="textsc">MA-PaPSP</span>) model, which augments <span class="textsc">PaPSP</span> with a retrieval dataset of image-text pairs. This is leveraged to reduce embedding variance by averaging retrieved nearest-neighbor pairs and is complemented by the use of contrastive normalization to improve score calibration. Through extensive experiments on multiple datasets, we show that <span class="textsc"> MA-PaPSP </span> outperforms <span class="textsc"> PaPSP </span> and other selective prediction baselines for selective captioning, image-text matching, and fine-grained classification.
+                </div>
+            </div>
+        </div>
+        <!--/ Abstract. -->
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="column is-centered has-text-centered">
+            <h2 class="title is-3">Approach</h2>
+            <img , src="./mapapsp/images/arch.png" width="90%"/>
+            <div class="content has-text-justified">
+                <span class="textsc">MA-PaPSP</span> is a model that complements <span class="textsc">PaPSP</span> with retrieval augmentation as shown above. The corresponding image-text projections are leveraged to address the two problems mentioned in abstract. Overall, the model retrieves relevant image-text pairs from a large retrieval set using a query image (input image), computes a proxy embedding and contrasts it with embeddings of negative captions. It comprises of two blocks and are as follows:
+                <ol>
+                    <li><strong>Proxy embedding</strong>: <span class="textsc">MA-PaPSP</span> first tries to estimate the ground-truth embeddings using a weighted average of retrieved sample embeddings. The weights are determined as the cosine similarity between the query image and the retrieved samples. The result is an embedding of the same size as input image embedding and is called proxy embedding.
+                    <li><strong>Contrastive scores</strong>: Then <span class="textsc">MA-PaPSP</span> contrasts it with negative captions by performing a softmax operation. For prediction tasks like classification and image-text matching, negative captions are already available; however for generation tasks like captioning, negative captions are absent and as a result, <span class="textsc">MA-PaPSP</span> either uses a simple wordnet like model or a small language model to curate negative captions. The result of this is a score and can be thresholded to perform abstention or prediction.
+                </ol>
+            </div>
+            <img src="./mapapsp/images/construct_data.png"/>
+            <div class="content has-text-justified">
+                Top figure demonstrates the two problems mentioned in the abstract and they are 1) instability of the visual-language representations (shown in a,b) and 2) poor calibration of similarity scores (shown in c,d). MA-PaPSP solves this by using the above mentioned blocks. Bottom figure shows the AURC scores for different thresholds. The lower curve indicates better performance. 
+            </div>
+        </div>
+
+        <div class="column is-centered has-text-centered">
+            <h2 class="title is-3">Qualitative Results</h2>
+            <div class="hero-body">
+                <img src="./mapapsp/images/result1.png"/>
+                <h2 class="subtitle has-text-centered">
+                    Example demonstrates both <span class="textsc">MA-PaPSP</span> and <span class="textsc">PaPSP</span> accept the inputs.
+                </h2>
+            </div>
+
+            <div class="hero-body">
+                <img src="./mapapsp/images/result2.png"/>
+                <h2 class="subtitle has-text-centered">
+                    Example demonstrates <span class="textsc">MA-PaPSP</span> rejects and <span class="textsc">PaPSP</span> accepts the inputs.
+                </h2>
+            </div>
+
+            <div class="hero-body">
+                <img src="./mapapsp/images/result3.png"/>
+                <h2 class="subtitle has-text-centered">
+                    Example demonstrates both <span class="textsc">MA-PaPSP</span> and <span class="textsc">PaPSP</span> reject the inputs.
+                </h2>
+            </div>
+
+            <div class="hero-body">
+                <img src="./mapapsp/images/result4.png"/>
+                <h2 class="subtitle has-text-centered">
+                    Example demonstrates <span class="textsc">MA-PaPSP</span> accepts and <span class="textsc">PaPSP</span> rejects the inputs.
+                </h2>
+            </div>
+
+        </div>
+
+        <div class="column is-centered has-text-centered">
+            <h2 class="title is-3">Institutions</h2>
+            <div class="hero-body">
+                <img src="./mapapsp/images/insti.png"/>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container is-max-desktop content">
+        <h2 class="title">Disclaimer</h2>                     
+        MA-PaPSP is purely a research project. Currently, we have no plans to incorporate MA-PaPSP into a product or expand access to the public. We will also put United States AI principles into practice when further developing the models.
+
+        In our research paper, we account for the ethical concerns associated with language generation research. To mitigate issues associated with testing data, we have implemented a rigorous filtering process to purge our data of inappropriate content, such as explicit imagery and offensive language, to minimize the likelihood of generating inappropriate content.
+    </div>
+</section>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{sarkar2026leveraging,
+  author = {Sarkar, Aditya and Li, Yi and Cheng, Jiacheng and Mishra, Shlok and Vasconcelos, Nuno},
+  journal = {arXiv preprint arXiv:2601.22570},
+  title = {Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction},
+  url = {https://arxiv.org/abs/2601.22570},
+  year = {2026}
+}</code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <!--     <div class="content has-text-centered">
+              <a class="icon-link"
+                 href="./mapapsp/videos/nerfies_paper.pdf">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+              <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+                <i class="fab fa-github"></i>
+              </a>
+            </div> -->
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        We thank the authors of <a href="https://github.com/nerfies/nerfies.github.io"><span
+                            class="textsc">Nerfies</span></a> that kindly open sourced the template of this website. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

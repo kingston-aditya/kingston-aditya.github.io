@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Aditya (Sighnin) Sarkar - いらっしゃいませ ![](images/por.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
+# Aditya (Spencer) Sarkar - いらっしゃいませ ![](images/por.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 
 :fontawesome-solid-building: Office: [8125 Paint Branch Dr, College Park, MD 20742](https://maps.app.goo.gl/xWjQWVVnpTVoWaQw8)
 
@@ -22,7 +22,7 @@ In my free time, I document my readings on my blog __Mind Unknotted__. Feel free
 
 Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering from [Indian Institute of Technology (IIT) Mandi](https://www.iitmandi.ac.in/), where I was advised by Prof. [Sreelakshmi Manjunath](https://faculty.iitmandi.ac.in/~sreelakshmi/) and received the [President of India Gold Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation) and [Institute Silver Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation). My undergraduate studies were supported by the __National Talent Search__ and __Walmart Predoc__ fellowships.
 
-<span style="color: red;">I am looking for research internships for fall and spring. Please reach out if you're interested in my profile.</span>
+<span style="color: red;">I am looking for research internships for summer '26. Please reach out if you're interested in my profile.</span>
 
 ## News
 

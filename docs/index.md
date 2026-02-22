@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Aditya (Jack) Sarkar - いらっしゃいませ ![](images/por.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
+# Aditya (Sighnin) Sarkar - いらっしゃいませ ![](images/por.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 
 :fontawesome-solid-building: Office: [8125 Paint Branch Dr, College Park, MD 20742](https://maps.app.goo.gl/xWjQWVVnpTVoWaQw8)
 
@@ -12,11 +12,11 @@ hide:
 
 :fontawesome-solid-inbox: Personal Email: [asnov2k [at] gmail [dot] com](mailto:asnov2k@gmail.com)
 
-<span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-github:](https://github.com/kingston-aditya) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073) [:fontawesome-solid-chalkboard-user:]()</span>
+<span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-github:](https://github.com/kingston-aditya) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073) [:fontawesome-solid-chalkboard-user:](SanDiego_Aditya_CV7.pdf)</span>
 
 <br>
 
-I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), primarily advised by Prof. [Ang Li](https://www.ang-li.com/) and informally co-advised by Prof. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/). I research computer vision models, specifically video-centric multimodal LLMs and diffusion models. Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/) and Prof. [David Jacobs](https://www.cs.umd.edu/~djacobs/). 
+I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), primarily advised by Prof. [Ang Li](https://www.ang-li.com/) and informally co-advised by Prof. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/). I research computer vision models, specifically video-centric LLMs and diffusion models. Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/) and Prof. [David Jacobs](https://www.cs.umd.edu/~djacobs/). 
 
 In my free time, I document my readings on my blog __Mind Unknotted__. Feel free to check it out [here](blog.md). 
 
@@ -28,7 +28,7 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
 === "2026"
     
-    [01/2026] MA-PaPSP got accepted at ICLR '26. See you in Rio de Janeiro, Brazil.
+    [01/2026] :party_popper: MA-PaPSP got accepted at ICLR '26. See you in Rio de Janeiro, Brazil.
 
 === "2024"
 
@@ -36,23 +36,22 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering.
 
-## Publications & Preprints
+## Publications & Ongoing Projects
 <sup>\*</sup> denotes equal contribution
 
-=== "Selected Publications"
+=== "Publications"
 
-    ####Quantifying symbol binding capability of Audio-Visual LLMs
+    ####Analyzing how Video-LLMs understand symbols in Multiple Choice Questions
 
-    <u>Aditya Sarkar</u>, [Shwai He](https://shwai-he.github.io/),  [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Ang Li](https://www.ang-li.com/).
+    <u>Aditya Sarkar</u>, [Shwai He](https://shwai-he.github.io/), [Jiacheng Cheng](), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Ang Li](https://www.ang-li.com/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
 
     Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 
-    ####Keeping Them HONEST: A Framework for Detailed Understanding of How Video Complexity Affects Video-LLM Performance
+    ####Quantifying the Impact of Temporal Dimensions on Video Complexity.
 
-    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/),  [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
+    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Zihao Wang](), [V.N. Sai](), [Aashu Singh](), [Shlok Mishra](), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
     
     Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
-
 
     ####Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction![Image title](images/papsp_pipe.png){align=right style="height:8em; border-radius: 1em;"}
 

@@ -16,7 +16,7 @@ hide:
 
 <br>
 
-I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), where I'm primarily working with Prof. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/) and Prof. [David Jacobs](https://www.cs.umd.edu/~djacobs/). I research computer vision models, specifically temporal understanding autoregressive and diffusion LLMs, with their applications to world modeling. Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [V.N. Sai]() and [Zihao Wang](https://www.linkedin.com/in/-zihao-wang) from Meta AI.
+I am a second-year Ph.D. student at the [University of Maryland](https://www.umiacs.umd.edu/), where I am engaged in research collaborations with Profs. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/) and [David Jacobs](https://www.cs.umd.edu/~djacobs/). I research computer vision models, specifically temporal understanding autoregressive and diffusion LLMs, with their applications to world modeling. Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [V.N. Sai]() and [Zihao Wang](https://www.linkedin.com/in/-zihao-wang) from Meta AI.
 
 In my free time, I document my readings on my blog __Mind Unknotted__. Feel free to check it out [here](blog.md). 
 

@@ -12,11 +12,11 @@ hide:
 
 :fontawesome-solid-inbox: Personal Email: [asnov2k [at] gmail [dot] com](mailto:asnov2k@gmail.com)
 
-<span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-github:](https://github.com/kingston-aditya) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073) [:fontawesome-solid-chalkboard-user:](SanDiego_Aditya_CV7.pdf)</span>
+<span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-github:](https://github.com/kingston-aditya) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073) [:fontawesome-solid-chalkboard-user:](SanDiego_Aditya_CV8.pdf)</span>
 
 <br>
 
-I am a second-year Ph.D. student at the [University of Maryland](https://www.umiacs.umd.edu/), where I am engaged in research collaborations with Profs. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/) and [David Jacobs](https://www.cs.umd.edu/~djacobs/). I research computer vision models, specifically temporal understanding autoregressive and diffusion LLMs, with their applications to world modeling. Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [V.N. Sai]() and [Zihao Wang](https://www.linkedin.com/in/-zihao-wang) from Meta AI.
+I am a second-year Ph.D. student at the [University of Maryland](https://www.umiacs.umd.edu/), where I am engaged in research collaborations with Profs. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/) and [David Jacobs](https://www.cs.umd.edu/~djacobs/). I research computer vision models, specifically temporal understanding in autoregressive and diffusion LLMs, with their applications to world modeling. Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [V.N. Sai]() and [Zihao Wang](https://www.linkedin.com/in/-zihao-wang) from Meta AI.
 
 In my free time, I document my readings on my blog __Mind Unknotted__. Feel free to check it out [here](blog.md). 
 
@@ -57,7 +57,7 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
     <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
     
-    ICLR 2026 &nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](mapapsp.html)
+    ICLR 2026 &nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/pdf/2601.22570)&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](mapapsp.html)
 
 ## Education
 

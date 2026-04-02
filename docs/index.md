@@ -6,7 +6,7 @@ hide:
 
 # Aditya (Spencer) Sarkar - いらっしゃいませ ![](images/por.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 
-:fontawesome-solid-building: Office: [8125 Paint Branch Dr, College Park, MD 20742](https://maps.app.goo.gl/xWjQWVVnpTVoWaQw8)
+:fontawesome-solid-building: Office: [4112-D15, Brendan Iribe Center, 8125 Paint Branch Dr, College Park, MD 20742](https://maps.app.goo.gl/xWjQWVVnpTVoWaQw8)
 
 :fontawesome-solid-inbox: Work Email: [asarkar6 [at] umd [dot] edu](mailto:asarkar6@umd.edu)
 
@@ -16,11 +16,11 @@ hide:
 
 <br>
 
-I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), primarily advised by Prof. [Ang Li](https://www.ang-li.com/) and informally co-advised by Prof. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/). I research computer vision models, specifically video-centric LLMs and diffusion models. Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/) and Prof. [David Jacobs](https://www.cs.umd.edu/~djacobs/). 
+I am a second-year Ph.D. student at [University of Maryland](https://www.umiacs.umd.edu/), where I'm primarily working with Prof. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/) and Prof. [David Jacobs](https://www.cs.umd.edu/~djacobs/). I research computer vision models, specifically temporal understanding autoregressive and diffusion LLMs, with their applications to world modeling. Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [V.N. Sai]() and [Zihao Wang](https://www.linkedin.com/in/-zihao-wang) from Meta AI.
 
 In my free time, I document my readings on my blog __Mind Unknotted__. Feel free to check it out [here](blog.md). 
 
-Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering from [Indian Institute of Technology (IIT) Mandi](https://www.iitmandi.ac.in/), where I was advised by Prof. [Sreelakshmi Manjunath](https://faculty.iitmandi.ac.in/~sreelakshmi/) and received the [President of India Gold Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation) and [Institute Silver Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation). My undergraduate studies were supported by the __National Talent Search__ and __Walmart Predoc__ fellowships.
+Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering from [Indian Institute of Technology (IIT) Mandi](https://www.iitmandi.ac.in/), where I was advised by Prof. [Sreelakshmi Manjunath](https://faculty.iitmandi.ac.in/~sreelakshmi/) and received the [President of India Gold Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation) (the highest distinction award) and [Institute Silver Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation). My undergraduate studies were fully supported by the __National Talent Search__ and __Walmart Predoc__ fellowships.
 
 <span style="color: red;">I am looking for research internships for summer '26. Please reach out if you're interested in my profile.</span>
 

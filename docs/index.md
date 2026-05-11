@@ -41,15 +41,15 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
 === "Publications"
 
-    ####Analyzing how Video-LLMs understand symbols in Multiple Choice Questions
+    ####Masked Visual Fine-Tuning for Encoder-based Diffusion Models.
 
-    <u>Aditya Sarkar</u>, [Shwai He](https://shwai-he.github.io/), [Jiacheng Cheng](), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Ang Li](https://www.ang-li.com/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
+    <u>Aditya Sarkar</u>, [Shwai He](https://shwai-he.github.io/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Ang Li](https://www.ang-li.com/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
 
     Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 
-    ####Quantifying the Impact of Temporal Dimensions on Video Complexity.
+    ####An Attribute-Based Measure of Video Complexity.
 
-    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Zihao Wang](), [V.N. Sai](), [Aashu Singh](), [Shlok Mishra](), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
+    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Zihao Wang](), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [V.N. Sai](), [Aashu Singh](), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
     
     Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 

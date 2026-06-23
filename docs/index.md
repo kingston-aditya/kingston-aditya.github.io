@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Aditya (Spencer) Sarkar - いらっしゃいませ ![](images/por.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
+# Aditya Sarkar ![](images/por.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 
 :fontawesome-solid-building: Office: [4112-D15, Brendan Iribe Center, 8125 Paint Branch Dr, College Park, MD 20742](https://maps.app.goo.gl/xWjQWVVnpTVoWaQw8)
 
@@ -16,15 +16,13 @@ hide:
 
 <br>
 
-I am a second-year Ph.D. student at the [University of Maryland](https://www.umiacs.umd.edu/), where I am engaged in research collaborations with Profs. [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/) and [David Jacobs](https://www.cs.umd.edu/~djacobs/). I research computer vision models, specifically temporal understanding in autoregressive and diffusion LLMs, with their applications to world modeling. Further, I closely collaborate with [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [V.N. Sai]() and [Zihao Wang](https://www.linkedin.com/in/-zihao-wang) from Meta AI.
+Hello! I am a second-year Ph.D. student at the [__University of Maryland__](https://www.umiacs.umd.edu/), where I am engaged in research collaborations with Profs. [__Nuno Vasconcelos__](http://www.svcl.ucsd.edu/people/nuno/) and [__David Jacobs__](https://www.cs.umd.edu/~djacobs/). My research aims to build better computer vision algorithms, specifically for temporal understanding in LLMs, action and world modeling. I am grateful to be supported by University of Maryland __Graduate Fellowship__.
 
 In my free time, I document my readings on my blog __Mind Unknotted__. Feel free to check it out [here](blog.md). 
 
-Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering from [Indian Institute of Technology (IIT) Mandi](https://www.iitmandi.ac.in/), where I was advised by Prof. [Sreelakshmi Manjunath](https://faculty.iitmandi.ac.in/~sreelakshmi/) and received the [President of India Gold Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation) (the highest distinction award) and [Institute Silver Medal](https://academics.iitmandi.ac.in/convocations/11thconvocation). My undergraduate studies were fully supported by the __National Talent Search__ and __Walmart Predoc__ fellowships.
-
 <span style="color: red;">I am looking for research internships for summer '26. Please reach out if you're interested in my profile.</span>
 
-## News
+<!-- ## News
 
 === "2026"
     
@@ -34,45 +32,27 @@ Before my Ph.D., I obtained my bachelor’s degree in Electrical Engineering fro
 
     [09/2024] :party_popper: Excited to start my Ph.D. at [University of Maryland](https://umd.edu/) advised by Prof. [Ang Li](https://www.ang-li.com/).
 
-    [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering.
+    [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
-## Publications & Ongoing Projects
+## Publications
 <sup>\*</sup> denotes equal contribution
 
-=== "Publications"
+<!-- === "Publications" -->
 
-    ####Masked Visual Fine-Tuning for Encoder-based Diffusion Models.
+####Masked Visual Fine-Tuning for Encoder-based Diffusion Models.
 
-    <u>Aditya Sarkar</u>, [Shwai He](https://shwai-he.github.io/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Ang Li](https://www.ang-li.com/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
+<u>Aditya Sarkar</u>, [Shwai He](https://shwai-he.github.io/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Ang Li](https://www.ang-li.com/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
 
-    Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
+Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 
-    ####An Attribute-Based Measure of Video Complexity.
+####An Attribute-Based Measure of Video Complexity.
 
-    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Zihao Wang](), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [V.N. Sai](), [Aashu Singh](), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
-    
-    Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
+<u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Zihao Wang](), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [V.N. Sai](), [Aashu Singh](), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
 
-    ####Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction![Image title](images/papsp_pipe.png){align=right style="height:8em; border-radius: 1em;"}
+Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 
-    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
-    
-    ICLR 2026 &nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/pdf/2601.22570)&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](mapapsp.html)
+####Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction![Image title](images/papsp_pipe.png){align=right style="height:8em; border-radius: 1em;"}
 
-## Education
+<u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
 
-### University of Maryland College Park![Image title](images/umd.png){ align=right style="height:6em; border-radius: 0.5em;"}
-
-Aug. 2024 -- Present
-
-**Ph.D. in Computer Vision**, advised by Prof. [Ang Li](https://www.ang-li.com/).
-
-### Indian Institute of Technology Mandi![Image title](images/iitmandi.jpg){ align=right style="height:6em; border-radius: 0.5em;"}
-
-Sept. 2019 -- June 2023
-
-**B.Tech. in Electrical Engineering (President of India Gold Medal Awardee)**, advised by Prof. [Sreelakshmi Manjunath](https://faculty.iitmandi.ac.in/~sreelakshmi/)
-
-## Academic Service
-
-Reviewer in CVPR'26.
+ICLR 2026 &nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/pdf/2601.22570)&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](mapapsp.html)

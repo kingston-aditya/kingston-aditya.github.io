@@ -1,5 +1,5 @@
-site_name: "Spencer's Blog 'n' Homepage"
-site_author: 'Aditya (Spencer) Sarkar'
+site_name: "Blog 'n' Homepage"
+site_author: 'Aditya Sarkar'
 copyright: '&copy; Aditya Sarkar'
 theme:
   name: material
@@ -56,6 +56,6 @@ extra_css:
 nav:
   - Home: index.md
   - Blog: blog.md
-  - Retrieval: posts/2026-02-05-retrieval.md
-  - Predicting: posts/2026-02-10-retrieval.md
+  - Retrieval: blog/2026-02-05-retrieval.md
+  - Predicting: blog/2026-02-10-retrieval.md
   - MA-PaPSP: mapapsp.html

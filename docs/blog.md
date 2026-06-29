@@ -10,7 +10,7 @@ __Mind-Unknotted__ is my personal corner of the internet. Since 2026, I’ve bee
 
 <span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-github:](https://github.com/kingston-aditya) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073)</span>
 
-<a href="../posts/2026-02-05-retrieval" style="text-decoration: none; color: inherit;">
+<a href="../blog/2026-02-05-retrieval" style="text-decoration: none; color: inherit;">
 
 <div class="blog-card">
   <h2>Similar instances enhances rejection.</h2>
@@ -22,7 +22,7 @@ __Mind-Unknotted__ is my personal corner of the internet. Since 2026, I’ve bee
 
 </a>
 
-<a href="../posts/2026-02-10-predicting" style="text-decoration: none; color: inherit;">
+<a href="../blog/2026-02-10-predicting" style="text-decoration: none; color: inherit;">
 
 <div class="blog-card">
   <h2>Disentangling a video's complexity.</h2>

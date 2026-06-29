@@ -56,3 +56,14 @@ Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid
 <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](http://www.svcl.ucsd.edu/people/jiacheng/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
 
 ICLR 2026 &nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/pdf/2601.22570)&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](mapapsp.html)
+
+## Blog
+
+####(April 30, 2026) - Hallucination detection versus Selective prediction.
+
+####(April 30, 2026) - Quantifying video complexity using Vector Quantization.
+
+<br>
+<br>
+
+

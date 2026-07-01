@@ -10,6 +10,10 @@
   -webkit-backdrop-filter: blur(12px) saturate(180%);
 }
 
+.md-main__inner {
+    padding-top: 30px !important;
+}
+
 .md-grid {
   max-width: 1280px; 
 }
@@ -19,13 +23,33 @@
   --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
 }
 
+.tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > label:nth-child(1),
+.tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > label:nth-child(2),
+.tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > label:nth-child(3),
+.tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > label:nth-child(4) {
+    background-color: #2b0080 !important; /* Your deep purple hex */
+    color: #ffffff !important;
+    border-color: #2b0080 !important;
+}
+
+/* Base style for unselected pills */
+.tabbed-labels label {
+    border: 1px solid #e0e0e0;
+    border-radius: 20px !important; /* Forces rounded pill style */
+    padding: 6px 16px !important;
+    margin-right: 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
 [data-md-page="blog"] .md-main {
   background-color: #cccccc;
 }
 
 .blog-card {
   background-color: #ffffff;
-  border: 3px solid #1a1a1a;
+  border: 1px solid #1a1a1a;
   border-radius: 12px;
   padding: 24px 28px;
   margin: 24px 0;

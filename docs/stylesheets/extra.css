@@ -1,3 +1,15 @@
+.md-header {
+  position: fixed; /* or position: sticky; */
+  top: 0;
+  width: 100%;
+  z-index: 100; /* Makes sure it stays on top of page content */
+  
+  /* Your liquid glass styling */
+  background-color: rgba(255, 255, 255, 0.6) !important; 
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
 .md-grid {
   max-width: 1280px; 
 }

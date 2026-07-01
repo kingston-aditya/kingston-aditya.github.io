@@ -41,7 +41,7 @@ In my free time, I document my readings on my blog __Mind Unknotted__. Feel free
 
 ####Masked Visual Fine-Tuning for Encoder-based Diffusion Models.
 
-<u>Aditya Sarkar</u>, [Shwai He](https://shwai-he.github.io/), [Jiacheng Cheng](), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Ang Li](https://www.ang-li.com/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
+<u>Aditya Sarkar</u>, [Shwai He](https://shwai-he.github.io/), [Jiacheng Cheng](https://jiacheng-cheng.github.io/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Ang Li](https://www.ang-li.com/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
 
 Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
 
@@ -49,13 +49,13 @@ Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid
 
 <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Z. Wang](), [J. Cheng](https://jiacheng-cheng.github.io/), [V.N. Sai](), [Aashu Singh](), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
 
-Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
+Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Blog]()&nbsp;&nbsp;[:fontawesome-brands-github: Code](https://github.com/kingston-aditya/VideoABC)
 
 ####Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction![Image title](images/papsp_pipe.png){align=right style="height:8em; border-radius: 1em;"}
 
 <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](https://jiacheng-cheng.github.io/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
 
-ICLR 2026 &nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/pdf/2601.22570)&nbsp;&nbsp;[:fontawesome-solid-link: Project Page](mapapsp.html)
+ICLR 2026 &nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/pdf/2601.22570)&nbsp;&nbsp;[:fontawesome-solid-link: Blog](mapapsp.html)&nbsp;&nbsp;[:fontawesome-brands-github: Code](https://github.com/kingston-aditya/MA-PaPSP)
 
 ## Blog
 

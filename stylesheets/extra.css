@@ -1,0 +1,269 @@
+.md-header {
+  position: fixed; /* or position: sticky; */
+  top: 0;
+  width: 100%;
+  z-index: 100; /* Makes sure it stays on top of page content */
+  
+  /* Your liquid glass styling */
+  background-color: rgba(255, 255, 255, 0.6) !important; 
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+.md-main__inner {
+    padding-top: 30px !important;
+}
+
+.md-grid {
+  max-width: 1280px; 
+}
+
+.md-content {
+  --md-typeset-color:                  hsla(272, 91%, 29%, 1);
+  --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
+}
+
+[data-md-page="blog"] .md-main {
+  background-color: #cccccc;
+}
+
+.pub-filter-container {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 16px 0 20px 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.filter-label {
+  font-size: 0.85em !important;
+  font-weight: 700 !important;      /* Makes it bold/semi-bold */
+  color: #555555 !important;        /* Crisp dark grey */
+  letter-spacing: 0.5px !important; /* Adds subtle tracking space */
+  margin-right: 4px !important;     /* Creates a little extra room before first pill */
+  text-transform: uppercase !important;
+}
+
+/* The animation sequence: Normal -> Shrink -> Grow -> Normal */
+@keyframes shrinkThenGrow {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.92); /* Shrinks down smoothly */
+  }
+  70% {
+    transform: scale(0.92); /* Pops open slightly larger */
+  }
+  100% {
+    transform: scale(1); /* Returns to rest */
+  }
+}
+
+/* This class triggers via JavaScript when clicked */
+.box-clicked {
+  /* 0.4s (400ms) controls the overall speed. Change to 0.6s to make it even slower */
+  animation: shrinkThenGrow 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
+  z-index: 10; /* Ensures the animating box stays layered cleanly on top */
+}
+
+/* Base style adjustment for the parent box to keep transitions elegant */
+.moving-box {
+  transition: transform 0.2s ease;
+}
+
+.pub-pill {
+  /* Force them to display as standalone bounded blocks */
+  display: inline-block !important;
+  visibility: visible !important;
+  
+  /* Reset background and explicitly paint a thin border */
+  background-color: #ffffff !important; 
+  border: 1px solid #4a154b !important; 
+  border-radius: 14px !important;
+  
+  /* Compact bounding box padding dimensions */
+  padding: 4px 12px !important;
+  font-size: 0.78em !important;
+  font-weight: 500 !important;
+  font-family: inherit !important;
+  color: #4a154b !important;
+  
+  /* Interactive properties */
+  cursor: pointer !important;
+  outline: none !important;
+  margin-right: 4px !important;
+  line-height: 1.3 !important;
+  text-transform: none !important;
+}
+
+.pub-pill:hover {
+  background-color: rgba(74, 21, 75, 0.08) !important;
+  color: #4a154b !important;
+}
+
+/* Active solid purple pill state */
+.pub-pill.active {
+  background-color: #4a154b !important; 
+  color: #ffffff !important;
+  border-color: #4a154b !important;
+  font-weight: bold !important;
+}
+
+.pub-btn-outline {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;                 /* Space between the icon and text */
+  background-color: transparent !important;
+  color: #4a154b !important;           /* Your signature deep purple color */
+  border: 1px solid #4a154b !important;/* Thin purple boundary ring */
+  border-radius: 6px !important;       /* Slightly rounded sharp corner look */
+  padding: 4px 12px !important;        /* Padding box layout match */
+  font-size: 0.82em !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease-in-out !important;
+  cursor: pointer !important;
+}
+
+/* Smooth hover interaction */
+.pub-btn-outline:hover {
+  background-color: #4a154b !important; /* Flips to solid purple background on hover */
+  color: #ffffff !important;            /* Text turns white on hover */
+}
+
+/* Adjust icon sizes slightly to stay balanced with text */
+.pub-btn-outline i {
+  font-size: 0.9em !important;
+}
+
+/* Tactile shrink effect when clicking on topic pills */
+.pub-pill:active {
+  transform: scale(0.95) !important; /* Shrinks the button to 95% of its size */
+  transition: transform 0.05s ease !important; /* Makes the snap down instant */
+}
+
+/* Tactile shrink effect when clicking on Blog, Code, or BibTeX buttons */
+.pub-btn-outline:active {
+  transform: scale(0.95) !important;
+  transition: transform 0.05s ease !important;
+}
+
+.box-title-link {
+  color: inherit !important;        /* Inherits the black/dark text color from the h3 */
+  text-decoration: none !important; /* Removes the default underline */
+}
+
+/* Optional: Adds a subtle underline when hovering over the link */
+.box-title-link:hover {
+  text-decoration: underline !important;
+  color: #4a154b !important;        /* Optional: shifts to your purple theme color on hover */
+}
+
+/* Outer wrapper that acts as the window masking the overflow */
+.carousel-container {
+  width: 100%;
+  overflow-x: auto;         /* Enables horizontal scrolling */
+  scroll-behavior: smooth;  /* Forces smooth momentum animations */
+  scroll-snap-type: x mandatory; /* The magic link: locks boxes into place when scrolling */
+  padding: 20px 0;
+}
+
+/* Hide default browser scrollbars for a cleaner, floating look */
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+.carousel-container {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+/* The long horizontal train holding all the boxes */
+.carousel-track {
+  display: flex;
+  gap: 20px; /* Uniform spacing between your cards */
+  padding: 0 10px;
+}
+
+/* Individual Card Styling */
+.moving-box {
+  /* Dynamic calculation: (100% of container - gaps) divided by 3 cards */
+  flex: 0 0 calc((100% - 40px) / 3); 
+  scroll-snap-align: start;          /* Tells the card where to snap cleanly */
+  
+  /* Visual Requirements */
+  background-color: #ffffff;
+  border: 1px solid #2b0080;         /* Your theme's deep purple border */
+  border-radius: 16px;               /* Matches your layout's rounded corners */
+  overflow: hidden;                  /* Ensures images don't clip outside rounded corners */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Top Part: Image styling */
+.box-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;                 /* Crop and scale nicely automatically */
+  display: block;
+}
+
+/* Bottom Part: Text layout */
+.box-text {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-text h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.15em;
+  color: #1a1a1a;
+}
+
+.box-text p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Responsive fix: On tablets/phones, scale down to show 1 or 2 cards instead of 3 */
+@media (max-width: 900px) {
+  .moving-box {
+    flex: 0 0 calc((100% - 20px) / 2); /* 2 cards visible */
+  }
+}
+@media (max-width: 600px) {
+  .moving-box {
+    flex: 0 0 100%;                     /* 1 card visible */
+  }
+}
+
+.blog-card {
+  background-color: #ffffff;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 24px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Card title */
+.blog-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Card meta info */
+.blog-card .meta {
+  color: #777;
+  font-size: 0.9em;
+  margin-top: 12px;
+}

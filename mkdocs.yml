@@ -55,7 +55,6 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Blog: blog.md
-  - Retrieval: blog/2026-02-05-retrieval.md
-  - Predicting: blog/2026-02-10-retrieval.md
+  - Retrieval: 2026-02-05-retrieval.md
+  - Predicting: 2026-02-10-retrieval.md
   - MA-PaPSP: mapapsp.html

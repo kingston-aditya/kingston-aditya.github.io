@@ -18,8 +18,6 @@ hide:
 
 Hello! I am a second-year Ph.D. student at the [__University of Maryland__](https://www.umiacs.umd.edu/), where I am engaged in research collaborations with Profs. [__Nuno Vasconcelos__](http://www.svcl.ucsd.edu/people/nuno/) and [__David Jacobs__](https://www.cs.umd.edu/~djacobs/). My research aims to build better computer vision algorithms, specifically for temporal understanding in LLMs, action and world modeling. I am grateful to be supported by University of Maryland __Graduate Fellowship__.
 
-In my free time, I document my readings on my blog __Mind Unknotted__. Feel free to check it out [here](blog.md). 
-
 <span style="color: red;">I am looking for research internships for summer '26. Please reach out if you're interested in my profile.</span>
 
 <!-- ## News
@@ -76,8 +74,50 @@ In my free time, I document my readings on my blog __Mind Unknotted__. Feel free
 
 ## Blog
 
-####(June 14, 2026) - Hallucination detection versus Selective prediction.
+<div class="carousel-container">
+  <div class="carousel-track">
+    
+<div class="moving-box">
+  <div class="box-image">
+    <img src="https://via.placeholder.com/400x250" alt="Project Image">
+  </div>
+  <div class="box-text">
+    <h3>Compute Optimal Tokenization</h3>
+    <p>A deep dive into cross-modal latent alignment strategies for diffusion backbones.</p>
+  </div>
+</div>
 
-####(April 30, 2026) - Quantifying video complexity using Vector Quantization.
+<div class="moving-box">
+  <div class="box-image">
+    <img src="https://via.placeholder.com/400x250" alt="Project Image">
+  </div>
+  <div class="box-text">
+    <h3>Video Complexity Measures</h3>
+    <p>Analyzing attribute-based metrics to map frame-by-frame structural density.</p>
+  </div>
+</div>
+
+<div class="moving-box">
+  <div class="box-image">
+    <img src="https://via.placeholder.com/400x250" alt="Project Image">
+  </div>
+  <div class="box-text">
+    <h3>Masked Visual Fine-Tuning</h3>
+    <p>Efficient tuning mechanisms keeping fundamental representations completely frozen.</p>
+  </div>
+</div>
+
+<div class="moving-box">
+  <div class="box-image">
+    <img src="https://via.placeholder.com/400x250" alt="Project Image">
+  </div>
+  <div class="box-text">
+    <h3>Generative Pre-training</h3>
+    <p>Scaling data generation pipelines using autoregressive multi-modal anchors.</p>
+  </div>
+</div>
+
+  </div>
+</div>
 
 <br>

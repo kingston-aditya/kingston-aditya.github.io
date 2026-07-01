@@ -23,28 +23,114 @@
   --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
 }
 
-.tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > label:nth-child(1),
-.tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > label:nth-child(2),
-.tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > label:nth-child(3),
-.tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > label:nth-child(4) {
-    background-color: #2b0080 !important; /* Your deep purple hex */
-    color: #ffffff !important;
-    border-color: #2b0080 !important;
+/* 1. Shrink the size of the pill boxes */
+.tabbed-labels label {
+    padding: 4px 12px !important;    /* Reduced vertical and horizontal padding */
+    font-size: 0.85em !important;    /* Slightly smaller font to keep it compact */
+    margin-right: 6px !important;    /* Tighter horizontal gaps between buttons */
+    border-radius: 16px !important;  /* Adjusted corner radius for smaller size */
 }
 
-/* Base style for unselected pills */
-.tabbed-labels label {
-    border: 1px solid #e0e0e0;
-    border-radius: 20px !important; /* Forces rounded pill style */
-    padding: 6px 16px !important;
-    margin-right: 8px;
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: all 0.2s ease;
+/* 2. Remove the line running beneath the active tab and container */
+.tabbed-set {
+    border-bottom: none !important;  /* Suppresses the main layout baseline divider */
+}
+
+.tabbed-labels {
+    border-bottom: none !important;  /* Removes the divider directly beneath labels */
+    box-shadow: none !important;     /* Removes theme-specific bottom highlights */
+}
+
+/* Strips out the active color accent line (the orange indicator) */
+.tabbed-set > input:checked ~ .tabbed-labels label {
+    border-bottom-color: transparent !important; 
 }
 
 [data-md-page="blog"] .md-main {
   background-color: #cccccc;
+}
+
+/* Outer wrapper that acts as the window masking the overflow */
+.carousel-container {
+  width: 100%;
+  overflow-x: auto;         /* Enables horizontal scrolling */
+  scroll-behavior: smooth;  /* Forces smooth momentum animations */
+  scroll-snap-type: x mandatory; /* The magic link: locks boxes into place when scrolling */
+  padding: 20px 0;
+}
+
+/* Hide default browser scrollbars for a cleaner, floating look */
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+.carousel-container {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+/* The long horizontal train holding all the boxes */
+.carousel-track {
+  display: flex;
+  gap: 20px; /* Uniform spacing between your cards */
+  padding: 0 10px;
+}
+
+/* Individual Card Styling */
+.moving-box {
+  /* Dynamic calculation: (100% of container - gaps) divided by 3 cards */
+  flex: 0 0 calc((100% - 40px) / 3); 
+  scroll-snap-align: start;          /* Tells the card where to snap cleanly */
+  
+  /* Visual Requirements */
+  background-color: #ffffff;
+  border: 3px solid #2b0080;         /* Your theme's deep purple border */
+  border-radius: 16px;               /* Matches your layout's rounded corners */
+  overflow: hidden;                  /* Ensures images don't clip outside rounded corners */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Top Part: Image styling */
+.box-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;                 /* Crop and scale nicely automatically */
+  display: block;
+}
+
+/* Bottom Part: Text layout */
+.box-text {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-text h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.15em;
+  color: #1a1a1a;
+}
+
+.box-text p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Responsive fix: On tablets/phones, scale down to show 1 or 2 cards instead of 3 */
+@media (max-width: 900px) {
+  .moving-box {
+    flex: 0 0 calc((100% - 20px) / 2); /* 2 cards visible */
+  }
+}
+@media (max-width: 600px) {
+  .moving-box {
+    flex: 0 0 100%;                     /* 1 card visible */
+  }
 }
 
 .blog-card {

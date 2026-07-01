@@ -31,10 +31,20 @@
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: wrap !important;
+  align-items: center !important;
   gap: 8px !important;
   margin: 16px 0 20px 0 !important;
   padding: 0 !important;
   border: none !important;
+}
+
+.filter-label {
+  font-size: 0.85em !important;
+  font-weight: 700 !important;      /* Makes it bold/semi-bold */
+  color: #555555 !important;        /* Crisp dark grey */
+  letter-spacing: 0.5px !important; /* Adds subtle tracking space */
+  margin-right: 4px !important;     /* Creates a little extra room before first pill */
+  text-transform: uppercase !important;
 }
 
 .pub-pill {
@@ -73,6 +83,56 @@
   color: #ffffff !important;
   border-color: #4a154b !important;
   font-weight: bold !important;
+}
+
+.pub-btn-outline {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;                 /* Space between the icon and text */
+  background-color: transparent !important;
+  color: #4a154b !important;           /* Your signature deep purple color */
+  border: 1px solid #4a154b !important;/* Thin purple boundary ring */
+  border-radius: 6px !important;       /* Slightly rounded sharp corner look */
+  padding: 4px 12px !important;        /* Padding box layout match */
+  font-size: 0.82em !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease-in-out !important;
+  cursor: pointer !important;
+}
+
+/* Smooth hover interaction */
+.pub-btn-outline:hover {
+  background-color: #4a154b !important; /* Flips to solid purple background on hover */
+  color: #ffffff !important;            /* Text turns white on hover */
+}
+
+/* Adjust icon sizes slightly to stay balanced with text */
+.pub-btn-outline i {
+  font-size: 0.9em !important;
+}
+
+/* Tactile shrink effect when clicking on topic pills */
+.pub-pill:active {
+  transform: scale(0.95) !important; /* Shrinks the button to 95% of its size */
+  transition: transform 0.05s ease !important; /* Makes the snap down instant */
+}
+
+/* Tactile shrink effect when clicking on Blog, Code, or BibTeX buttons */
+.pub-btn-outline:active {
+  transform: scale(0.95) !important;
+  transition: transform 0.05s ease !important;
+}
+
+.box-title-link {
+  color: inherit !important;        /* Inherits the black/dark text color from the h3 */
+  text-decoration: none !important; /* Removes the default underline */
+}
+
+/* Optional: Adds a subtle underline when hovering over the link */
+.box-title-link:hover {
+  text-decoration: underline !important;
+  color: #4a154b !important;        /* Optional: shifts to your purple theme color on hover */
 }
 
 /* Outer wrapper that acts as the window masking the overflow */

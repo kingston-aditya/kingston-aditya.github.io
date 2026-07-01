@@ -28,7 +28,7 @@
     display: flex !important;
     flex-direction: row !important;      /* Explicitly lines them up side-by-side */
     flex-wrap: wrap !important;          /* Allows wrapping gracefully on narrow screens */
-    gap: 8px !important;                 /* Horizontal gap between pills */
+    gap: 6px !important;                 /* Horizontal gap between pills */
     border-bottom: none !important;      /* Strips theme line */
     margin: 16px 0 !important;
     padding: 0 !important;
@@ -37,12 +37,12 @@
 /* 2. Style the pill shapes cleanly */
 .tabbed-labels label {
     display: inline-block !important;    /* Keeps them as individual blocks */
-    padding: 6px 14px !important;        /* Padding inside the pills */
-    font-size: 0.85em !important;
+    padding: 1px 5px !important;        /* Padding inside the pills */
+    font-size: 2.85em !important;
     font-weight: 500 !important;
     color: #555555 !important;           /* Dark grey text */
     background-color: transparent !important;
-    border: 1px solid #dcdcdc !important;/* Light border */
+    border: 0px solid #dcdcdc !important;/* Light border */
     border-radius: 20px !important;      /* Pill shape */
     cursor: pointer !important;
     transition: background-color 0.2s ease !important;
@@ -63,6 +63,14 @@
     background-color: #2b0080 !important; /* Pure solid purple */
     color: #ffffff !important;           /* White text */
     border-color: #2b0080 !important;
+}
+
+.tabbed-set, 
+.tabbed-content,
+.md-typeset .tabbed-set {
+    border-bottom: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 [data-md-page="blog"] .md-main {

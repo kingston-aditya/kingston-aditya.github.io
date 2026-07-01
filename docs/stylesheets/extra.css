@@ -23,49 +23,46 @@
   --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
 }
 
-/* 1. Turn the tab headings into a flex container for buttons */
+/* 1. Force the container to be a strict horizontal row */
 .tabbed-labels {
     display: flex !important;
-    gap: 8px !important;                 /* Space between buttons */
-    border-bottom: none !important;      /* Removes the global black baseline */
-    margin-bottom: 16px !important;
+    flex-direction: row !important;      /* Explicitly lines them up side-by-side */
+    flex-wrap: wrap !important;          /* Allows wrapping gracefully on narrow screens */
+    gap: 8px !important;                 /* Horizontal gap between pills */
+    border-bottom: none !important;      /* Strips theme line */
+    margin: 16px 0 !important;
+    padding: 0 !important;
 }
 
-/* 2. Base style for ALL buttons (Visible by default) */
+/* 2. Style the pill shapes cleanly */
 .tabbed-labels label {
-    display: inline-flex !important;     /* Ensures buttons stay visible */
-    align-items: center;
-    justify-content: center;
-    padding: 6px 14px !important;        /* Compact layout padding */
+    display: inline-block !important;    /* Keeps them as individual blocks */
+    padding: 6px 14px !important;        /* Padding inside the pills */
     font-size: 0.85em !important;
     font-weight: 500 !important;
-    color: #555555 !important;           /* Neutral grey text for unselected state */
+    color: #555555 !important;           /* Dark grey text */
     background-color: transparent !important;
-    border: 1px solid #dcdcdc !important;/* Thin outer border */
-    border-radius: 20px !important;      /* Smooth pill shape */
+    border: 1px solid #dcdcdc !important;/* Light border */
+    border-radius: 20px !important;      /* Pill shape */
     cursor: pointer !important;
-    transition: all 0.2s ease-in-out !important;
+    transition: background-color 0.2s ease !important;
+    box-shadow: none !important;
 }
 
-/* 3. Hover state for a premium feel */
+/* 3. Hover adjustment */
 .tabbed-labels label:hover {
     background-color: #f5f5f5 !important;
-    color: #1a1a1a !important;
 }
 
-/* 4. Active/Selected Button Style (Solid Purple) */
+/* 4. Deep Purple Active State Selection Override */
 .tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > label:nth-child(1),
 .tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > label:nth-child(2),
 .tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > label:nth-child(3),
-.tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > label:nth-child(4) {
-    background-color: #2b0080 !important; /* Solid deep purple fill */
+.tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > label:nth-child(4),
+.tabbed-set > input:nth-child(5):checked ~ .tabbed-labels > label:nth-child(5) {
+    background-color: #2b0080 !important; /* Pure solid purple */
     color: #ffffff !important;           /* White text */
-    border-color: #2b0080 !important;    /* Purple border match */
-}
-
-/* 5. Safe override to hide the theme's old indicator underlines */
-.tabbed-labels label::after {
-    display: none !important;            /* Strips out default theme underlines */
+    border-color: #2b0080 !important;
 }
 
 [data-md-page="blog"] .md-main {

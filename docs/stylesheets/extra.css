@@ -23,27 +23,43 @@
   --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
 }
 
-/* 1. Shrink the size of the pill boxes */
-.tabbed-labels label {
-    padding: 4px 12px !important;    /* Reduced vertical and horizontal padding */
-    font-size: 0.85em !important;    /* Slightly smaller font to keep it compact */
-    margin-right: 6px !important;    /* Tighter horizontal gaps between buttons */
-    border-radius: 16px !important;  /* Adjusted corner radius for smaller size */
-}
-
-/* 2. Remove the line running beneath the active tab and container */
-.tabbed-set {
-    border-bottom: none !important;  /* Suppresses the main layout baseline divider */
-}
-
 .tabbed-labels {
-    border-bottom: none !important;  /* Removes the divider directly beneath labels */
-    box-shadow: none !important;     /* Removes theme-specific bottom highlights */
+    border-bottom: none !important;  /* Removes the thick black baseline */
+    display: flex !important;
+    gap: 8px !important;             /* Spacing between the buttons */
+    padding-bottom: 12px !important;
 }
 
-/* Strips out the active color accent line (the orange indicator) */
+/* 2. Base style for all unselected buttons */
+.tabbed-labels label {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 16px !important;  /* Rounded corners */
+    padding: 4px 12px !important;    /* Compact spacing inside the box */
+    font-size: 0.85em !important;    
+    color: #666666 !important;       /* Dark grey unselected text */
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    font-weight: normal !important;
+    border-bottom-color: #e0e0e0 !important; /* Forces uniform border sides */
+}
+
+/* 3. Highlighted active button style */
+.tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > label:nth-child(1),
+.tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > label:nth-child(2),
+.tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > label:nth-child(3),
+.tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > label:nth-child(4) {
+    background-color: #2b0080 !important;   /* Solid deep purple background */
+    color: #ffffff !important;               /* White text */
+    border-color: #2b0080 !important;
+    font-weight: bold !important;
+}
+
+/* 4. Completely disable any default active underlining accents from the theme */
+.tabbed-labels label::after,
 .tabbed-set > input:checked ~ .tabbed-labels label {
-    border-bottom-color: transparent !important; 
+    display: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
 
 [data-md-page="blog"] .md-main {
@@ -83,7 +99,7 @@
   
   /* Visual Requirements */
   background-color: #ffffff;
-  border: 3px solid #2b0080;         /* Your theme's deep purple border */
+  border: 1px solid #2b0080;         /* Your theme's deep purple border */
   border-radius: 16px;               /* Matches your layout's rounded corners */
   overflow: hidden;                  /* Ensures images don't clip outside rounded corners */
   display: flex;

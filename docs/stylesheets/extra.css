@@ -47,6 +47,34 @@
   text-transform: uppercase !important;
 }
 
+/* The animation sequence: Normal -> Shrink -> Grow -> Normal */
+@keyframes shrinkThenGrow {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.92); /* Shrinks down smoothly */
+  }
+  70% {
+    transform: scale(1.04); /* Pops open slightly larger */
+  }
+  100% {
+    transform: scale(1); /* Returns to rest */
+  }
+}
+
+/* This class triggers via JavaScript when clicked */
+.box-clicked {
+  /* 0.4s (400ms) controls the overall speed. Change to 0.6s to make it even slower */
+  animation: shrinkThenGrow 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
+  z-index: 10; /* Ensures the animating box stays layered cleanly on top */
+}
+
+/* Base style adjustment for the parent box to keep transitions elegant */
+.moving-box {
+  transition: transform 0.2s ease;
+}
+
 .pub-pill {
   /* Force them to display as standalone bounded blocks */
   display: inline-block !important;

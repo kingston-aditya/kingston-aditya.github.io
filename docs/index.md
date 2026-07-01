@@ -89,6 +89,23 @@ function filterPubs(topic) {
     }
   });
 }
+
+function animateAndGo(element, url, event) {
+  event.preventDefault(); // Stop the browser from leaving the page instantly
+  
+  // Find the parent moving-box element
+  const box = element.closest('.moving-box');
+  
+  if (box) {
+    // Add the bounce animation class
+    box.classList.add('box-clicked');
+    
+    // Wait 400ms for the smooth animation to finish, then navigate
+    setTimeout(() => {
+      window.location.href = url;
+    }, 400);
+  }
+}
 </script>
 
 
@@ -112,7 +129,11 @@ function filterPubs(topic) {
     <img src="images/rain_book.jpg" alt="Project Image">
   </div>
   <div class="box-text">
-    <h3><a href="2026-02-05-retrieval" class="box-title-link">Video Complexity Measures</a></h3>
+    <h3>
+      <a href="#" onclick="animateAndGo(this, '2026-02-05-retrieval', event)" class="box-title-link">
+      Video Complexity Measures
+    </a>
+    </h3>
     <p>Analyzing attribute-based metrics to map frame-by-frame structural density.</p>
   </div>
 </div>
@@ -122,7 +143,11 @@ function filterPubs(topic) {
     <img src="images/rain_book.jpg" alt="Project Image">
   </div>
   <div class="box-text">
-    <h3><a href="2026-02-10-predicting" class="box-title-link">Masked Visual Fine-Tuning</a></h3>
+    <h3>
+      <a href="#" onclick="animateAndGo(this, '2026-02-05-retrieval', event)" class="box-title-link">
+      Representation learning.
+    </a>
+    </h3>
     <p>Efficient tuning mechanisms keeping fundamental representations completely frozen.</p>
   </div>
 </div>

@@ -27,56 +27,52 @@
   background-color: #cccccc;
 }
 
-/* Container for the filter pills row */
 .pub-filter-container {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    gap: 6px !important;
-    margin: 14px 0 24px 0 !important;
-    padding: 0 !important;
-    border: none !important; /* Forces absolutely no structural lines */
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin: 16px 0 20px 0 !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
-/* Individual mini pill styling */
 .pub-pill {
-    display: inline-block !important;
-    padding: 2px 10px !important;
-    font-size: 0.75em !important;
-    font-weight: 500 !important;
-    color: #555555 !important;
-    background-color: transparent !important;
-    border: 1px solid #dcdcdc !important;
-    border-radius: 12px !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
-    line-height: 1.3 !important;
-    outline: none !important;
+  /* Force them to display as standalone bounded blocks */
+  display: inline-block !important;
+  visibility: visible !important;
+  
+  /* Reset background and explicitly paint a thin border */
+  background-color: #ffffff !important; 
+  border: 1px solid #4a154b !important; 
+  border-radius: 14px !important;
+  
+  /* Compact bounding box padding dimensions */
+  padding: 4px 12px !important;
+  font-size: 0.78em !important;
+  font-weight: 500 !important;
+  font-family: inherit !important;
+  color: #4a154b !important;
+  
+  /* Interactive properties */
+  cursor: pointer !important;
+  outline: none !important;
+  margin-right: 4px !important;
+  line-height: 1.3 !important;
+  text-transform: none !important;
 }
 
-/* Hover effect */
 .pub-pill:hover {
-    background-color: #f5f5f5 !important;
-    color: #1a1a1a !important;
+  background-color: rgba(74, 21, 75, 0.08) !important;
+  color: #4a154b !important;
 }
 
 /* Active solid purple pill state */
 .pub-pill.active {
-    background-color: #2b0080 !important;
-    color: #ffffff !important;
-    border-color: #2b0080 !important;
-    font-weight: bold !important;
-}
-
-/* Publication row padding spacing */
-.pub-item {
-    margin-bottom: 20px;
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(2px); }
-    to { opacity: 1; transform: translateY(0); }
+  background-color: #4a154b !important; 
+  color: #ffffff !important;
+  border-color: #4a154b !important;
+  font-weight: bold !important;
 }
 
 /* Outer wrapper that acts as the window masking the overflow */

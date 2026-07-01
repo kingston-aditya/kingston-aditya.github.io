@@ -36,9 +36,12 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 <sup>\*</sup> denotes equal contribution
 
 <div class="pub-filter-container">
-  <button class="pub-pill active" onclick="filterPubs('all')">All topics</button>
-  <button class="pub-pill" onclick="filterPubs('diffusion')">Diffusion Models</button>
-  <button class="pub-pill" onclick="filterPubs('language')">Language Modeling</button>
+  <button class="pub-pill active" onclick="filterPubs('all', event)">All topics</button>
+  <button class="pub-pill" onclick="filterPubs('tokenization', event)">Tokenization</button>
+  <button class="pub-pill" onclick="filterPubs('video', event)">Video Modeling</button>
+  <button class="pub-pill" onclick="filterPubs('multimodal', event)">Multi-modal ML</button>
+  <button class="pub-pill" onclick="filterPubs('diffusion', event)">Diffusion Models</button>
+  <button class="pub-pill" onclick="filterPubs('optimization', event)">Optimization</button>
 </div>
 
 <div class="pub-list">

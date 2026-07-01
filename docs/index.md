@@ -35,41 +35,46 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 ## Publications
 <sup>\*</sup> denotes equal contribution
 
-=== "All topics"
+<div class="pub-filter-container">
+  <button class="pub-pill active" onclick="filterPubs('all')">All topics</button>
+  <button class="pub-pill" onclick="filterPubs('diffusion')">Diffusion Models</button>
+  <button class="pub-pill" onclick="filterPubs('language')">Language Modeling</button>
+</div>
 
-    ####Masked Visual Fine-Tuning for Encoder-based Diffusion Models.
+<div class="pub-list">
 
-    <u>Aditya Sarkar</u>, [Shwai He](https://shwai-he.github.io/), [Jiacheng Cheng](https://jiacheng-cheng.github.io/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Ang Li](https://www.ang-li.com/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
+  <div class="pub-item" data-topic="diffusion">
+    <h4>Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h4>
+    <p><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
+    <p class="pub-links">Preprint&nbsp;&nbsp;<a href="#">arXiv</a>&nbsp;&nbsp;<a href="#">Project Page</a></p>
+  </div>
 
-    Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
+  <div class="pub-item" data-topic="language">
+    <h4>An Attribute-Based Measure of Video Complexity.</h4>
+    <p><u>Aditya Sarkar</u>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="#">Z. Wang</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="#">V.N. Sai</a>, <a href="#">Aashu Singh</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
+    <p class="pub-links">Preprint&nbsp;&nbsp;<a href="#">arXiv</a>&nbsp;&nbsp;<a href="#">Project Page</a></p>
+  </div>
 
-    ####An Attribute-Based Measure of Video Complexity.
+</div>
 
-    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Z. Wang](), [J. Cheng](https://jiacheng-cheng.github.io/), [V.N. Sai](), [Aashu Singh](), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
+<script>
+function filterPubs(topic) {
+  // Update active state on buttons
+  const buttons = document.querySelectorAll('.pub-pill');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
 
-    Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Blog]()&nbsp;&nbsp;[:fontawesome-brands-github: Code](https://github.com/kingston-aditya/VideoABC)
-
-    ####Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction![Image title](images/papsp_pipe.png){align=right style="height:8em; border-radius: 1em;"}
-
-    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Jiacheng Cheng](https://jiacheng-cheng.github.io/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
-
-    ICLR 2026 &nbsp;&nbsp;[:academicons-arxiv: arXiv](https://arxiv.org/pdf/2601.22570)&nbsp;&nbsp;[:fontawesome-solid-link: Blog](mapapsp.html)&nbsp;&nbsp;[:fontawesome-brands-github: Code](https://github.com/kingston-aditya/MA-PaPSP)
-
-=== "Diffusion Models"
-    
-    ####Masked Visual Fine-Tuning for Encoder-based Diffusion Models.
-    
-    <u>Aditya Sarkar</u>, [Shwai He](https://shwai-he.github.io/), [Jiacheng Cheng](https://jiacheng-cheng.github.io/), [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [Ang Li](https://www.ang-li.com/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
-    
-    Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Project Page]()
-
-=== "Language Modeling"
-
-    ####An Attribute-Based Measure of Video Complexity.
-
-    <u>Aditya Sarkar</u>, [Yi Li](http://www.svcl.ucsd.edu/people/yili/), [Z. Wang](), [J. Cheng](https://jiacheng-cheng.github.io/), [V.N. Sai](), [Aashu Singh](), [Shlok Mishra](https://shlokk.github.io/shlokmishra.github.io/), [David Jacobs](https://www.cs.umd.edu/~djacobs/), [Nuno Vasconcelos](http://www.svcl.ucsd.edu/people/nuno/).
-
-    Preprint&nbsp;&nbsp;[:academicons-arxiv: arXiv]()&nbsp;&nbsp;[:fontawesome-solid-link: Blog]()&nbsp;&nbsp;[:fontawesome-brands-github: Code](https://github.com/kingston-aditya/VideoABC)
+  // Filter items
+  const items = document.querySelectorAll('.pub-item');
+  items.forEach(item => {
+    if (topic === 'all' || item.getAttribute('data-topic') === topic) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
 
 
 ## Blog
@@ -82,7 +87,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     <img src="images/rain_book.jpg" alt="Project Image">
   </div>
   <div class="box-text">
-    <h3>Compute Optimal Tokenization</h3>
+    <h3>[Compute Optimal Tokenization]()</h3>
     <p>A deep dive into cross-modal latent alignment strategies for diffusion backbones.</p>
   </div>
 </div>
@@ -92,7 +97,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     <img src="images/rain_book.jpg" alt="Project Image">
   </div>
   <div class="box-text">
-    <h3>Video Complexity Measures</h3>
+    <h3>[Video Complexity Measures]()</h3>
     <p>Analyzing attribute-based metrics to map frame-by-frame structural density.</p>
   </div>
 </div>
@@ -102,7 +107,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     <img src="images/rain_book.jpg" alt="Project Image">
   </div>
   <div class="box-text">
-    <h3>Masked Visual Fine-Tuning</h3>
+    <h3>[Masked Visual Fine-Tuning]()</h3>
     <p>Efficient tuning mechanisms keeping fundamental representations completely frozen.</p>
   </div>
 </div>
@@ -112,7 +117,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     <img src="images/rain_book.jpg" alt="Project Image">
   </div>
   <div class="box-text">
-    <h3>Generative Pre-training</h3>
+    <h3>[Generative Pre-training]()</h3>
     <p>Scaling data generation pipelines using autoregressive multi-modal anchors.</p>
   </div>
 </div>

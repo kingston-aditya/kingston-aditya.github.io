@@ -23,56 +23,6 @@
   --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
 }
 
-/* 1. Force the container to be a strict horizontal row */
-.tabbed-labels {
-    display: flex !important;
-    flex-direction: row !important;      /* Explicitly lines them up side-by-side */
-    flex-wrap: wrap !important;          /* Allows wrapping gracefully on narrow screens */
-    gap: 6px !important;                 /* Horizontal gap between pills */
-    border-bottom: none !important;      /* Strips theme line */
-    margin: 16px 0 !important;
-    padding: 0 !important;
-}
-
-/* 2. Style the pill shapes cleanly */
-.tabbed-labels label {
-    display: inline-block !important;    /* Keeps them as individual blocks */
-    padding: 1px 5px !important;        /* Padding inside the pills */
-    font-size: 2.85em !important;
-    font-weight: 500 !important;
-    color: #555555 !important;           /* Dark grey text */
-    background-color: transparent !important;
-    border: 0px solid #dcdcdc !important;/* Light border */
-    border-radius: 20px !important;      /* Pill shape */
-    cursor: pointer !important;
-    transition: background-color 0.2s ease !important;
-    box-shadow: none !important;
-}
-
-/* 3. Hover adjustment */
-.tabbed-labels label:hover {
-    background-color: #f5f5f5 !important;
-}
-
-/* 4. Deep Purple Active State Selection Override */
-.tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > label:nth-child(1),
-.tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > label:nth-child(2),
-.tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > label:nth-child(3),
-.tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > label:nth-child(4),
-.tabbed-set > input:nth-child(5):checked ~ .tabbed-labels > label:nth-child(5) {
-    background-color: #2b0080 !important; /* Pure solid purple */
-    color: #ffffff !important;           /* White text */
-    border-color: #2b0080 !important;
-}
-
-.tabbed-set, 
-.tabbed-content,
-.md-typeset .tabbed-set {
-    border-bottom: none !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
 [data-md-page="blog"] .md-main {
   background-color: #cccccc;
 }

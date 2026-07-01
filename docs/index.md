@@ -79,7 +79,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     
 <div class="moving-box">
   <div class="box-image">
-    <img src="https://via.placeholder.com/400x250" alt="Project Image">
+    <img src="images/rain_book.jpg" alt="Project Image">
   </div>
   <div class="box-text">
     <h3>Compute Optimal Tokenization</h3>
@@ -89,7 +89,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
 <div class="moving-box">
   <div class="box-image">
-    <img src="https://via.placeholder.com/400x250" alt="Project Image">
+    <img src="images/rain_book.jpg" alt="Project Image">
   </div>
   <div class="box-text">
     <h3>Video Complexity Measures</h3>
@@ -99,7 +99,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
 <div class="moving-box">
   <div class="box-image">
-    <img src="https://via.placeholder.com/400x250" alt="Project Image">
+    <img src="images/rain_book.jpg" alt="Project Image">
   </div>
   <div class="box-text">
     <h3>Masked Visual Fine-Tuning</h3>
@@ -109,7 +109,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
 <div class="moving-box">
   <div class="box-image">
-    <img src="https://via.placeholder.com/400x250" alt="Project Image">
+    <img src="images/rain_book.jpg" alt="Project Image">
   </div>
   <div class="box-text">
     <h3>Generative Pre-training</h3>

@@ -23,43 +23,49 @@
   --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
 }
 
+/* 1. Turn the tab headings into a flex container for buttons */
 .tabbed-labels {
-    border-bottom: none !important;  /* Removes the thick black baseline */
     display: flex !important;
-    gap: 8px !important;             /* Spacing between the buttons */
-    padding-bottom: 12px !important;
+    gap: 8px !important;                 /* Space between buttons */
+    border-bottom: none !important;      /* Removes the global black baseline */
+    margin-bottom: 16px !important;
 }
 
-/* 2. Base style for all unselected buttons */
+/* 2. Base style for ALL buttons (Visible by default) */
 .tabbed-labels label {
-    border: 1px solid #e0e0e0 !important;
-    border-radius: 16px !important;  /* Rounded corners */
-    padding: 4px 12px !important;    /* Compact spacing inside the box */
-    font-size: 0.85em !important;    
-    color: #666666 !important;       /* Dark grey unselected text */
+    display: inline-flex !important;     /* Ensures buttons stay visible */
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px !important;        /* Compact layout padding */
+    font-size: 0.85em !important;
+    font-weight: 500 !important;
+    color: #555555 !important;           /* Neutral grey text for unselected state */
+    background-color: transparent !important;
+    border: 1px solid #dcdcdc !important;/* Thin outer border */
+    border-radius: 20px !important;      /* Smooth pill shape */
     cursor: pointer !important;
-    transition: all 0.2s ease !important;
-    font-weight: normal !important;
-    border-bottom-color: #e0e0e0 !important; /* Forces uniform border sides */
+    transition: all 0.2s ease-in-out !important;
 }
 
-/* 3. Highlighted active button style */
+/* 3. Hover state for a premium feel */
+.tabbed-labels label:hover {
+    background-color: #f5f5f5 !important;
+    color: #1a1a1a !important;
+}
+
+/* 4. Active/Selected Button Style (Solid Purple) */
 .tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > label:nth-child(1),
 .tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > label:nth-child(2),
 .tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > label:nth-child(3),
 .tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > label:nth-child(4) {
-    background-color: #2b0080 !important;   /* Solid deep purple background */
-    color: #ffffff !important;               /* White text */
-    border-color: #2b0080 !important;
-    font-weight: bold !important;
+    background-color: #2b0080 !important; /* Solid deep purple fill */
+    color: #ffffff !important;           /* White text */
+    border-color: #2b0080 !important;    /* Purple border match */
 }
 
-/* 4. Completely disable any default active underlining accents from the theme */
-.tabbed-labels label::after,
-.tabbed-set > input:checked ~ .tabbed-labels label {
-    display: none !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
+/* 5. Safe override to hide the theme's old indicator underlines */
+.tabbed-labels label::after {
+    display: none !important;            /* Strips out default theme underlines */
 }
 
 [data-md-page="blog"] .md-main {

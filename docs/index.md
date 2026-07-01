@@ -54,6 +54,8 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     <p class="pub-links">Preprint 2026</p>
     <div class="pub-actions">
       <a href="#" class="pub-btn-outline"><i class="fa-solid fa-blog"></i> Blog</a>
+      <a href="#" class="pub-btn-outline"><i class="fa-solid fa-blog"></i> Paper</a>
+      <a href="#" class="pub-btn-outline"><i class="fa-solid fa-code"></i> HF Demo</a>
       <a href="#" class="pub-btn-outline"><i class="fa-solid fa-code"></i> Code</a>
       <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
     </div>
@@ -65,6 +67,8 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     <p class="pub-links">Preprint 2026</p>
     <div class="pub-actions">
       <a href="#" class="pub-btn-outline"><i class="fa-solid fa-blog"></i> Blog</a>
+      <a href="#" class="pub-btn-outline"><i class="fa-solid fa-blog"></i> Paper</a>
+      <a href="#" class="pub-btn-outline"><i class="fa-solid fa-code"></i> HF Demo</a>
       <a href="#" class="pub-btn-outline"><i class="fa-solid fa-code"></i> Code</a>
       <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
     </div>
@@ -91,19 +95,28 @@ function filterPubs(topic) {
 }
 
 function animateAndGo(element, url, event) {
-  event.preventDefault(); // Stop the browser from leaving the page instantly
+  event.preventDefault(); // Stop instant redirect
   
-  // Find the parent moving-box element
   const box = element.closest('.moving-box');
   
   if (box) {
-    // Add the bounce animation class
+    // 1. Remove the class first just in case it was left behind
+    box.classList.remove('box-clicked');
+    
+    // 2. Trigger a tiny DOM reflow to trick the browser into resetting the animation clock
+    void box.offsetWidth; 
+    
+    // 3. Re-apply the smooth animation class
     box.classList.add('box-clicked');
     
-    // Wait 400ms for the smooth animation to finish, then navigate
+    // 4. Navigate after the animation settles down
     setTimeout(() => {
+      // If the URL is just an anchor link on the same page, reset the class so it works again right away
+      if (url.startsWith('#') || url === '') {
+        box.classList.remove('box-clicked');
+      }
       window.location.href = url;
-    }, 400);
+    }, 400); // Matches your 0.4s CSS animation timeline
   }
 }
 </script>

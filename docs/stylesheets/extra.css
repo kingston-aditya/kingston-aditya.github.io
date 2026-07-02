@@ -1,7 +1,6 @@
 .md-header {
   position: fixed; /* or position: sticky; */
   top: 0;
-  height: 3.5rem !important;
   width: 100%;
   z-index: 100; /* Makes sure it stays on top of page content */
   
@@ -14,10 +13,7 @@
 }
 
 .md-main__inner {
-    height: 3.5rem !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    align-items: center !important;
+    padding-top: 40px !important;
 }
 
 .md-grid {

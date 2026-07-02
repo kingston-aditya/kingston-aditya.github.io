@@ -1,6 +1,21 @@
+.custom-top-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #7c3aed !important; /* Deep Purple */
+    color: #ffffff !important;            /* White text */
+    text-align: center !important;
+    padding: 8px 12px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    z-index: 99999 !important;            /* Forces it above everything else */
+    box-sizing: border-box;
+  }
+
 .md-header {
   position: fixed; /* or position: sticky; */
-  top: 0;
+  top: 36px !important;
   width: 100%;
   z-index: 100; /* Makes sure it stays on top of page content */
   

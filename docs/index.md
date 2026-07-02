@@ -4,6 +4,10 @@ hide:
   - toc
 ---
 
+<div class="custom-top-banner">
+  Your short white text here
+</div>
+
 # Aditya Sarkar ![](images/por.jpg){ align=right style="width:9.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 
 :fontawesome-solid-building: Office: [4112-D15, Brendan Iribe Center, 8125 Paint Branch Dr, College Park, MD 20742](https://maps.app.goo.gl/xWjQWVVnpTVoWaQw8)
@@ -17,9 +21,11 @@ hide:
 <div class="squircle-nav">
   <div class="nav-slider" id="navSlider"></div>
   
-  <button class="nav-option active" onclick="moveSlider(this)">We</button>
-  <button class="nav-option" onclick="moveSlider(this)">Recap</button>
-  <button class="nav-option" onclick="moveSlider(this)">Contact</button>
+  <button class="nav-option active" onclick="moveSlider(this)">Webpage</button>
+  <button class="nav-option" onclick="moveSlider(this)">Scholar</button>
+  <button class="nav-option" onclick="moveSlider(this)">Github</button>
+  <button class="nav-option" onclick="moveSlider(this)">X</button>
+  <button class="nav-option" onclick="moveSlider(this)">CV</button>
 </div>
 
 <br>

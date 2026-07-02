@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #7c3aed !important; /* Deep Purple */
+    background-color: #301934 !important; /* Deep Purple */
     color: #ffffff !important;            /* White text */
     text-align: center !important;
     padding: 8px 12px !important;
@@ -15,10 +15,10 @@
 
 .md-header {
   position: fixed; /* or position: sticky; */
-  top: 36px !important;
+  top: 46px !important;
   width: 100%;
   z-index: 100; /* Makes sure it stays on top of page content */
-  
+
   /* Your liquid glass styling */
   background-color: rgba(255, 255, 255, 0.6) !important; 
   backdrop-filter: blur(12px) saturate(180%);
@@ -29,7 +29,12 @@
 
 .md-main__inner {
     padding-top: 40px !important;
+    padding-bottom: 20px !important;
 }
+
+.md-search, .md-nav {
+    margin-top: 36px !important;
+  }
 
 .md-grid {
   max-width: 1280px; 

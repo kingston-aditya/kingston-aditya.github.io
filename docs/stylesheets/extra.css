@@ -1,7 +1,7 @@
 .md-header {
   position: fixed; /* or position: sticky; */
   top: 0;
-  height: 4rem !important;
+  height: 3.5rem !important;
   width: 100%;
   z-index: 100; /* Makes sure it stays on top of page content */
   
@@ -14,8 +14,10 @@
 }
 
 .md-main__inner {
-    padding-top: 30px !important;
-    padding-bottom: 8px !important;
+    height: 3.5rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    align-items: center !important;
 }
 
 .md-grid {
@@ -27,18 +29,14 @@
   --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
 }
 
-.md-banner {
-    background-color: #7c3aed !important; /* Your deep purple */
+.custom-announce-bar {
+    background-color: #7c3aed !important; /* Deep purple */
     color: #ffffff !important;            /* White text */
-    text-align: center !important;        /* Centered text */
+    text-align: center !important;
     font-size: 0.85rem !important;
     font-weight: 500 !important;
-    padding: 8px 12px !important;         /* Spacing inside the purple bar */
-}
-
-.md-banner a {
-    color: #ffffff !important;
-    text-decoration: underline !important;
+    padding: 8px 12px !important;
+    width: 100% !important;
 }
 
 [data-md-page="blog"] .md-main {
@@ -404,9 +402,9 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  background-color: #d1d5db; /* Soft grey matching the image */
-  border-radius: 50px;       /* Gives it the pill/squircle shape */
-  padding: 6px;              /* Space between the edge and the inner pill */
+  background-color: #f5f5f5; /* Soft grey matching the image */
+  border-radius: 10px;       /* Gives it the pill/squircle shape */
+  padding: 2px;              /* Space between the edge and the inner pill */
   box-shadow: inset 0 2px 4px rgba(255,255,255,0.4), 
               0 4px 10px rgba(0,0,0,0.05); /* Subtle 3D depth */
 }
@@ -414,9 +412,9 @@
 /* The sliding purple highlight */
 .nav-slider {
   position: absolute;
-  top: 6px;
-  bottom: 6px;
-  left: 6px;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
   background-color: #7c3aed; /* Vibrant Purple */
   border-radius: 40px;
   z-index: 1;                /* Stays behind the text */
@@ -435,8 +433,8 @@
   font-weight: 600;
   color: #000000;            /* Default text color */
   cursor: pointer;
-  border-radius: 40px;
-  transition: color 0.3s ease; /* Smooth text color crossfade */
+  border-radius: 10px;
+  transition: color 0.4s ease; /* Smooth text color crossfade */
   outline: none;
   font-family: inherit;
 }

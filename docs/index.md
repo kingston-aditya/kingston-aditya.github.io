@@ -17,7 +17,7 @@ hide:
 <div class="squircle-nav">
   <div class="nav-slider" id="navSlider"></div>
   
-  <button class="nav-option active" onclick="moveSlider(this)">Overview</button>
+  <button class="nav-option active" onclick="moveSlider(this)">We</button>
   <button class="nav-option" onclick="moveSlider(this)">Recap</button>
   <button class="nav-option" onclick="moveSlider(this)">Contact</button>
 </div>

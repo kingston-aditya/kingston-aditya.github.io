@@ -268,61 +268,56 @@
   margin-top: 12px;
 }
 
-/* Container Window */
+/* Container resets layout constraints */
 .apple-carousel-container {
   width: 100%;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  /* Crucial: Keeps the active card perfectly centered on screen when scrolling */
-  scroll-padding: 0 calc(12.5% - 10px); 
+  overflow: hidden !important; /* Hides default scrollbar layouts entirely */
   padding: 20px 0;
-  -ms-overflow-style: none;  
-  scrollbar-width: none;  
+  position: relative;
 }
 
-.apple-carousel-container::-webkit-scrollbar {
-  display: none;
+.apple-carousel-stage {
+  width: 100%;
 }
 
-/* The Track Train */
+/* Track container holds the long chain of items */
 .apple-carousel-track {
-  display: flex;
-  gap: 16px;
-  /* Adds breathing room alignment at the start and end of the scroll track */
-  padding: 0 calc(12.5% - 10px); 
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 16px !important;
+  width: max-content;
+  will-change: transform;
 }
 
-/* Apple TV Wide Box Layout */
+/* Layout modifications for Apple TV sizing specs */
 .apple-moving-box {
-  flex: 0 0 75%;                     /* Takes up exactly 75% width */
-  scroll-snap-align: center;         /* Tells browser to snap this box to the middle */
+  flex: 0 0 65vw !important;         /* Changes to view-width constraints to guarantee left/right peeking */
+  width: 65vw !important;
   position: relative;
   background-color: #000000;
   border-radius: 16px;
   overflow: hidden;
   box-sizing: border-box;
-  aspect-ratio: 21 / 9;              /* Cinematic wide aspect ratio matching your image */
-  min-height: 300px;
+  aspect-ratio: 21 / 9;
+  min-height: 250px;
 }
 
-/* Image Background */
+/* Image Background dimensions fill parent space */
 .apple-box-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  opacity: 0.85;                     /* Slightly dims background for better text contrast */
+  opacity: 0.85;
 }
 
-/* Cinematic Overlay Text */
+/* Overlay gradient configuration */
 .apple-box-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 30px 40px;
-  background: gradient(linear, left bottom, left top, from(rgba(0,0,0,0.85)), to(rgba(0,0,0,0)));
+  padding: 24px 32px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
   color: #ffffff;
   display: flex;
@@ -333,55 +328,27 @@
 
 .apple-box-overlay h3 {
   margin: 0 0 4px 0 !important;
-  font-size: 1.8em !important;
+  font-size: 1.6em !important;
   font-weight: 800;
-  letter-spacing: -0.5px;
 }
 
 .apple-box-overlay p {
-  margin: 0 0 16px 0;
-  font-size: 1em;
+  margin: 0 0 12px 0;
+  font-size: 0.95em;
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Apple Styled Action Pill Button */
 .apple-btn {
   background-color: #ffffff !important;
   color: #000000 !important;
-  padding: 8px 20px;
+  padding: 6px 18px;
   border-radius: 20px;
-  font-size: 0.85em;
+  font-size: 0.8em;
   font-weight: bold;
   text-decoration: none !important;
-  transition: transform 0.2s ease, background-color 0.2s;
 }
 
-.apple-btn:hover {
-  background-color: #f0f0f0 !important;
-  transform: scale(1.03);
-}
-
-.apple-btn:active {
-  transform: scale(0.96) !important;
-}
-
-/* Responsive Fix for Smaller Screens */
-@media (max-width: 768px) {
-  .apple-moving-box {
-    flex: 0 0 85%;                   /* Expands box space on mobile fields */
-  }
-  .apple-carousel-container {
-    scroll-padding: 0 calc(7.5% - 8px);
-  }
-  .apple-carousel-track {
-    padding: 0 calc(7.5% - 8px);
-  }
-  .apple-box-overlay {
-    padding: 20px;
-  }
-  .apple-box-overlay h3 { font-size: 1.3em !important; }
-}
-
+/* Indicator dots track row */
 .carousel-dots {
   display: flex !important;
   justify-content: center !important;
@@ -391,20 +358,26 @@
   width: 100% !important;
 }
 
-/* Base style for individual unselected dots */
 .dot {
   width: 6px !important;
   height: 6px !important;
-  background-color: rgba(0, 0, 0, 0.2) !important; /* Soft grey/dark tint for standard background */
+  background-color: rgba(0, 0, 0, 0.2) !important;
   border-radius: 50% !important;
   display: inline-block !important;
   cursor: pointer !important;
   transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
-/* Style for the active/selected dot (stretches wide like Apple TV) */
 .dot.active {
-  width: 14px !important; /* Stretches the dot into a modern capsule pill shape */
+  width: 14px !important;
   border-radius: 3px !important;
-  background-color: #4a154b !important; /* Matches your core purple branding theme */
+  background-color: #4a154b !important;
+}
+
+@media (max-width: 768px) {
+  .apple-moving-box {
+    flex: 0 0 80vw !important; /* Shows cards larger on mobile screens */
+    width: 80vw !important;
+  }
+  .apple-box-overlay h3 { font-size: 1.2em !important; }
 }

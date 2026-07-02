@@ -104,80 +104,105 @@ function filterPubs(topic) {
   });
 }
 
-const slider = document.getElementById('appleSlider');
-const dots = document.querySelectorAll('.dot');
-
-// Updates active dot during scrolling
-slider.addEventListener('scroll', () => {
-  const slideWidth = slider.querySelector('.apple-moving-box').clientWidth + 16; // width + gap
-  const scrollPosition = slider.scrollLeft + (slideWidth / 2);
-  const activeIndex = Math.floor(scrollPosition / slideWidth);
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("carouselTrack");
+  const dots = document.querySelectorAll(".dot");
+  const originalSlides = Array.from(track.children);
+  const totalOriginals = originalSlides.length;
   
-  dots.forEach((dot, index) => {
-    if (index === activeIndex) {
-      dot.classList.add('active');
+  // 1. Clone elements to create infinite illusion buffers (3 before, 3 after)
+  for (let i = totalOriginals - 1; i >= 0; i--) {
+    const clone = originalSlides[i].cloneNode(true);
+    clone.classList.add("carousel-clone");
+    track.insertBefore(clone, track.firstChild);
+  }
+  originalSlides.forEach(slide => {
+    const clone = slide.cloneNode(true);
+    clone.classList.add("carousel-clone");
+    track.appendChild(clone);
+  });
+
+  const allSlides = Array.from(track.children);
+  let currentIndex = totalOriginals; // Points directly to the first original slide
+  
+  // Disable user browser touch-scrolling manually since JavaScript is taking over wheel calculations
+  document.getElementById("appleSlider").style.overflowX = "hidden";
+
+  function updateCarousel(animated = true) {
+    if (animated) {
+      track.style.transition = "transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)";
     } else {
-      dot.classList.remove('active');
+      track.style.transition = "none";
+    }
+
+    // Mathematical formula to center the targeted box slide on screen
+    const slideWidth = allSlides[0].offsetWidth;
+    const gap = 16; 
+    const centerOffset = (window.innerWidth - slideWidth) / 2;
+    const targetLeft = (currentIndex * (slideWidth + gap)) - centerOffset;
+
+    track.style.transform = `translateX(${-targetLeft}px)`;
+
+    // Map correct original index back to the indicator dots array matching sequence
+    const currentOriginalIndex = parseInt(allSlides[currentIndex].getAttribute("data-index"));
+    dots.forEach((dot, idx) => {
+      if (idx === currentOriginalIndex) {
+        dot.classList.add("active");
+      } else {
+        dot.classList.remove("active");
+      }
+    });
+  }
+
+  // Handle loop jumping boundaries silently without breaking rendering paths
+  track.addEventListener("transitionend", () => {
+    if (currentIndex >= totalOriginals * 2) {
+      currentIndex = totalOriginals;
+      updateCarousel(false);
+    } else if (currentIndex < totalOriginals) {
+      currentIndex = totalOriginals * 2 - 1;
+      updateCarousel(false);
     }
   });
-});
 
-// Lets users click a dot to jump directly to that slide
-function scrollToSlide(index) {
-  const slideWidth = slider.querySelector('.apple-moving-box').clientWidth + 16;
-  slider.scrollTo({
-    left: slideWidth * index,
-    behavior: 'smooth'
+  // Expose jump function to indicator elements
+  window.jumpToSlide = function(targetOriginalIndex) {
+    currentIndex = totalOriginals + targetOriginalIndex;
+    updateCarousel(true);
+  };
+
+  // Drag/Swipe Mouse Support for moving slides
+  let isDragging = false, startX, currentTranslate, prevTranslate;
+  
+  track.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX;
+    track.style.transition = "none";
   });
-}
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const currentX = e.pageX;
+    const diff = currentX - startX;
+    if (Math.abs(diff) > 100) {
+      isDragging = false;
+      if (diff > 0) currentIndex--;
+      else currentIndex++;
+      updateCarousel(true);
+    }
+  });
+
+  window.addEventListener("mouseup", () => { isDragging = false; });
+  
+  // Fire initialization layout positioning rules
+  window.addEventListener("resize", () => updateCarousel(false));
+  setTimeout(() => updateCarousel(false), 100);
+});
 </script>
 
 
 ## Blogs
 
-<div class="apple-carousel-container">
-  <div class="apple-carousel-track">
-    
-  <div class="apple-moving-box">
-    <div class="apple-box-image">
-      <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&auto=format&fit=crop&q=80" alt="Slide 1">
-    </div>
-    <div class="apple-box-overlay">
-      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Friday Night Baseball</a></h3>
-      <p>We stream MLB games live every Saturday.</p>
-      <a href="#" class="apple-btn">Check the schedule</a>
-    </div>
-  </div>
 
-  <div class="apple-moving-box">
-    <div class="apple-box-image">
-      <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&auto=format&fit=crop&q=80" alt="Slide 2">
-    </div>
-    <div class="apple-box-overlay">
-      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Video Complexity Measures</a></h3>
-      <p>Analyzing structural frameworks across active frame sequences.</p>
-      <a href="#" class="apple-btn">Stream now</a>
-    </div>
-  </div>
-
-  <div class="apple-moving-box">
-    <div class="apple-box-image">
-      <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop&q=80" alt="Slide 3">
-    </div>
-    <div class="apple-box-overlay">
-      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Diffusion Models</a></h3>
-      <p>Exploring state-of-the-art tokenization layers across generative pipelines.</p>
-      <a href="#" class="apple-btn">Read paper</a>
-    </div>
-  </div>
-
-  </div>
-</div>
-
-<div class="carousel-dots">
-  <span class="dot active" onclick="scrollToSlide(0)"></span>
-  <span class="dot" onclick="scrollToSlide(1)"></span>
-  <span class="dot" onclick="scrollToSlide(2)"></span>
-</div>
 
 <br>

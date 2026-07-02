@@ -32,27 +32,25 @@
 }
 
 .md-container {
-  /* 1. Darker, creamier base backdrop color (changed from #f7f9fa to #f0f3f5) */
-  background-color: #f0f3f5 !important; 
+  /* 1. Base modern slate-cream background color */
+  background-color: #ebeff2 !important; 
 
-  /* 2. Enhanced layered center glow + deeper contour ring textures */
+  /* 2. Pure soft spotlight overlay (No concentric circles) */
   background-image: 
-    /* The Center Glow stays crisp white to contrast against the darker base */
     radial-gradient(
-      circle at 50% 25%, 
-      rgba(255, 255, 255, 1) 0%, 
-      rgba(255, 255, 255, 0) 65%
-    ),
-    /* The Concentric Rings: Opacity increased from 1.5% to 4% (0.04) for visibility */
-    repeating-radial-gradient(
-      circle at 50% 25%, 
-      transparent 0,
-      transparent 45px, 
-      rgba(0, 0, 0, 0.04) 45px, 
-      rgba(0, 0, 0, 0.04) 46px
+      circle at 50% 15%, /* Centers the spotlight at the top middle */
+      rgba(255, 255, 255, 0.95) 0%, 
+      rgba(255, 255, 255, 0.4) 40%,
+      rgba(255, 255, 255, 0) 70%
     ) !important;
     
   background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
+/* Keeps theme layouts completely clear so the lighting shines through */
+.md-main, .md-main__inner, .md-content, article.md-content__inner {
+  background-color: transparent !important;
 }
 
 /* Forces the theme's default white content boxes to be transparent */

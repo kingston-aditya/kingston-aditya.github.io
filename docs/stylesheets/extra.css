@@ -291,14 +291,14 @@
 
 /* Smaller Layout Dimensions for Apple TV Sizing Specs */
 .apple-moving-box {
-  flex: 0 0 50vw !important;         /* Reduced from 65vw to 50vw to shrink container size */
-  width: 50vw !important;
+  flex: 0 0 30vw !important;         /* Reduced from 65vw to 50vw to shrink container size */
+  width: 30vw !important;
   position: relative;
   background-color: #000000;
   border-radius: 12px;               /* Clean, tight border corner radius */
   overflow: hidden;
   box-sizing: border-box;
-  aspect-ratio: 16 / 9;              /* Shifted from 21/9 to a standard 16/9 for smaller cards */
+  aspect-ratio: 8 / 4;              /* Shifted from 21/9 to a standard 16/9 for smaller cards */
 }
 
 /* Image Background dimensions fill parent space */
@@ -358,13 +358,13 @@
 }
 
 .dot {
-  width: 6px !important;
-  height: 6px !important;
+  width: 16px !important;
+  height: 16px !important;
   background-color: rgba(0, 0, 0, 0.2) !important;
   border-radius: 50% !important;
   display: inline-block !important;
   cursor: pointer !important;
-  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  transition: all 0.45s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 .dot.active {

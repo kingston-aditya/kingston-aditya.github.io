@@ -104,88 +104,80 @@ function filterPubs(topic) {
   });
 }
 
-function animateAndGo(element, url, event) {
-  event.preventDefault(); // Stop instant redirect
+const slider = document.getElementById('appleSlider');
+const dots = document.querySelectorAll('.dot');
+
+// Updates active dot during scrolling
+slider.addEventListener('scroll', () => {
+  const slideWidth = slider.querySelector('.apple-moving-box').clientWidth + 16; // width + gap
+  const scrollPosition = slider.scrollLeft + (slideWidth / 2);
+  const activeIndex = Math.floor(scrollPosition / slideWidth);
   
-  const box = element.closest('.moving-box');
-  
-  if (box) {
-    // 1. Remove the class first just in case it was left behind
-    box.classList.remove('box-clicked');
-    
-    // 2. Trigger a tiny DOM reflow to trick the browser into resetting the animation clock
-    void box.offsetWidth; 
-    
-    // 3. Re-apply the smooth animation class
-    box.classList.add('box-clicked');
-    
-    // 4. Navigate after the animation settles down
-    setTimeout(() => {
-      // If the URL is just an anchor link on the same page, reset the class so it works again right away
-      if (url.startsWith('#') || url === '') {
-        box.classList.remove('box-clicked');
-      }
-      window.location.href = url;
-    }, 400); // Matches your 0.4s CSS animation timeline
-  }
+  dots.forEach((dot, index) => {
+    if (index === activeIndex) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  });
+});
+
+// Lets users click a dot to jump directly to that slide
+function scrollToSlide(index) {
+  const slideWidth = slider.querySelector('.apple-moving-box').clientWidth + 16;
+  slider.scrollTo({
+    left: slideWidth * index,
+    behavior: 'smooth'
+  });
 }
 </script>
 
 
-## Blog
+## Blogs
 
-<div class="carousel-container">
-  <div class="carousel-track">
+<div class="apple-carousel-container">
+  <div class="apple-carousel-track">
     
-<div class="moving-box">
-  <div class="box-image">
-    <img src="images/rain_book.jpg" alt="Project Image">
+  <div class="apple-moving-box">
+    <div class="apple-box-image">
+      <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&auto=format&fit=crop&q=80" alt="Slide 1">
+    </div>
+    <div class="apple-box-overlay">
+      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Friday Night Baseball</a></h3>
+      <p>We stream MLB games live every Saturday.</p>
+      <a href="#" class="apple-btn">Check the schedule</a>
+    </div>
   </div>
-  <div class="box-text">
-    <h3>[Compute Optimal Tokenization]()</h3>
-    <p>A deep dive into cross-modal latent alignment strategies for diffusion backbones.</p>
+
+  <div class="apple-moving-box">
+    <div class="apple-box-image">
+      <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&auto=format&fit=crop&q=80" alt="Slide 2">
+    </div>
+    <div class="apple-box-overlay">
+      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Video Complexity Measures</a></h3>
+      <p>Analyzing structural frameworks across active frame sequences.</p>
+      <a href="#" class="apple-btn">Stream now</a>
+    </div>
+  </div>
+
+  <div class="apple-moving-box">
+    <div class="apple-box-image">
+      <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop&q=80" alt="Slide 3">
+    </div>
+    <div class="apple-box-overlay">
+      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Diffusion Models</a></h3>
+      <p>Exploring state-of-the-art tokenization layers across generative pipelines.</p>
+      <a href="#" class="apple-btn">Read paper</a>
+    </div>
+  </div>
+
   </div>
 </div>
 
-<div class="moving-box">
-  <div class="box-image">
-    <img src="images/rain_book.jpg" alt="Project Image">
-  </div>
-  <div class="box-text">
-    <h3>
-      <a href="#" onclick="animateAndGo(this, '2026-02-05-retrieval', event)" class="box-title-link">
-      Video Complexity Measures
-    </a>
-    </h3>
-    <p>Analyzing attribute-based metrics to map frame-by-frame structural density.</p>
-  </div>
-</div>
-
-<div class="moving-box">
-  <div class="box-image">
-    <img src="images/rain_book.jpg" alt="Project Image">
-  </div>
-  <div class="box-text">
-    <h3>
-      <a href="#" onclick="animateAndGo(this, '2026-02-05-retrieval', event)" class="box-title-link">
-      Representation learning.
-    </a>
-    </h3>
-    <p>Efficient tuning mechanisms keeping fundamental representations completely frozen.</p>
-  </div>
-</div>
-
-<div class="moving-box">
-  <div class="box-image">
-    <img src="images/rain_book.jpg" alt="Project Image">
-  </div>
-  <div class="box-text">
-    <h3>[Generative Pre-training]()</h3>
-    <p>Scaling data generation pipelines using autoregressive multi-modal anchors.</p>
-  </div>
-</div>
-
-  </div>
+<div class="carousel-dots">
+  <span class="dot active" onclick="scrollToSlide(0)"></span>
+  <span class="dot" onclick="scrollToSlide(1)"></span>
+  <span class="dot" onclick="scrollToSlide(2)"></span>
 </div>
 
 <br>

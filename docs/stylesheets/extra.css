@@ -291,14 +291,21 @@
 
 /* Smaller Layout Dimensions for Apple TV Sizing Specs */
 .apple-moving-box {
-  flex: 0 0 30vw !important;         /* Reduced from 65vw to 50vw to shrink container size */
-  width: 30vw !important;
+  flex: 0 0 40vw !important;         /* Reduced from 65vw to 50vw to shrink container size */
+  width: 40vw !important;
   position: relative;
   background-color: #000000;
   border-radius: 12px;               /* Clean, tight border corner radius */
   overflow: hidden;
   box-sizing: border-box;
-  aspect-ratio: 8 / 4;              /* Shifted from 21/9 to a standard 16/9 for smaller cards */
+  aspect-ratio: 8 / 5;              /* Shifted from 21/9 to a standard 16/9 for smaller cards */
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.apple-moving-box:hover {
+  /* Scales the box down to 90% size on hover */
+  transform: scale(0.90) !important;
+  z-index: 5; /* Keeps the active hovered box layered cleanly */
 }
 
 /* Image Background dimensions fill parent space */
@@ -358,13 +365,13 @@
 }
 
 .dot {
-  width: 16px !important;
-  height: 16px !important;
+  width: 10px !important;
+  height: 10px !important;
   background-color: rgba(0, 0, 0, 0.2) !important;
   border-radius: 50% !important;
   display: inline-block !important;
   cursor: pointer !important;
-  transition: all 0.45s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  transition: all 0.65s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 .dot.active {

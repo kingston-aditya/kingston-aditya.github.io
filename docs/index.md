@@ -206,9 +206,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&auto=format&fit=crop&q=80" alt="Slide 1">
     </div>
     <div class="apple-box-overlay">
-      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Friday Night Baseball</a></h3>
+      <h3>Friday Night Baseball</h3>
       <p>We stream MLB games live every Saturday.</p>
-      <a href="#" class="apple-btn">Check the schedule</a>
+      <a href="#" class="apple-btn" onclick="animateAndGo(this, 'https://your-link.com', event)">Check the schedule</a>
     </div>
   </div>
 
@@ -217,9 +217,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&auto=format&fit=crop&q=80" alt="Slide 2">
     </div>
     <div class="apple-box-overlay">
-      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Video Complexity Measures</a></h3>
+      <h3>Video Complexity Measures</h3>
       <p>Analyzing structural frameworks across active frame sequences.</p>
-      <a href="#" class="apple-btn">Stream now</a>
+      <a href="#" class="apple-btn" onclick="animateAndGo(this, 'https://your-link.com', event)">Stream now</a>
     </div>
   </div>
 
@@ -228,9 +228,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop&q=80" alt="Slide 3">
     </div>
     <div class="apple-box-overlay">
-      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Diffusion Models</a></h3>
+      <h3><a href="#" class="box-title-link">Diffusion Models</a></h3>
       <p>Exploring state-of-the-art tokenization layers across generative pipelines.</p>
-      <a href="#" class="apple-btn">Read paper</a>
+      <a href="#" class="apple-btn" onclick="animateAndGo(this, 'https://your-link.com', event)">Read paper</a>
     </div>
   </div>
 

@@ -32,28 +32,31 @@
 }
 
 .md-container {
-  /* 1. Base cream backdrop fallback */
-  background-color: #f7f9fa !important; 
+  /* 1. Darker, creamier base backdrop color (changed from #f7f9fa to #f0f3f5) */
+  background-color: #f0f3f5 !important; 
 
-  /* 2. Layered center glow + contour ring textures */
+  /* 2. Enhanced layered center glow + deeper contour ring textures */
   background-image: 
+    /* The Center Glow stays crisp white to contrast against the darker base */
     radial-gradient(
       circle at 50% 25%, 
       rgba(255, 255, 255, 1) 0%, 
-      rgba(255, 255, 255, 0) 70%
+      rgba(255, 255, 255, 0) 65%
     ),
+    /* The Concentric Rings: Opacity increased from 1.5% to 4% (0.04) for visibility */
     repeating-radial-gradient(
       circle at 50% 25%, 
       transparent 0,
-      transparent 50px, 
-      rgba(0, 0, 0, 0.015) 50px, 
-      rgba(0, 0, 0, 0.015) 51px
+      transparent 45px, 
+      rgba(0, 0, 0, 0.04) 45px, 
+      rgba(0, 0, 0, 0.04) 46px
     ) !important;
     
   background-attachment: fixed !important;
 }
 
-.md-main, .md-main__inner {
+/* Forces the theme's default white content boxes to be transparent */
+.md-main, .md-main__inner, .md-content {
   background-color: transparent !important;
 }
 

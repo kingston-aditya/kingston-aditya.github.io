@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Aditya Sarkar ![](images/por.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
+# Aditya Sarkar ![](images/por.jpg){ align=right style="width:9.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 
 :fontawesome-solid-building: Office: [4112-D15, Brendan Iribe Center, 8125 Paint Branch Dr, College Park, MD 20742](https://maps.app.goo.gl/xWjQWVVnpTVoWaQw8)
 
@@ -12,7 +12,15 @@ hide:
 
 :fontawesome-solid-inbox: Personal Email: [asnov2k [at] gmail [dot] com](mailto:asnov2k@gmail.com)
 
-<span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-github:](https://github.com/kingston-aditya) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073) [:fontawesome-solid-chalkboard-user:](SanDiego_Aditya_CV8.pdf)</span>
+<!-- <span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-github:](https://github.com/kingston-aditya) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073) [:fontawesome-solid-chalkboard-user:](SanDiego_Aditya_CV8.pdf)</span> -->
+
+<div class="squircle-nav">
+  <div class="nav-slider" id="navSlider"></div>
+  
+  <button class="nav-option active" onclick="moveSlider(this)">Overview</button>
+  <button class="nav-option" onclick="moveSlider(this)">Recap</button>
+  <button class="nav-option" onclick="moveSlider(this)">Contact</button>
+</div>
 
 <br>
 
@@ -87,6 +95,23 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 </div>
 
 <script>
+  function animateAndGo(element, url, event) {
+  event.preventDefault(); // Stop the browser from leaving the page instantly
+  
+  // Find the parent moving-box element
+  const box = element.closest('.moving-box');
+  
+  if (box) {
+    // Add the bounce animation class
+    box.classList.add('box-clicked');
+    
+    // Wait 400ms for the smooth animation to finish, then navigate
+    setTimeout(() => {
+      window.location.href = url;
+    }, 400);
+  }
+}
+
 function filterPubs(topic) {
   // Update active state on buttons
   const buttons = document.querySelectorAll('.pub-pill');
@@ -103,6 +128,34 @@ function filterPubs(topic) {
     }
   });
 }
+
+function moveSlider(element) {
+    // 1. Remove the 'active' class (white text) from all options
+    const options = document.querySelectorAll('.nav-option');
+    options.forEach(opt => opt.classList.remove('active'));
+
+    // 2. Add the 'active' class to the exact button that was clicked
+    element.classList.add('active');
+
+    // 3. Find the slider element
+    const slider = document.getElementById('navSlider');
+
+    // 4. Calculate where the clicked button is and how wide it is
+    const leftPosition = element.offsetLeft;
+    const elementWidth = element.offsetWidth;
+
+    // 5. Move and resize the purple slider to match
+    slider.style.left = `${leftPosition}px`;
+    slider.style.width = `${elementWidth}px`;
+  }
+
+  // 6. Run this once when the page loads so the purple box starts on "Overview"
+  window.addEventListener('DOMContentLoaded', () => {
+    const firstOption = document.querySelector('.nav-option.active');
+    if (firstOption) {
+      moveSlider(firstOption);
+    }
+  });
 
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("carouselTrack");
@@ -134,14 +187,21 @@ document.addEventListener("DOMContentLoaded", () => {
       track.style.transition = "none";
     }
 
-    // Dynamic calculation based on exact rendered element widths
+    // 1. Get the width of the container on your website, NOT the monitor screen
+    const container = document.getElementById("appleSlider");
+    const containerWidth = container.offsetWidth;
+    
+    // 2. Get the actual width of the box
     const slideWidth = allSlides[0].getBoundingClientRect().width;
     const gap = 16; 
-    const centerOffset = (window.innerWidth - slideWidth) / 2;
+    
+    // 3. Calculate perfect center offset based on the container
+    const centerOffset = (containerWidth - slideWidth) / 2;
     const targetLeft = (currentIndex * (slideWidth + gap)) - centerOffset;
 
     track.style.transform = `translateX(${-targetLeft}px)`;
 
+    // Update dots
     const currentOriginalIndex = parseInt(allSlides[currentIndex].getAttribute("data-index"));
     dots.forEach((dot, idx) => {
       if (idx === currentOriginalIndex) {

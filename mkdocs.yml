@@ -36,6 +36,7 @@ markdown_extensions:
           case: lower
           
 extra:
+  announcement: "This is your short white text at the center."
   social:
     - icon: fontawesome/solid/envelope 
       link: mailto:asnov2k@gmail.com

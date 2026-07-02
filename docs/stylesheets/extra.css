@@ -1,6 +1,7 @@
 .md-header {
   position: fixed; /* or position: sticky; */
   top: 0;
+  height: 4rem !important;
   width: 100%;
   z-index: 100; /* Makes sure it stays on top of page content */
   
@@ -8,10 +9,13 @@
   background-color: rgba(255, 255, 255, 0.6) !important; 
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02) !important;
 }
 
 .md-main__inner {
     padding-top: 30px !important;
+    padding-bottom: 8px !important;
 }
 
 .md-grid {
@@ -21,6 +25,20 @@
 .md-content {
   --md-typeset-color:                  hsla(272, 91%, 29%, 1);
   --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
+}
+
+.md-banner {
+    background-color: #7c3aed !important; /* Your deep purple */
+    color: #ffffff !important;            /* White text */
+    text-align: center !important;        /* Centered text */
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    padding: 8px 12px !important;         /* Spacing inside the purple bar */
+}
+
+.md-banner a {
+    color: #ffffff !important;
+    text-decoration: underline !important;
 }
 
 [data-md-page="blog"] .md-main {
@@ -289,22 +307,23 @@
   will-change: transform;
 }
 
-/* Smaller Layout Dimensions for Apple TV Sizing Specs */
 .apple-moving-box {
-  flex: 0 0 40vw !important;         /* Reduced from 65vw to 50vw to shrink container size */
-  width: 40vw !important;
+  /* Change these two lines to use % */
+  flex: 0 0 60% !important;         
+  width: 60% !important;
+  
   position: relative;
   background-color: #000000;
-  border-radius: 12px;               /* Clean, tight border corner radius */
+  border-radius: 12px;
   overflow: hidden;
   box-sizing: border-box;
-  aspect-ratio: 8 / 5;              /* Shifted from 21/9 to a standard 16/9 for smaller cards */
+  aspect-ratio: 8 / 5;
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 .apple-moving-box:hover {
   /* Scales the box down to 90% size on hover */
-  transform: scale(0.90) !important;
+  transform: scale(0.96) !important;
   z-index: 5; /* Keeps the active hovered box layered cleanly */
 }
 
@@ -378,6 +397,53 @@
   width: 14px !important;
   border-radius: 3px !important;
   background-color: #4a154b !important;
+}
+
+/* The main grey container */
+.squircle-nav {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background-color: #d1d5db; /* Soft grey matching the image */
+  border-radius: 50px;       /* Gives it the pill/squircle shape */
+  padding: 6px;              /* Space between the edge and the inner pill */
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.4), 
+              0 4px 10px rgba(0,0,0,0.05); /* Subtle 3D depth */
+}
+
+/* The sliding purple highlight */
+.nav-slider {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 6px;
+  background-color: #7c3aed; /* Vibrant Purple */
+  border-radius: 40px;
+  z-index: 1;                /* Stays behind the text */
+  /* This controls the slow, smooth sliding animation */
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+/* The text options */
+.nav-option {
+  position: relative;
+  z-index: 2;                /* Stays above the purple slider */
+  background: transparent;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;            /* Default text color */
+  cursor: pointer;
+  border-radius: 40px;
+  transition: color 0.3s ease; /* Smooth text color crossfade */
+  outline: none;
+  font-family: inherit;
+}
+
+/* When the option is selected, text turns white */
+.nav-option.active {
+  color: #ffffff;
 }
 
 /* Responsive Overrides for Mobile Views */

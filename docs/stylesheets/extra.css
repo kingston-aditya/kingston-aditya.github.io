@@ -307,8 +307,8 @@
 
 .apple-moving-box {
   /* Change these two lines to use % */
-  flex: 0 0 60% !important;         
-  width: 60% !important;
+  flex: 0 0 40vw !important;         
+  width: 40vw !important;
   
   position: relative;
   background-color: #000000;

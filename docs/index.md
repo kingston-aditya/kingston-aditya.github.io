@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const originalSlides = Array.from(track.children);
   const totalOriginals = originalSlides.length;
   
-  // 1. Clone elements to create infinite illusion buffers (3 before, 3 after)
+  // Clone elements to create infinite illusion buffers (3 before, 3 after)
   for (let i = totalOriginals - 1; i >= 0; i--) {
     const clone = originalSlides[i].cloneNode(true);
     clone.classList.add("carousel-clone");
@@ -125,7 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const allSlides = Array.from(track.children);
   let currentIndex = totalOriginals; // Points directly to the first original slide
   
-  // Disable user browser touch-scrolling manually since JavaScript is taking over wheel calculations
   document.getElementById("appleSlider").style.overflowX = "hidden";
 
   function updateCarousel(animated = true) {
@@ -135,15 +134,14 @@ document.addEventListener("DOMContentLoaded", () => {
       track.style.transition = "none";
     }
 
-    // Mathematical formula to center the targeted box slide on screen
-    const slideWidth = allSlides[0].offsetWidth;
+    // Dynamic calculation based on exact rendered element widths
+    const slideWidth = allSlides[0].getBoundingClientRect().width;
     const gap = 16; 
     const centerOffset = (window.innerWidth - slideWidth) / 2;
     const targetLeft = (currentIndex * (slideWidth + gap)) - centerOffset;
 
     track.style.transform = `translateX(${-targetLeft}px)`;
 
-    // Map correct original index back to the indicator dots array matching sequence
     const currentOriginalIndex = parseInt(allSlides[currentIndex].getAttribute("data-index"));
     dots.forEach((dot, idx) => {
       if (idx === currentOriginalIndex) {
@@ -154,7 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Handle loop jumping boundaries silently without breaking rendering paths
   track.addEventListener("transitionend", () => {
     if (currentIndex >= totalOriginals * 2) {
       currentIndex = totalOriginals;
@@ -165,14 +162,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Expose jump function to indicator elements
   window.jumpToSlide = function(targetOriginalIndex) {
     currentIndex = totalOriginals + targetOriginalIndex;
     updateCarousel(true);
   };
 
-  // Drag/Swipe Mouse Support for moving slides
-  let isDragging = false, startX, currentTranslate, prevTranslate;
+  let isDragging = false, startX;
   
   track.addEventListener("mousedown", (e) => {
     isDragging = true;
@@ -184,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isDragging) return;
     const currentX = e.pageX;
     const diff = currentX - startX;
-    if (Math.abs(diff) > 100) {
+    if (Math.abs(diff) > 80) {
       isDragging = false;
       if (diff > 0) currentIndex--;
       else currentIndex++;
@@ -194,9 +189,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("mouseup", () => { isDragging = false; });
   
-  // Fire initialization layout positioning rules
   window.addEventListener("resize", () => updateCarousel(false));
-  setTimeout(() => updateCarousel(false), 100);
+  setTimeout(() => updateCarousel(false), 150);
 });
 </script>
 

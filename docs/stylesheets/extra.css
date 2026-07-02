@@ -271,8 +271,8 @@
 /* Container resets layout constraints */
 .apple-carousel-container {
   width: 100%;
-  overflow: hidden !important; /* Hides default scrollbar layouts entirely */
-  padding: 20px 0;
+  overflow: hidden !important; 
+  padding: 15px 0;
   position: relative;
 }
 
@@ -289,17 +289,16 @@
   will-change: transform;
 }
 
-/* Layout modifications for Apple TV sizing specs */
+/* Smaller Layout Dimensions for Apple TV Sizing Specs */
 .apple-moving-box {
-  flex: 0 0 65vw !important;         /* Changes to view-width constraints to guarantee left/right peeking */
-  width: 65vw !important;
+  flex: 0 0 50vw !important;         /* Reduced from 65vw to 50vw to shrink container size */
+  width: 50vw !important;
   position: relative;
   background-color: #000000;
-  border-radius: 16px;
+  border-radius: 12px;               /* Clean, tight border corner radius */
   overflow: hidden;
   box-sizing: border-box;
-  aspect-ratio: 21 / 9;
-  min-height: 250px;
+  aspect-ratio: 16 / 9;              /* Shifted from 21/9 to a standard 16/9 for smaller cards */
 }
 
 /* Image Background dimensions fill parent space */
@@ -317,8 +316,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 24px 32px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 16px 24px;                 /* Slightly tighter text borders */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -327,23 +326,23 @@
 }
 
 .apple-box-overlay h3 {
-  margin: 0 0 4px 0 !important;
-  font-size: 1.6em !important;
+  margin: 0 0 2px 0 !important;
+  font-size: 1.35em !important;       /* Scaled down font proportional to small card */
   font-weight: 800;
 }
 
 .apple-box-overlay p {
-  margin: 0 0 12px 0;
-  font-size: 0.95em;
+  margin: 0 0 10px 0;
+  font-size: 0.85em;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .apple-btn {
   background-color: #ffffff !important;
   color: #000000 !important;
-  padding: 6px 18px;
+  padding: 5px 14px;
   border-radius: 20px;
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-weight: bold;
   text-decoration: none !important;
 }
@@ -354,7 +353,7 @@
   justify-content: center !important;
   align-items: center !important;
   gap: 6px !important;
-  margin-top: 14px !important;
+  margin-top: 12px !important;
   width: 100% !important;
 }
 
@@ -374,10 +373,11 @@
   background-color: #4a154b !important;
 }
 
+/* Responsive Overrides for Mobile Views */
 @media (max-width: 768px) {
   .apple-moving-box {
-    flex: 0 0 80vw !important; /* Shows cards larger on mobile screens */
-    width: 80vw !important;
+    flex: 0 0 75vw !important;       /* Lets it get slightly wider on mobile for text legibility */
+    width: 75vw !important;
   }
-  .apple-box-overlay h3 { font-size: 1.2em !important; }
+  .apple-box-overlay h3 { font-size: 1.1em !important; }
 }

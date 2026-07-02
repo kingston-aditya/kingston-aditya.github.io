@@ -203,6 +203,53 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ## Blogs
 
+<div class="apple-carousel-container" id="appleSlider">
+  <div class="apple-carousel-stage">
+    <div class="apple-carousel-track" id="carouselTrack">
+      
+  <div class="apple-moving-box" data-index="0">
+    <div class="apple-box-image">
+      <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&auto=format&fit=crop&q=80" alt="Slide 1">
+    </div>
+    <div class="apple-box-overlay">
+      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Friday Night Baseball</a></h3>
+      <p>We stream MLB games live every Saturday.</p>
+      <a href="#" class="apple-btn">Check the schedule</a>
+    </div>
+  </div>
+
+  <div class="apple-moving-box" data-index="1">
+    <div class="apple-box-image">
+      <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&auto=format&fit=crop&q=80" alt="Slide 2">
+    </div>
+    <div class="apple-box-overlay">
+      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Video Complexity Measures</a></h3>
+      <p>Analyzing structural frameworks across active frame sequences.</p>
+      <a href="#" class="apple-btn">Stream now</a>
+    </div>
+  </div>
+
+  <div class="apple-moving-box" data-index="2">
+    <div class="apple-box-image">
+      <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop&q=80" alt="Slide 3">
+    </div>
+    <div class="apple-box-overlay">
+      <h3><a href="#" onclick="animateAndGo(this, 'https://your-link.com', event)" class="box-title-link">Diffusion Models</a></h3>
+      <p>Exploring state-of-the-art tokenization layers across generative pipelines.</p>
+      <a href="#" class="apple-btn">Read paper</a>
+    </div>
+  </div>
+
+</div>
+  </div>
+</div>
+
+<div class="carousel-dots" id="carouselDots">
+  <span class="dot active" onclick="jumpToSlide(0)"></span>
+  <span class="dot" onclick="jumpToSlide(1)"></span>
+  <span class="dot" onclick="jumpToSlide(2)"></span>
+</div>
+
 
 
 <br>

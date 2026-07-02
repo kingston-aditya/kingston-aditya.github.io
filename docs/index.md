@@ -10,7 +10,7 @@ hide:
 
 # Aditya Sarkar ![](images/por.jpg){ align=right style="width:9.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 
-:fontawesome-solid-building: Office: [4112-D15, Brendan Iribe Center, 8125 Paint Branch Dr, College Park, MD 20742](https://maps.app.goo.gl/xWjQWVVnpTVoWaQw8)
+:fontawesome-solid-building: Office: [4112-D15, Brendan Iribe Center, 8125 Paint Branch Dr, College Park, MD](https://maps.app.goo.gl/xWjQWVVnpTVoWaQw8)
 
 :fontawesome-solid-inbox: Work Email: [asarkar6 [at] umd [dot] edu](mailto:asarkar6@umd.edu)
 

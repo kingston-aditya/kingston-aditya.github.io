@@ -28,7 +28,33 @@
 }
 
 .md-main__inner {
-    margin-top: 80px !important;
+    margin-top: 95px !important;
+}
+
+.md-container {
+  /* 1. Base cream backdrop fallback */
+  background-color: #f7f9fa !important; 
+
+  /* 2. Layered center glow + contour ring textures */
+  background-image: 
+    radial-gradient(
+      circle at 50% 25%, 
+      rgba(255, 255, 255, 1) 0%, 
+      rgba(255, 255, 255, 0) 70%
+    ),
+    repeating-radial-gradient(
+      circle at 50% 25%, 
+      transparent 0,
+      transparent 50px, 
+      rgba(0, 0, 0, 0.015) 50px, 
+      rgba(0, 0, 0, 0.015) 51px
+    ) !important;
+    
+  background-attachment: fixed !important;
+}
+
+.md-main, .md-main__inner {
+  background-color: transparent !important;
 }
 
 .md-search, .md-nav {

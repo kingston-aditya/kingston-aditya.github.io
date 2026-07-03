@@ -18,6 +18,24 @@ hide:
 
 <!-- <span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-github:](https://github.com/kingston-aditya) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073) [:fontawesome-solid-chalkboard-user:](SanDiego_Aditya_CV8.pdf)</span> -->
 
+<div class="academic-squircles-container">
+  <a href="https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en" class="academic-squircle-btn" title="Google Scholar">
+    :academicons-google-scholar:
+  </a>
+  <a href="https://www.linkedin.com/in/aditya-sarkar-970620315/" class="academic-squircle-btn" title="LinkedIn">
+    :fontawesome-brands-linkedin:
+  </a>
+  <a href="https://github.com/kingston-aditya" class="academic-squircle-btn" title="GitHub">
+    :fontawesome-brands-github:
+  </a>
+  <a href="https://x.com/sarkar8073" class="academic-squircle-btn" title="X (Twitter)">
+    :fontawesome-brands-x-twitter:
+  </a>
+  <a href="SanDiego_Aditya_CV8.pdf" class="academic-squircle-btn" title="CV / Teaching">
+    :fontawesome-solid-chalkboard-user:
+  </a>
+</div>
+
 <div class="squircle-nav">
   <div class="nav-slider" id="navSlider"></div>
   
@@ -49,17 +67,29 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 ## Publications
 <sup>\*</sup> denotes equal contribution
 
-<div class="pub-filter-container">
+<div class="topics-wrapper">
+  <span class="topics-label">TOPICS:</span>
+
+  <div class="topics-squircle-nav">
+    <div class="topics-nav-slider" id="topicsNavSlider"></div>
+    
+  <button class="topics-nav-option active" onclick="moveTopicsSlider(this); filterPubs('all', this)">Selected</button>
+  <button class="topics-nav-option" onclick="moveTopicsSlider(this); filterPubs('language-modeling', this)">Language Modeling</button>
+  <button class="topics-nav-option" onclick="moveTopicsSlider(this); filterPubs('distillation', this)">Distillation</button>
+  </div>
+</div>
+
+<!-- <div class="pub-filter-container">
   <span class="filter-label">Topics:</span>
 
   <button class="pub-pill active" onclick="filterPubs('all', event)">Selected</button>
   <button class="pub-pill" onclick="filterPubs('video', event)">Language Modeling</button>
   <button class="pub-pill" onclick="filterPubs('diffusion', event)">Distillation</button>
-</div>
+</div> -->
 
 <div class="pub-list">
 
-  <div class="pub-item" data-topic="diffusion">
+  <div class="pub-item" data-topic="distillation">
     <h4>Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h4>
     <p><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
     <p class="pub-links">Preprint 2026</p>
@@ -72,7 +102,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     </div>
   </div>
 
-  <div class="pub-item" data-topic="video">
+  <div class="pub-item" data-topic="language-modeling">
     <h4>An Attribute-Based Measure of Video Complexity.</h4>
     <p><u>Aditya Sarkar</u>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="#">Z. Wang</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="#">V.N. Sai</a>, <a href="#">Aashu Singh</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
     <p class="pub-links">Preprint 2026</p>
@@ -85,18 +115,24 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     </div>
   </div>
 
-  <div class="pub-item" data-topic="video">
-    <h4>Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction.</h4>
-    <p><u>Aditya Sarkar</u>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="#">Z. Wang</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="#">V.N. Sai</a>, <a href="#">Aashu Singh</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
-    <p class="pub-links">ICLR 2026</p>
-    <div class="pub-actions">
-      <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
-      <a href="https://arxiv.org/abs/2601.22570" class="pub-btn-outline"><i class="fa-brands fa-xing"></i> Paper</a>
-      <a href="#" class="pub-btn-outline"><i class="fa-brands fa-hugging-face"></i> HF Demo</a>
-      <a href="https://github.com/kingston-aditya/MA-PaPSP" class="pub-btn-outline"><i class="fa-brands fa-github"></i>Code</a>
-      <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
-    </div>
+  <h4 class="pub-title">
+    Leveraging Data to Say No: Memory Augmented Plug-and-Play Selective Prediction.
+  </h4>
+  
+  <!-- Authors description layer -->
+  <p class="pub-authors">
+    <u>Aditya Sarkar</u>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="#">Z. Wang</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="#">V.N. Sai</a>, <a href="#">Aashu Singh</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.
+  </p>
+
+  <!-- Clean minimalist action pills at bottom -->
+  <div class="pub-actions">
+    <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
+    <a href="https://arxiv.org/abs/2601.22570" class="pub-btn-outline"><i class="fa-brands fa-xing"></i> Paper</a>
+    <a href="#" class="pub-btn-outline"><i class="fa-brands fa-hugging-face"></i> HF Demo</a>
+    <a href="https://github.com/kingston-aditya/MA-PaPSP" class="pub-btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+    <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
   </div>
+</div>
 
 </div>
 
@@ -118,13 +154,16 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
   }
 }
 
-function filterPubs(topic) {
-  // Update active state on buttons
+function filterPubs(topic, element) {
+  // 1. Update active state on tracking pills safely using the passed element
   const buttons = document.querySelectorAll('.pub-pill');
   buttons.forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
+  
+  if (element) {
+    element.classList.add('active');
+  }
 
-  // Filter items
+  // 2. Filter the elements cleanly
   const items = document.querySelectorAll('.pub-item');
   items.forEach(item => {
     if (topic === 'all' || item.getAttribute('data-topic') === topic) {
@@ -135,31 +174,32 @@ function filterPubs(topic) {
   });
 }
 
-function moveSlider(element) {
-    // 1. Remove the 'active' class (white text) from all options
-    const options = document.querySelectorAll('.nav-option');
+function moveTopicsSlider(element) {
+    // 1. Remove active state text highlights from siblings
+    const options = element.parentElement.querySelectorAll('.topics-nav-option');
     options.forEach(opt => opt.classList.remove('active'));
 
-    // 2. Add the 'active' class to the exact button that was clicked
+    // 2. Assign active state to the target element clicked
     element.classList.add('active');
 
-    // 3. Find the slider element
-    const slider = document.getElementById('navSlider');
+    // 3. Find the local sliding capsule node
+    const slider = element.parentElement.querySelector('.topics-nav-slider');
 
-    // 4. Calculate where the clicked button is and how wide it is
+    // 4. Compute positional boundaries inside tracking container
     const leftPosition = element.offsetLeft;
     const elementWidth = element.offsetWidth;
 
-    // 5. Move and resize the purple slider to match
+    // 5. Transform positions smoothly
     slider.style.left = `${leftPosition}px`;
     slider.style.width = `${elementWidth}px`;
   }
 
-  // 6. Run this once when the page loads so the purple box starts on "Overview"
-  window.addEventListener('DOMContentLoaded', () => {
-    const firstOption = document.querySelector('.nav-option.active');
-    if (firstOption) {
-      moveSlider(firstOption);
+  // Auto-initialize placement onto 'Selected' tab at layout startup
+  document.addEventListener('DOMContentLoaded', () => {
+    const defaultTab = document.querySelector('.topics-nav-option.active');
+    if (defaultTab) {
+      // Small timeout ensures browser completes parsing element boxes perfectly
+      setTimeout(() => moveTopicsSlider(defaultTab), 50);
     }
   });
 

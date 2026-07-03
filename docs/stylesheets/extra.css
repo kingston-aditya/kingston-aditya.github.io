@@ -494,3 +494,233 @@
   }
   .apple-box-overlay h3 { font-size: 1.1em !important; }
 }
+
+/* Container to lay the squircles out in a clean row */
+.academic-squircles-container {
+  display: flex !important;
+  gap: 12px !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Individual Squircle Button Styles */
+.academic-squircle-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 46px !important;                 /* Equal width and height creates a perfect square base */
+  height: 46px !important;
+  background-color: #4a154b !important;   /* Signature dark purple theme */
+  border-radius: 12px !important;         /* Smooth organic squircle rounding factor */
+  text-decoration: none !important;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
+}
+
+/* Formats the internal MkDocs custom emoji/font icons into crisp white lines */
+.academic-squircle-btn span.twemoji, 
+.academic-squircle-btn svg,
+.academic-squircle-btn i {
+  font-size: 1.4em !important;            /* Controls the icon scale inside the pill container */
+  color: #ffffff !important;              /* Locks icon lines to solid white */
+  fill: #ffffff !important;               /* Forces vector path shapes to white fill profiles */
+  display: block !important;
+  margin: 0 !important;
+}
+
+/* Interactive Hover States */
+.academic-squircle-btn:hover {
+  background-color: #5c1b5e !important;   /* Subtle purple brightness shift on hover */
+  transform: translateY(-2px) !important; /* Elegant lift layout */
+}
+
+/* Seamless responsive tactile shrink connection when tapped/clicked down */
+.academic-squircle-btn:active {
+  transform: scale(0.92) !important;     /* Shrinks the pill frame cleanly inward */
+}
+
+/* Layout row aligning the title and navigation container */
+.topics-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;              /* Space between 'TOPICS:' and the bar */
+  margin: 20px 0 !important;
+}
+
+/* Large, proportional label styling */
+.topics-label {
+  font-size: 1.45rem !important;     /* Scaled up to be big and bold */
+  font-weight: 800 !important;
+  color: #4b4b4b !important;         /* Deep grey color from your image */
+  letter-spacing: 0.5px !important;
+  font-family: inherit;
+}
+
+/* The transparent outline squircle wrapper track */
+.topics-squircle-nav {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;     /* Transparent background center */
+  border: 1.5px solid #4a154b;       /* Pure purple outline framing */
+  border-radius: 50px;               /* Smooth capsule/squircle pill shape */
+  padding: 4px;                      /* Internal padding gap for buttons */
+  box-sizing: border-box;
+}
+
+/* The solid purple sliding highlight block */
+.topics-nav-slider {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  background-color: #4a154b;         /* Deep purple fill matching your button style */
+  border-radius: 40px;
+  z-index: 1;                        /* Sits behind text paths layer */
+  transition: all 0.38s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth fluid movement curve */
+}
+
+/* Typography settings for individual button paths */
+.topics-nav-option {
+  position: relative;
+  z-index: 2;                        /* Floats text safely above the moving background layer */
+  background: transparent;
+  border: none;
+  padding: 8px 22px;                 /* Spacious internal padding alignment matching layout */
+  font-size: 0.95rem;
+  font-weight: 700;                  /* Crisp bold weighting profile */
+  color: #4a154b;                    /* Non-selected items display deep purple text lines */
+  cursor: pointer;
+  border-radius: 40px;
+  transition: color 0.25s ease;      /* Quick, clean color crossfade runtime */
+  outline: none;
+  font-family: inherit;
+  white-space: nowrap;               /* Prevents terms from dropping to double lines */
+}
+
+/* Active option triggers solid white text profile rules */
+.topics-nav-option.active {
+  color: #ffffff !important;
+}
+
+/* Small tactile click shrink responsiveness */
+.topics-nav-option:active {
+  transform: scale(0.96);
+  transition: transform 0.05s ease;
+}
+
+/* Responsive adjustments for mobile viewports */
+@media (max-width: 768px) {
+  .topics-wrapper {
+    flex-direction: column !important; /* Stack vertical on tiny screens */
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+  .topics-label {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Card Container Layout */
+.pub-item {
+  background: #ffffff !important;
+  border: 1px solid #eef2f5 !important;
+  border-radius: 20px !important;            /* Distinct rounded corners from the reference image */
+  padding: 32px !important;                 /* Spacious inner padding layout */
+  margin-bottom: 24px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important; /* Extremely soft shadow profile */
+  text-align: left !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Subtle interactive lift when looking over cards */
+.pub-item:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Metadata formatting */
+.pub-meta-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-bottom: 12px !important;
+  font-family: inherit;
+}
+
+.pub-tag {
+  color: #0f6257 !important;                /* Teal color code signature matching the screenshot example */
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+
+.pub-meta-sep {
+  color: #b0b8c0 !important;
+  font-size: 0.8rem !important;
+}
+
+.pub-date {
+  color: #606870 !important;
+  font-size: 0.85rem !important;
+}
+
+/* Bold prominent title matching 'What we're learning...' size balance */
+.pub-title {
+  font-size: 1.65rem !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  color: #0c111d !important;
+  margin: 0 0 16px 0 !important;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif !important; /* Editorial serif fallback to mimic image */
+}
+
+/* Authors line layout styling */
+.pub-authors {
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  color: #475467 !important;                /* Soft grayish steel from the image content block */
+  margin-bottom: 28px !important;
+}
+
+.pub-authors a {
+  color: #475467 !important;
+  text-decoration: none !important;
+  border-bottom: 1px dashed #b0b8c0 !important;
+}
+
+.pub-authors a:hover {
+  color: #4a154b !important;                /* Highlights your theme purple on hover links */
+  border-bottom-color: #4a154b !important;
+}
+
+/* Action button strip layout adjusting */
+.pub-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+
+.pub-btn-outline {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 16px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: #4a154b !important;                /* Uses your custom purple brand color for text accents */
+  background: transparent !important;
+  border: 1.5px solid #4a154b !important;
+  border-radius: 30px !important;           /* Smooth pill buttons layout */
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.pub-btn-outline:hover {
+  background: #4a154b !important;           /* Fills button with deep purple on hover overlay */
+  color: #ffffff !important;
+}

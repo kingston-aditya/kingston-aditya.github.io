@@ -36,16 +36,6 @@ hide:
   </a>
 </div>
 
-<!-- <div class="squircle-nav">
-  <div class="nav-slider" id="navSlider"></div>
-  
-  <button class="nav-option active" onclick="moveSlider(this)">Webpage</button>
-  <button class="nav-option" onclick="moveSlider(this)">Scholar</button>
-  <button class="nav-option" onclick="moveSlider(this)">Github</button>
-  <button class="nav-option" onclick="moveSlider(this)">X</button>
-  <button class="nav-option" onclick="moveSlider(this)">CV</button>
-</div> -->
-
 <br>
 
 Hello! I am a second-year Ph.D. student at the [__University of Maryland__](https://www.umiacs.umd.edu/), where I am engaged in research collaborations with Profs. [__Nuno Vasconcelos__](http://www.svcl.ucsd.edu/people/nuno/) and [__David Jacobs__](https://www.cs.umd.edu/~djacobs/). My research aims to build better computer vision algorithms, specifically for temporal understanding in LLMs, action and world modeling. I am grateful to be supported by University of Maryland __Graduate Fellowship__.
@@ -65,19 +55,27 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
 ## Publications
-<sup>\*</sup> denotes equal contribution
-
 <div class="topics-wrapper">
   <span class="topics-label">TOPICS:</span>
 
-  <div class="topics-squircle-nav">
-    <div class="topics-nav-slider" id="topicsNavSlider"></div>
+  <div class="squircle-nav">
+    <div class="nav-slider" id="navSlider"></div>
     
-  <button class="topics-nav-option active" onclick="moveTopicsSlider(this); filterPubs('all', this)">Selected</button>
-  <button class="topics-nav-option" onclick="moveTopicsSlider(this); filterPubs('language-modeling', this)">Language Modeling</button>
-  <button class="topics-nav-option" onclick="moveTopicsSlider(this); filterPubs('distillation', this)">Distillation</button>
+  <button class="nav-option active" onclick="moveTopicsSlider(this); filterPubs('all', this)">Selected</button>
+  <button class="nav-option" onclick="moveTopicsSlider(this); filterPubs('language-modeling', this)">Language Modeling</button>
+  <button class="nav-option" onclick="moveTopicsSlider(this); filterPubs('distillation', this)">Distillation</button>
   </div>
 </div>
+
+<!-- <div class="squircle-nav">
+  <div class="nav-slider" id="navSlider"></div>
+  
+  <button class="nav-option active" onclick="moveSlider(this)">Webpage</button>
+  <button class="nav-option" onclick="moveSlider(this)">Scholar</button>
+  <button class="nav-option" onclick="moveSlider(this)">Github</button>
+  <button class="nav-option" onclick="moveSlider(this)">X</button>
+  <button class="nav-option" onclick="moveSlider(this)">CV</button>
+</div> -->
 
 <!-- <div class="pub-filter-container">
   <span class="filter-label">Topics:</span>
@@ -88,7 +86,6 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 </div> -->
 
 <div class="pub-list">
-
   <div class="pub-item" data-topic="distillation">
     <h4>Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h4>
     <p><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
@@ -114,8 +111,6 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
       <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
     </div>
   </div>
-</div>
-
 </div>
 
 <script>
@@ -156,32 +151,31 @@ function filterPubs(topic, element) {
   });
 }
 
-function moveTopicsSlider(element) {
-    // 1. Remove active state text highlights from siblings
-    const options = element.parentElement.querySelectorAll('.topics-nav-option');
+function moveSlider(element) {
+    // 1. Remove the 'active' class (white text) from all options
+    const options = document.querySelectorAll('.nav-option');
     options.forEach(opt => opt.classList.remove('active'));
 
-    // 2. Assign active state to the target element clicked
+    // 2. Add the 'active' class to the exact button that was clicked
     element.classList.add('active');
 
-    // 3. Find the local sliding capsule node
-    const slider = element.parentElement.querySelector('.topics-nav-slider');
+    // 3. Find the slider element
+    const slider = document.getElementById('navSlider');
 
-    // 4. Compute positional boundaries inside tracking container
+    // 4. Calculate where the clicked button is and how wide it is
     const leftPosition = element.offsetLeft;
     const elementWidth = element.offsetWidth;
 
-    // 5. Transform positions smoothly
+    // 5. Move and resize the purple slider to match
     slider.style.left = `${leftPosition}px`;
     slider.style.width = `${elementWidth}px`;
   }
 
-  // Auto-initialize placement onto 'Selected' tab at layout startup
-  document.addEventListener('DOMContentLoaded', () => {
-    const defaultTab = document.querySelector('.topics-nav-option.active');
-    if (defaultTab) {
-      // Small timeout ensures browser completes parsing element boxes perfectly
-      setTimeout(() => moveTopicsSlider(defaultTab), 50);
+  // 6. Run this once when the page loads so the purple box starts on "Overview"
+  window.addEventListener('DOMContentLoaded', () => {
+    const firstOption = document.querySelector('.nav-option.active');
+    if (firstOption) {
+      moveSlider(firstOption);
     }
   });
 

@@ -3,7 +3,7 @@ hide:
   - navigation
   - toc
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
 
 <div class="custom-top-banner">
   Your short white text here
@@ -21,19 +21,19 @@ hide:
 
 <div class="academic-squircles-container">
   <a href="https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en" class="academic-squircle-btn" title="Google Scholar">
-    GS
+    <i class="fa-brands fa-google-scholar"></i>
   </a>
   <a href="https://www.linkedin.com/in/aditya-sarkar-970620315/" class="academic-squircle-btn" title="LinkedIn">
-    IN
+    <i class="fa-brands fa-linkedin"></i>
   </a>
   <a href="https://github.com/kingston-aditya" class="academic-squircle-btn" title="GitHub">
-    Git
+    <i class="fa-brands fa-github"></i>
   </a>
   <a href="https://x.com/sarkar8073" class="academic-squircle-btn" title="X (Twitter)">
-    X
+    <i class="fa-brands fa-square-x-twitter"></i>
   </a>
   <a href="SanDiego_Aditya_CV8.pdf" class="academic-squircle-btn" title="CV / Teaching">
-    CV
+    <i class="fa-regular fa-file"></i>
   </a>
 </div>
 
@@ -116,9 +116,9 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     <span class="pub-date">Preprint 2026</span>
   </div>
 
-  <h4 class="pub-title">
+  <h6 class="pub-title">
     Masked Visual Fine-Tuning for Encoder-based Diffusion Models.
-  </h4>
+  </h6>
   
   <p class="pub-authors">
     <u>Aditya Sarkar</u>, <a href="#">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="#">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.

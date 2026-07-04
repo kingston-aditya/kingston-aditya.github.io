@@ -920,3 +920,83 @@
   max-width: 800px;
   margin: 0 auto; /* Centers the list if needed */
 }
+
+/* Reset and Core Layout Setup */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Stretches the entire page to lock the footer at the very bottom */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f5; /* Light grey backdrop */
+}
+
+/* 1. Top Section & Floating Card */
+.top-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-squircle {
+  width: 100%;
+  max-width: 750px;
+  height: 260px; /* Adjust height based on content */
+  background-color: #ffffff;
+  
+  /* Precision Squircle Details */
+  border: 2px solid #0f2537;
+  border-radius: 32px;
+  
+  /* Pronounced floating depth shadow */
+  box-shadow: 0 12px 30px rgba(15, 37, 55, 0.15); 
+}
+
+/* 2. Full-Width White Layer (YouTube Video Container) */
+.video-section {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 60px 0; /* Vertical height control for the white band */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Keeps the YouTube iframe inside a clean aspect ratio grid */
+.video-container {
+  width: 90%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9; /* Maintains standard video proportions */
+  background-color: #334e68; /* Mock video fill color */
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #0f2537;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 3. Lower Middle Section Spacer */
+.spacer-section {
+  flex-grow: 1; /* Automatically consumes extra vertical screen space */
+  min-height: 150px; /* Ensures grey spacing layer is always distinct */
+}
+
+/* 4. Full-Width Purple Footer Base */
+.purple-footer {
+  width: 100%;
+  height: 180px; /* Fixed vertical footer depth matching mockup */
+  background-color: #8c3a8a; /* Rich purple tone */
+  border-top: 2px solid #000000;
+}

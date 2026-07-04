@@ -55,7 +55,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
-# Publications
+## Publications
 <div class="squircle-nav">
   <div class="nav-slider" id="navSlider"></div>
   
@@ -63,24 +63,6 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 <button class="nav-option" onclick="moveSlider(this); filterPubs('language-modeling', this)">Language Modeling</button>
 <button class="nav-option" onclick="moveSlider(this); filterPubs('distillation', this)">Distillation</button>
 </div>
-
-<!-- <div class="squircle-nav">
-  <div class="nav-slider" id="navSlider"></div>
-  
-  <button class="nav-option active" onclick="moveSlider(this)">Webpage</button>
-  <button class="nav-option" onclick="moveSlider(this)">Scholar</button>
-  <button class="nav-option" onclick="moveSlider(this)">Github</button>
-  <button class="nav-option" onclick="moveSlider(this)">X</button>
-  <button class="nav-option" onclick="moveSlider(this)">CV</button>
-</div> -->
-
-<!-- <div class="pub-filter-container">
-  <span class="filter-label">Topics:</span>
-
-  <button class="pub-pill active" onclick="filterPubs('all', event)">Selected</button>
-  <button class="pub-pill" onclick="filterPubs('video', event)">Language Modeling</button>
-  <button class="pub-pill" onclick="filterPubs('diffusion', event)">Distillation</button>
-</div> -->
 
 <div class="pub-list">
   <div class="pub-item" data-topic="distillation">
@@ -91,7 +73,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
       <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
       <a href="https://arxiv.org/abs/2601.22570" class="pub-btn-outline"><i class="fa-brands fa-xing"></i> Paper</a>
       <a href="#" class="pub-btn-outline"><i class="fa-brands fa-hugging-face"></i> HF Demo</a>
-      <a href="https://github.com/kingston-aditya/MA-PaPSP" class="pub-btn-outline"><i class="fa-brands fa-github"></i>Code</a>
+      <a href="https://github.com/kingston-aditya/MA-PaPSP" class="pub-btn-outline"><i class="fa-brands fa-github"></i> Code</a>
       <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
     </div>
   </div>
@@ -300,7 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <br>
 
-# Blogs
+## Blogs
 
 <div class="apple-carousel-container" id="appleSlider">
   <div class="apple-carousel-stage">

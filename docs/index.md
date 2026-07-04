@@ -10,6 +10,7 @@ hide:
     <span>MA-PaPSP got accepted to ICLR 2026!</span>
     <a href="#" class="banner-btn">Read Article &rarr;</a>
 </div>
+</div>
 
 # Aditya Sarkar ![](images/por.jpg){ align=right style="width:9.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 

@@ -651,14 +651,14 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
-  padding: 24px;
+  gap: 12px;           /* Tightened vertical gap between elements */
+  padding: 20px 24px;  /* Reduced vertical padding to make the box smaller */
+  max-width: 720px;    /* Constrains the overall layout footprint */
+  width: 100%;
+  box-sizing: border-box;
   
-  /* FIX: Add solid background and rounded corners */
   background-color: #ffffff; 
-  border-radius: 16px; /* Adjust to match your preferred squircle roundness */
-  
-  /* Optional: Add a subtle shadow if you want it to pop off the background */
+  border-radius: 16px; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
 }
 
@@ -800,19 +800,39 @@
 
 /* Typography */
 .article-title {
-  font-family: "Times New Roman", Times, Georgia, serif; /* Adjusted to a classic serif stack */
-  font-size: 1.75rem; /* Scaled proportionately to the new description size */
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-size: 2.1rem;   /* Increased from 1.75rem for greater prominence */
   font-weight: 400; 
   color: #111827;
-  margin: 0 0 16px 0;
-  line-height: 1.2;
+  margin: 0;           /* Removed default bottom margins to fix spacing leaks */
+  line-height: 1.25;
 }
 
+/* 4. Description Configurations */
 .article-description {
   font-size: 0.91rem !important;
-  color: #4b5563 !important;
+  color: #4b5563 !important; /* This keeps the primary text / commas dark */
   line-height: 1.6;
-  margin: 0 0 32px 0; /* Pushes the 'Read article' link down */
+  margin: 0 0 16px 0;
+}
+
+/* 1. Ensure the first author (the <u> tag) stays dark/prominent */
+.article-description u {
+  color: #111827;
+  font-weight: 500;
+  text-decoration: none; /* Removes the underline if you want a clean look */
+}
+
+/* 2. Turn all the subsequent author links grey */
+.article-description a {
+  color: #888888 !important; /* Forces the links to turn grey */
+  text-decoration-color: #cccccc; /* Softens the link underline color */
+  transition: color 0.2s ease;
+}
+
+/* 3. Optional: Make the grey links turn dark again when hovered */
+.article-description a:hover {
+  color: #111827 !important;
 }
 
 /* Action Link */

@@ -178,13 +178,13 @@
 .pub-btn-outline {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 6px !important;                 /* Space between the icon and text */
+  gap: 11px !important;                 /* Space between the icon and text */
   background-color: transparent !important;
   color: #4a154b !important;           /* Your signature deep purple color */
   border: 1px solid #4a154b !important;/* Thin purple boundary ring */
   border-radius: 6px !important;       /* Slightly rounded sharp corner look */
-  padding: 4px 12px !important;        /* Padding box layout match */
-  font-size: 0.82em !important;
+  padding: 6px 18px !important;        /* Padding box layout match */
+  font-size: 1.12em !important;
   font-weight: bold !important;
   text-decoration: none !important;
   transition: all 0.2s ease-in-out !important;
@@ -733,7 +733,7 @@
 .pub-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px; /* Slightly tighter gap */
+  gap: 9px; /* Slightly tighter gap */
   width: 100%;
   justify-content: flex-end; /* Pushes buttons to the bottom-right */
 }
@@ -798,7 +798,7 @@
 /* Typography */
 .article-title {
   font-family: "Georgia", "Times New Roman", serif; /* Creates that classic editorial look */
-  font-size: 2.1rem; 
+  font-size: 5.1rem; 
   font-weight: 400; /* Keeps it readable, not overly bold */
   color: #111827;
   margin: 0 0 16px 0;
@@ -806,7 +806,7 @@
 }
 
 .article-description {
-  font-size: 1.1rem;
+  font-size: 0.55rem;
   color: #4b5563;
   line-height: 1.6;
   margin: 0 0 32px 0; /* Pushes the 'Read article' link down */

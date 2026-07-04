@@ -230,7 +230,7 @@
 .pub-list {
   display: flex;
   flex-direction: column;
-  gap: 24px !important;
+  gap: 16px !important;
   margin-top: 24px; /* Space between navbar and content card */
 }
 
@@ -846,7 +846,7 @@
 }
 
 .meta-tag {
-  color: #24655A; /* Teal accent color */
+  color: #7c3aed; /* Teal accent color */
   font-weight: 600;
   letter-spacing: 1px;
 }

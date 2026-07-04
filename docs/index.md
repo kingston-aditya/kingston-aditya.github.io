@@ -8,7 +8,7 @@ hide:
 <div class="custom-top-banner">
   <div class="banner-center-content">
     <span>MA-PaPSP got accepted to ICLR 2026!</span>
-    <a href="#" class="banner-btn">Read Article &rarr;</a>
+    <a href="#" class="banner-btn">Read Paper &rarr;</a>
 </div>
 </div>
 
@@ -80,6 +80,8 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
   
   <p class="article-description"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
   </div>
+
+  <br>
   
   <div class="pub-actions">
     <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
@@ -104,7 +106,6 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
   </div>
 
   <br>
-  <br>
   
   <div class="pub-actions">
     <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
@@ -128,6 +129,8 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
   
   <p class="article-description"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
   </div>
+
+  <br>
   
   <div class="pub-actions">
     <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>

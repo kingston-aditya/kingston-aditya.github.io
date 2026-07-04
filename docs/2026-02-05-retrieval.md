@@ -1,7 +1,16 @@
 ---
 hide:
   - navigation
+  - toc
 ---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="custom-top-banner">
+  <div class="banner-center-content">
+    <span>MA-PaPSP got accepted to ICLR 2026!</span>
+    <a href="#" class="banner-btn">Read Paper &rarr;</a>
+</div>
+</div>
 
 # Similar instances enhances rejection. ![](./../images/rain_book.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 

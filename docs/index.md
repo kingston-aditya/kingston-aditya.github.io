@@ -66,30 +66,48 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
 <div class="pub-list">
   <div class="pub-item" data-topic="distillation">
-    <h4>Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h4>
-    <p><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
-    <p class="pub-links">Preprint 2026</p>
-    <div class="pub-actions">
-      <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
-      <a href="https://arxiv.org/abs/2601.22570" class="pub-btn-outline"><i class="fa-brands fa-xing"></i> Paper</a>
-      <a href="#" class="pub-btn-outline"><i class="fa-solid fa-robot"></i> HF Demo</a>
-      <a href="https://github.com/kingston-aditya/MA-PaPSP" class="pub-btn-outline"><i class="fa-brands fa-github"></i> Code</a>
-      <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
-    </div>
+  <div class="pub-content-left">
+      <div class="article-meta">
+        <span class="meta-tag">DISTILLATION</span>
+        <span class="meta-divider">•</span>
+        <span class="meta-date">Preprint 2026</span>
+      </div>
+      
+  <h2 class="article-title">Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h2>
+  
+  <p class="article-description"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
   </div>
+  
+  <div class="pub-actions">
+    <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
+    <a href="https://arxiv.org/abs/2601.22570" class="pub-btn-outline"><i class="fa-brands fa-xing"></i> Paper</a>
+    <a href="#" class="pub-btn-outline"><i class="fa-brands fa-hugging-face"></i> HF Demo</a>
+    <a href="https://github.com/kingston-aditya/MA-PaPSP" class="pub-btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+    <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
+  </div>
+</div>
 
-  <div class="pub-item" data-topic="language-modeling">
-    <h4>An Attribute-Based Measure of Video Complexity.</h4>
-    <p><u>Aditya Sarkar</u>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="#">Z. Wang</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="#">V.N. Sai</a>, <a href="#">Aashu Singh</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
-    <p class="pub-links">Preprint 2026</p>
-    <div class="pub-actions">
-      <a href="2026-02-10-predicting" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i>Blog</a>
-      <a href="https://arxiv.org/abs/2606.00640" class="pub-btn-outline"><i class="fa-brands fa-xing"></i>Paper</a>
-      <a href="#" class="pub-btn-outline"><i class="fa-solid fa-robot"></i> HF Demo</a>
-      <a href="https://github.com/kingston-aditya/VideoABC" class="pub-btn-outline"><i class="fa-brands fa-github"></i>Code</a>
-      <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
-    </div>
+  <div class="pub-item" data-topic="distillation">
+  <div class="pub-content-left">
+      <div class="article-meta">
+        <span class="meta-tag">DISTILLATION</span>
+        <span class="meta-divider">•</span>
+        <span class="meta-date">Preprint 2026</span>
+      </div>
+      
+  <h2 class="article-title">Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h2>
+  
+  <p class="article-description"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
   </div>
+  
+  <div class="pub-actions">
+    <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
+    <a href="https://arxiv.org/abs/2601.22570" class="pub-btn-outline"><i class="fa-brands fa-xing"></i> Paper</a>
+    <a href="#" class="pub-btn-outline"><i class="fa-brands fa-hugging-face"></i> HF Demo</a>
+    <a href="https://github.com/kingston-aditya/MA-PaPSP" class="pub-btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+    <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
+  </div>
+</div>
 
 
   <div class="pub-item" data-topic="distillation">

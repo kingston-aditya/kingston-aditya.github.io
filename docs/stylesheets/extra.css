@@ -1,43 +1,42 @@
 .custom-top-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    background-color: #301934 !important; /* Deep Purple */
-    color: #ffffff !important;            /* White text */
-    justify-content: space-between;
-    align-items: center;  
-    padding: 8px 12px !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 0.75rem !important;
-    font-weight: 400 !important;
-    z-index: 99999 !important;            /* Forces it above everything else */
-    box-sizing: border-box;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  padding: 6px 16px !important; /* Slightly more side padding for balance */
+  background-color: #301934 !important; /* Deep Purple */
+  color: #ffffff !important;            /* White text */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.75rem !important;
+  font-weight: 400 !important;
+  z-index: 99999 !important;            
+  box-sizing: border-box;
+}
 
 .banner-btn {
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.7rem !important; /* Scaled down to match 0.75rem banner text */
+  font-weight: 500;
   
-  /* Creates the custom outlined pill look */
-  padding: 8px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.4); 
-  border-radius: 50px; /* Forces a perfect capsule/squircle shape */
-  background-color: rgba(255, 255, 255, 0.05); /* Soft, subtle translucent fill */
+  /* Compact layout footprint */
+  padding: 4px 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important; 
+  border-radius: 50px !important; 
+  background-color: rgba(255, 255, 255, 0.05) !important; 
   
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  transition: all 0.2s ease-in-out; /* Smooth transition when hovering */
+  gap: 4px;
+  transition: all 0.2s ease-in-out; 
 }
 
 .banner-btn:hover {
-  background-color: #ffffff;
-  color: #24655A; /* Flips text color to the banner's teal for high contrast */
-  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
 }
 
 .md-header {

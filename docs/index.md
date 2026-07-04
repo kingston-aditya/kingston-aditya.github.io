@@ -94,15 +94,15 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
   <div class="pub-item" data-topic="distillation">
   <div class="pub-content-left">
-      <div class="pub-meta">
-        <span class="pub-tag">DISTILLATION</span>
-        <span class="pub-divider">•</span>
-        <span class="pub-date">Preprint 2026</span>
+      <div class="article-meta">
+        <span class="meta-tag">DISTILLATION</span>
+        <span class="meta-divider">•</span>
+        <span class="meta-date">Preprint 2026</span>
       </div>
       
-  <h4 class="pub-title">Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h4>
+  <h2 class="article-title">Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h2>
   
-  <p class="pub-authors"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
+  <p class="article-description"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
   </div>
   
   <div class="pub-actions">
@@ -116,41 +116,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
 </div>
 
-## Testing
-
-<div class="article-list">
-<div class="article-card">
-  <div class="article-meta">
-    <span class="meta-tag">SPECIALTY</span>
-    <span class="meta-divider">&middot;</span>
-    <span class="meta-date">June 4, 2026</span>
-    <span class="meta-divider">&middot;</span>
-    <span class="meta-read-time">6 min read</span>
-  </div>
-  
-  <h2 class="article-title">AI-Powered Referral Intake and Scheduling for Gastroenterology Practices</h2>
-  
-  <p class="article-description">How TriFetch automates referral triage, eligibility checks, EHR integration, and patient scheduling for GI practices and endoscopy centers.</p>
-  
-  <a href="#" class="article-link">Read article &rarr;</a>
-</div>
-
-<div class="article-card">
-  <div class="article-meta">
-    <span class="meta-tag">GUIDE</span> 
-    <span class="meta-divider">&middot;</span>
-    <span class="meta-date">June 4, 2026</span>
-    <span class="meta-divider">&middot;</span>
-    <span class="meta-read-time">7 min read</span>
-  </div>
-  
-  <h2 class="article-title">AI Agents for Gastroenterology Practices: How They Work and What They Replace</h2>
-  
-  <p class="article-description">A breakdown of how AI agents automate referral triage, eligibility verification, patient scheduling, and EHR integration for GI practices and endoscopy centers.</p>
-  
-  <a href="#" class="article-link">Read article &rarr;</a>
-</div>
-</div>
+<!-- ## Testin -->
 
 <script>
   function animateAndGo(element, url, event) {

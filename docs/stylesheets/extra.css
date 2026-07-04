@@ -71,7 +71,7 @@
 
 .md-header {
   position: fixed; /* or position: sticky; */
-  top: 46px !important;
+  top: 43px !important;
   width: 100%;
   z-index: 100; /* Makes sure it stays on top of page content */
 
@@ -719,6 +719,8 @@
   background-color: #ffffff; 
   border-radius: 12px; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); 
+
+  margin-bottom: 24px !important;
 }
 
 /* Subtle interactive lift when looking over cards */
@@ -873,7 +875,8 @@
   font-size: 0.91rem !important;
   color: #4b5563 !important; /* This keeps the primary text / commas dark */
   line-height: 1.4;
-  margin: 0 0 18px 0 !important;
+  margin: 0 0 30px 0 !important;
+/*  margin-bottom: 24px !important;*/
 }
 
 /* 1. Ensure the first author (the <u> tag) stays dark/prominent */
@@ -916,4 +919,8 @@
   gap: 24px; /* This controls the exact vertical space between the cards */
   max-width: 800px;
   margin: 0 auto; /* Centers the list if needed */
+}
+
+.pub-item .article-description {
+  margin-bottom: 24px !important; /* Forces a cleaner gap [cite: 143, 144] */
 }

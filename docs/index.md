@@ -6,7 +6,8 @@ hide:
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <div class="custom-top-banner">
-  MA-PaPSP got accepted to ICLR 2026. 
+  <span class="banner-text">MA-PaPSP got accepted to ICLR 2026!</span>
+  <a href="#" class="banner-btn">Read Article &rarr;</a>
 </div>
 
 # Aditya Sarkar ![](images/por.jpg){ align=right style="width:9.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}

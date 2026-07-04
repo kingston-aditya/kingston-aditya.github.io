@@ -800,10 +800,10 @@
 
 /* Typography */
 .article-title {
-  font-family: "Georgia", "Times New Roman", serif; /* Creates that classic editorial look */
-  font-size: 2.0rem !important; 
-  font-weight: 400 !important; /* Keeps it readable, not overly bold */
-  color: #111827 !important;
+  font-family: "Times New Roman", Times, Georgia, serif; /* Adjusted to a classic serif stack */
+  font-size: 1.75rem; /* Scaled proportionately to the new description size */
+  font-weight: 400; 
+  color: #111827;
   margin: 0 0 16px 0;
   line-height: 1.2;
 }

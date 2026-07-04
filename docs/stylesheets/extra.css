@@ -8,7 +8,7 @@
     text-align: center !important;
     padding: 8px 12px !important;
     font-size: 0.85rem !important;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     z-index: 99999 !important;            /* Forces it above everything else */
     box-sizing: border-box;
   }
@@ -801,16 +801,16 @@
 /* Typography */
 .article-title {
   font-family: "Georgia", "Times New Roman", serif; /* Creates that classic editorial look */
-  font-size: 6.5rem !important; 
+  font-size: 4.5rem !important; 
   font-weight: 400 !important; /* Keeps it readable, not overly bold */
-  color: #111827;
+  color: #111827 !important;
   margin: 0 0 16px 0;
   line-height: 1.2;
 }
 
 .article-description {
-  font-size: 2.1rem !important;
-  color: #4b5563;
+  font-size: 0.91rem !important;
+  color: #4b5563 !important;
   line-height: 1.6;
   margin: 0 0 32px 0; /* Pushes the 'Read article' link down */
 }

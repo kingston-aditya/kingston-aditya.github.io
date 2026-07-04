@@ -631,7 +631,7 @@
 .pub-content-left {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px; /* Reduced from 10px to pull title and authors closer */
   width: 100%;
 }
 
@@ -650,6 +650,13 @@
   align-items: flex-start;
   gap: 20px;
   padding: 24px;
+  
+  /* FIX: Add solid background and rounded corners */
+  background-color: #ffffff; 
+  border-radius: 16px; /* Adjust to match your preferred squircle roundness */
+  
+  /* Optional: Add a subtle shadow if you want it to pop off the background */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
 }
 
 /* Subtle interactive lift when looking over cards */
@@ -689,18 +696,19 @@
 
 /* Bold prominent title matching 'What we're learning...' size balance */
 .pub-title {
-  font-size: 1.35rem; /* Slightly larger */
-  font-weight: 300;    /* Makes it thin instead of bold */
+  font-family: "Times New Roman", Times, Georgia, serif; /* Changed font */
+  font-size: 1.35rem; 
+  font-weight: 300;    
   margin: 0;
   padding: 0;
-  line-height: 1.3;
+  line-height: 1.2; /* Tighter line height helps reduce spacing */
   color: #111;
 }
 
 /* Authors line layout styling */
 .pub-authors {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.65rem; /* Reduced from 0.95rem */
   color: #555;
 }
 
@@ -751,12 +759,4 @@
 .pub-btn-outline:hover {
   background: #3c1e43 !important;           /* Fills button with deep purple on hover overlay */
   color: #fff !important;
-}
-
-h2 {
-  font-size: 2rem; /* Increases the size (adjust as needed, e.g., 2.5rem for larger) */
-  font-weight: 700; /* Keeps it bold and prominent */
-  margin-top: 0;
-  margin-bottom: 20px; /* Controls the spacing right below the 'Publications' title */
-  color: #333333; /* Optional: matches standard dark text */
 }

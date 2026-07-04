@@ -675,17 +675,20 @@
 .pub-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  gap: 6px;           /* Tightened vertical gap between elements */
-  padding: 14px 24px;  /* Reduced vertical padding to make the box smaller */
-  max-width: 720px;    /* Constrains the overall layout footprint */
-  width: 100%;
+  gap: 8px;            
+  
+  /* FIXED: Set to flex-fill width properties */
+  width: 100% !important; 
+  min-width: 100%;
   box-sizing: border-box;
   
+  /* Keep your clean compact padding */
+  padding: 16px 24px;  
   background-color: #ffffff; 
-  border-radius: 16px; 
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+  border-radius: 12px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); 
 }
 
 /* Subtle interactive lift when looking over cards */
@@ -826,12 +829,12 @@
 
 /* Typography */
 .article-title {
-  font-family: "Times New Roman", Times, Georgia, serif;
-  font-size: 4.1rem;   /* Increased from 1.75rem for greater prominence */
-  font-weight: 400; 
-  color: #111827;
-  margin: 0;           /* Removed default bottom margins to fix spacing leaks */
-  line-height: 1.2;
+  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-size: 4.1rem !important; /* Forces the 4.1rem size to apply */
+  font-weight: 400 !important; 
+  color: #111827 !important;
+  margin: 0 !important;           
+  line-height: 1.25 !important;
 }
 
 /* 4. Description Configurations */

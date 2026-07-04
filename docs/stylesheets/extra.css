@@ -628,10 +628,28 @@
   }
 }
 
+.pub-content-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.pub-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem; /* Matches size of preprint text */
+}
+
 /* Card Container Layout */
 .pub-item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px;
   background: #ffffff !important;
   border: 1px solid #eef2f5 !important;
   border-radius: 12px !important;            /* Distinct rounded corners from the reference image */
@@ -661,7 +679,7 @@
   color: #0f6257 !important;                /* Teal color code signature matching the screenshot example */
   font-size: 0.55rem !important;
   font-weight: 500 !important;
-  letter-spacing: 1px !important;
+  letter-spacing: 0.5px !important;
   text-transform: uppercase !important;
 }
 
@@ -672,25 +690,28 @@
 
 .pub-date {
   color: #666 !important;
-  font-size: 0.95rem !important;
+}
+
+.pub-divider {
+  color: #aaa;
 }
 
 /* Bold prominent title matching 'What we're learning...' size balance */
 .pub-title {
-  font-size: 1.1rem !important;
-  font-weight: 700 !important;
+  font-size: 1.35rem !important;
+  font-weight: 300 !important;
   line-height: 1.3 !important;
-  color: #0c111d !important;
-  margin: 0 0 16px 0 !important;
+  color: #111 !important;
+  margin: 0 !important;
+  padding: 0 !important;
   font-family: Georgia, Cambria, "Times New Roman", Times, serif !important; /* Editorial serif fallback to mimic image */
 }
 
 /* Authors line layout styling */
 .pub-authors {
-  font-size: 0.75rem !important;
-  line-height: 1.6 !important;
-  color: #475467 !important;                /* Soft grayish steel from the image content block */
-  margin-bottom: 28px !important;
+  margin: 0;
+  font-size: 0.95rem !important;
+  color: #555 !important;                /* Soft grayish steel from the image content block */
 }
 
 .pub-title, .pub-authors, .pub-date {
@@ -714,26 +735,36 @@
 .pub-actions {
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 10px !important;
+  gap: 8px !important;
+  width: 100%;
+  justify-content: flex-end;
   margin-top: 4px;
 }
 
 .pub-btn-outline {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 6px !important;
-  padding: 8px 16px !important;
+  gap: 5px !important;
+  padding: 6px 14px !important;
   font-size: 0.85rem !important;
   font-weight: 600 !important;
   color: #4a154b !important;                /* Uses your custom purple brand color for text accents */
   background: transparent !important;
-  border: 1.5px solid #4a154b !important;
-  border-radius: 30px !important;           /* Smooth pill buttons layout */
+  border: 1px solid #3c1e43 !important;
+  border-radius: 12px !important;           /* Smooth pill buttons layout */
   text-decoration: none !important;
   transition: all 0.2s ease !important;
 }
 
 .pub-btn-outline:hover {
-  background: #4a154b !important;           /* Fills button with deep purple on hover overlay */
-  color: #ffffff !important;
+  background: #3c1e43 !important;           /* Fills button with deep purple on hover overlay */
+  color: #fff !important;
+}
+
+h2 {
+  font-size: 2rem; /* Increases the size (adjust as needed, e.g., 2.5rem for larger) */
+  font-weight: 700; /* Keeps it bold and prominent */
+  margin-top: 0;
+  margin-bottom: 20px; /* Controls the spacing right below the 'Publications' title */
+  color: #333333; /* Optional: matches standard dark text */
 }

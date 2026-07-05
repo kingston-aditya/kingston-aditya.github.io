@@ -17,7 +17,7 @@ hide:
   <div class="hero-squircle-card">
     
   <div class="hero-badge-row">
-    <span class="status-badge"><span class="dot"></span>Out of publication. April 2026</span>
+    <span class="status-badge"><span class="dot"></span>Out of publication · April 2026</span>
     <span class="funding-badge">$1.9M PRE-SEED · NEXUS VENTURE PARTNERS</span>
   </div>
   
@@ -28,11 +28,6 @@ hide:
   <p class="hero-description">
     Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
   </p>
-  
-  <div class="hero-action-row">
-    <a href="#" class="btn-primary">Book a Demo &rarr;</a>
-    <a href="#" class="btn-secondary">See How It Works &darr;</a>
-  </div>
     
   </div>
 </div>

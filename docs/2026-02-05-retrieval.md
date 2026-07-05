@@ -12,6 +12,31 @@ hide:
 </div>
 </div>
 
+<div class="landing-hero-container">
+  
+  <div class="hero-squircle-card">
+    
+  <div class="hero-badge-row">
+    <span class="status-badge"><span class="dot"></span>Out of publication. April 2026</span>
+    <span class="funding-badge">$1.9M PRE-SEED · NEXUS VENTURE PARTNERS</span>
+  </div>
+  
+  <h1 class="hero-title">
+    End-to-end <span class="italic-accent">admin automation</span>. Built for the way your <span class="italic-accent">clinic works</span>.
+  </h1>
+  
+  <p class="hero-description">
+    Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
+  </p>
+  
+  <div class="hero-action-row">
+    <a href="#" class="btn-primary">Book a Demo &rarr;</a>
+    <a href="#" class="btn-secondary">See How It Works &darr;</a>
+  </div>
+    
+  </div>
+</div>
+
 <!-- # Similar instances enhances rejection. ![](./../images/rain_book.jpg){ align=right style="width:7.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
 
 <br> -->

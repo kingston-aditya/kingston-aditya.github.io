@@ -921,13 +921,7 @@
   margin: 0 auto; /* Centers the list if needed */
 }
 
-/* Reset and Core Layout Setup */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
+/*This is for the blogs*/
 
 /* Stretches the entire page to lock the footer at the very bottom */
 .page-container {
@@ -936,7 +930,7 @@ html, body {
   min-height: 100vh;
 }
 
-/* 1. Top Section & Floating Card */
+/* 1. Top Section (Transparent Container) */
 .top-section {
   padding: 40px 0px;
   width: 100%;
@@ -948,22 +942,20 @@ html, body {
 .floating-squircle {
   width: 100% !important;
   max-width: 100% !important;
-  height: 260px; /* Adjust height based on content */
+  
+  /* FIX: Removed the hardcoded height: 260px to let aspect-ratio dynamically scale the box width safely */
   aspect-ratio: 16 / 9;
 
   background-color: #ffffff;
-  
-  /* Precision Squircle Details */
   border-radius: 50px;
-  
-  /* Pronounced floating depth shadow */
   box-shadow: 0 12px 30px rgba(15, 37, 55, 0.15);
+  box-sizing: border-box; /* Prevents hidden borders from breaking full-screen widths */
 }
 
-/* 2. Full-Width White Layer (YouTube Video Container) */
+/* 2. Full-Width Video Layout Section */
 .video-section {
   width: 100%;
-  padding: 60px 0; /* Vertical height control for the white band */
+  padding: 60px 0; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -971,14 +963,17 @@ html, body {
 
 /* Keeps the YouTube iframe inside a clean aspect ratio grid */
 .video-container {
-  width: 90%;
-  max-width: 800px;
-  aspect-ratio: 16 / 9; /* Maintains standard video proportions */
-  background-color: #334e68; /* Mock video fill color */
+  /* FIX: Changed from 90% and max-width: 800px to expand completely across the viewport width */
+  width: 100% !important;
+  max-width: 100% !important;
+  
+  aspect-ratio: 16 / 9; 
+  background-color: #334e68; 
   border-radius: 20px;
   overflow: hidden;
   border: 2px solid #0f2537;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .video-container iframe {
@@ -989,6 +984,6 @@ html, body {
 
 /* 3. Lower Middle Section Spacer */
 .spacer-section {
-  flex-grow: 1; /* Automatically consumes extra vertical screen space */
-  min-height: 150px; /* Ensures grey spacing layer is always distinct */
+  flex-grow: 1; 
+  min-height: 150px; 
 }

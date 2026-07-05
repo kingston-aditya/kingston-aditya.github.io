@@ -922,35 +922,31 @@
 }
 
 /*This is for the blogs*/
-
 /* Container framework - transparent, responsive bounding box */
 .landing-hero-container {
   width: 100% !important;
   max-width: 100% !important;
-  padding: 40px 24px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 24px 24px 0px 24px !important;
 }
 
 /* The Full-Width 16:9 Aspect Ratio Squircle Element */
 .hero-squircle-card {
   width: 100% !important;
   max-width: 100% !important;
-  aspect-ratio: 16 / 9; /* Enforces strict layout space proportions */
+  aspect-ratio: 16 / 9; 
   box-sizing: border-box;
-  
   background-color: #ffffff;
   border-radius: 40px; 
   box-shadow: 0 15px 45px rgba(15, 37, 55, 0.06);
-  
-  /* FIXED: Set to standard block layout with exact uniform padding on ALL sides */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Flows naturally from top down */
+  justify-content: flex-start; 
   align-items: flex-start;
-  padding: 64px; /* Perfectly uniform breathing room on all edges */
+  padding: 64px; 
 }
 
 /* Badge Row Styling */
@@ -964,7 +960,7 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #6b7280;
-  margin-bottom: 28px; /* Managed gap directly below badges */
+  margin-bottom: 28px; 
 }
 
 .status-badge {
@@ -981,7 +977,7 @@
 .status-badge .dot {
   width: 6px;
   height: 6px;
-  background-color: #9ca3af; /* Gray out dot for 'Out of publication' */
+  background-color: #9ca3af; 
   border-radius: 50%;
 }
 
@@ -989,27 +985,358 @@
 .hero-title {
   font-family: "Times New Roman", Times, Georgia, serif !important;
   font-weight: 400 !important;
-  line-height: 0.95 !important;
   color: #111827 !important;
-  margin: 0 0 28px 0 !important; /* Balanced gap between title and text body */
+  margin: 0 0 28px 0 !important; 
   max-width: 95%;
-  
-  /* INCREASED: Bumped up significantly from the previous 4.2rem */
-  font-size: 5.0rem !important; 
+  font-size: 5.4rem !important; 
+  line-height: 0.95 !important; 
 }
 
-/* The distinct deep-teal italic highlights */
 .italic-accent {
   font-style: italic;
-  color: #0b6466; /* Deep teal accent color */
+  color: #0b6466; 
 }
 
 /* Sub-Headline Description */
 .hero-description {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-  font-size: 0.65rem !important; /* Scaled slightly to match the larger title hierarchy */
+  font-size: 1.15rem !important; 
   line-height: 1.65;
   color: #4b5563 !important;
   max-width: 720px; 
-  margin: 0 !important; /* Resetting bottom margins since buttons are removed */
+  margin: 0 0 56px 0 !important; /* Increased space to push metrics section down smoothly */
+}
+
+/* ==========================================
+   NEW METRICS CONTAINER AND SECTION CODES 
+   ========================================== */
+
+.hero-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Generates 3 identical equal-width columns */
+  width: 100%;
+  border-top: 1px solid #e5e7eb; /* Subtle gray baseline split right above metrics */
+  padding-top: 36px;
+  margin-top: auto; /* Securely pins grid to the bottom bounds of the card container */
+}
+
+.metric-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 32px; /* Inner horizontal cell breathing gaps */
+  box-sizing: border-box;
+}
+
+/* Generates clean separator rules only between sibling columns */
+.metric-column:not(:first-child) {
+  border-left: 1px solid #e5e7eb;
+}
+
+/* Forces alignment corrections on first and last cells to line up flush with headers */
+.metric-column:first-child { padding-left: 0; }
+.metric-column:last-child { padding-right: 0; }
+
+/* Large Numeric Displays */
+.metric-number {
+  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: #0b6466; /* Matching your beautiful deep teal accent color */
+  margin: 0 0 4px 0;
+  line-height: 1;
+}
+
+/* Controls the inline plain text 'hrs' units scale placement */
+.metric-unit {
+  font-size: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin-left: 2px;
+  color: #0b6466;
+}
+
+/* Subscript plus signs and italic annotations sizing */
+.metric-number sub {
+  font-size: 2.2rem;
+  bottom: 0;
+}
+
+.metric-subtext {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 0 0 12px 0;
+}
+
+/* Metric Paragraph Text details */
+.metric-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #4b5563;
+  margin: 0;
+}
+
+.video-showcase-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 80px 24px; /* Generous breathing room below the hero card */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally centers header text and video */
+  background: transparent; /* No special background layout blocks */
+}
+
+/* Centered Typography Header block */
+.video-section-header {
+  text-align: center;
+  margin-bottom: 48px; /* Balanced space pushing the video player down */
+}
+
+/* Tiny uppercase sub-label */
+.video-meta-tag {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #0b6466; /* Matching deep teal accent color */
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Big Title Header */
+.video-section-title {
+  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-size: 3.8rem; /* Large prominent title font */
+  font-weight: 400;
+  color: #111827;
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* Reuses your deep-teal italic highlights style */
+.video-section-title .italic-accent {
+  font-style: italic;
+  color: #0b6466;
+}
+
+/* Full-Width 16:9 Aspect Ratio Video Frame Box */
+.video-player-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  aspect-ratio: 16 / 9; /* Enforces clean 16:9 ratio constraints safely */
+  background-color: #000000; /* Deep backdrop layout during loading */
+  border-radius: 32px; /* Soft squircle corner radius matching upper components */
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08); /* Soft depth drop-shadow */
+  box-sizing: border-box;
+}
+
+/* Forces the embedded video iframe to fill up the aspect grid cleanly */
+.video-player-container iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================
+   TESTIMONIAL SECTION FULL-WIDTH STYLES 
+   ========================================== */
+
+.testimonial-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 80px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+}
+
+.testimonial-section-title {
+  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-size: 3.8rem; 
+  font-weight: 400;
+  color: #111827;
+  text-align: center;
+  margin: 0 0 54px 0; 
+  line-height: 1.1;
+  max-width: 80%;
+}
+
+.testimonial-section-title .italic-accent {
+  font-style: italic;
+  color: #0b6466; 
+}
+
+/* The Low-Radius Card Element - Converted to Full Width Stack */
+.testimonial-squircle-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 20px; 
+  border: 1px solid #e8e5f4; 
+  box-shadow: none !important; 
+  
+  /* FIXED: Set to vertical block layout so text fills the entire space */
+  display: flex;
+  flex-direction: column;
+  padding: 56px;
+  gap: 32px;
+}
+
+/* Quote Block Container */
+.quote-content-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-mark {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: #cbd5e1; 
+  height: 35px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* FIXED: Spans the full length of the card safely */
+.quote-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.22rem; 
+  line-height: 1.65;
+  color: #24292f;
+  margin: 0;
+  width: 100%;
+}
+
+/* FIXED: A horizontal alignment footer for profile data below the full text */
+.profile-meta-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid #f3f4f6; /* Clean split separator rule */
+  padding-top: 28px;
+  width: 100%;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-name {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.profile-credentials {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.85rem;
+  color: #6b7280; 
+  margin: 0;
+}
+
+.profile-brand-logo {
+  font-family: "Impact", "Arial Black", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  color: #0f2537; 
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   DUAL COLUMN ARTICLES ROW STYLES 
+   ========================================== */
+
+/* Outer Section Layout Wrapper */
+.reading-grid-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 60px 24px; /* Sufficient vertical margins to match section gaps */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns left to match mockup hierarchy */
+  background: transparent;
+}
+
+/* Section Title Sizing */
+.reading-section-title {
+  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-size: 2.8rem; /* Scaled cleanly below your master headers */
+  font-weight: 400;
+  color: #111827;
+  margin: 0 0 36px 0; /* Air gap below heading */
+}
+
+/* Horizontal Axis Flexible Row Alignment wrapper */
+.articles-flex-row {
+  display: flex;
+  width: 100% !important;
+  gap: 24px; /* Clean gap directly between both split cards */
+  box-sizing: border-box;
+}
+
+/* Sub-Squircle Cards (Covering equal half widths) */
+.reading-squircle-card {
+  flex: 1; /* Forces both cards to grow equally and stretch across the screen width */
+  background-color: #ffffff;
+  
+  /* Matches your testimonial card constraints: low radius, light purple border, no shadows */
+  border-radius: 20px; 
+  border: 1px solid #e8e5f4; 
+  box-shadow: none !important; 
+  
+  padding: 40px; /* Uniform interior padding on all sides */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Tiny Categorization Meta Details */
+.card-meta-tag {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #0b6466; /* Deep teal brand accent color */
+  margin-bottom: 16px;
+}
+
+/* Inside Card Article Heading Layout */
+.card-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #111827;
+  margin: 0 0 16px 0;
+}
+
+/* Inner Text Excerpt Description paragraphs */
+.card-excerpt {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563; /* Soft grey text */
+  margin: 0;
+}
+
+.video-showcase-section,
+.testimonial-section {
+  padding-top: 10px !important; /* Pulls the next section directly up */
 }

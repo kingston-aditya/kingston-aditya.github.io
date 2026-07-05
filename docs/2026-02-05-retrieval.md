@@ -36,14 +36,14 @@ hide:
   </div>
   
   <div class="metric-column">
-    <h2 class="metric-number">$500K<sub>+</sub></h2>
-    <p class="metric-subtext">to $1.4M per year</p>
-    <p class="metric-text">In projected recovered revenue for mid-size specialty practices.</p>
+    <h2 class="metric-number">$500K ubi<sub>+</sub></h2>
+    <p class="metric-subtext">Selective prediction is a classic problem</p>
+    <p class="metric-text">Selective prediction is a classic problem in machine learnin.</p>
   </div>
   
   <div class="metric-column">
-    <h2 class="metric-number">$200K<sub>+</sub></h2>
-    <p class="metric-text">In projected annual revenue recovery for a single GI practice.</p>
+    <h2 class="metric-number">$200<<sub>+</sub></h2>
+    <p class="metric-text">Selective prediction is a classic problem in machine learning.</p>
   </div>
 
   </div>

@@ -988,7 +988,7 @@
   color: #111827 !important;
   margin: 0 0 28px 0 !important; 
   max-width: 95%;
-  font-size: 5.4rem !important; 
+  font-size: 4.7rem !important; 
   line-height: 0.95 !important; 
 }
 
@@ -1002,8 +1002,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: 1.15rem !important; 
   line-height: 1.65;
-  color: #4b5563 !important;
-  max-width: 720px; 
+  color: #4b5563 !important; 
   margin: 0 0 56px 0 !important; /* Increased space to push metrics section down smoothly */
 }
 
@@ -1124,8 +1123,8 @@
 
 /* Full-Width 16:9 Aspect Ratio Video Frame Box */
 .video-player-container {
-  width: 100% !important;
-  max-width: 100% !important;
+  width: 75% !important;
+  max-width: 80% !important;
   aspect-ratio: 16 / 9; /* Enforces clean 16:9 ratio constraints safely */
   background-color: #000000; /* Deep backdrop layout during loading */
   border-radius: 32px; /* Soft squircle corner radius matching upper components */
@@ -1158,7 +1157,7 @@
 
 .testimonial-section-title {
   font-family: "Times New Roman", Times, Georgia, serif !important;
-  font-size: 3.8rem; 
+  font-size: 4.8rem; 
   font-weight: 400;
   color: #111827;
   text-align: center;

@@ -17,11 +17,11 @@ hide:
     
   <div class="hero-badge-row">
     <span class="status-badge"><span class="dot"></span>Out of publication · April 2026</span>
-    <span class="funding-badge">$1.9M PRE-SEED · NEXUS VENTURE PARTNERS</span>
+    <span class="funding-badge">ACCEPTED AS CONFERENCE PAPER AT ICLR 2026</span>
   </div>
   
   <h1 class="hero-title">
-    End-to-end <span class="italic-accent">admin automation</span>. Built for the way your <span class="italic-accent">clinic works</span>.
+    <span class="italic-accent">Leveraging Data to Say No:</span>Memory Augmented Plug-and-Play Selective Prediction.
   </h1>
   
   <p class="hero-description">
@@ -32,7 +32,7 @@ hide:
     
   <div class="metric-column">
     <h2 class="metric-number">16<span class="metric-unit">hrs</span></h2>
-    <p class="metric-text">Of staff time freed per day, per clinic. The equivalent of two full-time team members returned to patient-facing work.</p>
+    <p class="metric-text">Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain.</p>
   </div>
   
   <div class="metric-column">
@@ -54,10 +54,9 @@ hide:
 <section class="video-showcase-section">
   
   <div class="video-section-header">
-    <span class="video-meta-tag">Launch Video</span>
-    <h2 class="video-section-title">
-      See TriFetch in <span class="italic-accent">action</span>.
-    </h2>
+    <h1 class="video-section-title">
+      <span class="italic-accent">Explanation Video</span>.
+    </h1>
   </div>
 
   <div class="video-player-container">
@@ -73,30 +72,28 @@ hide:
 
 <section class="testimonial-section">
 
-  <h2 class="testimonial-section-title">
-    Hear from those who <span class="italic-accent">know healthcare best</span>
-  </h2>
+  <h1 class="testimonial-section-title">
+    <span class="italic-accent">Motivation for Research.</span>
+  </h1>
 
   <div class="testimonial-squircle-card">
     
   <div class="quote-content-block">
     <span class="quote-mark">&#8220;</span>
     <p class="quote-text">
-      As a hands-on clinician with decades of experience, I have always preferred real wisdom over artificial intelligence. However, Dr. Varuni Sarwal brings a unique perspective that speaks to me. Medicine is hyper-local and hyper-personalized, and she clearly understands that. That is why her focus on streamlining non-clinical workflow is exactly where AI can make a real difference. My pilot with TriFetch has been a genuinely useful experience, and I am excited to see TriFetch grow.
-    </p>
+  Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
+
+  Traditionally, one common (and widely used) approach relies on thresholding the model’s output confidence, often derived from logits or predicted probabilities. For instance, consider a classifier that must distinguish between a dog and a cat image. Now suppose the model produces a probability distribution over the two classes of say, 0.1 for dog and 0.9 for cat. This maximum probability (0.9) reflects the model’s confidence in its prediction. In selective prediction, we compare this confidence score to a predefined threshold (e.g., 0.6) and output the predicted class (cat here) when the confidence exceeds the threshold. Otherwise, the model simply abstains from making a prediction, signaling uncertainty.
+  </p>
   </div>
 
   <div class="profile-meta-footer">
     <div class="profile-details">
-      <h3 class="profile-name">Paul Dhanuka, MD</h3>
+      <h3 class="profile-name">Traditionally, one common (and widely used).</h3>
       <p class="profile-credentials">
-        President, Docs Medical Group · Gastroenterologist, Redding Endoscopy Center
+        Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain.
       </p>
     </div>
-    
-  <div class="profile-brand-logo">
-    REDDING ENDOSCOPY CENTER
-  </div>
   </div>
 
   </div>
@@ -105,27 +102,29 @@ hide:
 
 <section class="reading-grid-section">
   
-  <h2 class="reading-section-title">Keep reading</h2>
+  <h1 class="testimonial-section-title">
+    <span class="italic-accent">Keep Reading.</span>
+  </h1>
 
   <div class="articles-flex-row">
 
   <div class="reading-squircle-card">
-    <span class="card-meta-tag">Guide</span>
+    <span class="card-meta-tag">Diffusion</span>
     <h3 class="card-title">
-      AI Agents for Gastroenterology Practices: How They Work and What They Replace
+      Traditionally, one common (and widely used) approach relies on thresholding the model’s output confidence, often derived from logits or predicted probabilities.
     </h3>
     <p class="card-excerpt">
-      A breakdown of how AI agents automate referral triage, eligibility verification, patient scheduling, and EHR integration for GI practices and endoscopy centers.
+      Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
     </p>
   </div>
 
   <div class="reading-squircle-card">
-    <span class="card-meta-tag">Specialty</span>
+    <span class="card-meta-tag">Language Modelling</span>
     <h3 class="card-title">
-      AI-Powered Patient Scheduling and Workflow Automation for Cardiology Practices
+      Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain.
     </h3>
     <p class="card-excerpt">
-      How TriFetch automates inbound calls, prescription refills, scheduling, and EHR workflows for multi-location cardiology practices.
+      Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
     </p>
   </div>
 

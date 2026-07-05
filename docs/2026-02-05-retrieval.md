@@ -69,7 +69,6 @@ hide:
       allowfullscreen>
     </iframe >
   </div>
-
 </section>
 
 <section class="testimonial-section">

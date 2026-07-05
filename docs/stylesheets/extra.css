@@ -1010,7 +1010,6 @@
 /* ==========================================
    NEW METRICS CONTAINER AND SECTION CODES 
    ========================================== */
-
 .hero-metrics-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Generates 3 identical equal-width columns */

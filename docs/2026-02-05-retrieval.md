@@ -37,11 +37,7 @@ hide:
 </div>
 
 <section class="testimonial-section">
-  <div class="video-section-header">
-    <h1 class="video-section-title">
-      <span> Explanation Video </span>.
-    </h1>
-  </div>
+  <h1> 5 minutes Video Exlanation.</h1>
   <div class="video-player-container">
     <iframe 
       src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
@@ -60,7 +56,6 @@ hide:
   <div class="testimonial-squircle-card">
     
   <div class="quote-content-block">
-    <span class="quote-mark">&#8220;</span>
     <p class="quote-text">
   Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
 

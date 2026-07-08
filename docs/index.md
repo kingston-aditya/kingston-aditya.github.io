@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <br>
 
-## Blogs
+## Featured Blogs
 
 <div class="apple-carousel-container" id="appleSlider">
   <div class="apple-carousel-stage">

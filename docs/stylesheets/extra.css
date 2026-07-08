@@ -61,9 +61,9 @@
   font-size: 0.7rem !important; 
   font-weight: 500 !important;
   padding: 3px 10px !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important; 
+  border: 1px solid rgba(0, 0, 0, 0.3) !important; 
   border-radius: 50px !important; 
-  background-color: rgba(255, 255, 255, 0.05) !important; 
+  background-color: rgba(128, 0, 128, 0.05) !important; 
   transition: all 0.2s ease-in-out; 
 }
 
@@ -75,7 +75,7 @@
 
 .md-header {
   position: fixed; /* or position: sticky; */
-  top: 41px !important;
+  top: 40px !important;
   width: 100%;
   z-index: 100; /* Makes sure it stays on top of page content */
 
@@ -495,7 +495,7 @@
 .dot {
   width: 10px !important;
   height: 10px !important;
-  background-color: rgba(0, 0, 0, 0.2) !important;
+  background-color: rgba(128, 0, 128, 0.2) !important;
   border-radius: 50% !important;
   display: inline-block !important;
   cursor: pointer !important;
@@ -913,7 +913,8 @@
   font-size: 0.91rem !important;
   color: #4b5563 !important; /* This keeps the primary text / commas dark */
   line-height: 1.4;
-  margin: 0 0 16px 0 !important;
+  margin: 0 0 24px 0 !important;
+  margin-right: 24px !important;
 /*  margin-bottom: 24px !important;*/
 }
 

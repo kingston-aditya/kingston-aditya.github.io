@@ -719,13 +719,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
 
   /* White-to-Brown Gradient Setup */
-  background: linear-gradient(
-    135deg, 
-    #ffffff 0%, 
-    #fbfafa 35%, 
-    #f5ede6 70%, 
-    #e8d8cb 100%
-  ) !important;
+  background: #ffffff !important;
   background-size: 200% 200% !important;
   background-position: 0% 50%;
   
@@ -735,29 +729,11 @@
 
 /* 2. Hover State - Triggers moving water animation, card lifting, and border color change */
 .pub-item:hover {
-  /* Animation 1: Moving water gradient effect */
-  animation: flowingWaterGradient 8s ease infinite !important;
-
   /* Animation 2: Smoothly lifts up by 6 pixels, drops a deeper depth shadow, and turns the thin border brown */
   transform: translateY(-6px) !important;
   border-color: #c4ae9f !important; /* Elegant warm brown color for the thin border */
   box-shadow: 0 12px 28px rgba(196, 174, 159, 0.2) !important; /* Adds a matching warm brown depth shadow */
 }
-
-/* 3. The Animation Keyframe Timeline (Keep this right at the bottom of your file) */
-@keyframes flowingWaterGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-
 
 .pub-media-left {
   flex: 0 0 33.333% !important;

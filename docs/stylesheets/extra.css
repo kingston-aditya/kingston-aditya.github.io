@@ -62,7 +62,7 @@
 
 .md-header {
   position: fixed; /* or position: sticky; */
-  top: 38px !important;
+  top: 32px !important;
   width: 100%;
   z-index: 100; /* Makes sure it stays on top of page content */
 
@@ -956,7 +956,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px 24px 0px 24px !important;
+  padding: 24px 24px 24px 24px !important;
 }
 
 /* The Full-Width 16:9 Aspect Ratio Squircle Element */
@@ -1042,7 +1042,7 @@
   border-top: 1px solid #e5e7eb; /* Subtle gray baseline split right above metrics */
   padding-top: 36px;
   margin-top: auto; /* Securely pins grid to the bottom bounds of the card container */
-  background-color: #C0C0C0;
+  background-color: transparent;
 }
 
 .metric-column {
@@ -1393,4 +1393,49 @@
   /* NEW: Forces the text to stretch and cleanly justify on both margins */
   text-align: justify !important; 
   hyphens: auto;
+}
+
+/* Container for the text and bullet points block */
+.hero-text-list-block {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+  /* Separator line and spacing above the block */
+  border-top: 1px solid #e5e7eb; 
+  padding-top: 32px;
+  margin-top: auto; /* Pins the block cleanly to the bottom bounds of your squircle card */
+}
+
+/* Sizing and typography for the new section title */
+.list-block-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #111827 !important;
+  margin: 0 0 16px 0 !important;
+}
+
+/* Bullet list wrapper settings */
+.list-block-items {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: #4b5563 !important;
+  margin: 0 !important;
+  padding-left: 20px !important; /* Left padding ensures bullet alignment room */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Air gap between each bullet point */
+}
+
+/* Customizing the color of the bullets to match your deep teal theme color */
+.list-block-items li {
+  margin: 0 !important;
+}
+
+.list-block-items li::marker {
+  color: #0b6466; /* Your signature deep teal color */
 }

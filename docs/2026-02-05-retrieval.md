@@ -12,7 +12,7 @@ hide:
 </div>
 </div>
 
-<div class="landing-hero-container">
+<section class="testimonial-section">
   <div class="hero-squircle-card">
     
   <div class="hero-badge-row">
@@ -28,13 +28,20 @@ hide:
     <span class="quote-mark">&#8220;</span> Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
   </p>
 
-  <div class="hero-metrics-grid">
-  <h2>Highlights:</h2>
+  <div class="hero-text-list-block">
+  
+  <h3 class="list-block-title">Highlights</h3>
+  
+  <ul class="list-block-items">
+    <li>Selective prediction is a classic problem in machine learning.</li>
+    <li>The objective is to achieve high accuracy on the predictions it does make.</li>
+    <li>The objective is to achieve high accuracy on the predictions it does make.</li>
+  </ul>
 
   </div>
     
   </div>
-</div>
+</section>
 
 <section class="testimonial-section">
   <h1> 5 minutes Video Exlanation.</h1>

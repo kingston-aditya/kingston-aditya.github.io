@@ -58,7 +58,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
-## Publications
+## Selected Publications
 <div class="squircle-nav">
   <div class="nav-slider" id="navSlider"></div>
   
@@ -86,7 +86,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
   
   <p class="article-authors"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
   
-  <p class="article-description">Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.</p>
+  <p class="article-description">Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve.</p>
   
   <div class="pub-actions">
     <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
@@ -116,7 +116,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
   
   <p class="article-authors"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
   
-  <p class="article-description">Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.</p>
+  <p class="article-description">Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve.</p>
   
   <div class="pub-actions">
     <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
@@ -147,7 +147,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
   
   <p class="article-authors"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
   
-  <p class="article-description">Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.</p>
+  <p class="article-description">Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve.</p>
   
   <div class="pub-actions">
     <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>

@@ -706,21 +706,47 @@
 /* Card Container Layout */
 .pub-item {
   display: flex !important;
-  flex-direction: row !important; /* Forces side-by-side column positioning */
+  flex-direction: row !important;
   width: 100% !important;
-  background-color: #ffffff;
   border-radius: 20px; 
   border: 1px solid #e8e5f4;
   padding: 32px !important;
   gap: 32px !important;
   box-sizing: border-box;
+
+  /* NEW: Fluid White-to-Brown Gradient Layout Background */
+  background: linear-gradient(
+    135deg, 
+    #ffffff 0%, 
+    #fbfafa 35%, 
+    #f5ede6 70%, 
+    #e8d8cb 100%
+  ) !important;
+  
+  /* NEW: Forces the background grid to stretch out so it can be animated */
+  background-size: 200% 200% !important;
+  
+  /* NEW: Triggers the water movement animation defined down below */
 }
 
 /* Subtle interactive lift when looking over cards */
 .pub-item:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04) !important;
+  animation: flowingWaterGradient 12s ease infinite !important;
 }
+
+@keyframes flowingWaterGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 
 .pub-media-left {
   flex: 0 0 33.333% !important;
@@ -825,7 +851,7 @@
   gap: 5px;
   text-decoration: none;
   border: 1px solid #3c1e43;
-  color: #3c1e43;
+  color: #fff;
   
   /* Reduced overall size and font size proportionately */
   font-size: 0.85rem; 
@@ -835,11 +861,12 @@
   border-radius: 12px; 
   
   transition: all 0.2s ease;
+  background: #3c1e43 !important;
 }
 
 .pub-btn-outline:hover {
-  background: #3c1e43 !important;           /* Fills button with deep purple on hover overlay */
-  color: #fff !important;
+  background: #fff !important;           /* Fills button with deep purple on hover overlay */
+  color: #3c1e43 !important;
 }
 
 /* Card Container */

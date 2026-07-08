@@ -25,23 +25,18 @@ hide:
   </h2>
   
   <p class="hero-description">
-    Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
+    <span class="quote-mark">&#8220;</span> Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
   </p>
 
   <div class="hero-metrics-grid">
-    
   <h2>Highlights:</h2>
-
 
   </div>
     
   </div>
 </div>
 
-<br>
-<br>
-
-<section class="video-showcase-section">
+<section class="testimonial-section">
   <div class="video-section-header">
     <h1 class="video-section-title">
       <span> Explanation Video </span>.
@@ -86,7 +81,7 @@ hide:
 
 </section>
 
-<section class="reading-grid-section">
+<section class="testimonial-section">
   
   <h1> Keep Reading. </h1>
 

@@ -12,7 +12,7 @@ hide:
 </div>
 </div>
 
-<section class="testimonial-section">
+<div class="landing-hero-container">
   <div class="hero-squircle-card">
     
   <div class="hero-badge-row">
@@ -41,7 +41,7 @@ hide:
   </div>
     
   </div>
-</section>
+</div>
 
 <section class="testimonial-section">
   <h1> 5 minutes Video Exlanation.</h1>

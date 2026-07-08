@@ -143,7 +143,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
       <span class="meta-date">Preprint 2026</span>
     </div>
       
-  <h2 class="article-title">Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h2>
+  <h3 class="article-title">Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h3>
   
   <p class="article-authors"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
   

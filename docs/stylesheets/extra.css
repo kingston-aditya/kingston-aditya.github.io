@@ -703,18 +703,22 @@
   font-size: 0.95rem; /* Matches size of preprint text */
 }
 
-/* Card Container Layout */
 .pub-item {
   display: flex !important;
   flex-direction: row !important;
   width: 100% !important;
   border-radius: 20px; 
-  border: 1px solid #e8e5f4;
   padding: 32px !important;
   gap: 32px !important;
   box-sizing: border-box;
 
-  /* NEW: Fluid White-to-Brown Gradient Layout Background */
+  /* Thin crisp baseline border */
+  border: 1px solid #e8e5f4 !important; 
+
+  /* Default resting box shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
+
+  /* White-to-Brown Gradient Setup */
   background: linear-gradient(
     135deg, 
     #ffffff 0%, 
@@ -722,18 +726,25 @@
     #f5ede6 70%, 
     #e8d8cb 100%
   ) !important;
-  
-  /* NEW: Forces the background grid to stretch out so it can be animated */
   background-size: 200% 200% !important;
+  background-position: 0% 50%;
   
-  /* NEW: Triggers the water movement animation defined down below */
+  /* FIXED: Smooth transition handling for the lifting effect and border changes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
 }
 
-/* Subtle interactive lift when looking over cards */
+/* 2. Hover State - Triggers moving water animation, card lifting, and border color change */
 .pub-item:hover {
-  animation: flowingWaterGradient 12s ease infinite !important;
+  /* Animation 1: Moving water gradient effect */
+  animation: flowingWaterGradient 8s ease infinite !important;
+
+  /* Animation 2: Smoothly lifts up by 6 pixels, drops a deeper depth shadow, and turns the thin border brown */
+  transform: translateY(-6px) !important;
+  border-color: #c4ae9f !important; /* Elegant warm brown color for the thin border */
+  box-shadow: 0 12px 28px rgba(196, 174, 159, 0.2) !important; /* Adds a matching warm brown depth shadow */
 }
 
+/* 3. The Animation Keyframe Timeline (Keep this right at the bottom of your file) */
 @keyframes flowingWaterGradient {
   0% {
     background-position: 0% 50%;
@@ -850,8 +861,8 @@
   align-items: center;
   gap: 5px;
   text-decoration: none;
-  border: 1px solid #3c1e43;
-  color: #fff;
+  border: 3px solid #3c1e43;
+  color: #ffffff;
   
   /* Reduced overall size and font size proportionately */
   font-size: 0.85rem; 
@@ -860,12 +871,12 @@
   /* Reduced squircle/border radius */
   border-radius: 12px; 
   
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   background: #3c1e43 !important;
 }
 
 .pub-btn-outline:hover {
-  background: #fff !important;           /* Fills button with deep purple on hover overlay */
+  background: #ffffff !important;           /* Fills button with deep purple on hover overlay */
   color: #3c1e43 !important;
 }
 

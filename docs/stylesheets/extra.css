@@ -63,19 +63,20 @@
   padding: 3px 10px !important;
   border: 1px solid rgba(0, 0, 0, 0.3) !important; 
   border-radius: 50px !important; 
-  background-color: rgba(128, 0, 128, 0.05) !important; 
+  background-color: rgba(128, 0, 128, 0.6) !important; 
   transition: all 0.2s ease-in-out; 
 }
 
 .custom-top-banner .banner-btn:hover {
   background-color: rgba(255, 255, 255, 0.2) !important;
   border-color: rgba(255, 255, 255, 0.6) !important;
+  color: #000000 !important;
 }
 
 
 .md-header {
   position: fixed; /* or position: sticky; */
-  top: 40px !important;
+  top: 38px !important;
   width: 100%;
   z-index: 100; /* Makes sure it stays on top of page content */
 
@@ -1054,6 +1055,7 @@
   border-top: 1px solid #e5e7eb; /* Subtle gray baseline split right above metrics */
   padding-top: 36px;
   margin-top: auto; /* Securely pins grid to the bottom bounds of the card container */
+  background-color: #808080;
 }
 
 .metric-column {

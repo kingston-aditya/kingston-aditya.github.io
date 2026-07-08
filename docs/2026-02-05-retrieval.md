@@ -20,9 +20,9 @@ hide:
     <span class="funding-badge">ACCEPTED AS CONFERENCE PAPER AT ICLR 2026</span>
   </div>
   
-  <h1 class="hero-title">
+  <h2 class="hero-title">
     <span class="italic-accent">Leveraging Data to Say No:</span>Memory Augmented Plug-and-Play Selective Prediction.
-  </h1>
+  </h2>
   
   <p class="hero-description">
     Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
@@ -30,35 +30,23 @@ hide:
 
   <div class="hero-metrics-grid">
     
-  <div class="metric-column">
-    <h2 class="metric-number">16<span class="metric-unit">hrs</span></h2>
-    <p class="metric-text">Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain.</p>
-  </div>
-  
-  <div class="metric-column">
-    <h2 class="metric-number">$500K ubi<sub>+</sub></h2>
-    <p class="metric-subtext">Selective prediction is a classic problem</p>
-    <p class="metric-text">Selective prediction is a classic problem in machine learnin.</p>
-  </div>
-  
-  <div class="metric-column">
-    <h2 class="metric-number">$200<<sub>+</sub></h2>
-    <p class="metric-text">Selective prediction is a classic problem in machine learning.</p>
-  </div>
+  <h2>Highlights:</h2>
+
 
   </div>
     
   </div>
 </div>
 
+<br>
+<br>
+
 <section class="video-showcase-section">
-  
   <div class="video-section-header">
     <h1 class="video-section-title">
-      <span class="italic-accent">Explanation Video</span>.
+      <span> Explanation Video </span>.
     </h1>
   </div>
-
   <div class="video-player-container">
     <iframe 
       src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
@@ -72,9 +60,7 @@ hide:
 
 <section class="testimonial-section">
 
-  <h1 class="testimonial-section-title">
-    <span class="italic-accent">Motivation for Research.</span>
-  </h1>
+  <h1> Motivation for Research. </h1>
 
   <div class="testimonial-squircle-card">
     
@@ -102,9 +88,7 @@ hide:
 
 <section class="reading-grid-section">
   
-  <h1 class="testimonial-section-title">
-    <span class="italic-accent">Keep Reading.</span>
-  </h1>
+  <h1> Keep Reading. </h1>
 
   <div class="articles-flex-row">
 

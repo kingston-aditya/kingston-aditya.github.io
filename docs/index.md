@@ -119,11 +119,11 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
   <p class="article-description">Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve.</p>
   
   <div class="pub-actions">
-    <a href="2026-02-05-retrieval" class="academic-squircle-btn"><i class="fa-brands fa-blogger"></i> Blog</a>
-    <a href="https://arxiv.org/abs/2601.22570" class="academic-squircle-btn"><i class="fa-brands fa-xing"></i> Paper</a>
-    <a href="#" class="academic-squircle-btn"><i class="fa-brands fa-hugging-face"></i> HF Demo</a>
-    <a href="https://github.com/kingston-aditya/MA-PaPSP" class="academic-squircle-btn"><i class="fa-brands fa-github"></i> Code</a>
-    <a href="#" class="academic-squircle-btn"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
+    <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
+    <a href="https://arxiv.org/abs/2601.22570" class="pub-btn-outline"><i class="fa-brands fa-xing"></i> Paper</a>
+    <a href="#" class="pub-btn-outline"><i class="fa-brands fa-hugging-face"></i> HF Demo</a>
+    <a href="https://github.com/kingston-aditya/MA-PaPSP" class="pub-btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+    <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
   </div>
   </div>
 

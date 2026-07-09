@@ -1,6 +1,6 @@
 site_name: "Blog 'n' Homepage"
 site_author: 'Aditya Sarkar'
-copyright: '&copy; Aditya Sarkar'
+copyright: '&copy; Aditya Sarkar - University of Maryland'
 theme:
   name: material
   custom_dir: overrides
@@ -57,4 +57,3 @@ nav:
   - Home: index.md
   - Retrieval: 2026-02-05-retrieval.md
   - Predicting: 2026-02-10-retrieval.md
-  - MA-PaPSP: mapapsp.html

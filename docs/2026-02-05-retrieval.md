@@ -30,7 +30,7 @@ hide:
 
   <div class="hero-text-list-block">
   
-  <h3 class="list-block-title">Highlights</h3>
+  <h3 class="list-block-title">Project Highlights</h3>
   
   <ul class="list-block-items">
     <li>Selective prediction is a classic problem in machine learning.</li>
@@ -44,7 +44,7 @@ hide:
 </div>
 
 <section class="testimonial-section">
-  <h1> 5 minutes Video Exlanation.</h1>
+  <h1> 5 minutes Video Explanation.</h1>
   <div class="video-player-container">
     <iframe 
       src="https://www.youtube.com/embed/dQw4w9WgXcQ" 

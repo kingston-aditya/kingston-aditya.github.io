@@ -62,7 +62,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 <div class="squircle-nav">
   <div class="nav-slider" id="navSlider"></div>
   
-<button class="nav-option active" onclick="moveSlider(this); filterPubs('all', this)">Selected</button>
+<button class="nav-option active" onclick="moveSlider(this); filterPubs('all', this)">Recent Works</button>
 <button class="nav-option" onclick="moveSlider(this); filterPubs('language-modeling', this)">Language Modeling</button>
 <button class="nav-option" onclick="moveSlider(this); filterPubs('distillation', this)">Distillation</button>
 </div>

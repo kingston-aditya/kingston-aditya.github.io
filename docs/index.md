@@ -12,7 +12,7 @@ hide:
 </div>
 </div>
 
-# Aditya Sarkar ![](images/por.jpg){ align=right style="width:9.5em; margin-left: 7.5em; margin-top: 0.5em; border-radius: 1em;"}
+# Aditya Sarkar ![](images/por.jpg){ align=right style="width:9.5em; margin-left: 3.5em; margin-top: 0.5em; border-radius: 1em;"}
 
 :fontawesome-solid-building: Office: [4112-D15, Brendan Iribe Center, 8125 Paint Branch Dr, College Park, MD](https://maps.app.goo.gl/xWjQWVVnpTVoWaQw8)
 

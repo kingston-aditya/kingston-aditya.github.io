@@ -6,7 +6,8 @@ hide:
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <div class="custom-tab-navbar-container">
-  <div class="tab-navbar-wrapper">
+  <div class="tab-navbar-wrapper sliding-nav">
+    <div class="pill-slider"></div>
     <a href="#capabilities" class="tab-link active">Capabilities</a>
     <a href="#performance" class="tab-link">Performance</a>
     <a href="#safety" class="tab-link">Safety</a>
@@ -245,16 +246,40 @@ function moveSlider(element) {
   });
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Grab all the navigation links
-    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabLinks = document.querySelectorAll('.sliding-nav .tab-link');
+    const slider = document.querySelector('.pill-slider');
 
+    // Function to calculate and move the sliding background pill
+    function updateSlider(activeTab) {
+      if (!activeTab || !slider) return;
+      
+      const navRect = activeTab.closest('.sliding-nav').getBoundingClientRect();
+      const tabRect = activeTab.getBoundingClientRect();
+      
+      // Set the width to match the specific word and slide it to the exact relative coordinate
+      slider.style.width = `${tabRect.width}px`;
+      slider.style.left = `${tabRect.left - navRect.left}px`;
+    }
+
+    // 1. Initialize the slider position instantly on page load
+    const initialActive = document.querySelector('.sliding-nav .tab-link.active');
+    if (initialActive) {
+      // Slight delay ensures custom fonts are fully loaded before calculating width
+      setTimeout(() => updateSlider(initialActive), 50); 
+    }
+
+    // 2. Listen for clicks to trigger the slide
     tabLinks.forEach(link => {
       link.addEventListener('click', function(event) {
-        // Remove the 'active' class from all links
+        
+        // Remove active class from all links
         tabLinks.forEach(t => t.classList.remove('active'));
         
-        // Add the 'active' class to the specific link you just clicked
+        // Add active class to the clicked tab to turn the text white
         this.classList.add('active');
+        
+        // Slide the pill to wrap the new active tab
+        updateSlider(this);
       });
     });
   });

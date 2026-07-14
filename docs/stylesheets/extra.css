@@ -160,32 +160,53 @@
 }
 
 .tab-link {
+  position: relative;
+  z-index: 1; /* Ensures text stays visible on top of the sliding background */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #000000 !important; /* Pure black text when inactive */
+  color: #000000;
   text-decoration: none;
   padding: 10px 24px;
   border-radius: 30px;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
+.tab-link.active {
+  background-color: transparent !important; 
+  color: #ffffff !important; 
+}
+
+.tab-link.active:hover {
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
 
 .tab-link:hover {
   color: #000000 !important; /* Softens slightly on hover */
   background-color: #e5e5e5 !important;
 }
 
-/* The dark active pill inside the squircle */
-.tab-link.active {
-  background-color: #242424; 
-  color: #ffffff; /* Remains white when the black background is active */
+.tab-link:hover:not(.active) {
+  background-color: #e5e5e5 !important;
+  color: #000000 !important; 
 }
 
-.tab-link.active:hover {
-  background-color: #242424; 
-  color: #ffffff; 
+.sliding-nav {
+  position: relative;
 }
+
+.pill-slider {
+  position: absolute;
+  top: 6px; /* Matches the 6px padding of the wrapper */
+  left: 6px;
+  height: calc(100% - 12px);
+  background-color: #242424;
+  border-radius: 30px;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth snapping animation */
+  z-index: 0; 
+}
+
 
 .tab-item {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;

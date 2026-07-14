@@ -5,7 +5,24 @@ hide:
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<div class="custom-tab-navbar-container">
+  <div class="tab-navbar-wrapper">
+    <a href="#news" class="tab-link">Home</a>
+  </div>
 
+  <div class="tab-navbar-wrapper sliding-nav">
+    <div class="pill-slider"></div>
+    <a href="#capabilities" class="tab-link active">Topic 1</a>
+    <a href="#performance" class="tab-link">Topic 2</a>
+    <a href="#safety" class="tab-link">Topic 3</a>
+    <a href="#download" class="tab-link">Topic 4</a>
+    <a href="#download" class="tab-link">Read More</a>
+  </div>
+
+  <div class="tab-navbar-wrapper">
+    <a href="#news" class="tab-link">News</a>
+  </div>
+</div>
 
 <div class="landing-hero-container">
   <div class="hero-squircle-card">

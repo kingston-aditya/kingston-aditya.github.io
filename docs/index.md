@@ -14,8 +14,15 @@ hide:
     <a href="#download" class="tab-link">Download</a>
   </div>
 
-  <div class="tab-navbar-wrapper sliding-nav">
-    <a href="#news" class="tab-link">News</a>
+  <div class="tab-navbar-wrapper news-dropdown-wrapper">
+    <a href="#news" class="tab-link news-pill" id="news-toggle">News</a>
+
+  <div class="glassy-dialog-box" id="news-dialog">
+    <div class="dialog-content">
+      <h3>News & Updates</h3>
+      <p>This is your placeholder text for the glassy dialog box. The content is set to pure black, and the container perfectly matches your heavy glassmorphism aesthetics.</p>
+    </div>
+  </div>
   </div>
 </div>
 
@@ -59,6 +66,9 @@ hide:
 Hello! I am a second-year Ph.D. student at the [__University of Maryland__](https://www.umiacs.umd.edu/), where I am engaged in research collaborations with Profs. [__Nuno Vasconcelos__](http://www.svcl.ucsd.edu/people/nuno/) and [__David Jacobs__](https://www.cs.umd.edu/~djacobs/). My research aims to build better computer vision algorithms, specifically for temporal understanding in LLMs, action and world modeling. I am grateful to be supported by University of Maryland __Graduate Fellowship__.
 
 <span style="color: red;">I am looking for research internships for summer '26. Please reach out if you're interested in my profile.</span>
+
+<br>
+<br>
 
 <!-- ## News
 
@@ -283,6 +293,35 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const newsToggle = document.getElementById('news-toggle');
+  const newsDialog = document.getElementById('news-dialog');
+
+  if (newsToggle && newsDialog) {
+    // 1. Toggle dialog on pill click
+    newsToggle.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevents the page from jumping
+      event.stopPropagation(); // Stops the click from immediately triggering the document listener below
+      
+      this.classList.toggle('active-purple');
+      newsDialog.classList.toggle('show');
+    });
+
+    // 2. Prevent clicks inside the dialog from closing it
+    newsDialog.addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+
+    // 3. Close the dialog if the user clicks anywhere outside of it
+    document.addEventListener('click', function(event) {
+      if (newsDialog.classList.contains('show')) {
+        newsToggle.classList.remove('active-purple');
+        newsDialog.classList.remove('show');
+      }
+    });
+  }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("carouselTrack");

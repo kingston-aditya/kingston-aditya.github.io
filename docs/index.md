@@ -5,6 +5,20 @@ hide:
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<div class="custom-tab-navbar-container">
+  <div class="tab-navbar-wrapper">
+    
+  <a href="#" class="tab-item">Capabilities</a>
+  
+  <a href="#" class="tab-item active-tab">Performance</a>
+  
+  <a href="#" class="tab-item">Safety</a>
+  
+  <a href="#" class="tab-item">Download</a>
+    
+  </div>
+</div>
+
 <!-- <div class="custom-top-banner">
   <div class="banner-center-content">
     <span>MA-PaPSP got accepted to ICLR 2026!</span>

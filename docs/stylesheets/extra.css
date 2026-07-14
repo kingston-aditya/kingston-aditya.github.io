@@ -244,19 +244,23 @@
   color: #000000 !important; /* Ensures text stays black */
 }
 
+/* The Glassy Squircle Dialog Box */
 .glassy-dialog-box {
   position: absolute;
-  top: calc(100% + 16px); /* Pushes it exactly 16px below the pill */
-  right: 0; /* Aligns the right edge of the box with the right edge of the pill */
-  width: 480px; /* Wide enough to match your screenshot reference */
+  top: calc(100% + 16px);
+  right: 0; 
+  width: 480px; 
   padding: 32px;
-  background: rgba(255, 255, 255, 0.85); /* Frosty white glass */
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-radius: 32px; /* Generous squircle radius */
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.6);
-  color: #000000; /* Pure black text */
+  
+  /* FIX: Heavily increased background opacity and doubled the blur radius */
+  background: rgba(255, 255, 255, 0.92); 
+  backdrop-filter: blur(48px);
+  -webkit-backdrop-filter: blur(48px);
+  
+  border-radius: 32px; 
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  color: #000000; 
   text-align: left;
   
   /* Hidden by default with a smooth slide-up animation */
@@ -1334,21 +1338,85 @@
 
 /* Full-Width 16:9 Aspect Ratio Video Frame Box */
 .video-player-container {
+  position: relative;
   width: 75% !important;
   max-width: 80% !important;
-  aspect-ratio: 16 / 9; /* Enforces clean 16:9 ratio constraints safely */
-  background-color: #000000; /* Deep backdrop layout during loading */
-  border-radius: 32px; /* Soft squircle corner radius matching upper components */
+  aspect-ratio: 16 / 9;
+  background-color: #ffffff; /* Changed to white to match your design */
+  border-radius: 32px;
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08); /* Soft depth drop-shadow */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 }
 
-/* Forces the embedded video iframe to fill up the aspect grid cleanly */
 .video-player-container iframe {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Solid white canvas */
+  /* Optional: You can add a subtle background image here for the blue dot pattern */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* The Huge Blue Headline Text */
+.overlay-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 5.5rem; /* Massive scaling */
+  font-weight: 600;
+  color: #3b82f6; /* Premium Google-style blue */
+  text-align: center;
+  line-height: 1.05;
+  margin: 0;
+  letter-spacing: -0.04em; /* Tightens the letters up for a modern look */
+  z-index: 1;
+}
+
+/* The Glassmorphic Play Button */
+.play-button {
+  position: absolute; /* Centers it perfectly regardless of text height */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.play-button:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* The Black Play Triangle */
+.play-button svg {
+  width: 28px;
+  height: 28px;
+  color: #000000;
+  margin-left: 4px; /* Optically centers the triangle inside the circle */
 }
 
 /* ==========================================
@@ -1596,41 +1664,39 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-
   border-radius: 40px !important;
-  background-color: #C4C3D0 !important;
-  
-  /* Separator line and spacing above the block */
-  border-top: 1px solid #e5e7eb; 
-  padding-top: 32px;
-  margin-top: auto; /* Pins the block cleanly to the bottom bounds of your squircle card */
+  background-color: #C4C3D0 !important; 
+  padding: 32px 40px; /* 32px top/bottom, 40px left/right for clean alignment */
+  margin-top: auto; 
+  box-sizing: border-box;
 }
 
 /* Sizing and typography for the new section title */
 .list-block-title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-  font-size: 1.25rem !important;
-  font-weight: 600 !important;
-  color: #111827 !important;
-  margin: 0 0 16px 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937; /* Keeps the title a strong, readable dark color */
+  margin: 0 0 16px 0;
 }
 
 /* Bullet list wrapper settings */
 .list-block-items {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-  color: #4b5563 !important;
-  margin: 0 !important;
-  padding-left: 20px !important; /* Left padding ensures bullet alignment room */
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Air gap between each bullet point */
+  margin: 0;
+  padding-left: 20px; /* Aligns the physical bullets perfectly flush under the title */
 }
 
 /* Customizing the color of the bullets to match your deep teal theme color */
 .list-block-items li {
-  margin: 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563; /* The light slate-grey text color */
+  margin-bottom: 10px;
+}
+
+.list-block-items li:last-child {
+  margin-bottom: 0;
 }
 
 .list-block-items li::marker {

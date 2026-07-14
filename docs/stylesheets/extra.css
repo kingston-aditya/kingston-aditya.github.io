@@ -58,6 +58,14 @@
   padding-top: 40px !important;
 }
 
+/* Custom Styling for Main H1 Profile Title */
+.md-content h1 {
+  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-size: 3.5rem !important; /* Increase or decrease this value to match your preference */
+  font-weight: 700 !important;
+  color: #000000 !important;
+}
+
 .md-header {
   display: none !important;
 }
@@ -253,9 +261,9 @@
   padding: 32px;
   
   /* FIX: Heavily increased background opacity and doubled the blur radius */
-  background: rgba(255, 255, 255, 0.92); 
-  backdrop-filter: blur(48px);
-  -webkit-backdrop-filter: blur(48px);
+  background: rgba(255, 255, 255, 0.35); 
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   
   border-radius: 32px; 
   border: 1px solid rgba(255, 255, 255, 0.8);

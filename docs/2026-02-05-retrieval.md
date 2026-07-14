@@ -19,8 +19,15 @@ hide:
     <a href="#download" class="tab-link">Read More</a>
   </div>
 
-  <div class="tab-navbar-wrapper">
-    <a href="#news" class="tab-link">News</a>
+  <div class="tab-navbar-wrapper news-dropdown-wrapper">
+    <a href="#news" class="tab-link news-pill" id="news-toggle">News</a>
+
+  <div class="glassy-dialog-box" id="news-dialog">
+    <div class="dialog-content">
+      <h3>News & Updates</h3>
+      <p>This is your placeholder text for the glassy dialog box. The content is set to pure black, and the container perfectly matches your heavy glassmorphism aesthetics.</p>
+    </div>
+  </div>
   </div>
 </div>
 
@@ -100,7 +107,7 @@ hide:
   <div class="video-player-container" id="video-container">
     
   <div class="video-overlay" id="video-overlay">
-    <h2 class="overlay-text">What's new in<br>Gemma 4</h2>
+    <h1 class="overlay-text">What's new in<br>MA-PaPSP</h1>
     
   <button class="play-button" id="play-button">
     <svg viewBox="0 0 24 24" fill="currentColor">

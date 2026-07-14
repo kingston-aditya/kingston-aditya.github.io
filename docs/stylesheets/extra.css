@@ -92,20 +92,22 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 20px; /* Controls the exact gap between the two squircles */
+  gap: 20px; 
   z-index: 99999 !important;
   box-sizing: border-box;
 }
 
+/* Enhanced Glassmorphism with Thin Black Border */
 .tab-navbar-wrapper {
   display: inline-flex;
   align-items: center;
-  background: rgba(245, 245, 245, 0.85); /* Light glass background */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.35); /* Maintains transparency */
+  backdrop-filter: blur(24px); /* Maintains heavy blur */
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid #000000; /* Added: Thin black border */
   border-radius: 40px; 
   padding: 6px;
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4), 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.4);
 }
 
 .nav-news-pill {
@@ -161,7 +163,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #1f2937;
+  color: #000000; /* Pure black text when inactive */
   text-decoration: none;
   padding: 10px 24px;
   border-radius: 30px;
@@ -170,13 +172,13 @@
 
 
 .tab-link:hover {
-  color: #0b6466;
+  color: #555555; /* Softens slightly on hover */
 }
 
 /* The dark active pill inside the squircle */
 .tab-link.active {
   background-color: #242424; 
-  color: #ffffff;
+  color: #ffffff; /* Remains white when the black background is active */
 }
 
 .tab-item {

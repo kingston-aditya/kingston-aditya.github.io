@@ -7,9 +7,9 @@ hide:
 
 <div class="custom-tab-navbar-container">
   <div class="tab-navbar-wrapper">
-    <a href="#capabilities" class="tab-link">Capabilities</a>
+    <a href="#capabilities" class="tab-link active">Capabilities</a>
     <a href="#performance" class="tab-link">Performance</a>
-    <a href="#safety" class="tab-link active">Safety</a>
+    <a href="#safety" class="tab-link">Safety</a>
     <a href="#download" class="tab-link">Download</a>
   </div>
 
@@ -71,7 +71,6 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
-## Selected Publications
 <div class="nav-container-wrapper">
 <div class="squircle-nav">
   <div class="nav-slider" id="navSlider"></div>
@@ -344,8 +343,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 <br>
-
-## Featured Blogs
 
 <div class="apple-carousel-container" id="appleSlider">
   <div class="apple-carousel-stage">

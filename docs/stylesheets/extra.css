@@ -1731,7 +1731,7 @@
 
 /* Base structural style for all large blocks */
 .dashboard-block {
-  background-color: #f3f4f6; /* Soft light gray */
+  background-color: #ffffff; /* Soft light gray */
   border-radius: 20px;
   width: 100%;
 }

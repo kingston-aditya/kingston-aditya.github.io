@@ -7,16 +7,14 @@ hide:
 
 <div class="custom-tab-navbar-container">
   <div class="tab-navbar-wrapper">
-    
-  <span class="nav-news-badge">News</span>
-  
-  <div class="nav-links-subgroup">
-    <a href="#" class="tab-item">Capabilities</a>
-    <a href="#" class="tab-item">Performance</a>
-    <a href="#" class="tab-item active-tab">Safety</a>
-    <a href="#" class="tab-item">Download</a>
+    <a href="#capabilities" class="tab-link">Capabilities</a>
+    <a href="#performance" class="tab-link">Performance</a>
+    <a href="#safety" class="tab-link active">Safety</a>
+    <a href="#download" class="tab-link">Download</a>
   </div>
-    
+
+  <div class="tab-navbar-wrapper">
+    <a href="#news" class="tab-link">News</a>
   </div>
 </div>
 

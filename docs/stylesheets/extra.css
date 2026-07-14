@@ -1710,3 +1710,80 @@
 .list-block-items li::marker {
   color: #0b6466; /* Your signature deep teal color */
 }
+
+/* Master Grid Layout: 3 Columns */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Middle column is twice as wide as the sides */
+  gap: 20px;
+  width: 100%;
+  height: 600px; /* Base height for the fractional math to work */
+  box-sizing: border-box;
+}
+
+/* Vertical Stacking Inside Each Column */
+.dashboard-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+/* Base structural style for all large blocks */
+.dashboard-block {
+  background-color: #f3f4f6; /* Soft light gray */
+  border-radius: 20px;
+  width: 100%;
+}
+
+/* ==========================================
+   LEFT COLUMN 
+   ========================================== */
+.left-top {
+  flex: 3; /* Takes up 3/4 of the height */
+}
+
+.left-bottom {
+  flex: 1; /* Takes up 1/4 of the height */
+  background-color: #d1f4cd; /* The pastel green from your image */
+}
+
+/* ==========================================
+   MIDDLE COLUMN 
+   ========================================== */
+.middle-top-pills {
+  flex: 1; /* Takes up 1/8 of the height */
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+/* The 5 Equal Pills */
+.nav-pill {
+  flex: 1; /* Forces all 5 pills to be exactly the same width */
+  border-radius: 40px;
+  height: 100%;
+}
+
+.black-pill {
+  background-color: #000000;
+}
+
+.red-pill {
+  background-color: #ea4335; /* The pop of red from your image */
+}
+
+.middle-bottom {
+  flex: 7; /* Takes up 7/8 of the height */
+}
+
+/* ==========================================
+   RIGHT COLUMN 
+   ========================================== */
+.right-half {
+  flex: 1; /* Both take up exactly 1/2 of the height */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers your future video/presentation content */
+}

@@ -73,12 +73,14 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
 ## Selected Publications
+<div class="nav-container-wrapper">
 <div class="squircle-nav">
   <div class="nav-slider" id="navSlider"></div>
   
 <button class="nav-option active" onclick="moveSlider(this); filterPubs('all', this)">Recent Works</button>
 <button class="nav-option" onclick="moveSlider(this); filterPubs('language-modeling', this)">Language Modeling</button>
 <button class="nav-option" onclick="moveSlider(this); filterPubs('distillation', this)">Distillation</button>
+</div>
 </div>
 
 <div class="pub-list">

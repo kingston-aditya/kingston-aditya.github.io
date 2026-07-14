@@ -5,12 +5,7 @@ hide:
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<div class="custom-top-banner">
-  <div class="banner-center-content">
-    <span>MA-PaPSP got accepted to ICLR 2026!</span>
-    <a href="#" class="banner-btn">Read Paper &rarr;</a>
-</div>
-</div>
+
 
 <div class="landing-hero-container">
   <div class="hero-squircle-card">

@@ -55,61 +55,60 @@
 
 
 .md-header {
-  position: fixed; /* or position: sticky; */
-  top: 32px !important;
-  width: 100%;
-  z-index: 100; /* Makes sure it stays on top of page content */
-
-  /* Your liquid glass styling */
-  background-color: rgba(255, 255, 255, 0.6) !important; 
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02) !important;
-}
-
-.md-main__inner {
-    margin-top: 95px !important;
+  display: none !important;
 }
 
 .md-container {
-  /* 1. Base modern slate-cream background color */
-  background-color: #ebeff2 !important; 
-
-  /* 2. Pure soft spotlight overlay (No concentric circles) */
-  background-image: 
-    radial-gradient(
-      circle at 50% 15%, /* Centers the spotlight at the top middle */
-      rgba(255, 255, 255, 0.95) 0%, 
-      rgba(255, 255, 255, 0.4) 40%,
-      rgba(255, 255, 255, 0) 70%
-    ) !important;
-    
-  background-attachment: fixed !important;
-  background-size: cover !important;
+  padding-top: 0 !important;
 }
 
-/* Keeps theme layouts completely clear so the lighting shines through */
-.md-main, .md-main__inner, .md-content, article.md-content__inner {
-  background-color: transparent !important;
+.custom-tab-navbar-container {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 32px 24px 16px 24px !important;
+  box-sizing: border-box !important;
 }
 
-/* Forces the theme's default white content boxes to be transparent */
-.md-main, .md-main__inner, .md-content {
-  background-color: transparent !important;
+/* The light container tray that encapsulates all the pill buttons */
+.tab-navbar-wrapper {
+  background-color: #f5f6f9 !important; /* Soft, light grey tray background */
+  border-radius: 40px !important;       /* Clean squircle roundness matching mockup */
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 6px !important;               /* Gutter spacing inside the tray */
+  gap: 4px !important;
+  box-sizing: border-box !important;
 }
 
-.md-search, .md-nav {
-    margin-top: 36px !important;
-  }
-
-.md-grid {
-  max-width: 1280px; 
+/* Base navigation tab properties */
+.tab-item {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  color: #1f2937 !important;            /* Clean off-black default text color */
+  text-decoration: none !important;
+  padding: 12px 24px !important;         /* Generous internal spacing for each pill link */
+  border-radius: 32px !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
 }
 
-.md-content {
-  --md-typeset-color:                  hsla(272, 91%, 29%, 1);
-  --md-typeset-a-color:                hsla(272, 91%, 29%, 1);
+/* Hover transition effect for unselected tabs */
+.tab-item:not(.active-tab):hover {
+  background-color: rgba(0, 0, 0, 0.04) !important; /* Extremely subtle grey hover glow */
+  color: #000000 !important;
+}
+
+/* The Active Tab State - Perfectly matches the dark squircle focus pill */
+.tab-item.active-tab {
+  background-color: #111317 !important;  /* Slick, premium deep charcoal-black */
+  color: #ffffff !important;             /* Pure white focused label text */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important; /* Smooth bottom depth shadow */
 }
 
 .custom-announce-bar {

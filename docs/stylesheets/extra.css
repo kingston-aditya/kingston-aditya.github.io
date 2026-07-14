@@ -62,8 +62,27 @@
   display: none !important;
 }
 
+/* Ambient SaaS background styling - Smooth Glow Edition (No Rings) */
 .md-container {
-  padding-top: 0 !important;
+  /* 1. Base modern slate-cream background color */
+  background-color: #ebeff2 !important; 
+
+  /* 2. Pure soft spotlight overlay (No concentric circles) */
+  background-image: 
+    radial-gradient(
+      circle at 50% 15%, /* Centers the spotlight at the top middle */
+      rgba(255, 255, 255, 0.95) 0%, 
+      rgba(255, 255, 255, 0.4) 40%,
+      rgba(255, 255, 255, 0) 70%
+    ) !important;
+    
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
+/* Keeps theme layouts completely clear so the lighting shines through */
+.md-main, .md-main__inner, .md-content, article.md-content__inner {
+  background-color: transparent !important;
 }
 
 .custom-tab-navbar-container {
@@ -148,33 +167,7 @@
     width: 100% !important;
 }
 
-/* 1. CLEANING CORE OVERRIDES: Neutralizes stubborn white layout zones built into the framework */
-.md-main,
-.md-container,
-.md-content,
-.md-content__inner,
-article.md-content__inner {
-  background: transparent !important;
-  background-color: transparent !important;
-}
 
-/* 2. THE FIX: Generates the premium gradient fade that perfectly mirrors your reference image */
-body, 
-html, 
-.md-layout {
-  background: linear-gradient(
-    to bottom,
-    #fcfdfe 0%,    /* Pristine soft off-white canvas at the top boundary */
-    #f5f7f8 12%,   /* Smooth transition zone */
-    #4d8b8d 24%,   /* Gentle mid-tone blending vector */
-    #0b6466 40%,   /* Locks cleanly into your signature deep teal color */
-    #0b6466 100%   /* Solid teal floor extending through the footer bounds */
-  ) !important;
-  
-  /* Keeps the canvas locked solid in the viewport frame while you scroll through items */
-  background-attachment: fixed !important; 
-  min-height: 100vh !important;
-}
 
 [data-md-page="blog"] .md-main {
   background-color: #cccccc;

@@ -104,10 +104,10 @@
   background: rgba(255, 255, 255, 0.35); /* Maintains transparency */
   backdrop-filter: blur(24px); /* Maintains heavy blur */
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid #000000; /* Added: Thin black border */
+  border: none; /* Added: Thin black border */
   border-radius: 40px; 
   padding: 6px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .nav-news-pill {
@@ -163,7 +163,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #000000; /* Pure black text when inactive */
+  color: #000000 !important; /* Pure black text when inactive */
   text-decoration: none;
   padding: 10px 24px;
   border-radius: 30px;
@@ -172,13 +172,19 @@
 
 
 .tab-link:hover {
-  color: #555555; /* Softens slightly on hover */
+  color: #000000 !important; /* Softens slightly on hover */
+  background-color: #e5e5e5 !important;
 }
 
 /* The dark active pill inside the squircle */
 .tab-link.active {
   background-color: #242424; 
   color: #ffffff; /* Remains white when the black background is active */
+}
+
+.tab-link.active:hover {
+  background-color: #242424; 
+  color: #ffffff; 
 }
 
 .tab-item {

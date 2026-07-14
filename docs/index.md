@@ -244,6 +244,21 @@ function moveSlider(element) {
     }
   });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Grab all the navigation links
+    const tabLinks = document.querySelectorAll('.tab-link');
+
+    tabLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        // Remove the 'active' class from all links
+        tabLinks.forEach(t => t.classList.remove('active'));
+        
+        // Add the 'active' class to the specific link you just clicked
+        this.classList.add('active');
+      });
+    });
+  });
+
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("carouselTrack");
   const dots = document.querySelectorAll(".dot");

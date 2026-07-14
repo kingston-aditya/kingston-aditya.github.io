@@ -14,7 +14,7 @@ hide:
     <a href="#download" class="tab-link">Download</a>
   </div>
 
-  <div class="tab-navbar-wrapper">
+  <div class="tab-navbar-wrapper sliding-nav">
     <a href="#news" class="tab-link">News</a>
   </div>
 </div>

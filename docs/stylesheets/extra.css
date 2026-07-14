@@ -148,7 +148,7 @@
     width: 100% !important;
 }
 
-/* Wipes out hidden background colors in the theme so your gradient can show through */
+/* 1. CLEANING CORE OVERRIDES: Neutralizes stubborn white layout zones built into the framework */
 .md-main,
 .md-container,
 .md-content,
@@ -158,18 +158,21 @@ article.md-content__inner {
   background-color: transparent !important;
 }
 
-/* Applies the clean off-white to deep teal gradient across the entire web page canvas */
+/* 2. THE FIX: Generates the premium gradient fade that perfectly mirrors your reference image */
 body, 
 html, 
 .md-layout {
   background: linear-gradient(
     to bottom,
-    #f8f9fa 0%,
-    #f8f9fa 15%,
-    #0b6466 35%,
-    #0b6466 100%
+    #fcfdfe 0%,    /* Pristine soft off-white canvas at the top boundary */
+    #f5f7f8 12%,   /* Smooth transition zone */
+    #4d8b8d 24%,   /* Gentle mid-tone blending vector */
+    #0b6466 40%,   /* Locks cleanly into your signature deep teal color */
+    #0b6466 100%   /* Solid teal floor extending through the footer bounds */
   ) !important;
-  background-attachment: fixed !important; /* Keeps the gradient locked firm while you scroll */
+  
+  /* Keeps the canvas locked solid in the viewport frame while you scroll through items */
+  background-attachment: fixed !important; 
   min-height: 100vh !important;
 }
 
@@ -587,7 +590,7 @@ html,
   border-radius: 10px;
   transition: color 0.4s ease; /* Smooth text color crossfade */
   outline: none;
-  font-family: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
 /* When the option is selected, text turns white */

@@ -8,13 +8,14 @@ hide:
 <div class="custom-tab-navbar-container">
   <div class="tab-navbar-wrapper">
     
-  <a href="#" class="tab-item">Capabilities</a>
+  <span class="nav-news-badge">News</span>
   
-  <a href="#" class="tab-item active-tab">Performance</a>
-  
-  <a href="#" class="tab-item">Safety</a>
-  
-  <a href="#" class="tab-item">Download</a>
+  <div class="nav-links-subgroup">
+    <a href="#" class="tab-item">Capabilities</a>
+    <a href="#" class="tab-item">Performance</a>
+    <a href="#" class="tab-item active-tab">Safety</a>
+    <a href="#" class="tab-item">Download</a>
+  </div>
     
   </div>
 </div>

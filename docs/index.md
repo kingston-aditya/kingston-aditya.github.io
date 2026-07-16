@@ -132,24 +132,37 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
-<nav class="invisible-dock-container">
-  
-  <div class="nav-dynamic-tracker" id="nav-tracker"></div>
-  
-  <div class="dock-links">
-    <a href="#" class="dock-item active-item" onmouseenter="moveTracker(this)">Capabilities</a>
-    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Performance</a>
-    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Safety</a>
-    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Download</a>
-  
-  <span class="dock-separator"></span>
-  
-  <a href="#news" class="dock-item news-item" onmouseenter="moveTracker(this)">
-    News
-    <span class="news-dot pulsing"></span>
+<nav class="editorial-nav-container">
+  <div class="editorial-links">
+    
+  <a href="#" class="edit-nav-item active">
+      <span class="nav-number">01</span>
+      <span class="nav-text">Capabilities</span>
+    </a>
+    
+  <a href="#" class="edit-nav-item">
+      <span class="nav-number">02</span>
+      <span class="nav-text">Performance</span>
+    </a>
+    
+  <a href="#" class="edit-nav-item">
+    <span class="nav-number">03</span>
+    <span class="nav-text">Safety</span>
   </a>
-  </div>
   
+  <a href="#" class="edit-nav-item">
+    <span class="nav-number">04</span>
+    <span class="nav-text">Download</span>
+  </a>
+  
+  <span class="edit-nav-divider"></span>
+  
+  <a href="#news" class="edit-nav-item news-accent">
+    <span class="nav-text">News</span>
+    <span class="status-indicator-dot pulsing"></span>
+  </a>
+    
+  </div>
 </nav>
 
 <div class="pub-list">

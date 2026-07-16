@@ -209,31 +209,26 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 <br>
 <br>
 
-<div class="dashboard-container">
+<div class="publication-card">
   
-  <div class="dashboard-column">
-    <div class="dashboard-block left-top"></div>
-    <div class="dashboard-block left-bottom"></div>
+  <div class="pub-header">
+    <span class="pub-badge">Preprint</span>
+    <span class="pub-year">2026</span>
   </div>
-
-  <div class="dashboard-column">
-    <div class="middle-top-pills">
-      <div class="nav-pill black-pill"></div>
-      <div class="nav-pill black-pill"></div>
-      <div class="nav-pill black-pill"></div>
-      <div class="nav-pill black-pill"></div>
-      <div class="nav-pill red-pill"></div>
-    </div>
-    <div class="dashboard-block middle-bottom"></div>
+  <h3 class="pub-title">Selected Language Modeling Distillation</h3>
+  <p class="pub-authors">
+    <strong>Aditya Sarkar</strong>, Co-Author One, Co-Author Two
+  </p>
+  <div class="pub-action-row">
+    <a href="#" class="pub-button" target="_blank">
+      <svg class="pub-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      <span>Paper</span>
+    </a>
+  <a href="#" class="pub-button" target="_blank">
+    <svg class="pub-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+    <span>Code</span>
+  </a>
   </div>
-
-  <div class="dashboard-column">
-    <div class="dashboard-block right-half">
-      </div>
-    <div class="dashboard-block right-half">
-      </div>
-  </div>
-
 </div>
 
 <!-- ## Testin -->

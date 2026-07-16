@@ -48,20 +48,31 @@ hide:
     Hello! I am a second-year Ph.D. student at the <a href="https://www.umd.edu/" class="inline-link" target="_blank">University of Maryland</a>, where I am engaged in research collaborations with Profs. <a href="#" class="inline-link">Nuno Vasconcelos</a> and <a href="#" class="inline-link">David Jacobs</a>. My research aims to build better computer vision algorithms, specifically for temporal understanding in LLMs, action and world modeling. I am grateful to be supported by the <strong class="highlight-text">University of Maryland Graduate Fellowship</strong>.
   </p>
   
-  <div class="intro-contact-list">
-    <div class="contact-item">
-      <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-      <span>Office: 4112-D15, Brendan Iribe Center, 8125 Paint Branch Dr, College Park, MD</span>
-    </div>
-    <div class="contact-item">
-      <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-      <span>Work Email: <a href="mailto:asarkar6@umd.edu">asarkar6 [at] umd [dot] edu</a></span>
-    </div>
-    <div class="contact-item">
-      <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-      <span>Personal Email: <a href="mailto:asnov2k@gmail.com">asnov2k [at] gmail [dot] com</a></span>
-    </div>
+  <div class="intro-contact-grid">
+  
+  <div class="contact-column">
+    <span class="contact-tag">Office</span>
+    <span class="contact-detail">
+      4112-D15, Brendan Iribe Center<br>
+      <span class="sub-detail">8125 Paint Branch Dr, College Park, MD</span>
+    </span>
   </div>
+
+  <div class="contact-column">
+    <span class="contact-tag">Work Email</span>
+    <span class="contact-detail">
+      <a href="mailto:asarkar6@umd.edu" class="contact-link">asarkar6 [at] umd [dot] edu</a>
+    </span>
+  </div>
+
+  <div class="contact-column">
+    <span class="contact-tag">Personal Email</span>
+    <span class="contact-detail">
+      <a href="mailto:asnov2k@gmail.com" class="contact-link">asnov2k [at] gmail [dot] com</a>
+    </span>
+  </div>
+
+</div>
   
   <div class="minimal-social-links">
     <a href="#" class="social-icon-link" title="Homepage">

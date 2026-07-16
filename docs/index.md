@@ -8,10 +8,9 @@ hide:
 <div class="custom-tab-navbar-container">
   <div class="tab-navbar-wrapper sliding-nav">
     <div class="pill-slider"></div>
-    <a href="#capabilities" class="tab-link active">Capabilities</a>
-    <a href="#performance" class="tab-link">Performance</a>
-    <a href="#safety" class="tab-link">Safety</a>
-    <a href="#download" class="tab-link">Download</a>
+    <a href="#capabilities" class="tab-link active"><i class="fa-solid fa-house"></i></a>
+    <a href="#performance" class="tab-link">Publications</a>
+    <a href="#safety" class="tab-link">Blogs</a>
   </div>
 
   <div class="tab-navbar-wrapper news-dropdown-wrapper">
@@ -152,7 +151,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
 <div class="publications-bento-grid">
 
-  <div class="bento-pub-card pub-card-teal">
+  <div class="bento-pub-card pub-card-blue">
     <div class="bento-ambient-graphic">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
       <path d="M2 6c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3M2 12c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3M2 18c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -173,7 +172,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
   </div>
   </div>
 
-  <div class="bento-pub-card pub-card-teal">
+  <div class="bento-pub-card pub-card-blue">
     <div class="bento-ambient-graphic">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
       <path d="M2 6c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3M2 12c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3M2 18c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -612,10 +611,90 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
 <div class="carousel-dots" id="carouselDots">
-  <span class="dot active" onclick="jumpToSlide(0)"></span>
-  <span class="dot" onclick="jumpToSlide(1)"></span>
-  <span class="dot" onclick="jumpToSlide(2)"></span>
+  <div class="progress-pill active" onclick="jumpToSlide(0)">
+    <span class="progress-fill"></span>
+  </div>
+  <div class="progress-pill" onclick="jumpToSlide(1)">
+    <span class="progress-fill"></span>
+  </div>
+  <div class="progress-pill" onclick="jumpToSlide(2)">
+    <span class="progress-fill"></span>
+  </div>
 </div>
+
+<script>
+  // Carousel configuration variables
+let currentSlideIndex = 0;
+const totalSlides = 3; // Total number of slides
+const slideDuration = 5000; // Time per slide in milliseconds (5 seconds)
+let slideInterval;
+
+function startSlideShow() {
+  // Clear any existing intervals safely
+  clearInterval(slideInterval);
+  
+  // Reset and trigger the active progress fill
+  resetAndTriggerFill(currentSlideIndex);
+
+  // Set up the recurring timer to slide towards the right
+  slideInterval = setInterval(() => {
+    // Increment slide index to shift right, loop back to 0 if at the end
+    let nextIndex = (currentSlideIndex + 1) % totalSlides;
+    jumpToSlide(nextIndex);
+  }, slideDuration);
+}
+
+function jumpToSlide(index) {
+  currentSlideIndex = index;
+
+  // 1. Physically translate your actual slides container (adjust selector to match your layout)
+  const slidesContainer = document.querySelector('.slides-wrapper'); // Adjust this classname if different
+  if (slidesContainer) {
+    slidesContainer.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+  }
+
+  // 2. Update the progress pill states
+  const pills = document.querySelectorAll('.progress-pill');
+  pills.forEach((pill, i) => {
+    const fill = pill.querySelector('.progress-fill');
+    
+    // Remove active and strip transitions so they reset instantly
+    pill.classList.remove('active');
+    if (fill) {
+      fill.style.transition = 'none';
+      fill.style.width = '0%';
+    }
+  });
+
+  // 3. Force browser reflow to reset transitions, then activate the new pill
+  setTimeout(() => {
+    resetAndTriggerFill(currentSlideIndex);
+  }, 50);
+
+  // Restart slide duration timer
+  startSlideShow();
+}
+
+function resetAndTriggerFill(index) {
+  const pills = document.querySelectorAll('.progress-pill');
+  const activePill = pills[index];
+  
+  if (activePill) {
+    activePill.classList.add('active');
+    const fill = activePill.querySelector('.progress-fill');
+    if (fill) {
+      // Re-apply the smooth timing transition to the progress fill line
+      fill.style.transition = `width ${slideDuration}ms linear`;
+      fill.style.width = '100%';
+    }
+  }
+}
+
+// Start the sequence automatically on page load
+window.addEventListener('DOMContentLoaded', () => {
+  startSlideShow();
+});
+</script>
 
 
 

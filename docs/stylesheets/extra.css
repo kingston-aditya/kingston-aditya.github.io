@@ -997,28 +997,52 @@
 
 /* Indicator dots track row */
 .carousel-dots {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 6px !important;
-  margin-top: 12px !important;
-  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Tight, elegant separation */
+  margin-top: 20px;
 }
 
-.dot {
-  width: 10px !important;
-  height: 10px !important;
-  background-color: rgba(128, 0, 128, 0.2) !important;
-  border-radius: 50% !important;
-  display: inline-block !important;
-  cursor: pointer !important;
-  transition: all 0.65s cubic-bezier(0.25, 1, 0.5, 1) !important;
+.progress-pill {
+  position: relative;
+  width: 8px; /* Starts as a perfect tiny circle */
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.12); /* Soft gray background */
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden; /* Clips the loading fill inside the capsule */
+  box-sizing: border-box;
+  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.4s ease;
 }
 
-.dot.active {
-  width: 14px !important;
-  border-radius: 3px !important;
-  background-color: #4a154b !important;
+/* Hover state: Idle dots glow slightly darker */
+.progress-pill:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Active State: The pill stretches horizontally */
+.progress-pill.active {
+  width: 40px; /* Stretches elegantly into a capsule pill */
+  background-color: rgba(0, 0, 0, 0.08); /* Muted track background */
+}
+
+/* The actual loading color line inside the active pill */
+.progress-pill .progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%; /* Starts at nothing */
+  background-color: #111827; /* Rich dark charcoal fill (or match your teal #0b6466) */
+  border-radius: 4px;
+}
+
+/* When active, the fill line stretches to 100% over the exact slide duration */
+.progress-pill.active .progress-fill {
+  width: 100%;
+  /* The slider transition duration (e.g., 5 seconds). Transition is linear for constant speed fill */
+  transition: width 5000ms linear; 
 }
 
 .nav-container-wrapper {

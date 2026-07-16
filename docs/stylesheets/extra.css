@@ -2443,9 +2443,12 @@
 }
 
 /* Active State Defaults */
+/* Active State: Triggered when clicked */
 .dock-item.active-item {
-  color: #111827 !important;
-  font-weight: 600;
+  color: #111827 !important; /* Velvet rich black text */
+  font-weight: 600 !important; /* Makes it bold */
+  transform: scale(1.05); /* Scales the word slightly to make it bigger */
+  transition: transform 0.25s ease, color 0.25s ease;
 }
 
 /* Elegant Muted Vertical Divider */

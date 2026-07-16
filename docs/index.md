@@ -134,6 +134,25 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
 <nav class="invisible-dock-container">
+  <div class="nav-dynamic-tracker" id="nav-tracker"></div>
+  
+  <div class="dock-links">
+
+  <a href="#news" class="dock-item news-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">
+    Research Topics
+    <span class="news-dot pulsing"></span>
+  </a>
+
+  <span class="dock-separator"></span>
+
+  <a href="#" class="dock-item active-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">Capabilities</a>
+  <a href="#" class="dock-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">Performance</a>
+  <a href="#" class="dock-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">Safety</a>
+  <a href="#" class="dock-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">Download</a>
+  </div>
+</nav>
+
+<nav class="invisible-dock-container">
   
   <div class="nav-dynamic-tracker" id="nav-tracker"></div>
   

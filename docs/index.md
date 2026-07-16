@@ -92,7 +92,7 @@ hide:
 
 <!-- <span style=font-size:2em;">[:academicons-google-scholar:](https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en) [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/aditya-sarkar-970620315/) [:fontawesome-brands-github:](https://github.com/kingston-aditya) [:fontawesome-brands-x-twitter:](https://x.com/sarkar8073) [:fontawesome-solid-chalkboard-user:](SanDiego_Aditya_CV8.pdf)</span> -->
 
-<div class="academic-squircles-container">
+<!-- <div class="academic-squircles-container">
   <a href="https://scholar.google.com/citations?user=jLJJn6sAAAAJ&hl=en" class="academic-squircle-btn" title="Google Scholar">
     <i class="fa-brands fa-google-scholar"></i>
   </a>
@@ -114,10 +114,10 @@ hide:
 
 Hello! I am a second-year Ph.D. student at the [__University of Maryland__](https://www.umiacs.umd.edu/), where I am engaged in research collaborations with Profs. [__Nuno Vasconcelos__](http://www.svcl.ucsd.edu/people/nuno/) and [__David Jacobs__](https://www.cs.umd.edu/~djacobs/). My research aims to build better computer vision algorithms, specifically for temporal understanding in LLMs, action and world modeling. I am grateful to be supported by University of Maryland __Graduate Fellowship__.
 
-<span style="color: red;">I am looking for research internships for summer '26. Please reach out if you're interested in my profile.</span>
+<span style="color: red;">I am looking for research internships for summer '26. Please reach out if you're interested in my profile.</span> -->
 
-<br>
-<br>
+<!-- <br>
+<br> -->
 
 <!-- ## News
 

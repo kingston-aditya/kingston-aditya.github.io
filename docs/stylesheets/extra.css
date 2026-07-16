@@ -96,7 +96,7 @@
 /* Master Layout Grid */
 .intro-grid-container {
   display: grid;
-  grid-template-columns: 1.5fr 1fr; /* Mathematically elegant ratio */
+  grid-template-columns: 1.5fr 1fr;
   gap: 60px;
   align-items: center;
   width: 100%;
@@ -114,12 +114,12 @@
 
 .intro-name {
   font-family: "Times New Roman", Times, Georgia, serif !important;
-  font-size: 3.8rem !important;
+  font-size: 3.5rem !important; /* Slightly dialed down for refined elegance */
   font-weight: 500 !important;
   letter-spacing: -0.02em;
   color: #111827 !important;
-  margin: 12px 0 24px 0 !important;
-  line-height: 1.05 !important;
+  margin: 16px 0 24px 0 !important;
+  line-height: 1.1 !important;
 }
 
 .intro-bio {
@@ -132,7 +132,7 @@
 
 /* Subtle highlights & elegant text links */
 .inline-link {
-  color: #0b6466 !important; /* Premium brand deep teal */
+  color: #0b6466 !important;
   text-decoration: none;
   font-weight: 500;
   border-bottom: 1px dashed rgba(11, 100, 102, 0.4);
@@ -150,13 +150,13 @@
 }
 
 /* ==========================================
-   INTERNSHIP ACTIVE STATUS PILL
+   ACTIVE STATUS PILL
    ========================================== */
 .status-indicator {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: rgba(11, 100, 102, 0.06); /* Soft tint of your deep teal */
+  background-color: rgba(11, 100, 102, 0.06);
   padding: 6px 14px;
   border-radius: 20px;
   border: 1px solid rgba(11, 100, 102, 0.1);
@@ -165,12 +165,11 @@
 .status-dot {
   width: 8px;
   height: 8px;
-  background-color: #10b981; /* Premium Emerald green */
+  background-color: #10b981;
   border-radius: 50%;
   position: relative;
 }
 
-/* The pulse animation effect */
 .status-dot.pulsing::after {
   content: '';
   position: absolute;
@@ -198,71 +197,79 @@
 }
 
 /* ==========================================
-   MINIMALIST DETAILS & METADATA
+   CONTACT DETAILS & UNIFORM ICONS
    ========================================== */
 .intro-contact-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px; /* Slightly increased for readability */
   margin-bottom: 32px;
+  width: 100%;
 }
 
 .contact-item {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-start; /* Keeps icons aligned if text wraps on mobile */
+  gap: 14px;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.95rem;
+  line-height: 1.5;
   color: #4b5563;
 }
 
 .contact-item a {
-  color: #4b5563;
+  color: #3b82f6; /* Modern subtle blue for active links */
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .contact-item a:hover {
-  color: #000000;
+  color: #1d4ed8;
+  text-decoration: underline;
 }
 
+/* Aligns and scales contact icons perfectly to match text height */
 .contact-icon {
-  width: 18px;
-  height: 18px;
-  color: #9ca3af; /* Muted grey vector paths */
+  width: 20px;
+  height: 20px;
+  color: #4b5563; /* Slightly darker slate grey for premium visibility */
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 /* ==========================================
-   CLEAN VECTOR SOCIAL BUTTONS
+   ROBUST HOVER SOCIAL BUTTONS
    ========================================== */
 .minimal-social-links {
   display: flex;
-  gap: 20px;
+  gap: 16px;
 }
 
 .social-icon-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 44px; /* Increased slightly to feel better to touch/click */
+  height: 44px;
   border-radius: 50%;
   border: 1px solid #e5e7eb;
-  color: #4b5563; /* Subtle neutral state */
+  color: #4b5563;
   background-color: transparent;
   transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Icon size inside the social tray scaled up for visual presence */
 .social-icon-link svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 }
 
 .social-icon-link:hover {
-  color: #000000;
-  background-color: #f3f4f6;
-  border-color: #9ca3af;
-  transform: translateY(-2px); /* Gentle floating lift */
+  color: #ffffff;
+  background-color: #242424; /* Seamless black hover to match your primary theme accents */
+  border-color: #242424;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* ==========================================
@@ -276,11 +283,11 @@
 .premium-image-frame {
   position: relative;
   width: 100%;
-  max-width: 320px; /* Aligns perfectly with standard proportions */
-  border-radius: 36px; /* High-end rounded squircle */
+  max-width: 340px;
+  border-radius: 36px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08); /* Sophisticated floating shadow */
-  aspect-ratio: 1 / 1.1; /* Slightly taller than wide */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  aspect-ratio: 1 / 1.1;
   background-color: #f3f4f6;
 }
 
@@ -299,7 +306,7 @@
     text-align: left;
   }
   .intro-image-column {
-    order: -1; /* Puts image on top on mobile */
+    order: -1;
   }
 }
 

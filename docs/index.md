@@ -15,7 +15,7 @@ hide:
   </div>
 
   <div class="tab-navbar-wrapper news-dropdown-wrapper">
-    <a href="#news" class="tab-link news-pill" id="news-toggle">News</a>
+    <a href="#news" class="tab-link news-pill" id="news-toggle"> <span class="news-dot pulsing"></span> News</a>
 
   <div class="glassy-dialog-box" id="news-dialog">
     <div class="dialog-content">
@@ -137,17 +137,10 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
   <div class="nav-dynamic-tracker" id="nav-tracker"></div>
   
   <div class="dock-links">
-    <a href="#" class="dock-item active-item" onmouseenter="moveTracker(this)">Capabilities</a>
-    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Performance</a>
-    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Safety</a>
-    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Download</a>
-  
-  <span class="dock-separator"></span>
-  
-  <a href="#news" class="dock-item news-item" onmouseenter="moveTracker(this)">
-    News
-    <span class="news-dot pulsing"></span>
-  </a>
+    <a href="#" class="dock-item active-item" onmouseenter="moveTracker(this)">Recent Works</a>
+    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Diffusion</a>
+    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Language Modelling</a>
+    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Contrastive Learning</a>
   </div>
   
 </nav>

@@ -2366,7 +2366,7 @@
 .news-dot {
   width: 6px;
   height: 6px;
-  background-color: #1e1b4b; /* Matches text */
+  background-color: #db1414; /* Matches text */
   border-radius: 50%;
   position: relative;
 }
@@ -2379,7 +2379,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #1e1b4b;
+  background-color: #de5050;
   animation: mini-pulse 1.8s infinite ease-in-out;
 }
 
@@ -2439,7 +2439,7 @@
 
 /* Hovering turns text fully dark */
 .dock-item:hover {
-  color: #111827 !important;
+  color: #ffffff !important;
 }
 
 /* Active State Defaults */
@@ -2495,11 +2495,11 @@
   left: 16px;
   height: calc(100% - 16px);
   width: 0;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(0, 128, 128, 0.55);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 128, 128, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.03);
   border-radius: 16px;
   z-index: 1;
   opacity: 0;

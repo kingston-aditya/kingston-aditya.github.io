@@ -151,12 +151,54 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
 
 <div class="publications-bento-grid">
+
+  <div class="bento-pub-card pub-card-teal">
+    <div class="bento-ambient-graphic">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M2 6c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3M2 12c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3M2 18c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    </div>
+    
+  <div class="bento-pub-meta">
+    <span class="bento-badge">Ongoing</span>
+    <span class="bento-year">2026</span>
+  </div>
+  <h3 class="bento-title">Selected Language Modeling Distillation</h3>
+  <p class="bento-authors"><strong>Aditya Sarkar</strong>, Co-Author One</p>
+  <div class="bento-links">
+    <a href="#" class="bento-link">Paper <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+    <a href="#" class="bento-link">Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+    <a href="#" class="bento-link">Blog <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+    <a href="#" class="bento-link">Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+  </div>
+  </div>
+
+  <div class="bento-pub-card pub-card-teal">
+    <div class="bento-ambient-graphic">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M2 6c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3M2 12c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3M2 18c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    </div>
+    
+  <div class="bento-pub-meta">
+    <span class="bento-badge">Ongoing</span>
+    <span class="bento-year">2026</span>
+  </div>
+  <h3 class="bento-title">Selected Language Modeling Distillation</h3>
+  <p class="bento-authors"><strong>Aditya Sarkar</strong>, Co-Author One</p>
+  <div class="bento-links">
+    <a href="#" class="bento-link">Paper <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+    <a href="#" class="bento-link">Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+    <a href="#" class="bento-link">Blog <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+    <a href="#" class="bento-link">Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+  </div>
+  </div>
   
   <div class="bento-pub-card pub-card-teal">
     <div class="bento-ambient-graphic">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <path d="M2 6c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3M2 12c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3M2 18c2.5 0 2.5 3 5 3s2.5-3 5-3 2.5 3 5 3 2.5-3 5-3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
     </div>
     
   <div class="bento-pub-meta">
@@ -168,6 +210,8 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
   <div class="bento-links">
     <a href="#" class="bento-link">Paper <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
     <a href="#" class="bento-link">Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+    <a href="#" class="bento-link">Blog <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+    <a href="#" class="bento-link">Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
   </div>
   </div>
 
@@ -408,7 +452,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // 20% chance to go Bold
         span.classList.add("is-bold");
         span.classList.remove("is-crossed");
-      } else if (roll < 0.35) {
+      } else if (roll < 0.75) {
         // 15% chance to go Crossed out
         span.classList.add("is-crossed");
         span.classList.remove("is-bold");

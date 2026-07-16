@@ -152,8 +152,8 @@ hide:
 <section class="testimonial-section">
 
   <div class="testimonial-squircle-card">
-  <h1> Motivation for Research. </h1>
   <div class="quote-content-block">
+    <h1> Motivation for Research. </h1>
     <p class="quote-text">
   Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
 

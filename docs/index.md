@@ -15,7 +15,6 @@ hide:
   </div>
 
   <div class="tab-navbar-wrapper news-dropdown-wrapper">
-    <span class="news-dot pulsing"></span>
     <a href="#news" class="tab-link news-pill" id="news-toggle">News</a>
 
   <div class="glassy-dialog-box" id="news-dialog">
@@ -140,118 +139,58 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
   <a href="#news" class="dock-item news-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">
     Research Topics
-    <span class="news-dot pulsing"></span>
   </a>
 
   <span class="dock-separator"></span>
 
-  <a href="#" class="dock-item active-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">Capabilities</a>
-  <a href="#" class="dock-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">Performance</a>
-  <a href="#" class="dock-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">Safety</a>
-  <a href="#" class="dock-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">Download</a>
+  <a href="#" class="dock-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">Diffusion</a>
+  <a href="#" class="dock-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">Language Modelling</a>
+  <a href="#" class="dock-item" onmouseenter="moveTracker(this)" onclick="setActive(this)">Contrastive Learning</a>
   </div>
 </nav>
 
-<nav class="invisible-dock-container">
-  
-  <div class="nav-dynamic-tracker" id="nav-tracker"></div>
-  
-  <div class="dock-links">
-    <a href="#" class="dock-item active-item" onmouseenter="moveTracker(this)">Recent Works</a>
-    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Diffusion</a>
-    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Language Modelling</a>
-    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Contrastive Learning</a>
-  </div>
-  
-</nav>
 
-<div class="pub-list">
+<div class="publications-bento-grid">
   
-  <div class="pub-item" data-topic="distillation">
-  
-  <div class="pub-media-left">
-    <img src="images/rain_book.jpg" alt="Masked Visual Fine-Tuning Diagram" class="pub-card-img">
-  </div>
-
-  <div class="pub-content-right">
-    <div class="article-meta">
-      <span class="meta-tag">DISTILLATION</span>
-      <span class="meta-divider">•</span>
-      <span class="meta-date">Preprint 2026</span>
+  <div class="bento-pub-card pub-card-teal">
+    <div class="bento-ambient-graphic">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </div>
-      
-  <h2 class="article-title">Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h2>
-  
-  <p class="article-authors"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
-  
-  <p class="article-description">Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve.</p>
-  
-  <div class="pub-actions">
-    <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
-    <a href="https://arxiv.org/abs/2601.22570" class="pub-btn-outline"><i class="fa-brands fa-xing"></i> Paper</a>
-    <a href="#" class="pub-btn-outline"><i class="fa-solid fa-person-running"></i> HF Demo</a>
-    <a href="https://github.com/kingston-aditya/MA-PaPSP" class="pub-btn-outline"><i class="fa-brands fa-github"></i> Code</a>
-    <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
+    
+  <div class="bento-pub-meta">
+    <span class="bento-badge">Preprint</span>
+    <span class="bento-year">2026</span>
+  </div>
+  <h3 class="bento-title">Selected Language Modeling Distillation</h3>
+  <p class="bento-authors"><strong>Aditya Sarkar</strong>, Co-Author One</p>
+  <div class="bento-links">
+    <a href="#" class="bento-link">Paper <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+    <a href="#" class="bento-link">Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
   </div>
   </div>
 
-</div>
-
-<div class="pub-item" data-topic="distillation">
-  
-  <div class="pub-media-left">
-    <img src="images/rain_book.jpg" alt="Masked Visual Fine-Tuning Diagram" class="pub-card-img">
-  </div>
-
-  <div class="pub-content-right">
-    <div class="article-meta">
-      <span class="meta-tag">DISTILLATION</span>
-      <span class="meta-divider">•</span>
-      <span class="meta-date">Preprint 2026</span>
+  <div class="bento-pub-card pub-card-purple">
+    <div class="bento-ambient-graphic">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M9 18V5l12-2v13" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="6" cy="18" r="3"/>
+        <circle cx="18" cy="16" r="3"/>
+      </svg>
     </div>
-      
-  <h2 class="article-title">Masked Visual Fine-Tuning for Encoder-based Diffusion Models.</h2>
-  
-  <p class="article-authors"><u>Aditya Sarkar</u>, <a href="https://shwai-he.github.io/">Shwai He</a>, <a href="https://jiacheng-cheng.github.io/">Jiacheng Cheng</a>, <a href="http://www.svcl.ucsd.edu/people/yili/">Yi Li</a>, <a href="https://shlokk.github.io/shlokmishra.github.io/">Shlok Mishra</a>, <a href="https://www.ang-li.com/">Ang Li</a>, <a href="https://www.cs.umd.edu/~djacobs/">David Jacobs</a>, <a href="http://www.svcl.ucsd.edu/people/nuno/">Nuno Vasconcelos</a>.</p>
-  
-  <p class="article-description">Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve.</p>
-  
-  <div class="pub-actions">
-    <a href="2026-02-05-retrieval" class="pub-btn-outline"><i class="fa-brands fa-blogger"></i> Blog</a>
-    <a href="https://arxiv.org/abs/2601.22570" class="pub-btn-outline"><i class="fa-brands fa-xing"></i> Paper</a>
-    <a href="#" class="pub-btn-outline"><i class="fa-solid fa-person-running"></i> HF Demo</a>
-    <a href="https://github.com/kingston-aditya/MA-PaPSP" class="pub-btn-outline"><i class="fa-brands fa-github"></i> Code</a>
-    <a href="#" class="pub-btn-outline"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
+
+  <div class="bento-pub-meta">
+    <span class="bento-badge">Conference</span>
+    <span class="bento-year">2025</span>
+  </div>
+  <h3 class="bento-title">Temporal Understanding in Multimodal Large Language Models</h3>
+  <p class="bento-authors"><strong>Aditya Sarkar</strong>, Vasconcelos, N.</p>
+  <div class="bento-links">
+    <a href="#" class="bento-link">Paper <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
   </div>
   </div>
 
-</div>
-
-</div>
-
-<br>
-<br>
-
-<div class="publication-card">
-  
-  <div class="pub-header">
-    <span class="pub-badge">Preprint</span>
-    <span class="pub-year">2026</span>
-  </div>
-  <h3 class="pub-title">Selected Language Modeling Distillation</h3>
-  <p class="pub-authors">
-    <strong>Aditya Sarkar</strong>, Co-Author One, Co-Author Two
-  </p>
-  <div class="pub-action-row">
-    <a href="#" class="pub-button" target="_blank">
-      <svg class="pub-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-      <span>Paper</span>
-    </a>
-  <a href="#" class="pub-button" target="_blank">
-    <svg class="pub-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-    <span>Code</span>
-  </a>
-  </div>
 </div>
 
 <!-- ## Testin -->

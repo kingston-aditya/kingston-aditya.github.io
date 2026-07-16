@@ -2461,7 +2461,9 @@
 
 /* Custom News Accent (Text Only) */
 .dock-item.news-item {
-  color: #c084fc !important; /* Bold, elegant purple */
+  color: #111827 !important; /* Bold, elegant purple */
+  font-weight: 600!important;
+  transform: scale(1.05);
 }
 
 .news-dot {
@@ -2650,5 +2652,160 @@
   .research-grid-container {
     flex-direction: column;
     gap: 16px;
+  }
+}
+
+/* ==========================================
+   PREMIUM BENTO BOX PUBLICATION GRID
+   ========================================== */
+.publications-bento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Splitting the horizontal plane cleanly */
+  gap: 24px;
+  width: 100%;
+  margin: 32px 0;
+  box-sizing: border-box;
+}
+
+/* Base Bento Card Configuration */
+.bento-pub-card {
+  position: relative; /* Essential to isolate the floating background icon */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px;
+  border-radius: 36px !important; /* Elegant thick squircle radius */
+  overflow: hidden; /* Clips the background icon from spilling out */
+  box-sizing: border-box;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+  min-height: 320px;
+}
+
+/* Unique Distinct Color Profiles */
+.pub-card-teal {
+  background-color: #e0f2f1 !important; /* Premium pastel teal */
+  box-shadow: 0 10px 30px rgba(11, 100, 102, 0.04);
+}
+
+.pub-card-purple {
+  background-color: #f3e8ff !important; /* Premium pastel purple */
+  box-shadow: 0 10px 30px rgba(147, 51, 234, 0.04);
+}
+
+/* Card Float Animation on Hover */
+.bento-pub-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   BACKGROUND EMBEDDED ILLUSTATION/FIGURE
+   ========================================== */
+.bento-ambient-graphic {
+  position: absolute;
+  bottom: -20px; /* Pushes it down into the corner exactly like your screenshot */
+  right: -20px;  /* Slams it right against the corner frame edge */
+  width: 200px;  /* Adjust size based on how prominent you want the figure to be */
+  height: 200px;
+  color: rgba(0, 0, 0, 0.05); /* Keeps the line thickness faint so text remains readable */
+  z-index: 0;
+  pointer-events: none; /* Mouse elements pass through cleanly to text layers */
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), color 0.4s ease;
+}
+
+/* High-End Micro-Animation: Icon rotates or scales gracefully on card hover */
+.bento-pub-card:hover .bento-ambient-graphic {
+  transform: scale(1.08) rotate(-4deg);
+  color: rgba(0, 0, 0, 0.08); /* Darkens slightly on focus */
+}
+
+/* Typography & Content Architecture */
+.bento-pub-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.bento-badge {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #111827;
+}
+
+.bento-year {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.bento-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 1.45rem !important;
+  font-weight: 600 !important;
+  color: #111827 !important;
+  margin: 0 0 12px 0 !important;
+  line-height: 1.3 !important;
+  max-width: 85%; /* Stops text from slamming completely over the icon zone */
+  z-index: 1;
+}
+
+.bento-authors {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 0.98rem !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  margin: 0 0 auto 0 !important; /* Automatically pins links array to bottom bounds */
+  z-index: 1;
+}
+
+/* Action Links Tray */
+.bento-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 32px;
+  z-index: 1;
+}
+
+.bento-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.bento-link svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.25s ease;
+}
+
+.bento-link:hover {
+  border-bottom-color: #111827;
+}
+
+.bento-link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* Mobile Fallback Viewport Layout */
+@media (max-width: 768px) {
+  .publications-bento-grid {
+    grid-template-columns: 1fr; /* Stack vertically on small screens */
+    gap: 20px;
   }
 }

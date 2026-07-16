@@ -60,7 +60,7 @@
 
 /* Custom Styling for Main H1 Profile Title */
 .md-content h1 {
-  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: 2.5rem !important; /* Increase or decrease this value to match your preference */
   font-weight: 700 !important;
   color: #000000 !important;
@@ -71,21 +71,23 @@
 }
 
 /* Ambient SaaS background styling - Smooth Glow Edition (No Rings) */
-.md-container {
-  /* 1. Base modern slate-cream background color */
-  background-color: #ebeff2 !important; 
-
-  /* 2. Pure soft spotlight overlay (No concentric circles) */
-  background-image: 
-    radial-gradient(
-      circle at 50% 15%, /* Centers the spotlight at the top middle */
-      rgba(255, 255, 255, 0.95) 0%, 
-      rgba(255, 255, 255, 0.4) 40%,
-      rgba(255, 255, 255, 0) 70%
-    ) !important;
-    
+body, .md-container, .md-content {
+  background-color: #fafbfc !important; /* Crisp, clean off-white canvas base */
   background-attachment: fixed !important;
-  background-size: cover !important;
+  
+  /* Creates 4 ultra-soft, fixed color gradients that sit behind your content */
+  background-image: 
+    /* 1. Soft lavender-purple spot (bottom center-left) */
+    radial-gradient(at 30% 85%, rgba(233, 213, 255, 0.14) 0px, transparent 50%),
+    
+    /* 2. Your brand's signature deep teal spot (top right) */
+    radial-gradient(at 85% 15%, rgba(11, 100, 102, 0.07) 0px, transparent 45%),
+    
+    /* 3. Soft Google-style blue spot (bottom right) */
+    radial-gradient(at 95% 90%, rgba(59, 130, 246, 0.06) 0px, transparent 40%),
+    
+    /* 4. Elegant neutral slate warm glow (top left) */
+    radial-gradient(at 10% 10%, rgba(196, 195, 208, 0.12) 0px, transparent 50%) !important;
 }
 
 /* Keeps theme layouts completely clear so the lighting shines through */
@@ -359,7 +361,21 @@
    ========================================== */
 .intro-image-column {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Centers the whole system in the column space */
+  gap: 16px; /* The exact gap between the photo frame and your address details */
+  width: 100%;
+}
+
+.photo-sub-info {
+  width: 100%;
+  max-width: 340px; /* Matches the exact max-width of .premium-image-frame */
+  text-align: left; /* Kept left-aligned for that strict editorial spec sheet feel */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  padding: 0 4px; /* Tiny offset so the text lines up perfectly with the card curve edge */
 }
 
 .premium-image-frame {
@@ -1263,7 +1279,7 @@
 
 /* Bold prominent title matching 'What we're learning...' size balance */
 .pub-title {
-  font-family: "Times New Roman", Times, Georgia, serif; /* Changed font */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: 1.35rem; 
   font-weight: 300;    
   margin: 0;
@@ -1376,7 +1392,7 @@
 /* Typography */
 .pub-item h4.article-title,
 .pub-item .article-title {
-  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: 1.56rem !important; /* Adjust cleanly between 1.75rem and 2.1rem depending on preference */
   font-weight: 400 !important;
   line-height: 1.25 !important;
@@ -1559,7 +1575,7 @@
 
 /* Large Numeric Displays */
 .metric-number {
-  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: 3.6rem;
   font-weight: 400;
   color: #0b6466; /* Matching your beautiful deep teal accent color */
@@ -1582,7 +1598,7 @@
 }
 
 .metric-subtext {
-  font-family: "Times New Roman", Times, Georgia, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-style: italic;
   font-size: 0.95rem;
   color: #6b7280;
@@ -1629,7 +1645,7 @@
 
 /* Big Title Header */
 .video-section-title {
-  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: 3.8rem; /* Large prominent title font */
   font-weight: 400;
   color: #111827;
@@ -1742,7 +1758,7 @@
 }
 
 .testimonial-section-title {
-  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: 4.8rem; 
   font-weight: 400;
   color: #111827;
@@ -1782,7 +1798,7 @@
 }
 
 .quote-mark {
-  font-family: "Times New Roman", Times, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: 3rem;
   line-height: 0.8;
   color: #cbd5e1; 
@@ -1858,7 +1874,7 @@
 
 /* Section Title Sizing */
 .reading-section-title {
-  font-family: "Times New Roman", Times, Georgia, serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: 2.8rem; /* Scaled cleanly below your master headers */
   font-weight: 400;
   color: #111827;

@@ -2495,10 +2495,10 @@
   left: 16px;
   height: calc(100% - 16px);
   width: 0;
-  background: rgba(0, 128, 128, 0.55);
+  background: rgba(0, 128, 128, 1.0);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 128, 128, 0.5);
+  border: 1px solid rgba(0, 128, 128, 1.0);
   box-shadow: 0 4px 12px rgba(0, 128, 128, 0.03);
   border-radius: 16px;
   z-index: 1;

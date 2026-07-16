@@ -15,7 +15,8 @@ hide:
   </div>
 
   <div class="tab-navbar-wrapper news-dropdown-wrapper">
-    <a href="#news" class="tab-link news-pill" id="news-toggle"> <span class="news-dot pulsing"></span> News</a>
+    <span class="news-dot pulsing"></span>
+    <a href="#news" class="tab-link news-pill" id="news-toggle">News</a>
 
   <div class="glassy-dialog-box" id="news-dialog">
     <div class="dialog-content">
@@ -307,18 +308,30 @@ function moveSlider(element) {
     const tracker = document.getElementById('nav-tracker');
     const container = element.closest('.invisible-dock-container');
     
-    // Calculate precise boundaries relative to the menu container
     const targetRect = element.getBoundingClientRect();
     const containerRect = container.getBoundingClientRect();
     
     const relativeLeft = targetRect.left - containerRect.left;
     const relativeTop = targetRect.top - containerRect.top;
     
-    // Stretch and slide the glass bubble seamlessly
     tracker.style.left = `${relativeLeft}px`;
     tracker.style.top = `${relativeTop}px`;
     tracker.style.width = `${targetRect.width}px`;
     tracker.style.height = `${targetRect.height}px`;
+  }
+
+  function setActive(element) {
+    // 1. Strip the active class from whichever item currently holds it
+    const currentActive = document.querySelector('.dock-item.active-item');
+    if (currentActive) {
+      currentActive.classList.remove('active-item');
+    }
+    
+    // 2. Add the active styling class to the clicked link
+    element.classList.add('active-item');
+    
+    // 3. Instantly tell the background tracker to resize and fit the new text size
+    moveTracker(element);
   }
 
   // Hide or reset to active item when mouse leaves the navigation dock completely

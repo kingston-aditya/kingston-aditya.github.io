@@ -623,22 +623,16 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
 <script>
-  // Carousel configuration variables
 let currentSlideIndex = 0;
-const totalSlides = 3; // Total number of slides
-const slideDuration = 5000; // Time per slide in milliseconds (5 seconds)
+const totalSlides = 3; 
+const slideDuration = 5000; 
 let slideInterval;
 
 function startSlideShow() {
-  // Clear any existing intervals safely
   clearInterval(slideInterval);
-  
-  // Reset and trigger the active progress fill
   resetAndTriggerFill(currentSlideIndex);
 
-  // Set up the recurring timer to slide towards the right
   slideInterval = setInterval(() => {
-    // Increment slide index to shift right, loop back to 0 if at the end
     let nextIndex = (currentSlideIndex + 1) % totalSlides;
     jumpToSlide(nextIndex);
   }, slideDuration);
@@ -647,31 +641,28 @@ function startSlideShow() {
 function jumpToSlide(index) {
   currentSlideIndex = index;
 
-  // 1. Physically translate your actual slides container (adjust selector to match your layout)
-  const slidesContainer = document.querySelector('.slides-wrapper'); // Adjust this classname if different
+  // Sync actual sliding container viewport coordinates
+  const slidesContainer = document.querySelector('.slides-wrapper');
   if (slidesContainer) {
     slidesContainer.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
   }
 
-  // 2. Update the progress pill states
+  // De-hydrate all pill indicators completely
   const pills = document.querySelectorAll('.progress-pill');
-  pills.forEach((pill, i) => {
-    const fill = pill.querySelector('.progress-fill');
-    
-    // Remove active and strip transitions so they reset instantly
+  pills.forEach((pill) => {
     pill.classList.remove('active');
+    const fill = pill.querySelector('.progress-fill');
     if (fill) {
       fill.style.transition = 'none';
       fill.style.width = '0%';
     }
   });
 
-  // 3. Force browser reflow to reset transitions, then activate the new pill
+  // Force DOM Reflow layout calculations before re-injecting transition states
   setTimeout(() => {
     resetAndTriggerFill(currentSlideIndex);
-  }, 50);
+  }, 20);
 
-  // Restart slide duration timer
   startSlideShow();
 }
 
@@ -683,14 +674,13 @@ function resetAndTriggerFill(index) {
     activePill.classList.add('active');
     const fill = activePill.querySelector('.progress-fill');
     if (fill) {
-      // Re-apply the smooth timing transition to the progress fill line
       fill.style.transition = `width ${slideDuration}ms linear`;
       fill.style.width = '100%';
     }
   }
 }
 
-// Start the sequence automatically on page load
+// Global window init hook listener
 window.addEventListener('DOMContentLoaded', () => {
   startSlideShow();
 });

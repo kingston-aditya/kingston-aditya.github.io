@@ -2755,7 +2755,11 @@
   color: #111827 !important;
   margin: 0 0 12px 0 !important;
   line-height: 1.3 !important;
-  max-width: 85%; /* Stops text from slamming completely over the icon zone */
+  
+  /* FIX: Allows the publication text title to utilize the full width of the squircle layout card */
+  width: 100% !important;
+  max-width: 100% !important; 
+  
   z-index: 1;
 }
 

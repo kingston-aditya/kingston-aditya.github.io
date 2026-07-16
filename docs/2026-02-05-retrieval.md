@@ -7,7 +7,7 @@ hide:
 
 <div class="custom-tab-navbar-container">
   <div class="tab-navbar-wrapper">
-    <a href="#news" class="tab-link">Home</a>
+    <a href="https://kingston-aditya.github.io/" class="tab-link"><i class="fa-solid fa-house"></i></a>
   </div>
 
   <div class="tab-navbar-wrapper sliding-nav">
@@ -76,21 +76,21 @@ hide:
   <div class="hero-squircle-card">
     
   <div class="hero-badge-row">
-    <span class="status-badge"><span class="dot"></span>Out of publication · April 2026</span>
+    <span class="status-badge"><span class="dot"></span>POSTER · ICLR 2026</span>
     <span class="funding-badge">ACCEPTED AS CONFERENCE PAPER AT ICLR 2026</span>
   </div>
   
   <h2 class="hero-title">
-    <span class="italic-accent">Leveraging Data to Say No:</span>Memory Augmented Plug-and-Play Selective Prediction.
+    <span class="italic-accent">Leveraging Data to Say No:</span> Memory Augmented Plug-and-Play Selective Prediction.
   </h2>
   
   <p class="hero-description">
-    <span class="quote-mark">&#8220;</span> Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
+    <span class="quote-mark">&#8220; TLDR</span> Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
   </p>
 
   <div class="hero-text-list-block">
   
-  <h3 class="list-block-title">Project Highlights</h3>
+  <h2 class="list-block-title">Project Highlights</h2>
   
   <ul class="list-block-items">
     <li>Selective prediction is a classic problem in machine learning.</li>
@@ -107,8 +107,6 @@ hide:
   <div class="video-player-container" id="video-container">
     
   <div class="video-overlay" id="video-overlay">
-    <h1 class="overlay-text">What's new in<br>MA-PaPSP</h1>
-    
   <button class="play-button" id="play-button">
     <svg viewBox="0 0 24 24" fill="currentColor">
       <path d="M8 5v14l11-7z"/>
@@ -153,15 +151,13 @@ hide:
 
 <section class="testimonial-section">
 
-  <h1> Motivation for Research. </h1>
-
   <div class="testimonial-squircle-card">
-    
+  <h1> Motivation for Research. </h1>
   <div class="quote-content-block">
     <p class="quote-text">
   Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
 
-  Traditionally, one common (and widely used) approach relies on thresholding the model’s output confidence, often derived from logits or predicted probabilities. For instance, consider a classifier that must distinguish between a dog and a cat image. Now suppose the model produces a probability distribution over the two classes of say, 0.1 for dog and 0.9 for cat. This maximum probability (0.9) reflects the model’s confidence in its prediction. In selective prediction, we compare this confidence score to a predefined threshold (e.g., 0.6) and output the predicted class (cat here) when the confidence exceeds the threshold. Otherwise, the model simply abstains from making a prediction, signaling uncertainty.
+  Traditionally, one common (and widely used) approach relies on <mark class="aesthetic-highlight">thresholding the model’s output confidence</mark>, often derived from logits or predicted probabilities. For instance, consider a classifier that must distinguish between a dog and a cat image. Now suppose the model produces a probability distribution over the two classes of say, 0.1 for dog and 0.9 for cat. This maximum probability (0.9) reflects the model’s confidence in its prediction. In selective prediction, we compare this confidence score to a predefined threshold (e.g., 0.6) and output the predicted class (cat here) when the confidence exceeds the threshold. Otherwise, the model simply abstains from making a prediction, signaling uncertainty.
   </p>
   </div>
 
@@ -182,29 +178,35 @@ hide:
   
   <h1> Keep Reading. </h1>
 
-  <div class="articles-flex-row">
-
-  <div class="reading-squircle-card">
-    <span class="card-meta-tag">Diffusion</span>
-    <h3 class="card-title">
-      Traditionally, one common (and widely used) approach relies on thresholding the model’s output confidence, often derived from logits or predicted probabilities.
-    </h3>
-    <p class="card-excerpt">
-      Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
-    </p>
+  <div class="research-grid-container">
+  
+  <div class="aesthetic-research-card diffusion-theme">
+    <div class="card-accent-glow"></div>
+    <div class="card-content">
+      <span class="card-category">Diffusion</span>
+      <p class="card-lead-text">
+        Traditionally, one common (and widely used) approach relies on thresholding the model’s output confidence, often derived from logits or predicted probabilities.
+      </p>
+      <p class="card-body-text">
+        Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
+      </p>
+    </div>
   </div>
 
-  <div class="reading-squircle-card">
-    <span class="card-meta-tag">Language Modelling</span>
-    <h3 class="card-title">
-      Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain.
-    </h3>
-    <p class="card-excerpt">
-      Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
-    </p>
+  <div class="aesthetic-research-card language-theme">
+    <div class="card-accent-glow"></div>
+    <div class="card-content">
+      <span class="card-category">Language Modelling</span>
+      <p class="card-lead-text">
+        Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain.
+      </p>
+      <p class="card-body-text">
+        The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
+      </p>
+    </div>
   </div>
 
-  </div>
+</div>
 </section>
 
 

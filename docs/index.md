@@ -132,14 +132,21 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
-<div class="nav-container-wrapper">
-<div class="squircle-nav">
-  <div class="nav-slider" id="navSlider"></div>
+<div class="glass-nav-container">
   
-<button class="nav-option active" onclick="moveSlider(this); filterPubs('all', this)">Recent Works</button>
-<button class="nav-option" onclick="moveSlider(this); filterPubs('language-modeling', this)">Language Modeling</button>
-<button class="nav-option" onclick="moveSlider(this); filterPubs('distillation', this)">Distillation</button>
-</div>
+  <div class="glass-pill main-navigation">
+    <a href="#" class="nav-item active-black">Capabilities</a>
+    <a href="#" class="nav-item">Performance</a>
+    <a href="#" class="nav-item">Safety</a>
+  </div>
+  
+  <div class="glass-pill news-navigation">
+    <a href="#news" class="nav-item active-purple">
+      News 
+      <span class="news-dot pulsing"></span>
+    </a>
+  </div>
+
 </div>
 
 <div class="pub-list">

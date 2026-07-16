@@ -37,7 +37,7 @@ hide:
   
   <div class="intro-text-column">
   
-  <h1 class="intro-name">Aditya Sarkar</h1>
+  <h1 class="dynamic-name" id="dynamicName">Aditya Sarkar</h1>
   
   <p class="intro-bio">
     Hello! I am a second-year Ph.D. student at the <a href="https://www.umd.edu/" class="inline-link" target="_blank">University of Maryland</a>, where I am engaged in research collaborations with Profs. <a href="#" class="inline-link">Nuno Vasconcelos</a> and <a href="#" class="inline-link">David Jacobs</a>. My research aims to build better computer vision algorithms, specifically for temporal understanding in LLMs, action and world modeling. I am grateful to be supported by the <strong class="highlight-text">University of Maryland Graduate Fellowship</strong>.
@@ -365,6 +365,56 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const nameElement = document.getElementById("dynamicName");
+  if (!nameElement) return;
+
+  const originalText = nameElement.textContent.trim();
+  nameElement.innerHTML = ""; // Clear original text
+
+  // Split the name into individual characters (preserving spaces)
+  const characters = Array.from(originalText).map(char => {
+    const span = document.createElement("span");
+    if (char === " ") {
+      span.innerHTML = "&nbsp;"; // Maintain proper spacing
+    } else {
+      span.textContent = char;
+    }
+    nameElement.appendChild(span);
+    return span;
+  });
+
+  // Function to apply random states to characters
+  function randomizeText() {
+    characters.forEach(span => {
+      // Don't animate spaces
+      if (span.innerHTML === "&nbsp;") return;
+
+      // Generate a random roll to decide the state
+      const roll = Math.random();
+
+      if (roll < 0.20) {
+        // 20% chance to go Bold
+        span.classList.add("is-bold");
+        span.classList.remove("is-crossed");
+      } else if (roll < 0.35) {
+        // 15% chance to go Crossed out
+        span.classList.add("is-crossed");
+        span.classList.remove("is-bold");
+      } else {
+        // 65% chance to stay/return to Normal
+        span.classList.remove("is-bold", "is-crossed");
+      }
+    });
+  }
+
+  // Initial run
+  randomizeText();
+
+  // Change the letters dynamically every 2.5 seconds
+  setInterval(randomizeText, 2500);
 });
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -71,7 +71,7 @@
 }
 
 /* Ambient SaaS background styling - Smooth Glow Edition (No Rings) */
-body, .md-container, .md-content {
+.md-container {
   background-color: #fafbfc !important; /* Crisp, clean off-white canvas base */
   background-attachment: fixed !important;
   

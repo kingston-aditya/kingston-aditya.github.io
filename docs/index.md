@@ -132,22 +132,25 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
-<div class="glass-nav-container">
+<nav class="invisible-dock-container">
   
-  <div class="glass-pill main-navigation">
-    <a href="#" class="nav-item active-black">Capabilities</a>
-    <a href="#" class="nav-item">Performance</a>
-    <a href="#" class="nav-item">Safety</a>
+  <div class="nav-dynamic-tracker" id="nav-tracker"></div>
+  
+  <div class="dock-links">
+    <a href="#" class="dock-item active-item" onmouseenter="moveTracker(this)">Capabilities</a>
+    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Performance</a>
+    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Safety</a>
+    <a href="#" class="dock-item" onmouseenter="moveTracker(this)">Download</a>
+  
+  <span class="dock-separator"></span>
+  
+  <a href="#news" class="dock-item news-item" onmouseenter="moveTracker(this)">
+    News
+    <span class="news-dot pulsing"></span>
+  </a>
   </div>
   
-  <div class="glass-pill news-navigation">
-    <a href="#news" class="nav-item active-purple">
-      News 
-      <span class="news-dot pulsing"></span>
-    </a>
-  </div>
-
-</div>
+</nav>
 
 <div class="pub-list">
   
@@ -303,6 +306,41 @@ function moveSlider(element) {
     const firstOption = document.querySelector('.nav-option.active');
     if (firstOption) {
       moveSlider(firstOption);
+    }
+  });
+
+
+  function moveTracker(element) {
+    const tracker = document.getElementById('nav-tracker');
+    const container = element.closest('.invisible-dock-container');
+    
+    // Calculate precise boundaries relative to the menu container
+    const targetRect = element.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+    
+    const relativeLeft = targetRect.left - containerRect.left;
+    const relativeTop = targetRect.top - containerRect.top;
+    
+    // Stretch and slide the glass bubble seamlessly
+    tracker.style.left = `${relativeLeft}px`;
+    tracker.style.top = `${relativeTop}px`;
+    tracker.style.width = `${targetRect.width}px`;
+    tracker.style.height = `${targetRect.height}px`;
+  }
+
+  // Hide or reset to active item when mouse leaves the navigation dock completely
+  document.querySelector('.invisible-dock-container').addEventListener('mouseleave', () => {
+    const activeItem = document.querySelector('.dock-item.active-item');
+    if (activeItem) {
+      moveTracker(activeItem);
+    }
+  });
+
+  // Initialize position on page load
+  window.addEventListener('load', () => {
+    const activeItem = document.querySelector('.dock-item.active-item');
+    if (activeItem) {
+      moveTracker(activeItem);
     }
   });
 

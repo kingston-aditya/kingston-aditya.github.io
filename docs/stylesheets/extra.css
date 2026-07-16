@@ -2389,3 +2389,116 @@
     justify-content: center;
   }
 }
+
+/* ==========================================
+   THE INVISIBLE DOCK NAVIGATION
+   ========================================== */
+.invisible-dock-container {
+  position: relative;
+  display: inline-flex;
+  margin: 40px auto;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.dock-links {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2; /* Sits above the sliding tracker */
+}
+
+/* Individual Links */
+.dock-item {
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4b5563 !important;
+  text-decoration: none !important;
+  padding: 10px 22px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+/* Hovering turns text fully dark */
+.dock-item:hover {
+  color: #111827 !important;
+}
+
+/* Active State Defaults */
+.dock-item.active-item {
+  color: #111827 !important;
+  font-weight: 600;
+}
+
+/* Elegant Muted Vertical Divider */
+.dock-separator {
+  width: 1px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.08);
+  margin: 0 16px;
+}
+
+/* Custom News Accent (Text Only) */
+.dock-item.news-item {
+  color: #c084fc !important; /* Bold, elegant purple */
+}
+
+.news-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #c084fc;
+  border-radius: 50%;
+  position: relative;
+}
+
+.news-dot.pulsing::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #c084fc;
+  animation: mini-pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes mini-pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(3.2); opacity: 0; }
+}
+
+/* ==========================================
+   THE SLIDING BACKDROP GLASS LAYER
+   ========================================== */
+.nav-dynamic-tracker {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  height: calc(100% - 16px);
+  width: 0;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  /* Ultra-smooth physics-based sliding transition */
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Container hover reveals the dynamic tracker */
+.invisible-dock-container:hover .nav-dynamic-tracker {
+  opacity: 1;
+}

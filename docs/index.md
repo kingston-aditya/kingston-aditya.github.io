@@ -624,7 +624,7 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
   <button class="carousel-control-toggle" onclick="togglePlayPause()">
-    </button>
+  </button>
 </div>
 
 <script>
@@ -632,17 +632,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentSlideIndex = 0;
   let carouselTimer = null;
   let isPaused = false;
-  const slideIntervalTime = 5000; // 5 Seconds per slide (matches your CSS progress line)
+  const slideIntervalTime = 5000; // 5 Seconds per slide
 
   // 2. DOM Element Hooks
   const track = document.getElementById('carouselTrack');
   const indicators = document.querySelectorAll('.indicator-dot');
-  const toggleButton = document.querySelector('.carousel-control-toggle');
   const totalSlides = document.querySelectorAll('.apple-moving-box').length;
 
   // 3. Automated Time Interval Loop
   function startTimer() {
-    clearInterval(carouselTimer); // Erase any lingering intervals to prevent double-speed bugs
+    clearInterval(carouselTimer); 
     if (!isPaused && totalSlides > 0) {
       carouselTimer = setInterval(() => {
         advanceSlide();
@@ -660,16 +659,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function goToSlide(index) {
     currentSlideIndex = index;
     updateCarouselUI();
-    startTimer(); // Refreshes the countdown loop smoothly
+    startTimer(); 
   }
 
   // 6. Sizing Engine: Moves track by the precise card width + gap layout math
   function updateCarouselUI() {
     if (track) {
-      // Smoothly applies the transition style directly onto your track container
       track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
-      
-      // Calculate layout shift: (Slide Width * Index) + (Gap Width * Index)
       track.style.transform = `translateX(calc(-${currentSlideIndex} * (40vw + 16px)))`;
     }
 
@@ -679,7 +675,6 @@ document.addEventListener("DOMContentLoaded", () => {
       
       const fill = indicator.querySelector('.progress-fill');
       if (fill) {
-        // Hardware-accelerated browser trick to drop line fill instantly back to 0%
         fill.style.animation = 'none';
         void fill.offsetHeight; // Triggers browser layout engine reflow
         fill.style.animation = null; 
@@ -689,26 +684,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      // Re-add active tracker class to the current pill
       if (index === currentSlideIndex) {
         indicator.classList.add('active');
       }
     });
   }
 
-  // 7. Circle Play/Pause Button Toggle Functionality
+  // 7. Resilient Play/Pause Controller Toggle Functionality
   function togglePlayPause() {
     isPaused = !isPaused;
+    
+    // Find the pause button dynamically based on its onclick action attribute
+    const toggleButton = document.querySelector('[onclick="togglePlayPause()"]');
     const activeFill = document.querySelector('.indicator-dot.active .progress-fill');
     
     if (isPaused) {
-      clearInterval(carouselTimer); // Kills background countdown logic instantly
+      clearInterval(carouselTimer); // Instantly halts countdown logic loop
       if (toggleButton) toggleButton.classList.add('paused'); 
       if (activeFill) activeFill.style.animationPlayState = 'paused'; // Freezes visual indicator line
     } else {
       if (toggleButton) toggleButton.classList.remove('paused');
       if (activeFill) activeFill.style.animationPlayState = 'running'; // Resumes visual indicator line
-      startTimer(); // Restarts the interval loop
+      startTimer(); // Restarts the interval loop clock
     }
   }
 

@@ -1018,33 +1018,31 @@
 
 .indicator-dot {
   position: relative;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   padding: 0;
   border: none;
-  border-radius: 50%;
+  border-radius: 14px;
   background-color: #c5dbff !important; /* Soft unselected grey */
   cursor: pointer;
-  overflow: hidden; /* Encapsulates the filling indicator line */
   transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
-              border-radius 0.4s cubic-bezier(0.25, 1, 0.5, 1),
               background-color 0.4s ease;
 }
 
 .indicator-dot.active {
-  width: 48px; /* Stretches the dot into a premium capsule pill */
-  border-radius: 6px;
+  width: 56px; /* Stretches the dot into a premium capsule pill */
   background-color: #c5dbff !important; /* Darker background track context */
 }
 
 .indicator-dot .progress-fill {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  top: 3px;
+  left: 3px;
+  height: calc(100% - 6px);
   width: 0%; /* Starts completely empty */
   background-color: #001178; /* Deep black active progress fill */
-  border-radius: 6px;
+  border-radius: 10px;
+  pointer-events: none;
 }
 
 /* Trigger class handled by JavaScript logic execution */
@@ -1058,21 +1056,26 @@
     width: 0%;
   }
   to {
-    width: 100%;
+    width: calc(100% - 6px);
   }
 }
 
 /* Circular target layout button context */
 .carousel-control-toggle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: #75c3ff; /* Light grey from your screenshot */
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background-color: #75c3ff !important; 
+  border: none !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   cursor: pointer;
+  
+  /* The layout lock */
+  margin: 0 !important; 
+  flex-shrink: 0 !important; 
+  
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 

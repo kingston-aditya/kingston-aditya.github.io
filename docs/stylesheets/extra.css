@@ -922,7 +922,7 @@
   margin-top: 12px;
 }
 
-/* Container resets layout constraints */
+
 .apple-carousel-container {
   width: 100%;
   overflow: hidden !important; 
@@ -934,23 +934,17 @@
   width: 100%;
 }
 
-/* Track container holds the long chain of items */
 .apple-carousel-track {
   display: flex !important;
   flex-direction: row !important;
   gap: 16px !important;
   width: max-content;
   will-change: transform;
-
-  margin-left: 0 !important;
-  padding-left: 0 !important;
 }
 
 .apple-moving-box {
-  /* Change these two lines to use % */
   flex: 0 0 40vw !important;         
   width: 40vw !important;
-  
   position: relative;
   background-color: #000000;
   border-radius: 12px;
@@ -961,12 +955,10 @@
 }
 
 .apple-moving-box:hover {
-  /* Scales the box down to 90% size on hover */
   transform: scale(0.98) !important;
-  z-index: 5; /* Keeps the active hovered box layered cleanly */
+  z-index: 5;
 }
 
-/* Image Background dimensions fill parent space */
 .apple-box-image img {
   width: 100%;
   height: 100%;
@@ -975,13 +967,12 @@
   opacity: 0.85;
 }
 
-/* Overlay gradient configuration */
 .apple-box-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 16px 24px;                 /* Slightly tighter text borders */
+  padding: 16px 24px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
   color: #ffffff;
   display: flex;
@@ -992,7 +983,7 @@
 
 .apple-box-overlay h3 {
   margin: 0 0 2px 0 !important;
-  font-size: 1.35em !important;       /* Scaled down font proportional to small card */
+  font-size: 1.35em !important;
   font-weight: 800;
 }
 
@@ -1012,107 +1003,88 @@
   text-decoration: none !important;
 }
 
-/* Master Wrapper Cluster Platform */
+/* --- NAVIGATION AND PILL TIMERS --- */
 .carousel-navigation-container {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  gap: 12px !important; /* Exact close gap breathing room spacing distance */
+  gap: 12px !important;
   width: 100%;
   padding: 24px 0;
 }
 
-/* Indicators Container Layout Track */
 .carousel-indicators {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important; /* Spacing margin between individual pill blocks */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px !important;
   width: auto !important;
   margin: 0 !important;
 }
 
-/* Base Pill Resting State: Delicate Uniform Vertically Oriented Squircles */
 .indicator-dot {
   position: relative !important;
-  width: 12px !important;  /* Elegant vertical pill width profile */
-  height: 24px !important; /* Exact structural height synchronization match with button */
+  width: 12px !important;  
+  height: 12px !important; 
   padding: 0 !important;
   border: none !important;
-  border-radius: 12px !important; /* Forces uniform cap curvatures matching the circle */
-  background-color: #e5e7eb !important; /* Clean light hardware grey background */
+  border-radius: 6px !important; 
+  background-color: #e5e7eb !important; 
   cursor: pointer !important;
-  flex-shrink: 0 !important;
-  
-  /* High-end micro-animation transition profile handles fluid morphing stretch */
-  transition: width 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
-              background-color 0.5s ease !important;
+  transition: width 0.5s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.5s ease !important;
 }
 
-/* Active State: The Pill dynamically stretches out wide */
 .indicator-dot.active {
-  width: 54px !important; /* Horizontal width capsule profile ratio balance */
-  background-color: #d1d5db !important; /* Darker grey to create structural depth */
+  width: 48px !important; 
+  background-color: #d1d5db !important;
 }
 
-/* Inside Loader Progress Line: Double Capsule Effect */
 .indicator-dot .progress-fill {
   position: absolute !important;
-  top: 3px !important;    /* Clean 3px inset padding boundary from top edge */
-  left: 3px !important;   /* Clean 3px inset padding boundary from left edge */
-  height: calc(100% - 6px) !important; /* Preserves symmetrical 3px bottom padding */
+  top: 2px !important;    
+  left: 2px !important;   
+  height: calc(100% - 4px) !important; 
   width: 0%;
-  background-color: #111827 !important; /* Rich anti-aliased graphite active black line */
-  border-radius: 9px !important; /* Forms a beautifully scaled nested capsule inner border */
+  background-color: #111827 !important; 
+  border-radius: 4px !important; 
   pointer-events: none !important;
 }
 
-/* Initiate progression loop execution exclusively on the active pill class stack */
 .indicator-dot.active .progress-fill {
-  animation: fillProgress 5s linear forwards !important; /* 5s interval slide transition time */
+  animation: fillProgress 5s linear forwards !important; 
 }
 
 @keyframes fillProgress {
   from { width: 0%; }
-  to { width: calc(100% - 6px); } /* Halts precisely matching right side inset padding borders */
+  to { width: calc(100% - 4px); }
 }
 
-/* Symmetrical Circular Action Controller Toggle Button */
 .carousel-control-toggle {
-  width: 24px !important;  /* Matched precisely to the vertical height metrics of indicators */
+  width: 24px !important;  
   height: 24px !important; 
-  border-radius: 12px !important; /* 12px radius locks container into a perfect circular disk */
-  background-color: #e5e7eb !important; /* Matches resting pill color values for design harmony */
+  border-radius: 50% !important; 
+  background-color: #e5e7eb !important; 
   border: none !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   cursor: pointer !important;
-  margin: 0 !important;
-  flex-shrink: 0 !important;
-  transition: background-color 0.2s ease, transform 0.1s ease !important;
+  margin: 0 !important; 
+  flex-shrink: 0 !important; 
 }
 
-.carousel-control-toggle:active {
-  transform: scale(0.92) !important;
-}
-
-/* Vector Graphic Optimization Controls */
 .carousel-control-toggle svg {
   width: 10px !important;
   height: 10px !important;
-  fill: #4b5563 !important; /* Softer graphite tint looks more elegant than harsh pitch black */
-  transition: transform 0.2s ease !important;
+  fill: #4b5563 !important; 
 }
 
-/* Display State Toggling Engine */
 .carousel-control-toggle .icon-play { display: none !important; }
 .carousel-control-toggle .icon-pause { display: block !important; }
 
-/* Swaps out icon layers instantly onpaused structural updates */
 .carousel-control-toggle.paused .icon-play { 
   display: block !important; 
-  margin-left: 1.5px !important; /* Optical tracking alignment center correction vector for play triangle */
+  margin-left: 1.5px !important; 
 }
 .carousel-control-toggle.paused .icon-pause { display: none !important; }
 

@@ -573,6 +573,17 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="apple-carousel-stage">
     <div class="apple-carousel-track" id="carouselTrack">
       
+  <div class="apple-moving-box" data-index="2">
+    <div class="apple-box-image">
+      <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop&q=80" alt="Slide 3">
+    </div>
+    <div class="apple-box-overlay">
+      <h3>Diffusion Models</h3>
+      <p>Exploring state-of-the-art tokenization layers across generative pipelines.</p>
+      <a href="#" class="apple-btn">Read paper</a>
+    </div>
+  </div>
+
   <div class="apple-moving-box" data-index="0">
     <div class="apple-box-image">
       <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&auto=format&fit=crop&q=80" alt="Slide 1">
@@ -580,7 +591,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="apple-box-overlay">
       <h3>Friday Night Baseball</h3>
       <p>We stream MLB games live every Saturday.</p>
-      <a href="#" class="apple-btn" onclick="animateAndGo(this, 'https://your-link.com', event)">Check the schedule</a>
+      <a href="#" class="apple-btn">Check the schedule</a>
     </div>
   </div>
 
@@ -591,7 +602,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="apple-box-overlay">
       <h3>Video Complexity Measures</h3>
       <p>Analyzing structural frameworks across active frame sequences.</p>
-      <a href="#" class="apple-btn" onclick="animateAndGo(this, 'https://your-link.com', event)">Stream now</a>
+      <a href="#" class="apple-btn">Stream now</a>
     </div>
   </div>
 
@@ -600,9 +611,20 @@ document.addEventListener("DOMContentLoaded", () => {
       <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&auto=format&fit=crop&q=80" alt="Slide 3">
     </div>
     <div class="apple-box-overlay">
-      <h3><a href="#" class="box-title-link">Diffusion Models</a></h3>
+      <h3>Diffusion Models</h3>
       <p>Exploring state-of-the-art tokenization layers across generative pipelines.</p>
-      <a href="#" class="apple-btn" onclick="animateAndGo(this, 'https://your-link.com', event)">Read paper</a>
+      <a href="#" class="apple-btn">Read paper</a>
+    </div>
+  </div>
+
+  <div class="apple-moving-box" data-index="0">
+    <div class="apple-box-image">
+      <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&auto=format&fit=crop&q=80" alt="Slide 1">
+    </div>
+    <div class="apple-box-overlay">
+      <h3>Friday Night Baseball</h3>
+      <p>We stream MLB games live every Saturday.</p>
+      <a href="#" class="apple-btn">Check the schedule</a>
     </div>
   </div>
 
@@ -611,118 +633,107 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
 <div class="carousel-navigation-container">
-  
   <div class="carousel-indicators">
-    <button class="indicator-dot active" onclick="goToSlide(0)">
-      <span class="progress-fill"></span>
-    </button>
-    <button class="indicator-dot" onclick="goToSlide(1)">
-      <span class="progress-fill"></span>
-    </button>
-    <button class="indicator-dot" onclick="goToSlide(2)">
-      <span class="progress-fill"></span>
-    </button>
+    <button class="indicator-dot active" onclick="goToSlide(0)"><span class="progress-fill"></span></button>
+    <button class="indicator-dot" onclick="goToSlide(1)"><span class="progress-fill"></span></button>
+    <button class="indicator-dot" onclick="goToSlide(2)"><span class="progress-fill"></span></button>
   </div>
 
-  <button class="carousel-control-toggle" onclick="togglePlayPause()" aria-label="Play or Pause Slideshow">
-    <svg class="icon-pause" viewBox="0 0 24 24">
-      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-    </svg>
-    <svg class="icon-play" viewBox="0 0 24 24">
-      <path d="M8 5v14l11-7z"/>
-    </svg>
+  <button class="carousel-control-toggle" onclick="togglePlayPause()" aria-label="Play/Pause">
+    <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
   </button>
-
 </div>
 
 <script>
-  // 1. Initial Structural State Fields
-  let currentSlideIndex = 0;
+  let currentSlideIndex = 0; // Represents real slides (0, 1, 2)
   let carouselTimer = null;
   let isPaused = false;
-  const slideIntervalTime = 5000; // Countdown loop window speed (5 seconds)
+  const slideIntervalTime = 5000;
 
-  // 2. DOM Frame Selectors
   const track = document.getElementById('carouselTrack');
   const indicators = document.querySelectorAll('.indicator-dot');
-  const totalSlides = document.querySelectorAll('.apple-moving-box').length || indicators.length;
+  const totalRealSlides = indicators.length;
 
-  // 3. Automated Rotation Counting Interval Clock
+  // Account for the clone slide placed at index 0 of the track
+  function getPhysicalOffset(index) {
+    // Shifting formula: standard center window + index step calculation
+    return `calc(50vw - 20vw - ((${index} + 1) * (40vw + 16px)))`;
+  }
+
   function startTimer() {
-    clearInterval(carouselTimer); // Always strip active loops to block speed accumulation bugs
-    if (!isPaused && totalSlides > 0) {
+    clearInterval(carouselTimer);
+    if (!isPaused && totalRealSlides > 0) {
       carouselTimer = setInterval(() => {
         advanceSlide();
       }, slideIntervalTime);
     }
   }
 
-  // 4. Increment Sizing Pointer Rightward Bounds
   function advanceSlide() {
-    currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
-    updateCarouselUI();
+    currentSlideIndex++;
+    track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+    track.style.transform = `translateX(${getPhysicalOffset(currentSlideIndex)})`;
+
+    // Wait until the transition slide ends, then check if we need to snap positions safely
+    setTimeout(() => {
+      if (currentSlideIndex >= totalRealSlides) {
+        currentSlideIndex = 0; // Jump back to first real slide index
+        track.style.transition = 'none'; // Clear animation so the jump is invisible
+        track.style.transform = `translateX(${getPhysicalOffset(currentSlideIndex)})`;
+      }
+    }, 600);
+
+    updateIndicatorsUI();
   }
 
-  // 5. Manual Option Pill Clicks (Direct Jumps)
   function goToSlide(index) {
     currentSlideIndex = index;
-    updateCarouselUI();
-    startTimer(); // Safely resumes counting cycles on explicit user interaction
+    track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+    track.style.transform = `translateX(${getPhysicalOffset(currentSlideIndex)})`;
+    updateIndicatorsUI();
+    startTimer();
   }
 
-  // 6. Sizing Engine Controller & Layout Matrix Sync Update
-  function updateCarouselUI() {
-    // A. Apply custom translation width card-shift math dynamically onto your track layer
-    if (track) {
-      track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
-      track.style.transform = `translateX(calc(50vw - 20vw - (${currentSlideIndex} * (40vw + 24px))))`;
-    }
-
-    // B. Re-render individual layout states across indicators tray safely
+  function updateIndicatorsUI() {
     indicators.forEach((indicator, index) => {
       indicator.classList.remove('active');
-      
       const fill = indicator.querySelector('.progress-fill');
       if (fill) {
-        // Force immediate graphics engine layout reflow to reset line progress back to 0%
         fill.style.animation = 'none';
-        void fill.offsetHeight; // Forces browser reflow execution state reset
-        fill.style.animation = null; 
-        
-        // Ensure width remains frozen if clicked on pause state
-        if (isPaused) {
-          fill.style.animationPlayState = 'paused';
-        }
+        void fill.offsetHeight; // Forces engine layout flow update
+        fill.style.animation = null;
+        if (isPaused) fill.style.animationPlayState = 'paused';
       }
-
-      // Add fluid tracking class selector context back to live indicator button view
-      if (index === currentSlideIndex) {
+      
+      // Handle edge boundary mod indexing cleanly for indicator arrays
+      let normalizedIndex = currentSlideIndex % totalRealSlides;
+      if (index === normalizedIndex) {
         indicator.classList.add('active');
       }
     });
   }
 
-  // 7. Resilient Play/Pause Toggle Action Hook
   function togglePlayPause() {
     isPaused = !isPaused;
-    
-    // Dynamically locate action button by attribute parameters so theme classes don't break lookups
     const toggleButton = document.querySelector('[onclick="togglePlayPause()"]');
     const activeFill = document.querySelector('.indicator-dot.active .progress-fill');
-    
+
     if (isPaused) {
-      clearInterval(carouselTimer); // Stops background script timing calculation loop immediately
-      if (toggleButton) toggleButton.classList.add('paused'); // Swaps display layer to show Play vector shape
-      if (activeFill) activeFill.style.animationPlayState = 'paused'; // Hardware freezes active black filling line width state
+      clearInterval(carouselTimer);
+      if (toggleButton) toggleButton.classList.add('paused');
+      if (activeFill) activeFill.style.animationPlayState = 'paused';
     } else {
-      if (toggleButton) toggleButton.classList.remove('paused'); // Swaps display layer back to Pause bars vector shape
-      if (activeFill) activeFill.style.animationPlayState = 'running'; // Resumes timeline physics track movement cleanly
-      startTimer(); // Re-ignites interval engine cycle loops safely
+      if (toggleButton) toggleButton.classList.remove('paused');
+      if (activeFill) activeFill.style.animationPlayState = 'running';
+      startTimer();
     }
   }
 
-  // 8. Global Document Initialization Sequence Hooks
   document.addEventListener("DOMContentLoaded", () => {
+    // Position the track initially onto the first real slide (bypassing clone buffer 0)
+    track.style.transition = 'none';
+    track.style.transform = `translateX(${getPhysicalOffset(0)})`;
     startTimer();
   });
 </script>

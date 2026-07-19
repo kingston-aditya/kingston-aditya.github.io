@@ -651,6 +651,18 @@ function handleAnimationEnd() {
   }
 }
 
+function prevSlide() {
+  // Directs the sliding index backwards (to the left)
+  currentSlideIndex = (currentSlideIndex - 1 + indicators.length) % indicators.length;
+  goToSlide(currentSlideIndex);
+}
+
+function handleTimerEnd() {
+  if (!isPaused) {
+    prevSlide(); // Moves the deck left the millisecond the loading bar hits 100%
+  }
+}
+
 function updateIndicators() {
   indicators.forEach((indicator, index) => {
     indicator.classList.remove('active');
@@ -670,6 +682,11 @@ function updateIndicators() {
       }
     }
   });
+
+  const carouselTrack = document.querySelector('.carousel-track'); 
+  if (carouselTrack) {
+    carouselTrack.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+  }
 }
 
 function goToSlide(index) {
@@ -688,6 +705,35 @@ document.addEventListener("DOMContentLoaded", () => {
   setupAnimationListeners();
   updateIndicators(); // Kicks off the first slide fill sequence
 });
+
+let isPaused = false;
+const pauseButton = document.querySelector('.carousel-control-toggle');
+
+function togglePlayPause() {
+  isPaused = !isPaused;
+  
+  if (isPaused) {
+    // 1. Immediately freeze the execution interval timeline loop
+    clearInterval(carouselTimer);
+    pauseButton.classList.add('paused');
+    
+    // 2. Pause the active CSS keyframe width expansion layout sweep
+    const activeFill = document.querySelector('.indicator-dot.active .progress-fill');
+    if (activeFill) {
+      activeFill.style.animationPlayState = 'paused';
+    }
+  } else {
+    // 3. Resume linear timing physics tracking seamlessly
+    pauseButton.classList.remove('paused');
+    const activeFill = document.querySelector('.indicator-dot.active .progress-fill');
+    if (activeFill) {
+      activeFill.style.animationPlayState = 'running';
+    }
+    
+    // Calculate precise remaining slide time before auto-advancing right bounds
+    startCarouselTimer(); 
+  }
+}
 </script>
 
 <br>

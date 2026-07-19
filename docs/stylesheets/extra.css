@@ -997,51 +997,49 @@
 
 .carousel-navigation-container {
   display: flex !important;
-  align-items: center !important;
   justify-content: center !important;
-  gap: 16px !important; 
-  padding: 20px 0;
+  align-items: center !important;
+  gap: 12px !important; /* Reduced from 16px to pull them closer together */
   width: 100%;
+  padding: 20px 0;
 }
 
 .carousel-indicators {
   background-color: #75c3ff !important;
-  border-radius: 40px !important;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 5px 0;
+  justify-content: center;
+  gap: 8px !important; /* Reduced from 10px for a more compact track */
   width: auto !important;
   margin: 0 !important;
 }
 
 .indicator-dot {
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 10px !important;  /* Shrunk to match the screenshot's delicate feel */
+  height: 10px !important; /* Shrunk to match */
   padding: 0;
   border: none;
-  border-radius: 14px;
-  background-color: #c5dbff !important; /* Soft unselected grey */
+  border-radius: 10px !important;
+  background-color: #c5dbff !important; 
   cursor: pointer;
   transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
               background-color 0.4s ease;
 }
 
 .indicator-dot.active {
-  width: 56px; /* Stretches the dot into a premium capsule pill */
+  width: 44px !important; /* Stretches the dot into a premium capsule pill */
   background-color: #c5dbff !important; /* Darker background track context */
 }
 
 .indicator-dot .progress-fill {
   position: absolute;
-  top: 3px;
-  left: 3px;
-  height: calc(100% - 6px);
+  top: 2px !important;
+  left: 2px !important;
+  height: calc(100% - 4px) !important;
   width: 0%; /* Starts completely empty */
   background-color: #001178; /* Deep black active progress fill */
-  border-radius: 10px;
+  border-radius: 6px !important;
   pointer-events: none;
 }
 
@@ -1056,14 +1054,14 @@
     width: 0%;
   }
   to {
-    width: calc(100% - 6px);
+    width: calc(100% - 4px);
   }
 }
 
 /* Circular target layout button context */
 .carousel-control-toggle {
-  width: 28px !important;
-  height: 28px !important;
+  width: 24px !important;
+  height: 24px !important;
   border-radius: 50% !important;
   background-color: #75c3ff !important; 
   border: none !important;
@@ -1084,8 +1082,8 @@
 }
 
 .carousel-control-toggle svg {
-  width: 12px !important;
-  height: 12px !important;
+  width: 10px !important;
+  height: 10px !important;
   fill: #75c3ff !important; /* A softer dark gray looks much more premium than harsh black */
 }
 

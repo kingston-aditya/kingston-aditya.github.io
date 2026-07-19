@@ -999,7 +999,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px; /* Spacing between the squircle container and the circle button */
+  gap: 16px; 
+  padding: 20px 0;
 }
 
 .carousel-indicators {
@@ -1061,28 +1062,26 @@
 .carousel-control-toggle {
   width: 44px;
   height: 44px;
-  border-radius: 50%; /* Forces a perfect uniform circle */
-  background-color: #e5e7eb; /* Matches outer indicator palette choices */
+  border-radius: 50%;
+  background-color: #f3f4f6; /* Light grey from your screenshot */
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-/* Generating internal visual pause bars cleanly */
-.carousel-control-toggle::before,
-.carousel-control-toggle::after {
-  content: '';
-  width: 3px;
-  height: 14px;
-  background-color: #111827; /* Rich black icon strokes */
-  transition: all 0.2s ease;
+.carousel-control-toggle:active {
+  transform: scale(0.92);
 }
 
-/* Internal alignment separation parameters */
-.carousel-control-toggle::before { margin-right: 4px; }
+.carousel-control-toggle .icon-play { display: none; }
+.carousel-control-toggle .icon-pause { display: block; }
+
+/* Paused State: Show Play, Hide Pause */
+.carousel-control-toggle.paused .icon-play { display: block; margin-left: 3px; /* Optically centers the triangle */ }
+.carousel-control-toggle.paused .icon-pause { display: none; }
 
 .nav-container-wrapper {
   width: 100% !important;

@@ -941,6 +941,9 @@
   gap: 16px !important;
   width: max-content;
   will-change: transform;
+
+  margin-left: 0 !important;
+  padding-left: 0 !important;
 }
 
 .apple-moving-box {

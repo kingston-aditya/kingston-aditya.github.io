@@ -266,7 +266,21 @@
 
 /* State 2: Crossed out */
 .dynamic-name span.is-crossed {
-  color: #fa003f; /* Soft gray color when crossed out */
+  /* Make the actual text color invisible so the background shows through */
+  color: transparent; 
+  
+  /* Draw the diagonal stripes in the background using your color */
+  background-image: repeating-linear-gradient(
+    45deg,
+    #fa003f,
+    #fa003f 6px,       /* Width of the colored stripe */
+    transparent 6px, 
+    transparent 14px   /* Width of the gap between stripes */
+  );
+  
+  /* Clip the striped background strictly to the shape of the letters */
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 /* ==========================================
@@ -590,7 +604,7 @@
 }
 
 .news-pill.active-purple {
-  background-color: #e9d5ff !important; /* Soft, premium purple */
+  background-color: rgba(17, 19, 23, 0.9) !important; /* Soft, premium purple */
   color: #000000 !important; /* Ensures text stays black */
 }
 
@@ -603,9 +617,9 @@
   padding: 32px;
   
   /* FIX: Heavily increased background opacity and doubled the blur radius */
-  background: rgba(255, 255, 255, 0.35); 
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: rgba(255, 255, 255, 0.92); 
+  backdrop-filter: blur(48px);
+  -webkit-backdrop-filter: blur(48px);
   
   border-radius: 32px; 
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -995,85 +1009,82 @@
   text-decoration: none !important;
 }
 
+/* 1. Master Control Wrapper Layout */
 .carousel-navigation-container {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  gap: 12px !important; /* Reduced from 16px to pull them closer together */
+  gap: 12px !important; /* Premium tight cluster spacing */
   width: 100%;
-  padding: 20px 0;
+  padding: 24px 0;
 }
 
+/* 2. Squircle Multi-Track Wrapper */
 .carousel-indicators {
-  background-color: #75c3ff !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px !important; /* Reduced from 10px for a more compact track */
+  gap: 8px !important; 
   width: auto !important;
   margin: 0 !important;
 }
 
+/* 3. Base Capsule Pill (Inactive State) */
 .indicator-dot {
   position: relative;
-  width: 10px !important;  /* Shrunk to match the screenshot's delicate feel */
-  height: 10px !important; /* Shrunk to match */
+  width: 12px !important;  /* Adjusted to sync weight with the circle button */
+  height: 24px !important; /* Matches the exact height and radius boundary of the circle */
   padding: 0;
   border: none;
-  border-radius: 10px !important;
-  background-color: #c5dbff !important; 
+  /* Enforces the exact geometric curvature profile to mirror the circle perfectly */
+  border-radius: 12px !important; 
+  background-color: #e5e7eb; 
   cursor: pointer;
   transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
               background-color 0.4s ease;
 }
 
+/* 4. Active Capsule Pill (Horizontal Expansion Stretch) */
 .indicator-dot.active {
-  width: 44px !important; /* Stretches the dot into a premium capsule pill */
-  background-color: #c5dbff !important; /* Darker background track context */
+  width: 54px !important; /* Elegant horizontal stretch ratio */
+  background-color: #d1d5db;
 }
 
+/* 5. The Inset Progress Fill Bar Line (Generous Negative Margin Breathing Room) */
 .indicator-dot .progress-fill {
   position: absolute;
-  top: 2px !important;
-  left: 2px !important;
-  height: calc(100% - 4px) !important;
-  width: 0%; /* Starts completely empty */
-  background-color: #001178; /* Deep black active progress fill */
-  border-radius: 6px !important;
+  top: 3px !important;    /* Clean, deeper inset alignment padding on all sides */
+  left: 3px !important;   /* Clean, deeper inset alignment padding on all sides */
+  height: calc(100% - 6px) !important; /* Preserves matching bottom edge margins */
+  width: 0%;
+  background-color: #111827; 
+  border-radius: 9px !important; /* Tighter radius to follow the nested contour cleanly */
   pointer-events: none;
 }
 
-/* Trigger class handled by JavaScript logic execution */
+/* 6. Active Progression Sweep Triggers */
 .indicator-dot.active .progress-fill {
-  animation: fillProgress 5s linear forwards !important; /* 5s matches your carousel timer slide speed */
+  animation: fillProgress 5s linear forwards !important; 
 }
 
-/* Hardware-accelerated filling animation logic sequence */
 @keyframes fillProgress {
-  from {
-    width: 0%;
-  }
-  to {
-    width: calc(100% - 4px);
-  }
+  from { width: 0%; }
+  to { width: calc(100% - 6px); } /* Halts perfectly matching the right border gap */
 }
 
-/* Circular target layout button context */
+/* 7. Hardened Standalone Circle Play/Pause Toggle Button */
 .carousel-control-toggle {
-  width: 24px !important;
-  height: 24px !important;
-  border-radius: 50% !important;
-  background-color: #75c3ff !important; 
+  width: 24px !important;  /* Locks structural size symmetrically to match the pill heights */
+  height: 24px !important; 
+  border-radius: 12px !important; /* 12px border radius forces a perfect uniform circle */
+  background-color: #e5e7eb !important; /* Matches inactive pill track tones precisely */
   border: none !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   cursor: pointer;
-  
-  /* The layout lock */
   margin: 0 !important; 
   flex-shrink: 0 !important; 
-  
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
@@ -1081,17 +1092,22 @@
   transform: scale(0.92);
 }
 
+/* 8. Micro Vector Icon Formatting Layers */
 .carousel-control-toggle svg {
   width: 10px !important;
   height: 10px !important;
-  fill: #75c3ff !important; /* A softer dark gray looks much more premium than harsh black */
+  fill: #4b5563 !important; /* Premium soft dark graphite tint prevents jagged pixels */
 }
 
+/* Operational State Toggles */
 .carousel-control-toggle .icon-play { display: none; }
 .carousel-control-toggle .icon-pause { display: block; }
 
-/* Paused State: Show Play, Hide Pause */
-.carousel-control-toggle.paused .icon-play { display: block; margin-left: 2px !important; /* Optically centers the triangle */ }
+/* Swaps signals perfectly inside the circle layer when toggled via script runtime */
+.carousel-control-toggle.paused .icon-play { 
+  display: block; 
+  margin-left: 1.5px !important; /* Optical correction centering factor for the triangle */
+}
 .carousel-control-toggle.paused .icon-pause { display: none; }
 
 .nav-container-wrapper {

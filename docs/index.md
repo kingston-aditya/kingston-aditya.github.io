@@ -610,79 +610,96 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </div>
 
-<div class="carousel-dots" id="carouselDots">
-  <div class="progress-pill active" onclick="jumpToSlide(0)">
-    <span class="progress-fill"></span>
+<div class="carousel-navigation-container">
+  <div class="carousel-indicators">
+    <button class="indicator-dot active" onclick="goToSlide(0)">
+      <span class="progress-fill"></span>
+    </button>
+    <button class="indicator-dot" onclick="goToSlide(1)">
+      <span class="progress-fill"></span>
+    </button>
+    <button class="indicator-dot" onclick="goToSlide(2)">
+      <span class="progress-fill"></span>
+    </button>
   </div>
-  <div class="progress-pill" onclick="jumpToSlide(1)">
-    <span class="progress-fill"></span>
-  </div>
-  <div class="progress-pill" onclick="jumpToSlide(2)">
-    <span class="progress-fill"></span>
-  </div>
+
+  <button class="carousel-control-toggle" onclick="togglePlayPause()">
+    </button>
 </div>
 
 <script>
 let currentSlideIndex = 0;
-const totalSlides = 3; 
-const slideDuration = 5000; 
-let slideInterval;
+const indicators = document.querySelectorAll('.indicator-dot');
+const pauseButton = document.querySelector('.carousel-control-toggle');
+const slideIntervalTime = 5000; // 5 Seconds per slide
+let carouselTimer;
+let isPaused = false; // Tracks the state of the circle button
 
-function startSlideShow() {
-  clearInterval(slideInterval);
-  resetAndTriggerFill(currentSlideIndex);
-
-  slideInterval = setInterval(() => {
-    let nextIndex = (currentSlideIndex + 1) % totalSlides;
-    jumpToSlide(nextIndex);
-  }, slideDuration);
+function startCarouselTimer() {
+  clearInterval(carouselTimer);
+  if (!isPaused) {
+    carouselTimer = setInterval(() => {
+      nextSlide();
+    }, slideIntervalTime);
+  }
 }
 
-function jumpToSlide(index) {
-  currentSlideIndex = index;
-
-  // Sync actual sliding container viewport coordinates
-  const slidesContainer = document.querySelector('.slides-wrapper');
-  if (slidesContainer) {
-    slidesContainer.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+// Click function for the circle button to pause/play the timeline
+function togglePlayPause() {
+  isPaused = !isPaused;
+  const activeFill = document.querySelector('.indicator-dot.active .progress-fill');
+  
+  if (isPaused) {
+    clearInterval(carouselTimer); // Stops the JS timer instantly 
+    pauseButton.classList.add('paused'); // Class to change icon to "Play" triangle if desired
+    if (activeFill) {
+      activeFill.style.animationPlayState = 'paused'; // Freezes the CSS bar fill
+    }
+  } else {
+    pauseButton.classList.remove('paused');
+    if (activeFill) {
+      activeFill.style.animationPlayState = 'running'; // Resumes the CSS bar fill
+    }
+    startCarouselTimer(); // Resumes the countdown loop safely
   }
+}
 
-  // De-hydrate all pill indicators completely
-  const pills = document.querySelectorAll('.progress-pill');
-  pills.forEach((pill) => {
-    pill.classList.remove('active');
-    const fill = pill.querySelector('.progress-fill');
+function updateIndicators() {
+  indicators.forEach((indicator, index) => {
+    indicator.classList.remove('active');
+    const fill = indicator.querySelector('.progress-fill');
+    
     if (fill) {
-      fill.style.transition = 'none';
-      fill.style.width = '0%';
+      fill.style.animation = 'none';
+      void fill.offsetHeight; // Triggers reflow browser engine reset [cite: 1034]
+      fill.style.animation = null;
+    }
+    
+    if (index === currentSlideIndex) {
+      indicator.classList.add('active');
+      const newFill = indicator.querySelector('.progress-fill');
+      // If the carousel is paused when we change slides, make sure the new bar stays frozen
+      if (isPaused && newFill) {
+        newFill.style.animationPlayState = 'paused';
+      }
     }
   });
-
-  // Force DOM Reflow layout calculations before re-injecting transition states
-  setTimeout(() => {
-    resetAndTriggerFill(currentSlideIndex);
-  }, 20);
-
-  startSlideShow();
 }
 
-function resetAndTriggerFill(index) {
-  const pills = document.querySelectorAll('.progress-pill');
-  const activePill = pills[index];
-  
-  if (activePill) {
-    activePill.classList.add('active');
-    const fill = activePill.querySelector('.progress-fill');
-    if (fill) {
-      fill.style.transition = `width ${slideDuration}ms linear`;
-      fill.style.width = '100%';
-    }
-  }
+function goToSlide(index) {
+  currentSlideIndex = index;
+  updateIndicators();
+  startCarouselTimer();
 }
 
-// Global window init hook listener
-window.addEventListener('DOMContentLoaded', () => {
-  startSlideShow();
+function nextSlide() {
+  currentSlideIndex = (currentSlideIndex + 1) % indicators.length;
+  goToSlide(currentSlideIndex);
+}
+
+// Initialization
+document.addEventListener("DOMContentLoaded", () => {
+  startCarouselTimer();
 });
 </script>
 

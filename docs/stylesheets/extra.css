@@ -995,55 +995,66 @@
   text-decoration: none !important;
 }
 
-/* Indicator dots track row */
-.carousel-dots {
+.carousel-navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px; /* Spacing between the squircle container and the circle button */
+}
+
+.carousel-indicators {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 24px;
+  padding: 20px 0;
+  width: 100%;
 }
 
-.progress-pill {
+.indicator-dot {
   position: relative;
-  width: 8px;
-  height: 8px;
-  background-color: rgba(0, 0, 0, 0.12); /* Soft neutral gray track */
-  border-radius: 20px;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #e5e7eb; /* Soft unselected grey */
   cursor: pointer;
-  overflow: hidden; /* Clips the dark fill inside the curves */
-  box-sizing: border-box;
-  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.4s ease;
+  overflow: hidden; /* Encapsulates the filling indicator line */
+  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              border-radius 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              background-color 0.4s ease;
 }
 
-/* Hover state: Idle dots glow slightly darker */
-.progress-pill:hover {
-  background-color: rgba(0, 0, 0, 0.25);
+.indicator-dot.active {
+  width: 48px; /* Stretches the dot into a premium capsule pill */
+  border-radius: 6px;
+  background-color: #d1d5db; /* Darker background track context */
 }
 
-/* Active State: The pill stretches horizontally */
-.progress-pill.active {
-  width: 44px;
-  background-color: rgba(0, 0, 0, 0.06);
-}
-
-/* The actual loading color line inside the active pill */
-.progress-pill .progress-fill {
+.indicator-dot .progress-fill {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 0%;
-  background-color: #111827; /* Solid charcoal focus track color */
-  border-radius: 20px;
-  transform: translateZ(0); /* Forces GPU layer isolation */
+  width: 0%; /* Starts completely empty */
+  background-color: #000000; /* Deep black active progress fill */
+  border-radius: 6px;
 }
 
-/* When active, the fill line stretches to 100% over the exact slide duration */
-.progress-pill.active .progress-fill {
-  width: 100%;
-  /* The slider transition duration (e.g., 5 seconds). Transition is linear for constant speed fill */
-  transition: width 5000ms linear; 
+/* Trigger class handled by JavaScript logic execution */
+.indicator-dot.active .progress-fill {
+  animation: fillProgress 5s linear forwards; /* 5s matches your carousel timer slide speed */
+}
+
+/* Hardware-accelerated filling animation logic sequence */
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .nav-container-wrapper {
@@ -2461,7 +2472,7 @@
 
 /* Hovering turns text fully dark */
 .dock-item:hover {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 /* Active State Defaults */
@@ -2522,11 +2533,11 @@
   left: 16px;
   height: calc(100% - 16px);
   width: 0;
-  background: rgba(0, 128, 128, 1.0);
+  background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 128, 128, 1.0);
-  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   border-radius: 16px;
   z-index: 1;
   opacity: 0;

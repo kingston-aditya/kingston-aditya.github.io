@@ -1062,8 +1062,8 @@
 
 /* Circular target layout button context */
 .carousel-control-toggle {
-  width: 44px !important;
-  height: 44px !important;
+  width: 28px !important;
+  height: 28px !important;
   border-radius: 50% !important;
   background-color: #75c3ff !important; 
   border: none !important;
@@ -1083,11 +1083,17 @@
   transform: scale(0.92);
 }
 
+.carousel-control-toggle svg {
+  width: 12px !important;
+  height: 12px !important;
+  fill: #75c3ff !important; /* A softer dark gray looks much more premium than harsh black */
+}
+
 .carousel-control-toggle .icon-play { display: none; }
 .carousel-control-toggle .icon-pause { display: block; }
 
 /* Paused State: Show Play, Hide Pause */
-.carousel-control-toggle.paused .icon-play { display: block; margin-left: 3px; /* Optically centers the triangle */ }
+.carousel-control-toggle.paused .icon-play { display: block; margin-left: 2px !important; /* Optically centers the triangle */ }
 .carousel-control-toggle.paused .icon-pause { display: none; }
 
 .nav-container-wrapper {

@@ -628,39 +628,26 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
 <script>
-let currentSlideIndex = 0;
+  let currentSlideIndex = 0;
 const indicators = document.querySelectorAll('.indicator-dot');
-const pauseButton = document.querySelector('.carousel-control-toggle');
 const slideIntervalTime = 5000; // 5 Seconds per slide
-let carouselTimer;
-let isPaused = false; // Tracks the state of the circle button
+let isPaused = false;
 
-function startCarouselTimer() {
-  clearInterval(carouselTimer);
-  if (!isPaused) {
-    carouselTimer = setInterval(() => {
-      nextSlide();
-    }, slideIntervalTime);
-  }
+function setupAnimationListeners() {
+  indicators.forEach((indicator) => {
+    const fill = indicator.querySelector('.progress-fill');
+    if (fill) {
+      // CLEAR old triggers to prevent stack accumulation
+      fill.removeEventListener('animationend', handleAnimationEnd);
+      // LISTEN for the precise millisecond the CSS bar finishes filling
+      fill.addEventListener('animationend', handleAnimationEnd);
+    }
+  });
 }
 
-// Click function for the circle button to pause/play the timeline
-function togglePlayPause() {
-  isPaused = !isPaused;
-  const activeFill = document.querySelector('.indicator-dot.active .progress-fill');
-  
-  if (isPaused) {
-    clearInterval(carouselTimer); // Stops the JS timer instantly 
-    pauseButton.classList.add('paused'); // Class to change icon to "Play" triangle if desired
-    if (activeFill) {
-      activeFill.style.animationPlayState = 'paused'; // Freezes the CSS bar fill
-    }
-  } else {
-    pauseButton.classList.remove('paused');
-    if (activeFill) {
-      activeFill.style.animationPlayState = 'running'; // Resumes the CSS bar fill
-    }
-    startCarouselTimer(); // Resumes the countdown loop safely
+function handleAnimationEnd() {
+  if (!isPaused) {
+    nextSlide(); // Force slide advance the instant the bar finishes filling
   }
 }
 
@@ -671,14 +658,13 @@ function updateIndicators() {
     
     if (fill) {
       fill.style.animation = 'none';
-      void fill.offsetHeight; // Triggers reflow browser engine reset [cite: 1034]
+      void fill.offsetHeight; // Force browser layout engine reflow
       fill.style.animation = null;
     }
     
     if (index === currentSlideIndex) {
       indicator.classList.add('active');
       const newFill = indicator.querySelector('.progress-fill');
-      // If the carousel is paused when we change slides, make sure the new bar stays frozen
       if (isPaused && newFill) {
         newFill.style.animationPlayState = 'paused';
       }
@@ -688,8 +674,8 @@ function updateIndicators() {
 
 function goToSlide(index) {
   currentSlideIndex = index;
+  // Insert your custom layout slide transition here (e.g., transform translateX)
   updateIndicators();
-  startCarouselTimer();
 }
 
 function nextSlide() {
@@ -697,12 +683,11 @@ function nextSlide() {
   goToSlide(currentSlideIndex);
 }
 
-// Initialization
+// Global runtime execution hook
 document.addEventListener("DOMContentLoaded", () => {
-  startCarouselTimer();
+  setupAnimationListeners();
+  updateIndicators(); // Kicks off the first slide fill sequence
 });
 </script>
-
-
 
 <br>

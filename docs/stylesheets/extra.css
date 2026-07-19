@@ -1044,7 +1044,7 @@
 
 /* Trigger class handled by JavaScript logic execution */
 .indicator-dot.active .progress-fill {
-  animation: fillProgress 5s linear forwards; /* 5s matches your carousel timer slide speed */
+  animation: fillProgress 5s linear forwards !important; /* 5s matches your carousel timer slide speed */
 }
 
 /* Hardware-accelerated filling animation logic sequence */
@@ -1056,6 +1056,33 @@
     width: 100%;
   }
 }
+
+/* Circular target layout button context */
+.carousel-control-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%; /* Forces a perfect uniform circle */
+  background-color: #e5e7eb; /* Matches outer indicator palette choices */
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Generating internal visual pause bars cleanly */
+.carousel-control-toggle::before,
+.carousel-control-toggle::after {
+  content: '';
+  width: 3px;
+  height: 14px;
+  background-color: #111827; /* Rich black icon strokes */
+  transition: all 0.2s ease;
+}
+
+/* Internal alignment separation parameters */
+.carousel-control-toggle::before { margin-right: 4px; }
 
 .nav-container-wrapper {
   width: 100% !important;
@@ -2533,11 +2560,11 @@
   left: 16px;
   height: calc(100% - 16px);
   width: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.03);
   border-radius: 16px;
   z-index: 1;
   opacity: 0;

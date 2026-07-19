@@ -628,112 +628,94 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
 <script>
+  // 1. Carousel Configuration Configuration
   let currentSlideIndex = 0;
-const indicators = document.querySelectorAll('.indicator-dot');
-const slideIntervalTime = 5000; // 5 Seconds per slide
-let isPaused = false;
+  let carouselTimer = null;
+  let isPaused = false;
+  const slideIntervalTime = 5000; // 5 Seconds per slide (matches your CSS progress line)
 
-function setupAnimationListeners() {
-  indicators.forEach((indicator) => {
-    const fill = indicator.querySelector('.progress-fill');
-    if (fill) {
-      // CLEAR old triggers to prevent stack accumulation
-      fill.removeEventListener('animationend', handleAnimationEnd);
-      // LISTEN for the precise millisecond the CSS bar finishes filling
-      fill.addEventListener('animationend', handleAnimationEnd);
+  // 2. DOM Element Hooks
+  const track = document.getElementById('carouselTrack');
+  const indicators = document.querySelectorAll('.indicator-dot');
+  const toggleButton = document.querySelector('.carousel-control-toggle');
+  const totalSlides = document.querySelectorAll('.apple-moving-box').length;
+
+  // 3. Automated Time Interval Loop
+  function startTimer() {
+    clearInterval(carouselTimer); // Erase any lingering intervals to prevent double-speed bugs
+    if (!isPaused && totalSlides > 0) {
+      carouselTimer = setInterval(() => {
+        advanceSlide();
+      }, slideIntervalTime);
     }
-  });
-}
-
-function handleAnimationEnd() {
-  if (!isPaused) {
-    nextSlide(); // Force slide advance the instant the bar finishes filling
   }
-}
 
-function prevSlide() {
-  // Directs the sliding index backwards (to the left)
-  currentSlideIndex = (currentSlideIndex - 1 + indicators.length) % indicators.length;
-  goToSlide(currentSlideIndex);
-}
-
-function handleTimerEnd() {
-  if (!isPaused) {
-    prevSlide(); // Moves the deck left the millisecond the loading bar hits 100%
+  // 4. Move Carousel Index Pointer forward
+  function advanceSlide() {
+    currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+    updateCarouselUI();
   }
-}
 
-function updateIndicators() {
-  indicators.forEach((indicator, index) => {
-    indicator.classList.remove('active');
-    const fill = indicator.querySelector('.progress-fill');
-    
-    if (fill) {
-      fill.style.animation = 'none';
-      void fill.offsetHeight; // Force browser layout engine reflow
-      fill.style.animation = null;
+  // 5. Manual Indicator Dot Click Override
+  function goToSlide(index) {
+    currentSlideIndex = index;
+    updateCarouselUI();
+    startTimer(); // Refreshes the countdown loop smoothly
+  }
+
+  // 6. Sizing Engine: Moves track by the precise card width + gap layout math
+  function updateCarouselUI() {
+    if (track) {
+      // Smoothly applies the transition style directly onto your track container
+      track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+      
+      // Calculate layout shift: (Slide Width * Index) + (Gap Width * Index)
+      track.style.transform = `translateX(calc(-${currentSlideIndex} * (40vw + 16px)))`;
     }
-    
-    if (index === currentSlideIndex) {
-      indicator.classList.add('active');
-      const newFill = indicator.querySelector('.progress-fill');
-      if (isPaused && newFill) {
-        newFill.style.animationPlayState = 'paused';
+
+    // Reset visual loading lines inside your navigation pills
+    indicators.forEach((indicator, index) => {
+      indicator.classList.remove('active');
+      
+      const fill = indicator.querySelector('.progress-fill');
+      if (fill) {
+        // Hardware-accelerated browser trick to drop line fill instantly back to 0%
+        fill.style.animation = 'none';
+        void fill.offsetHeight; // Triggers browser layout engine reflow
+        fill.style.animation = null; 
+        
+        if (isPaused) {
+          fill.style.animationPlayState = 'paused';
+        }
       }
+
+      // Re-add active tracker class to the current pill
+      if (index === currentSlideIndex) {
+        indicator.classList.add('active');
+      }
+    });
+  }
+
+  // 7. Circle Play/Pause Button Toggle Functionality
+  function togglePlayPause() {
+    isPaused = !isPaused;
+    const activeFill = document.querySelector('.indicator-dot.active .progress-fill');
+    
+    if (isPaused) {
+      clearInterval(carouselTimer); // Kills background countdown logic instantly
+      if (toggleButton) toggleButton.classList.add('paused'); 
+      if (activeFill) activeFill.style.animationPlayState = 'paused'; // Freezes visual indicator line
+    } else {
+      if (toggleButton) toggleButton.classList.remove('paused');
+      if (activeFill) activeFill.style.animationPlayState = 'running'; // Resumes visual indicator line
+      startTimer(); // Restarts the interval loop
     }
+  }
+
+  // 8. Auto-Boot Initializer Hook
+  document.addEventListener("DOMContentLoaded", () => {
+    startTimer();
   });
-
-  const carouselTrack = document.querySelector('.carousel-track'); 
-  if (carouselTrack) {
-    carouselTrack.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-  }
-}
-
-function goToSlide(index) {
-  currentSlideIndex = index;
-  // Insert your custom layout slide transition here (e.g., transform translateX)
-  updateIndicators();
-}
-
-function nextSlide() {
-  currentSlideIndex = (currentSlideIndex + 1) % indicators.length;
-  goToSlide(currentSlideIndex);
-}
-
-// Global runtime execution hook
-document.addEventListener("DOMContentLoaded", () => {
-  setupAnimationListeners();
-  updateIndicators(); // Kicks off the first slide fill sequence
-});
-
-let isPaused = false;
-const pauseButton = document.querySelector('.carousel-control-toggle');
-
-function togglePlayPause() {
-  isPaused = !isPaused;
-  
-  if (isPaused) {
-    // 1. Immediately freeze the execution interval timeline loop
-    clearInterval(carouselTimer);
-    pauseButton.classList.add('paused');
-    
-    // 2. Pause the active CSS keyframe width expansion layout sweep
-    const activeFill = document.querySelector('.indicator-dot.active .progress-fill');
-    if (activeFill) {
-      activeFill.style.animationPlayState = 'paused';
-    }
-  } else {
-    // 3. Resume linear timing physics tracking seamlessly
-    pauseButton.classList.remove('paused');
-    const activeFill = document.querySelector('.indicator-dot.active .progress-fill');
-    if (activeFill) {
-      activeFill.style.animationPlayState = 'running';
-    }
-    
-    // Calculate precise remaining slide time before auto-advancing right bounds
-    startCarouselTimer(); 
-  }
-}
 </script>
 
 <br>

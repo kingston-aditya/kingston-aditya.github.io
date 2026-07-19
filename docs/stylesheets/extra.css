@@ -611,13 +611,14 @@
 }
 
 .news-pulse-badge {
-    width: 14px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     background-color: #ff3b30; /* Premium iOS Red */
     border-radius: 10px;
     display: inline-block;
     box-shadow: 0 0 8px #ff3b30, 0 0 16px #ff3b30;
     animation: pulseRedGlow 2s infinite ease-in-out;
+    margin-right: 8px !important;
 }
 
 @keyframes pulseRedGlow {
@@ -627,7 +628,7 @@
         opacity: 0.9;
     }
     50% {
-        transform: scale(1.08);
+        transform: scale(1.8);
         box-shadow: 0 0 14px #ff3b30, 0 0 24px #ff3b30;
         opacity: 1;
     }
@@ -960,7 +961,6 @@
 
 .apple-carousel-container {
   width: 100% !important;
-  max-width: 1200px !important;
   position: relative !important;
   left: auto !important;
   right: auto !important;

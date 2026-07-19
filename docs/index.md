@@ -14,7 +14,7 @@ hide:
   </div>
 
   <div class="tab-navbar-wrapper news-dropdown-wrapper">
-    <a href="#news" class="tab-link news-pill" id="news-toggle">News</a>
+    <a href="#news" class="tab-link news-pill" id="news-toggle"><span class="news-pulse-badge"></span>News</a>
 
   <div class="glassy-dialog-box" id="news-dialog">
     <div class="dialog-content">

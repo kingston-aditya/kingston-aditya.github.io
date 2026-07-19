@@ -250,6 +250,7 @@
   color: #000000;
   display: inline-block;
   letter-spacing: -0.01em;
+  margin: 8px !important;
 }
 
 /* Individual character spans */
@@ -601,6 +602,40 @@
 
 .news-dropdown-wrapper {
   position: relative;
+}
+
+.news-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.news-pulse-badge {
+    width: 14px;
+    height: 7px;
+    background-color: #ff3b30; /* Premium iOS Red */
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 0 8px #ff3b30, 0 0 16px #ff3b30;
+    animation: pulseRedGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseRedGlow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 6px #ff3b30, 0 0 12px #ff3b30;
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 14px #ff3b30, 0 0 24px #ff3b30;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 6px #ff3b30, 0 0 12px #ff3b30;
+        opacity: 0.9;
+    }
 }
 
 .news-pill.active-purple {
@@ -2895,10 +2930,20 @@
 
 .calligraphy-heading {
   font-family: 'Great Vibes', 'Georgia', cursive !important;
+  display: block !important;
+  margin: 32px auto !important;
   text-align: center !important;
-  font-size: 3.5rem !important; /* Adjust size to fit your page aesthetic */
-  font-weight: 400 !important;
+  font-size: 2.5rem !important; /* Adjust size to fit your page aesthetic */
+  font-weight: 500 !important;
   color: #111827 !important; /* Clean, modern dark value */
-  margin: 32px 0; /* Balanced vertical spacing */
   letter-spacing: 1px;
+}
+
+.intro-grid-container h1,
+.dynamic-name {
+    margin-bottom: 4px !important;
+}
+
+.intro-bio {
+    margin-top: 0 !important;
 }

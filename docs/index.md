@@ -39,7 +39,7 @@ hide:
   <h1 class="dynamic-name" id="dynamicName">Aditya Sarkar</h1>
   
   <p class="intro-bio">
-    Hello! I am a second-year Ph.D. student at the <a href="https://www.umd.edu/" class="inline-link" target="_blank">University of Maryland</a>, where I am engaged in research collaborations with Profs. <a href="#" class="inline-link">Nuno Vasconcelos</a> and <a href="#" class="inline-link">David Jacobs</a>. My research aims to build better computer vision algorithms, specifically for temporal understanding in LLMs, action and world modeling. I am grateful to be supported by the <strong class="highlight-text">University of Maryland Graduate Fellowship</strong>.
+    Hello! I am a <mark class="aesthetic-highlight">second-year Ph.D. student</mark> at the <a href="https://www.umd.edu/" class="inline-link" target="_blank">University of Maryland</a>, where I am engaged in research collaborations with Profs. <a href="#" class="inline-link">Nuno Vasconcelos</a> and <a href="#" class="inline-link">David Jacobs</a>. My research aims to build better computer vision algorithms, specifically for temporal understanding in LLMs, action and world modeling. I am grateful to be supported by the <mark class="aesthetic-highlight">University of Maryland Graduate Fellowship</mark>.
   </p>
 
   <div class="status-indicator">

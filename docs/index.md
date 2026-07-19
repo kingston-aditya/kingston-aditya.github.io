@@ -658,7 +658,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Account for the clone slide placed at index 0 of the track
   function getPhysicalOffset(index) {
     // Shifting formula: standard center window + index step calculation
-    return `calc(50vw - 20vw - 8px - ((${index} + 1) * (40vw + 16px)))`;
+    return `calc(50vw - 20vw - 8px - 4.5vw - ((${index} + 1) * (40vw + 16px)))`;
   }
 
   function startTimer() {
@@ -731,11 +731,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    // Position the track initially onto the first real slide (bypassing clone buffer 0)
-    track.style.transition = 'none';
+  if (track) {
+    track.style.transition = 'none'; 
     track.style.transform = `translateX(${getPhysicalOffset(0)})`;
-    startTimer();
-  });
+  }
+  startTimer();
+});
 </script>
 
 <br>

@@ -666,17 +666,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // 5. Manual Option Pill Clicks (Direct Jumps)
   function goToSlide(index) {
     currentSlideIndex = index;
-    const container = document.getElementById("appleSlider");
-    const containerWidth = container.offsetWidth;
-    
-    // 2. Get the actual width of the box
-    const slideWidth = allSlides[0].getBoundingClientRect().width;
-    const gap = 16; 
-    
-    // 3. Calculate perfect center offset based on the container
-    const centerOffset = (containerWidth - slideWidth) / 2;
-    const targetLeft = (currentIndex * (slideWidth + gap)) - centerOffset;
-
     updateCarouselUI();
     startTimer(); // Safely resumes counting cycles on explicit user interaction
   }
@@ -686,7 +675,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // A. Apply custom translation width card-shift math dynamically onto your track layer
     if (track) {
       track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
-      track.style.transform = `translateX(calc(-${currentSlideIndex} * (40vw + ${targetLeft}px)))`;
+      track.style.transform = `translateX(calc(-${currentSlideIndex} * (40vw + 8px)))`;
     }
 
     // B. Re-render individual layout states across indicators tray safely

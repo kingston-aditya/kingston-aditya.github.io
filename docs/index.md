@@ -131,6 +131,8 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
+<h2 class="calligraphy-heading">Selected Works</h2>
+
 <nav class="invisible-dock-container">
   <div class="nav-dynamic-tracker" id="nav-tracker"></div>
   
@@ -569,6 +571,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <br>
 
+<h2 class="calligraphy-heading">Read my Blogs</h2>
+
 <div class="apple-carousel-container" id="appleSlider">
   <div class="apple-carousel-stage">
     <div class="apple-carousel-track" id="carouselTrack">
@@ -646,27 +650,42 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
 <script>
-  let currentSlideIndex = 0; // Represents real slides (0, 1, 2)
+  let currentSlideIndex = 0; 
   let carouselTimer = null;
   let isPaused = false;
   const slideIntervalTime = 5000;
 
   const track = document.getElementById('carouselTrack');
+  const container = document.querySelector('.apple-carousel-container');
   const indicators = document.querySelectorAll('.indicator-dot');
   const totalRealSlides = indicators.length;
 
-  // Account for the clone slide placed at index 0 of the track
+  // DYNAMIC LOOKUP ENGINE: Measures the exact active size layout of your container bounds
   function getPhysicalOffset(index) {
-    // Shifting formula: standard center window + index step calculation
-    return `calc(50vw - 20vw - 8px - 4.5vw - ((${index} + 1) * (40vw + 16px)))`;
+    if (!track || !container) return '0px';
+
+    const firstCard = track.children[0];
+    if (!firstCard) return '0px';
+
+    // 1. Read real element layout values directly from the browser viewport engine
+    const containerWidth = container.getBoundingClientRect().width;
+    const cardWidth = firstCard.getBoundingClientRect().width;
+
+    // 2. Discover the exact structural margin padding added by your theme layout container
+    const leftPadOffset = container.getBoundingClientRect().left;
+
+    // 3. Perfect Centering Calculus Vector Anchor
+    // (Container Center Line) - (Half of One Card Width) - (Calculated Movement Steps * (Card width + Gap))
+    const centerPoint = (containerWidth / 2) - (cardWidth / 2);
+    const stepMoveDistance = (index + 1) * (cardWidth + 16); 
+
+    return `${centerPoint - stepMoveDistance}px`;
   }
 
   function startTimer() {
     clearInterval(carouselTimer);
     if (!isPaused && totalRealSlides > 0) {
-      carouselTimer = setInterval(() => {
-        advanceSlide();
-      }, slideIntervalTime);
+      carouselTimer = setInterval(() => { advanceSlide(); }, slideIntervalTime);
     }
   }
 
@@ -675,11 +694,10 @@ document.addEventListener("DOMContentLoaded", () => {
     track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
     track.style.transform = `translateX(${getPhysicalOffset(currentSlideIndex)})`;
 
-    // Wait until the transition slide ends, then check if we need to snap positions safely
     setTimeout(() => {
       if (currentSlideIndex >= totalRealSlides) {
-        currentSlideIndex = 0; // Jump back to first real slide index
-        track.style.transition = 'none'; // Clear animation so the jump is invisible
+        currentSlideIndex = 0; 
+        track.style.transition = 'none'; 
         track.style.transform = `translateX(${getPhysicalOffset(currentSlideIndex)})`;
       }
     }, 600);
@@ -701,12 +719,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const fill = indicator.querySelector('.progress-fill');
       if (fill) {
         fill.style.animation = 'none';
-        void fill.offsetHeight; // Forces engine layout flow update
+        void fill.offsetHeight; 
         fill.style.animation = null;
         if (isPaused) fill.style.animationPlayState = 'paused';
       }
       
-      // Handle edge boundary mod indexing cleanly for indicator arrays
       let normalizedIndex = currentSlideIndex % totalRealSlides;
       if (index === normalizedIndex) {
         indicator.classList.add('active');
@@ -730,13 +747,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-  if (track) {
-    track.style.transition = 'none'; 
-    track.style.transform = `translateX(${getPhysicalOffset(0)})`;
+  // Double layout trigger hooks to lock centering on window resize changes
+  function syncCarouselPosition() {
+    if (track) {
+      track.style.transition = 'none';
+      track.style.transform = `translateX(${getPhysicalOffset(currentSlideIndex)})`;
+    }
   }
-  startTimer();
-});
+
+  window.addEventListener('resize', syncCarouselPosition);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Wait a brief browser millisecond thread loop for MkDocs layout structures to complete rendering
+    setTimeout(() => {
+      syncCarouselPosition();
+      startTimer();
+    }, 50);
+  });
 </script>
 
 <br>

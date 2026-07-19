@@ -1006,11 +1006,12 @@
 
 .carousel-indicators {
   background-color: #75c3ff !important;
+  border-radius: 40px !important;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 20px 0;
+  padding: 5px 0;
   width: auto !important;
   margin: 0 !important;
 }
@@ -1033,7 +1034,7 @@
 .indicator-dot.active {
   width: 48px; /* Stretches the dot into a premium capsule pill */
   border-radius: 6px;
-  background-color: #001178 !important; /* Darker background track context */
+  background-color: #c5dbff !important; /* Darker background track context */
 }
 
 .indicator-dot .progress-fill {

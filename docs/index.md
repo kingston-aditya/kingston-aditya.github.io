@@ -675,7 +675,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // A. Apply custom translation width card-shift math dynamically onto your track layer
     if (track) {
       track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
-      track.style.transform = `translateX(calc(50vw - 20vw - (${currentSlideIndex} * (40vw + 16px))))`;
+      track.style.transform = `translateX(calc(50vw - 20vw - (${currentSlideIndex} * (40vw + 24px))))`;
     }
 
     // B. Re-render individual layout states across indicators tray safely

@@ -613,39 +613,43 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="carousel-navigation-container">
   
   <div class="carousel-indicators">
-    <button class="indicator-dot active" onclick="goToSlide(0)"><span class="progress-fill"></span></button>
-    <button class="indicator-dot" onclick="goToSlide(1)"><span class="progress-fill"></span></button>
-    <button class="indicator-dot" onclick="goToSlide(2)"><span class="progress-fill"></span></button>
+    <button class="indicator-dot active" onclick="goToSlide(0)">
+      <span class="progress-fill"></span>
+    </button>
+    <button class="indicator-dot" onclick="goToSlide(1)">
+      <span class="progress-fill"></span>
+    </button>
+    <button class="indicator-dot" onclick="goToSlide(2)">
+      <span class="progress-fill"></span>
+    </button>
   </div>
 
-  <button class="carousel-control-toggle" onclick="togglePlayPause()" aria-label="Play/Pause">
-    
-  <svg class="icon-pause" viewBox="0 0 24 24" width="16" height="16" fill="#111827">
-    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-  </svg>
-
-  <svg class="icon-play" viewBox="0 0 24 24" width="18" height="18" fill="#111827">
-    <path d="M8 5v14l11-7z"/>
-  </svg>
-
+  <button class="carousel-control-toggle" onclick="togglePlayPause()" aria-label="Play or Pause Slideshow">
+    <svg class="icon-pause" viewBox="0 0 24 24">
+      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+    </svg>
+    <svg class="icon-play" viewBox="0 0 24 24">
+      <path d="M8 5v14l11-7z"/>
+    </svg>
   </button>
+
 </div>
 
 <script>
+  // 1. Initial Structural State Fields
   let currentSlideIndex = 0;
   let carouselTimer = null;
   let isPaused = false;
-  const slideIntervalTime = 5000; // 5 Seconds per slide
+  const slideIntervalTime = 5000; // Countdown loop window speed (5 seconds)
 
-  // DOM Elements
-  const track = document.getElementById('carouselTrack'); // Matches your CSS track ID
+  // 2. DOM Frame Selectors
+  const track = document.getElementById('carouselTrack');
   const indicators = document.querySelectorAll('.indicator-dot');
-  
-  // Dynamically count your apple-moving-box cards
   const totalSlides = document.querySelectorAll('.apple-moving-box').length || indicators.length;
 
+  // 3. Automated Rotation Counting Interval Clock
   function startTimer() {
-    clearInterval(carouselTimer); 
+    clearInterval(carouselTimer); // Always strip active loops to block speed accumulation bugs
     if (!isPaused && totalSlides > 0) {
       carouselTimer = setInterval(() => {
         advanceSlide();
@@ -653,65 +657,71 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // 4. Increment Sizing Pointer Rightward Bounds
   function advanceSlide() {
-    if (totalSlides === 0) return;
     currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
     updateCarouselUI();
   }
 
+  // 5. Manual Option Pill Clicks (Direct Jumps)
   function goToSlide(index) {
     currentSlideIndex = index;
     updateCarouselUI();
-    startTimer(); 
+    startTimer(); // Safely resumes counting cycles on explicit user interaction
   }
 
+  // 6. Sizing Engine Controller & Layout Matrix Sync Update
   function updateCarouselUI() {
-    // 1. Move the Track
+    // A. Apply custom translation width card-shift math dynamically onto your track layer
     if (track) {
       track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
       track.style.transform = `translateX(calc(-${currentSlideIndex} * (40vw + 16px)))`;
     }
 
-    // 2. Reset and Trigger the Indicator Lines
+    // B. Re-render individual layout states across indicators tray safely
     indicators.forEach((indicator, index) => {
       indicator.classList.remove('active');
       
       const fill = indicator.querySelector('.progress-fill');
       if (fill) {
+        // Force immediate graphics engine layout reflow to reset line progress back to 0%
         fill.style.animation = 'none';
-        void fill.offsetHeight; // Force layout engine reflow to restart animation
+        void fill.offsetHeight; // Forces browser reflow execution state reset
         fill.style.animation = null; 
         
+        // Ensure width remains frozen if clicked on pause state
         if (isPaused) {
           fill.style.animationPlayState = 'paused';
         }
       }
 
+      // Add fluid tracking class selector context back to live indicator button view
       if (index === currentSlideIndex) {
         indicator.classList.add('active');
       }
     });
   }
 
+  // 7. Resilient Play/Pause Toggle Action Hook
   function togglePlayPause() {
     isPaused = !isPaused;
     
-    // Select the button based on its onclick action so it never loses connection
+    // Dynamically locate action button by attribute parameters so theme classes don't break lookups
     const toggleButton = document.querySelector('[onclick="togglePlayPause()"]');
     const activeFill = document.querySelector('.indicator-dot.active .progress-fill');
     
     if (isPaused) {
-      clearInterval(carouselTimer); 
-      if (toggleButton) toggleButton.classList.add('paused'); // Swaps SVG to Play
-      if (activeFill) activeFill.style.animationPlayState = 'paused'; // Freezes black line
+      clearInterval(carouselTimer); // Stops background script timing calculation loop immediately
+      if (toggleButton) toggleButton.classList.add('paused'); // Swaps display layer to show Play vector shape
+      if (activeFill) activeFill.style.animationPlayState = 'paused'; // Hardware freezes active black filling line width state
     } else {
-      if (toggleButton) toggleButton.classList.remove('paused'); // Swaps SVG to Pause
-      if (activeFill) activeFill.style.animationPlayState = 'running'; // Resumes black line
-      startTimer(); 
+      if (toggleButton) toggleButton.classList.remove('paused'); // Swaps display layer back to Pause bars vector shape
+      if (activeFill) activeFill.style.animationPlayState = 'running'; // Resumes timeline physics track movement cleanly
+      startTimer(); // Re-ignites interval engine cycle loops safely
     }
   }
 
-  // Boot up the carousel logic safely
+  // 8. Global Document Initialization Sequence Hooks
   document.addEventListener("DOMContentLoaded", () => {
     startTimer();
   });

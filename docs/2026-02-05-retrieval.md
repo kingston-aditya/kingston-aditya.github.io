@@ -66,6 +66,11 @@ hide:
   });
 </script>
 
+<div class="intro-image-column">
+    <div class="premium-image-frame">
+      <img src="images/por.jpg" alt="Aditya Sarkar" class="profile-portrait">
+    </div>
+  </div>
 
 <div class="landing-hero-container">
   <div class="hero-squircle-card">

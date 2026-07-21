@@ -82,7 +82,8 @@ hide:
   </p>
 
   <div class="hero-image-wrapper" markdown="1">
-    ![VO](images/por.jpg){class="hero-project-image"}
+
+  ![VO](images/por.jpg){class="hero-project-image"}
 </div>  
 
   <div class="hero-text-list-block">

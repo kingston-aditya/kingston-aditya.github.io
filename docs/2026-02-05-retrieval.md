@@ -66,12 +66,6 @@ hide:
   });
 </script>
 
-<div class="intro-image-column">
-    <div class="premium-image-frame">
-      <img src="../images/por.jpg" alt="Aditya Sarkar" class="profile-portrait">
-    </div>
-  </div>
-
 <div class="landing-hero-container">
   <div class="hero-squircle-card">
     
@@ -87,10 +81,8 @@ hide:
     A Visual-oriented Hallucination Detector.
   </p>
 
-<div class="hero-image-wrapper">
-
-![VO](images/por.jpg){ .hero-project-image }
-
+  <div class="hero-image-wrapper">
+  <img src="../images/square_ruled.jpg" alt="VO" class="hero-project-image">
 </div>
 
 

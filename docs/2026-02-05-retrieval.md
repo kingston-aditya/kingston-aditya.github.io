@@ -81,7 +81,7 @@ hide:
     A Visual-oriented Hallucination Detector.
   </p>
 
-  <div class="hero-image-wrapper">
+  <div class="hero-image-wrapper" markdown="1">
     ![VO](images/por.jpg){class="hero-project-image"}
 </div>  
 

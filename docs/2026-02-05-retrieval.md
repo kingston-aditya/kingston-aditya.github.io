@@ -66,6 +66,9 @@ hide:
   });
 </script>
 
+
+<img src="images/por.jpg">
+
 <div class="landing-hero-container">
   <div class="hero-squircle-card">
     
@@ -80,11 +83,6 @@ hide:
   <p class="hero-description">
     A Visual-oriented Hallucination Detector.
   </p>
-
-  <div>
-
-  <img src="images/por.jpg" alt="VO">
-</div>  
 
   <div class="hero-text-list-block">
   <div class="list-block-header">

@@ -2953,9 +2953,9 @@
 
 .intro-bio-1 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-    font-size: 1.05rem !important;
-    line-height: 1.75 !important;
+    font-size: 0.78rem !important;  /* Reduced from 0.85rem */
+    line-height: 1.6 !important;     /* Adjusted from 1.75 to match smaller font size */
     color: #374151 !important;
     margin-top: 2px !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;  /* Reduced from 8px to keep spacing tight */
 }

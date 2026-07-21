@@ -38,12 +38,12 @@ hide:
   
   <h1 class="dynamic-name" id="dynamicName">Aditya Sarkar</h1>
   <p class="intro-bio-1">
-    PhD Student at University of Maryland, IIT Mandi '23.
+    PhD Student at University of Maryland; IIT Mandi '23.
   </p>
   <p class="intro-bio">
-    Hello! I broadly work in areas where vision-language models fail to cope with the alignment of these two modalities, particularly temporal reasoning and world modelling with language models. I am a <mark class="aesthetic-highlight">second-year Ph.D. student</mark> at the <a href="https://www.umd.edu/" class="inline-link" target="_blank">University of Maryland</a>, where I am engaged in research collaborations with Profs. <a href="#" class="inline-link">Nuno Vasconcelos</a> and <a href="#" class="inline-link">David Jacobs</a>. I am grateful to be supported by the University of Maryland Graduate Fellowship. 
-
-  Previously, I was awarded the President of India Gold Medal as the top undergraduate student at IIT Mandi. Throughout my academic journey, I have had the privilege of being advised by <a href="https://faculty.iitmandi.ac.in/~sreelakshmi/" class="inline-link" target="_blank">Sreelakshmi Manjunath</a> and <a href="https://mangul-lab-usc.github.io/members/serghei-mangul.html" class="inline-link" target="_blank">Serghei Mangul</a>.
+    Hello! I broadly work on improving the alignment between vision and language in vision-language models, with a particular focus on temporal reasoning and world modeling. I am currently a <mark class="aesthetic-highlight">second-year Ph.D. student</mark> at the <a href="https://www.umd.edu/" class="inline-link" target="_blank">University of Maryland</a>, where I collaborate with Profs. <a href="http://www.svcl.ucsd.edu/people/nuno/" class="inline-link">Nuno Vasconcelos</a> and <a href="https://www.cs.umd.edu/~djacobs/" class="inline-link">David Jacobs</a>. I am grateful to be supported by the University of Maryland Graduate Fellowship.</p>
+  <p class="intro-bio">
+  Prior to joining UMD, I received the President of India Gold Medal as the top undergraduate student at IIT Mandi. Throughout my academic journey, I have had the privilege of being mentored by <a href="https://faculty.iitmandi.ac.in/~sreelakshmi/" class="inline-link" target="_blank">Sreelakshmi Manjunath</a> and <a href="https://mangul-lab-usc.github.io/members/serghei-mangul.html" class="inline-link" target="_blank">Serghei Mangul</a>.
   </p>
 
   <div class="status-indicator">

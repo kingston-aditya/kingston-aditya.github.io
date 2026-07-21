@@ -66,8 +66,6 @@ hide:
   });
 </script>
 
-![VP](images/por.jpg)
-
 <div class="landing-hero-container">
   <div class="hero-squircle-card">
     
@@ -83,9 +81,9 @@ hide:
     A Visual-oriented Hallucination Detector.
   </p>
 
-  <div class="hero-image-wrapper" markdown="1">
+  <div>
 
-  ![VO](images/por.jpg){.hero-project-image}
+  <img src="images/por.jpg" alt="VO">
 </div>  
 
   <div class="hero-text-list-block">

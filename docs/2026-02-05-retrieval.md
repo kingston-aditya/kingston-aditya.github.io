@@ -66,6 +66,8 @@ hide:
   });
 </script>
 
+![VP](images/por.jpg)
+
 <div class="landing-hero-container">
   <div class="hero-squircle-card">
     
@@ -83,7 +85,7 @@ hide:
 
   <div class="hero-image-wrapper" markdown="1">
 
-  ![VO](images/por.jpg){class="hero-project-image"}
+  ![VO](images/por.jpg){.hero-project-image}
 </div>  
 
   <div class="hero-text-list-block">

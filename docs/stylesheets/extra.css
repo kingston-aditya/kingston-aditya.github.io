@@ -2159,8 +2159,8 @@
 .list-block-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 22px;
+  gap: 5px;
+  margin-bottom: 4px;
 }
 .badge-icon {
   display: inline-flex;
@@ -2178,7 +2178,7 @@
 .list-block-title {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 3.2rem !important;
+  font-size: 2.2rem !important;
   font-weight: 400;
   color: #0f172a;               /* Deep slate navy header color */
   letter-spacing: -0.015em;
@@ -2225,7 +2225,7 @@
 /* Clean Readable Body Text */
 .bullet-text {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.92rem;
+  font-size: 1.06rem !important;
   line-height: 1.6;
   color: #334155;              /* Slate-700 for optimal readability without harshness */
   letter-spacing: -0.005em;
@@ -3017,8 +3017,7 @@
 
 .hero-project-image {
   display: block;
-  width: 100%;
-  max-width: 240px !important;            /* Perfectly proportioned square size */
+  width: 100% !important;            /* Perfectly proportioned square size */
   aspect-ratio: 16 / 9 !important;
   height: auto;
   margin: 0 auto 36px auto;     /* Perfectly centered with clean 36px bottom margin */

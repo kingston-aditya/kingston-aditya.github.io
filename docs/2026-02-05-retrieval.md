@@ -82,11 +82,11 @@ hide:
   </p>
 
   <div class="hero-image-wrapper">
-  <img src="../images/square_ruled.jpg" alt="VO" class="hero-project-image">
+  <img src="../images/yellow_wall.jpg" alt="VO" class="hero-project-image">
 </div>
 
 
-  <div class="hero-text-list-block">
+<div class="hero-text-list-block">
   <div class="list-block-header">
     <span class="badge-icon"><i class="fa-solid fa-sparkles"></i></span>
     <h2 class="list-block-title">Project Highlights</h2>
@@ -95,15 +95,15 @@ hide:
   <ul class="list-block-items">
     <li>
       <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
-      <span>Selective prediction is a classic problem in machine learning.</span>
+      <span class="bullet-text">Selective prediction is a classic problem in machine learning.</span>
     </li>
     <li>
       <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
-      <span>The objective is to achieve high accuracy on the predictions it does make.</span>
+      <span class="bullet-text">The objective is to achieve high accuracy on the predictions it does make.</span>
     </li>
     <li>
       <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
-      <span>Designed for zero-shot generalization across multimodal vision tasks.</span>
+      <span class="bullet-text">The objective is to achieve high accuracy on the predictions it does make.</span>
     </li>
   </ul>
 </div>

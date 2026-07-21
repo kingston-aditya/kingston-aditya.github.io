@@ -2135,95 +2135,99 @@
 
 /* Container for the text and bullet points block */
 .hero-text-list-block {
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   box-shadow: 
-    0 12px 32px -4px rgba(0, 0, 0, 0.04),
-    0 4px 12px -2px rgba(0, 0, 0, 0.02),
+    0 20px 40px -12px rgba(0, 0, 0, 0.05),
+    0 2px 6px rgba(0, 0, 0, 0.02),
     inset 0 1px 1px rgba(255, 255, 255, 0.9);
-  padding: 28px 32px;
-  margin: 24px 0;
+  padding: 30px 34px;
+  margin: 0 auto 32px auto;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
 .hero-text-list-block:hover {
   transform: translateY(-2px);
   box-shadow: 
-    0 20px 40px -4px rgba(0, 0, 0, 0.07),
-    0 6px 16px -2px rgba(0, 0, 0, 0.03),
+    0 24px 48px -12px rgba(0, 0, 0, 0.08),
     inset 0 1px 1px rgba(255, 255, 255, 1);
 }
 
 .list-block-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 22px;
 }
-
 .badge-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  background: #000000;
+  width: 32px;
+  height: 32px;
+  background: #111827;         /* Soft dark graphite instead of harsh pure black */
   color: #ffffff;
-  border-radius: 50%;
-  font-size: 0.75rem;
+  border-radius: 10px;         /* Smooth rounded badge square */
+  font-size: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .list-block-title {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 650;
-  color: #111827;
-  letter-spacing: -0.01em;
+  color: #0f172a;               /* Deep slate navy header color */
+  letter-spacing: -0.015em;
 }
 
-/* Bullet list wrapper settings */
+/* --- 4. BULLET ITEMS & TYPOGRAPHY --- */
 .list-block-items {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-} 
+  gap: 16px;
+}
 
-/* Customizing the color of the bullets to match your deep teal theme color */
 .list-block-items li {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.55;
-  color: #374151;
+  align-items: flex-start;     /* Keeps checkmark locked to top line of multi-line text */
+  gap: 14px;
+}
+
+/* Soft Modern Checkmarks */
+.bullet-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  margin-top: 1px;             /* Precision vertical alignment with first line of text */
+  background: rgba(15, 23, 42, 0.05); /* Soft translucent neutral circle background */
+  border-radius: 50%;
+  color: #0f172a;
+  font-size: 0.68rem;
+  transition: all 0.25s ease;
 }
 
 .list-block-items li:hover .bullet-icon {
-  background: #000000;
+  background: #111827;
   color: #ffffff;
+  transform: scale(1.08);
 }
 
-.bullet-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 20px;
-  height: 20px;
-  margin-top: 2px;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 50%;
-  color: #111827;
-  font-size: 0.65rem;
-  transition: background 0.2s ease, color 0.2s ease;
+/* Clean Readable Body Text */
+.bullet-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #334155;              /* Slate-700 for optimal readability without harshness */
+  letter-spacing: -0.005em;
 }
 
 /* Master Grid Layout: 3 Columns */
@@ -3011,11 +3015,17 @@
 }
 
 .hero-project-image {
-  width: 100%;
-  height: auto;
-  border-radius: 16px; /* Smooth rounded corners */
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08); /* Subtle float shadow */
-  border: 1px solid rgba(255, 255, 255, 0.6); /* Soft border for glassmorphism aesthetics */
-  object-fit: cover;
   display: block;
+  width: 100%;
+  max-width: 240px;            /* Perfectly proportioned square size */
+  aspect-ratio: 1 / 1;
+  height: auto;
+  margin: 0 auto 36px auto;     /* Perfectly centered with clean 36px bottom margin */
+  border-radius: 24px;          /* Matching smooth rounded corners */
+  object-fit: cover;
+  box-shadow: 
+    0 16px 32px -8px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
+

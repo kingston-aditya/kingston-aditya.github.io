@@ -82,7 +82,7 @@ hide:
   </p>
 
   <div class="hero-image-wrapper">
-  <img src="images/square_ruled.jpg" alt="VO" class="hero-project-image">
+  <img src="images/por.jpg" alt="VO" class="hero-project-image">
 </div>  
 
   <div class="hero-text-list-block">

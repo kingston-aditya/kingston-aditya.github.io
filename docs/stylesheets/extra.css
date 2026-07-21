@@ -392,9 +392,9 @@
 }
 
 .social-icon-link:hover {
-  color: #ffffff; /* Fades the icon to white */
-  background-color: #242424; /* Clean contrast: snaps background to primary theme black */
-  border-color: #242424;
+  color: #ffffff !important; /* Fades the icon to white */
+  background-color: #0082fb !important; /* Clean contrast: snaps background to primary theme black */
+  border-color: #0082fb !important;
   transform: translateY(-4px); /* Hover lift: floats upward smoothly */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow expansion */
 }
@@ -2936,10 +2936,10 @@
   font-family: 'Great Vibes', 'Georgia', cursive !important;
   display: block !important;
   margin: 8px auto !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 3px !important;
   text-align: center !important;
-  font-size: 3.5rem; /* Adjust size to fit your page aesthetic */
-  font-weight: 500 !important;
+  font-size: 3.5rem !important; /* Adjust size to fit your page aesthetic */
+  font-weight: 300 !important;
   color: #111827 !important; /* Clean, modern dark value */
   letter-spacing: 1px;
 }

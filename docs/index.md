@@ -43,12 +43,12 @@ hide:
   <p class="intro-bio">
     Hello! I broadly work in areas where vision-language models fail to cope with the alignment of these two modalities, particularly temporal reasoning and world modelling with language models. I am a <mark class="aesthetic-highlight">second-year Ph.D. student</mark> at the <a href="https://www.umd.edu/" class="inline-link" target="_blank">University of Maryland</a>, where I am engaged in research collaborations with Profs. <a href="#" class="inline-link">Nuno Vasconcelos</a> and <a href="#" class="inline-link">David Jacobs</a>. I am grateful to be supported by the University of Maryland Graduate Fellowship. 
 
-  Previously, I was awarded the President of India Gold Medal as the top undergraduate student at IIT Mandi. Throughout my academic journey, I have had the privilege of being advised by <a href="">Sreelakshmi Manjunath</a> and <a href="https://mangul-lab-usc.github.io/members/serghei-mangul.html">Serghei Mangul</a>.
+  Previously, I was awarded the President of India Gold Medal as the top undergraduate student at IIT Mandi. Throughout my academic journey, I have had the privilege of being advised by <a href="https://faculty.iitmandi.ac.in/~sreelakshmi/" class="inline-link" target="_blank">Sreelakshmi Manjunath</a> and <a href="https://mangul-lab-usc.github.io/members/serghei-mangul.html" class="inline-link" target="_blank">Serghei Mangul</a>.
   </p>
 
   <div class="status-indicator">
     <span class="status-dot pulsing"></span>
-    <span class="status-text">Available for Summer '26 Research Internships</span>
+    <span class="status-text">Available for Fall '26 Research Internships</span>
   </div>
   
   <div class="minimal-social-links">
@@ -135,7 +135,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
-<h2 class="calligraphy-heading">Selected Works</h2>
+<h1 class="calligraphy-heading">selected works</h1>
 
 <nav class="invisible-dock-container">
   <div class="nav-dynamic-tracker" id="nav-tracker"></div>
@@ -572,10 +572,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-
 <br>
 
-<h2 class="calligraphy-heading">Read my Blogs</h2>
+<h1 class="calligraphy-heading">latest posts</h1>
 
 <div class="apple-carousel-container" id="appleSlider">
   <div class="apple-carousel-stage">

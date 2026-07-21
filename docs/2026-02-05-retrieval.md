@@ -6,17 +6,11 @@ hide:
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <div class="custom-tab-navbar-container">
-  <div class="tab-navbar-wrapper">
-    <a href="https://kingston-aditya.github.io/" class="tab-link"><i class="fa-solid fa-house"></i></a>
-  </div>
-
   <div class="tab-navbar-wrapper sliding-nav">
     <div class="pill-slider"></div>
-    <a href="#capabilities" class="tab-link active">Topic 1</a>
-    <a href="#performance" class="tab-link">Topic 2</a>
-    <a href="#safety" class="tab-link">Topic 3</a>
-    <a href="#download" class="tab-link">Topic 4</a>
-    <a href="#download" class="tab-link">Read More</a>
+    <a href="#performance" class="tab-link active"><i class="fa-solid fa-house"></i></a>
+    <a href="#capabilities" class="tab-link">Publications</a>
+    <a href="#appleSlider" class="tab-link">Blogs</a>
   </div>
 
   <div class="tab-navbar-wrapper news-dropdown-wrapper">
@@ -81,24 +75,37 @@ hide:
   </div>
   
   <h2 class="hero-title">
-    <span class="italic-accent">Leveraging Data to Say No:</span> Memory Augmented Plug-and-Play Selective Prediction.
+    Introducing <span class="italic-accent">MA-PaPSP</span>.
   </h2>
-  
   <p class="hero-description">
-    <span class="quote-mark">&#8220; TLDR</span> Selective prediction is a classic problem in machine learning in which a model is allowed to decide when to make a prediction and when to abstain. The objective is to achieve high accuracy on the predictions it does make, while avoiding uncertain or potentially risky inputs.
+    A Visual-oriented Hallucination Detector.
   </p>
 
+  <div class="hero-image-wrapper">
+  <img src="./images/square_ruled.jpg" alt="VO" class="hero-project-image">
+</div>  
+
   <div class="hero-text-list-block">
-  
-  <h2 class="list-block-title">Project Highlights</h2>
+  <div class="list-block-header">
+    <span class="badge-icon"><i class="fa-solid fa-sparkles"></i></span>
+    <h2 class="list-block-title">Project Highlights</h2>
+  </div>
   
   <ul class="list-block-items">
-    <li>Selective prediction is a classic problem in machine learning.</li>
-    <li>The objective is to achieve high accuracy on the predictions it does make.</li>
-    <li>The objective is to achieve high accuracy on the predictions it does make.</li>
+    <li>
+      <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+      <span>Selective prediction is a classic problem in machine learning.</span>
+    </li>
+    <li>
+      <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+      <span>The objective is to achieve high accuracy on the predictions it does make.</span>
+    </li>
+    <li>
+      <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+      <span>Designed for zero-shot generalization across multimodal vision tasks.</span>
+    </li>
   </ul>
-
-  </div>
+</div>
     
   </div>
 </div>

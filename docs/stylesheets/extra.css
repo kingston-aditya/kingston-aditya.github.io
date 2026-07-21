@@ -703,7 +703,7 @@
 }
 
 .aesthetic-highlight {
-  background-color: rgba(192, 132, 252, 0.15) !important; /* Low-opacity soft purple */
+  background-color: rgba(255, 255, 170, 0.2) !important; /* Low-opacity soft purple */
   color: #111827 !important; /* Keeps text dark and highly legible */
   padding: 2px 6px;
   border-radius: 4px; /* Softens the corners of the highlight box */
@@ -1680,10 +1680,11 @@
   
   /* Balanced bottom margin for the new smaller text size scale */
   margin: 0 0 20px 0 !important; 
+  text-align: center !important;
 }
 
 .italic-accent {
-  color: #B43757; 
+  color: #0082FB; 
 }
 
 .hero-description {
@@ -2134,48 +2135,95 @@
 
 /* Container for the text and bullet points block */
 .hero-text-list-block {
-  width: 100% !important;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  border-radius: 40px !important;
-  background-color: #f3f2f7 !important; 
-  padding: 32px 40px; /* 32px top/bottom, 40px left/right for clean alignment */
-  margin-top: auto; 
-  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 12px 32px -4px rgba(0, 0, 0, 0.04),
+    0 4px 12px -2px rgba(0, 0, 0, 0.02),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  padding: 28px 32px;
+  margin: 24px 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-/* Sizing and typography for the new section title */
+.hero-text-list-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 20px 40px -4px rgba(0, 0, 0, 0.07),
+    0 6px 16px -2px rgba(0, 0, 0, 0.03),
+    inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+.list-block-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 0.75rem;
+}
+
+
 .list-block-title {
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1f2937; /* Keeps the title a strong, readable dark color */
-  margin: 0 0 16px 0;
+  font-size: 1.15rem;
+  font-weight: 650;
+  color: #111827;
+  letter-spacing: -0.01em;
 }
 
 /* Bullet list wrapper settings */
 .list-block-items {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  padding-left: 20px; /* Aligns the physical bullets perfectly flush under the title */
-}
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+} 
 
 /* Customizing the color of the bullets to match your deep teal theme color */
 .list-block-items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #4b5563; /* The light slate-grey text color */
-  margin-bottom: 10px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #374151;
 }
 
-.list-block-items li:last-child {
-  margin-bottom: 0;
+.list-block-items li:hover .bullet-icon {
+  background: #000000;
+  color: #ffffff;
 }
 
-.list-block-items li::marker {
-  color: #0b6466; /* Your signature deep teal color */
+.bullet-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  color: #111827;
+  font-size: 0.65rem;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 /* Master Grid Layout: 3 Columns */
@@ -2953,11 +3001,21 @@
     margin-bottom: 8px !important;
 }
 
-.intro-bio-1 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-    font-size: 0.78rem !important;  /* Reduced from 0.85rem */
-    line-height: 1.6 !important;     /* Adjusted from 1.75 to match smaller font size */
-    color: #374151 !important;
-    margin-top: 2px !important;
-    margin-bottom: 6px !important;  /* Reduced from 8px to keep spacing tight */
+.hero-image-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 24px 0 32px 0; /* Creates balanced spacing above and below the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px; /* Smooth rounded corners */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08); /* Subtle float shadow */
+  border: 1px solid rgba(255, 255, 255, 0.6); /* Soft border for glassmorphism aesthetics */
+  object-fit: cover;
+  display: block;
 }

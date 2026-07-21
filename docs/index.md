@@ -8,9 +8,9 @@ hide:
 <div class="custom-tab-navbar-container">
   <div class="tab-navbar-wrapper sliding-nav">
     <div class="pill-slider"></div>
-    <a href="#capabilities" class="tab-link active"><i class="fa-solid fa-house"></i></a>
-    <a href="#performance" class="tab-link">Publications</a>
-    <a href="#safety" class="tab-link">Blogs</a>
+    <a href="#performance" class="tab-link active"><i class="fa-solid fa-house"></i></a>
+    <a href="#capabilities" class="tab-link">Publications</a>
+    <a href="#appleSlider" class="tab-link">Blogs</a>
   </div>
 
   <div class="tab-navbar-wrapper news-dropdown-wrapper">
@@ -28,12 +28,27 @@ hide:
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const navWrapper = document.querySelector(".sliding-nav");
-  const links = navWrapper.querySelectorAll(".tab-link");
+  if (!navWrapper) return;
+
+  const links = Array.from(navWrapper.querySelectorAll(".tab-link"));
   const slider = navWrapper.querySelector(".pill-slider");
 
-  // Recalculates position & width of the black squircle
-  function moveSlider(targetLink) {
-    if (!targetLink) return;
+  // Dynamically fetch target target DIV elements based on link hrefs
+  function getTargets() {
+    return links
+      .map(link => {
+        const id = link.getAttribute("href");
+        if (id && id.startsWith("#")) {
+          return document.querySelector(id);
+        }
+        return null;
+      })
+      .filter(Boolean);
+  }
+
+  // Moves the black pill indicator directly to the active tab
+  function moveSliderToLink(targetLink) {
+    if (!targetLink || !slider) return;
 
     const navRect = navWrapper.getBoundingClientRect();
     const linkRect = targetLink.getBoundingClientRect();
@@ -44,58 +59,64 @@ document.addEventListener("DOMContentLoaded", () => {
     slider.style.left = `${left}px`;
     slider.style.width = `${width}px`;
 
-    links.forEach(link => link.classList.remove("active"));
+    links.forEach(l => l.classList.remove("active"));
     targetLink.classList.add("active");
   }
 
-  // 1. Position indicator on page load
-  const initialActive = navWrapper.querySelector(".tab-link.active") || links[0];
-  moveSlider(initialActive);
+  // Calculates which div is currently on screen
+  function updateScrollSpy() {
+    const targetDivs = getTargets();
+    if (targetDivs.length === 0) return;
 
-  // 2. Adjust position if window resizes
-  window.addEventListener("resize", () => {
-    const activeLink = navWrapper.querySelector(".tab-link.active");
-    moveSlider(activeLink);
-  });
+    // Trigger threshold: 30% down the visible window
+    const scrollPosition = window.scrollY + window.innerHeight * 0.3;
 
-  // 3. Observer to slide squircle as user scrolls sections
-  const observerOptions = {
-    root: null,
-    rootMargin: "-30% 0px -50% 0px",
-    threshold: 0
-  };
+    let currentDiv = null;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute("id");
-        const correspondingLink = navWrapper.querySelector(`.tab-link[href="#${id}"]`);
-        if (correspondingLink) {
-          moveSlider(correspondingLink);
-        }
+    targetDivs.forEach(div => {
+      const top = div.offsetTop;
+      const height = div.offsetHeight;
+
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        currentDiv = div;
       }
     });
-  }, observerOptions);
 
-  // Target content sections matching link hrefs
-  links.forEach(link => {
-    const sectionId = link.getAttribute("href");
-    if (sectionId && sectionId.startsWith("#")) {
-      const section = document.querySelector(sectionId);
-      if (section) observer.observe(section);
+    // Default to first link if scrolled back to top
+    if (window.scrollY < 100) {
+      currentDiv = targetDivs[0];
     }
+
+    if (currentDiv) {
+      const activeId = `#${currentDiv.getAttribute("id")}`;
+      const matchingLink = links.find(l => l.getAttribute("href") === activeId);
+      if (matchingLink) {
+        moveSliderToLink(matchingLink);
+      }
+    }
+  }
+
+  // Initial positioning
+  const initialActive = navWrapper.querySelector(".tab-link.active") || links[0];
+  moveSliderToLink(initialActive);
+
+  // Listen for scroll & window resize events
+  window.addEventListener("scroll", updateScrollSpy, { passive: true });
+  window.addEventListener("resize", () => {
+    const activeLink = navWrapper.querySelector(".tab-link.active") || links[0];
+    moveSliderToLink(activeLink);
   });
 
-  // 4. Smooth click handler
+  // Smooth scroll animation when clicking nav tabs
   links.forEach(link => {
     link.addEventListener("click", (e) => {
       const targetId = link.getAttribute("href");
       if (targetId && targetId.startsWith("#")) {
-        e.preventDefault();
-        const targetSection = document.querySelector(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: "smooth" });
-          moveSlider(link);
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: "smooth" });
+          moveSliderToLink(link);
         }
       }
     });
@@ -110,18 +131,18 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 </div> -->
 
-<div class="intro-grid-container">
+<div id="performance" class="intro-grid-container">
   
   <div class="intro-text-column">
   
   <h1 class="dynamic-name" id="dynamicName">Aditya Sarkar</h1>
   <p class="intro-bio">
-    PhD Student at University of Maryland; IIT Mandi '23.
+    <mark class="aesthetic-highlight">PhD Student</mark> at University of Maryland; IIT Mandi '23.
   </p>
   <p class="intro-bio">
     Hello! I broadly work on improving the alignment between vision and language in vision-language models, with a particular focus on temporal reasoning and world modeling. I am currently a <mark class="aesthetic-highlight">second-year Ph.D. student</mark> at the <a href="https://www.umd.edu/" class="inline-link" target="_blank">University of Maryland</a>, where I collaborate with Profs. <a href="http://www.svcl.ucsd.edu/people/nuno/" class="inline-link">Nuno Vasconcelos</a> and <a href="https://www.cs.umd.edu/~djacobs/" class="inline-link">David Jacobs</a>. I am grateful to be supported by the University of Maryland Graduate Fellowship.</p>
   <p class="intro-bio">
-  Prior to joining UMD, I received the President of India Gold Medal as the top undergraduate student at IIT Mandi. Throughout my academic journey, I have had the privilege of being mentored by <a href="https://faculty.iitmandi.ac.in/~sreelakshmi/" class="inline-link" target="_blank">Sreelakshmi Manjunath</a> and <a href="https://mangul-lab-usc.github.io/members/serghei-mangul.html" class="inline-link" target="_blank">Serghei Mangul</a>.
+  Prior to joining UMD, I graduated as the top student at IIT Mandi SCEE department. Throughout my academic journey, I have had the privilege of being mentored by <a href="https://faculty.iitmandi.ac.in/~sreelakshmi/" class="inline-link" target="_blank">Sreelakshmi Manjunath</a> and <a href="https://mangul-lab-usc.github.io/members/serghei-mangul.html" class="inline-link" target="_blank">Serghei Mangul</a>.
   </p>
 
   <div class="status-indicator">
@@ -233,7 +254,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 </nav>
 
 
-<div class="publications-bento-grid">
+<div id="capabilities" class="publications-bento-grid">
 
   <div class="bento-pub-card pub-card-blue">
     <div class="bento-ambient-graphic">

@@ -268,19 +268,21 @@
 
 /* State 2: Crossed out */
 .dynamic-name span.is-crossed {
-  /* Make the actual text color invisible so the background shows through */
-  color: transparent; 
+  color: transparent;
   
-  /* Draw the diagonal stripes in the background using your color */
+  filter: drop-shadow(1px 0 0 #000) 
+          drop-shadow(-1px 0 0 #000) 
+          drop-shadow(0 1px 0 #000) 
+          drop-shadow(0 -1px 0 #000);
+
   background-image: repeating-linear-gradient(
-    90deg,
-    #000000,
-    #000000 6px,       /* Width of the colored stripe */
-    transparent 6px, 
-    transparent 14px   /* Width of the gap between stripes */
+    0deg,             
+    #fa003f 0px,
+    #fa003f 1px,       /* Ultra-thin 1px line */
+    transparent 1px, 
+    transparent 8px    /* Spacing between lines */
   );
   
-  /* Clip the striped background strictly to the shape of the letters */
   -webkit-background-clip: text;
   background-clip: text;
 }

@@ -85,28 +85,23 @@ hide:
   <img src="../images/yellow_wall.jpg" alt="VO" class="hero-project-image">
 </div>
 
-
-<div class="hero-text-list-block">
-  <div class="list-block-header">
-    <span class="badge-icon"><i class="fa-solid fa-sparkles"></i></span>
-    <h2 class="list-block-title">Project Highlights</h2>
-  </div>
-  
-  <ul class="list-block-items">
-    <li>
-      <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
-      <span class="bullet-text">Selective prediction is a classic problem in machine learning.</span>
-    </li>
-    <li>
-      <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
-      <span class="bullet-text">The objective is to achieve high accuracy on the predictions it does make.</span>
-    </li>
-    <li>
-      <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
-      <span class="bullet-text">The objective is to achieve high accuracy on the predictions it does make.</span>
-    </li>
-  </ul>
+<div class="list-block-header">
+  <h2 class="list-block-title">Project Highlights</h2>
 </div>
+<ul class="list-block-items">
+  <li>
+    <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+    <span class="bullet-text">Selective prediction is a classic problem in machine learning.</span>
+  </li>
+  <li>
+    <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+    <span class="bullet-text">The objective is to achieve high accuracy on the predictions it does make.</span>
+  </li>
+  <li>
+    <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+    <span class="bullet-text">The objective is to achieve high accuracy on the predictions it does make.</span>
+  </li>
+</ul>
     
   </div>
 </div>

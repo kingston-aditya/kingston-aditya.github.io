@@ -266,23 +266,25 @@
   font-weight: 800;
 }
 
-/* State 2: Crossed out */
 .dynamic-name span.is-crossed {
+  position: relative;
   color: transparent;
   
-  filter: drop-shadow(1px 0 0 #000) 
-          drop-shadow(-1px 0 0 #000) 
-          drop-shadow(0 1px 0 #000) 
-          drop-shadow(0 -1px 0 #000);
+  -webkit-text-stroke: 2px #000000;
+  
+  /* 2. Force the stroke to be painted BEHIND the interior fill */
+  paint-order: stroke fill;
 
+  /* 3. Hairline vertical stripes */
   background-image: repeating-linear-gradient(
-    0deg,             
-    #fa003f 0px,
-    #fa003f 1px,       /* Ultra-thin 1px line */
+    90deg,             
+    #000000 0px,
+    #000000 1px,       /* Ultra-thin 1px line */
     transparent 1px, 
     transparent 8px    /* Spacing between lines */
   );
   
+  /* 4. Clip the stripes inside the letters */
   -webkit-background-clip: text;
   background-clip: text;
 }

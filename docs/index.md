@@ -25,6 +25,84 @@ hide:
   </div>
 </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navWrapper = document.querySelector(".sliding-nav");
+  const links = navWrapper.querySelectorAll(".tab-link");
+  const slider = navWrapper.querySelector(".pill-slider");
+
+  // Recalculates position & width of the black squircle
+  function moveSlider(targetLink) {
+    if (!targetLink) return;
+
+    const navRect = navWrapper.getBoundingClientRect();
+    const linkRect = targetLink.getBoundingClientRect();
+
+    const left = linkRect.left - navRect.left;
+    const width = linkRect.width;
+
+    slider.style.left = `${left}px`;
+    slider.style.width = `${width}px`;
+
+    links.forEach(link => link.classList.remove("active"));
+    targetLink.classList.add("active");
+  }
+
+  // 1. Position indicator on page load
+  const initialActive = navWrapper.querySelector(".tab-link.active") || links[0];
+  moveSlider(initialActive);
+
+  // 2. Adjust position if window resizes
+  window.addEventListener("resize", () => {
+    const activeLink = navWrapper.querySelector(".tab-link.active");
+    moveSlider(activeLink);
+  });
+
+  // 3. Observer to slide squircle as user scrolls sections
+  const observerOptions = {
+    root: null,
+    rootMargin: "-30% 0px -50% 0px",
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+        const correspondingLink = navWrapper.querySelector(`.tab-link[href="#${id}"]`);
+        if (correspondingLink) {
+          moveSlider(correspondingLink);
+        }
+      }
+    });
+  }, observerOptions);
+
+  // Target content sections matching link hrefs
+  links.forEach(link => {
+    const sectionId = link.getAttribute("href");
+    if (sectionId && sectionId.startsWith("#")) {
+      const section = document.querySelector(sectionId);
+      if (section) observer.observe(section);
+    }
+  });
+
+  // 4. Smooth click handler
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      const targetId = link.getAttribute("href");
+      if (targetId && targetId.startsWith("#")) {
+        e.preventDefault();
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: "smooth" });
+          moveSlider(link);
+        }
+      }
+    });
+  });
+});
+</script>
+
 <!-- <div class="custom-top-banner">
   <div class="banner-center-content">
     <span>MA-PaPSP got accepted to ICLR 2026!</span>
@@ -37,7 +115,7 @@ hide:
   <div class="intro-text-column">
   
   <h1 class="dynamic-name" id="dynamicName">Aditya Sarkar</h1>
-  <p class="intro-bio-1">
+  <p class="intro-bio">
     PhD Student at University of Maryland; IIT Mandi '23.
   </p>
   <p class="intro-bio">

@@ -14,7 +14,7 @@ hide:
   </div>
 
   <div class="tab-navbar-wrapper news-dropdown-wrapper">
-    <a href="#news" class="tab-link news-pill" id="news-toggle"><span class="news-pulse-badge"></span>News</a>
+    <a href="#news" class="tab-link news-pill" id="news-toggle">News</a>
 
   <div class="glassy-dialog-box" id="news-dialog">
     <div class="dialog-content">
@@ -37,9 +37,13 @@ hide:
   <div class="intro-text-column">
   
   <h1 class="dynamic-name" id="dynamicName">Aditya Sarkar</h1>
-  
+  <p class="intro-bio-1">
+    PhD Student at University of Maryland, IIT Mandi '23.
+  </p>
   <p class="intro-bio">
-    Hello! I am a <mark class="aesthetic-highlight">second-year Ph.D. student</mark> at the <a href="https://www.umd.edu/" class="inline-link" target="_blank">University of Maryland</a>, where I am engaged in research collaborations with Profs. <a href="#" class="inline-link">Nuno Vasconcelos</a> and <a href="#" class="inline-link">David Jacobs</a>. My research aims to build better computer vision algorithms, specifically for temporal understanding in LLMs, action and world modeling. I am grateful to be supported by the <mark class="aesthetic-highlight">University of Maryland Graduate Fellowship</mark>.
+    Hello! I broadly work in areas where vision-language models fail to cope with the alignment of these two modalities, particularly temporal reasoning and world modelling with language models. I am a <mark class="aesthetic-highlight">second-year Ph.D. student</mark> at the <a href="https://www.umd.edu/" class="inline-link" target="_blank">University of Maryland</a>, where I am engaged in research collaborations with Profs. <a href="#" class="inline-link">Nuno Vasconcelos</a> and <a href="#" class="inline-link">David Jacobs</a>. I am grateful to be supported by the University of Maryland Graduate Fellowship. 
+
+  Previously, I was awarded the President of India Gold Medal as the top undergraduate student at IIT Mandi. Throughout my academic journey, I have had the privilege of being advised by <a href="">Sreelakshmi Manjunath</a> and <a href="https://mangul-lab-usc.github.io/members/serghei-mangul.html">Serghei Mangul</a>.
   </p>
 
   <div class="status-indicator">
@@ -453,7 +457,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // 20% chance to go Bold
         span.classList.add("is-bold");
         span.classList.remove("is-crossed");
-      } else if (roll < 0.75) {
+      } else if (roll < 0.35) {
         // 15% chance to go Crossed out
         span.classList.add("is-crossed");
         span.classList.remove("is-bold");

@@ -1,6 +1,5 @@
 site_name: "Aditya Sarkar"
 site_author: 'Aditya Sarkar'
-use_directory_urls: false
 copyright: '&copy; Aditya Sarkar - University of Maryland'
 theme:
   name: material

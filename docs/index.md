@@ -234,6 +234,71 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
 
+
+<div class="aesthetic-cards-grid">
+
+  <a href="#pixels" class="aesthetic-card">
+    <div class="card-icon top-left">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="8" y="5" width="8" height="14" rx="4"/>
+        <path d="M12 2v3M6 19h12M12 19v3"/>
+        <path d="M16 11c1.5 0 2.5 1 2.5 2.5 0 1-.5 1.5-1 2"/>
+        <circle cx="12" cy="10" r="0.5" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="card-shape pink-shape"></div>
+    <div class="card-content">
+      <span class="card-title">PIXELS</span>
+      <div class="wavy-line"></div>
+    </div>
+  </a>
+
+  <a href="#bookmarks" class="aesthetic-card">
+    <div class="card-icon center-left">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 14h8l-1 8H9l-1-8z"/>
+        <path d="M12 14V6M12 10c-2-2-4-1-5 1 2 2 3.5 1 5-1zM12 7c2-2 4-1 5 1-2 2-3.5 1-5-1z"/>
+      </svg>
+    </div>
+    <div class="card-shape pink-shape-alt"></div>
+    <div class="card-content">
+      <span class="card-title">BOOKMARKS</span>
+      <div class="wavy-line"></div>
+    </div>
+  </a>
+
+  <a href="#blogroll" class="aesthetic-card">
+    <div class="card-icon bottom-left">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/>
+        <path d="M12 8c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4"/>
+        <path d="M12 5c4 0 7 3 7 7s-3 7-7 7-7-3-7-7 3-7 7-7"/>
+      </svg>
+    </div>
+    <div class="card-shape taupe-shape"></div>
+    <div class="card-content">
+      <span class="card-title">BLOGROLL</span>
+      <div class="wavy-line"></div>
+    </div>
+  </a>
+
+  <a href="#about-me" class="aesthetic-card">
+    <div class="card-icon bottom-right">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 12v9M10 20c2-1 4-1 4 0"/>
+        <circle cx="12" cy="8" r="2.5"/>
+        <path d="M12 3.5v2M12 10.5v2M7.5 8h2M14.5 8h2M8.8 4.8l1.4 1.4M13.8 9.8l1.4 1.4M8.8 11.2l1.4-1.4M13.8 6.2l1.4-1.4"/>
+      </svg>
+    </div>
+    <div class="card-shape beige-shape"></div>
+    <div class="card-content">
+      <span class="card-title">ABOUT ME</span>
+      <div class="wavy-line"></div>
+    </div>
+  </a>
+
+</div>
+
 <h1 class="calligraphy-heading">selected works</h1>
 
 <nav class="invisible-dock-container">

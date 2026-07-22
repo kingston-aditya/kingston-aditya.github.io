@@ -135,7 +135,15 @@ document.addEventListener("DOMContentLoaded", () => {
   
   <div class="intro-text-column">
   
+  <div class="name-container">
   <h1 class="dynamic-name" id="dynamicName">Aditya Sarkar</h1>
+  
+  <svg class="name-doodle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+    <circle cx="12" cy="12" r="3" fill="currentColor"/>
+  </svg>
+</div>
+
   <p class="intro-bio">
     <mark class="aesthetic-highlight">PhD Student</mark> at University of Maryland; IIT Mandi '23.
   </p>
@@ -233,7 +241,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
     [09/2024] :party_popper: Excited to start my Ph.D. at [University of Maryland](https://umd.edu/) advised by Prof. [Ang Li](https://www.ang-li.com/).
 
     [09/2023] :party_popper: Graduated from IIT Mandi with B.Tech. (Honors) in Electrical Engineering. -->
-
+<h1 class="calligraphy-heading">.updates</h1>
 
 <div class="aesthetic-cards-grid">
   <a href="#pixels" class="aesthetic-card">
@@ -298,7 +306,7 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
 </div>
 
-<h1 class="calligraphy-heading">selected works</h1>
+<h1 class="calligraphy-heading">.selected works</h1>
 
 <nav class="invisible-dock-container">
   <div class="nav-dynamic-tracker" id="nav-tracker"></div>
@@ -737,7 +745,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <br>
 
-<h1 class="calligraphy-heading">latest posts</h1>
+<h1 class="calligraphy-heading">.latest posts</h1>
 
 <div class="apple-carousel-container" id="appleSlider">
   <div class="apple-carousel-stage">

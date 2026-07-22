@@ -3056,9 +3056,26 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.aesthetic-card:nth-child(1) { /* PIXELS */
+  transform: rotate(-2.5deg);
+}
+
+.aesthetic-card:nth-child(2) { /* BOOKMARKS */
+  transform: rotate(1.8deg);
+}
+
+.aesthetic-card:nth-child(3) { /* BLOGROLL */
+  transform: rotate(1.5deg);
+}
+
+.aesthetic-card:nth-child(4) { /* ABOUT ME */
+  transform: rotate(-2deg);
+}
+
+/* Smooth Hover Interaction: Straightens the card and lifts it up slightly */
 .aesthetic-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transform: rotate(0deg) translateY(-6px) !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
 /* Organic Blob Background Shapes */
@@ -3172,4 +3189,32 @@
   .aesthetic-cards-grid {
     grid-template-columns: 1fr; /* Stacks vertically on small screens */
   }
+}
+
+/* Layout container to align name & doodle horizontally */
+.name-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px; /* Space between name and doodle */
+}
+
+/* Ensure original h1 styles remain untouched */
+.dynamic-name {
+  margin: 0;
+  display: inline-block;
+}
+
+/* Comic / Doodle Styling */
+.name-doodle {
+  width: 32px;  /* Adjust size as needed */
+  height: 32px;
+  color: #111111; /* Color matches your text/doodle aesthetic */
+  transform: rotate(12deg); /* Slightly tilted comic feel */
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Subtle interactive wobble when hovering over the name */
+.name-container:hover .name-doodle {
+  transform: rotate(-8deg) scale(1.15);
 }

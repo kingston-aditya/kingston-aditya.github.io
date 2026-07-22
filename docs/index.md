@@ -236,7 +236,6 @@ Hello! I am a second-year Ph.D. student at the [__University of Maryland__](http
 
 
 <div class="aesthetic-cards-grid">
-
   <a href="#pixels" class="aesthetic-card">
     <div class="card-icon top-left">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
